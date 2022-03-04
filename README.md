@@ -1,1 +1,1 @@
-# gamatechno-designlibrary
+# Gamatechno Design Library
