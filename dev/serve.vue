@@ -1,18 +1,17 @@
 <script>
-import Vue from 'vue';
-// Uncomment import and local "components" registration if library is not registered globally.
-// import { GamatechnoVueComponentLibrarySample } from '@/entry.esm';
+import Vue from "vue";
+import { Button } from "@/entry.esm";
 
 export default Vue.extend({
-  name: 'ServeDev',
-  // components: {
-  //  GamatechnoVueComponentLibrarySample,
-  // }
+  name: "ServeDev",
+  components: {
+    Button,
+  },
 });
 </script>
 
 <template>
   <div id="app">
-    <gamatechno-vue-component-library-sample />
+    <Button primary size="small" label="Hello World!" />
   </div>
 </template>
