@@ -1,0 +1,45 @@
+import { Meta } from "@storybook/addon-docs";
+import Code from "./assets/code-brackets.svg";
+import Colors from "./assets/colors.svg";
+import Comments from "./assets/comments.svg";
+import Direction from "./assets/direction.svg";
+import Flow from "./assets/flow.svg";
+import Plugin from "./assets/plugin.svg";
+import Repo from "./assets/repo.svg";
+import StackAlt from "./assets/stackalt.svg";
+
+<Meta title="Getting Started" />
+
+# Gamatechno Component Library
+
+Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang dapat digunakan oleh pengembang aplikasi dari PT Gamatechno Indonesia dalam menyusun layout produk digital yang sedang dikembangkan pada platform web dengan lebih mudah dan cepat.
+
+### Project Setup
+
+- Clone repository ini
+- Jalankan npm install
+- Jalankan npm run serve
+- Jalankan npm run storybook
+
+### Cara Membuat Komponen Baru
+
+- Buat file baru dengan ekstensi .vue pada folder lib-components
+- Tambahkan properti name pada section script lalu isi dengan nama komponen yang akan dibuat
+- Buat struktur, styling dan behavior komponen di dalamnya
+- Import as default komponen pada lib-components/index.js
+- Import dan deklarasikan komponen pada dev/serve.vue untuk melihat hasilnya di local environment
+- Buat file stories dengan format (Nama Komponen).stories.js di dalam folder stories
+- Buat stories untuk komponen yang nantinya akan ditampilkan pada dokumentasi storybook
+- Buat file untuk unit test case dengan format (Nama Komponen).spec.js di dalam folder test/unit
+- Buat unit test case di dalam file (Nama Komponen).spec.js
+- Jalankan perintah npm run test:unit untuk melakukan proses unit testing pada seluruh komponen
+
+### Cara Publish Versi Terbaru
+
+- Jalankan perintah npm run build
+- Ubah versi library pada file package.json
+- Melakukan registrasi akun baru pada website [npmjs](https://www.npmjs.com/) jika belum memiliki akun
+- Jalankan perintah npm login
+- Masukkan username dan password dari akun yang sudah dibuat sebelumnya
+- Jalankan perintah npm publish
+- Masukkan kode OTP jika diperlukan
