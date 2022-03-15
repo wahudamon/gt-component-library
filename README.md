@@ -1,1 +1,1 @@
-# Gamatechno Design Library
+# Gamatechno Component Library using Vue
