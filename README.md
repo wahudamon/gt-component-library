@@ -2,14 +2,14 @@
 
 Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang dapat digunakan oleh pengembang aplikasi dari PT Gamatechno Indonesia dalam menyusun layout produk digital yang sedang dikembangkan pada platform web dengan lebih mudah dan cepat.
 
-# Project Setup
+## Project Setup
 
 - Clone repository ini
 - Jalankan npm install
 - Jalankan npm run serve
 - Jalankan npm run storybook
 
-# How to Create a New Component
+## How to Create a New Component
 
 - Buat file baru dengan ekstensi .vue pada folder lib-components
 - Tambahkan properti name pada section script lalu isi dengan nama komponen yang akan dibuat
@@ -22,7 +22,7 @@ Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang d
 - Buat unit test case di dalam file (Nama Komponen).spec.js
 - Jalankan perintah npm run test:unit untuk melakukan proses unit testing pada seluruh komponen
 
-# How to Publish New Version
+## How to Publish New Version
 
 - Jalankan perintah npm run build
 - Ubah versi library pada file package.json
@@ -32,7 +32,7 @@ Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang d
 - Jalankan perintah npm publish
 - Masukkan kode OTP jika diperlukan
 
-# Technologies
+## Technologies
 
 Tools ini dibangun dengan menggunakan beberapa framework, library, dan package di bawah ini :
 
@@ -45,6 +45,6 @@ Tools ini dibangun dengan menggunakan beberapa framework, library, dan package d
 | @vue/test-utils           | 1.3.0  |
 | vue-sfc-rollup            | 4.1.1  |
 
-# License
+## License
 
 (c) 2022 PT Gamatechno Indonesia, under MIT License.
