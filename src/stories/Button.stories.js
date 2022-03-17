@@ -12,6 +12,9 @@ export default {
       options: ["small", "medium", "large"],
     },
   },
+  parameters: {
+    viewMode: "docs",
+  },
 };
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
