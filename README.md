@@ -9,7 +9,7 @@ Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang d
 - Jalankan perintah npm run serve
 - Jalankan perintah npm run storybook
 
-## Membuat sebuah komponen baru
+## Membuat komponen baru
 
 - Buat file baru dengan ekstensi .vue pada folder lib-components
 - Tambahkan properti name pada section script

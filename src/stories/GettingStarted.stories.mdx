@@ -19,32 +19,38 @@ import StackAlt from "./assets/stackalt.svg";
 
 Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang dapat digunakan oleh pengembang aplikasi dari PT Gamatechno Indonesia dalam menyusun layout produk digital yang sedang dikembangkan pada platform web dengan lebih mudah dan cepat.
 
-### Project Setup
+## Setup Proyek
 
 - Clone repository ini
-- Jalankan npm install
-- Jalankan npm run serve
-- Jalankan npm run storybook
+- Jalankan perintah npm install
+- Jalankan perintah npm run serve
+- Jalankan perintah npm run storybook
 
-### Cara Membuat Komponen Baru
+## Membuat komponen baru
 
 - Buat file baru dengan ekstensi .vue pada folder lib-components
-- Tambahkan properti name pada section script lalu isi dengan nama komponen yang akan dibuat
-- Buat struktur, styling dan behavior komponen di dalamnya
+- Tambahkan properti name pada section script
+- Buat struktur, styling dan behavior komponen
 - Import as default komponen pada lib-components/index.js
-- Import dan deklarasikan komponen pada dev/serve.vue untuk melihat hasilnya di local environment
+- Import dan deklarasikan komponen pada dev/serve.vue
 - Buat file stories dengan format (Nama Komponen).stories.js di dalam folder stories
-- Buat stories untuk komponen yang nantinya akan ditampilkan pada dokumentasi storybook
+- Buat stories untuk komponen yang sedang dibuat
 - Buat file untuk unit test case dengan format (Nama Komponen).spec.js di dalam folder test/unit
-- Buat unit test case di dalam file (Nama Komponen).spec.js
-- Jalankan perintah npm run test:unit untuk melakukan proses unit testing pada seluruh komponen
+- Buat unit test case untuk komponen yang sedang dibuat
+- Jalankan perintah npm run test:unit
 
-### Cara Publish Versi Terbaru
+## Mengubah komponen yang sudah ada
+
+- Buat perubahan untuk komponen pada folder lib-components
+- Tambahkan test case baru untuk perubahan yang dilakukan pada komponen (jika ada)
+- Tambahkan perubahan pada komponen ke dalam file stories komponen
+
+## Mempublikasikan versi terbaru
 
 - Jalankan perintah npm run build
 - Ubah versi library pada file package.json
 - Melakukan registrasi akun baru pada website [npmjs](https://www.npmjs.com/) jika belum memiliki akun
 - Jalankan perintah npm login
-- Masukkan username dan password dari akun yang sudah dibuat sebelumnya
+- Masukkan username dan password dari akun npm
 - Jalankan perintah npm publish
 - Masukkan kode OTP jika diperlukan
