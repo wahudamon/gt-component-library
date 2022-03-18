@@ -1,0 +1,56 @@
+import { Meta } from "@storybook/addon-docs";
+import Code from "./assets/code-brackets.svg";
+import Colors from "./assets/colors.svg";
+import Comments from "./assets/comments.svg";
+import Direction from "./assets/direction.svg";
+import Flow from "./assets/flow.svg";
+import Plugin from "./assets/plugin.svg";
+import Repo from "./assets/repo.svg";
+import StackAlt from "./assets/stackalt.svg";
+
+<Meta
+  title="Contributing"
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+# Contributing
+
+Lorem ipsum dolor sir amet.
+
+## Setup Proyek
+
+- Clone repository ini
+- Jalankan perintah npm install
+- Jalankan perintah npm run serve
+- Jalankan perintah npm run storybook
+
+## Membuat komponen baru
+
+- Buat file baru dengan ekstensi .vue pada folder lib-components
+- Tambahkan properti name pada section script
+- Buat struktur, styling dan behavior komponen
+- Import as default komponen pada lib-components/index.js
+- Import dan deklarasikan komponen pada dev/serve.vue
+- Buat file stories dengan format (Nama Komponen).stories.js di dalam folder stories
+- Buat stories untuk komponen yang sedang dibuat
+- Buat file untuk unit test case dengan format (Nama Komponen).spec.js di dalam folder test/unit
+- Buat unit test case untuk komponen yang sedang dibuat
+- Jalankan perintah npm run test:unit
+
+## Mengubah komponen yang sudah ada
+
+- Buat perubahan untuk komponen pada folder lib-components
+- Tambahkan test case baru untuk perubahan yang dilakukan pada komponen (jika ada)
+- Tambahkan perubahan pada komponen ke dalam file stories komponen
+
+## Mempublikasikan versi terbaru
+
+- Jalankan perintah npm run build
+- Ubah versi library pada file package.json
+- Melakukan registrasi akun baru pada website [npmjs](https://www.npmjs.com/) jika belum memiliki akun
+- Jalankan perintah npm login
+- Masukkan username dan password dari akun npm
+- Jalankan perintah npm publish
+- Masukkan kode OTP jika diperlukan

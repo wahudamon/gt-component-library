@@ -9,6 +9,11 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  options: {
+    storySort: {
+      order: ["Getting Started", "Installation", "Contributing", "Docs"],
+    },
+  },
   previewTabs: {
     "storybook/docs/panel": { index: -1 },
   },
