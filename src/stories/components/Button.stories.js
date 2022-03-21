@@ -1,8 +1,8 @@
-import Button from "../lib-components/Button.vue";
+import Button from "../../lib-components/Button.vue";
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: "Docs/Button",
+  title: "Components/Button",
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
