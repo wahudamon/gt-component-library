@@ -19,7 +19,8 @@
   "unpkg": "dist/gamatechno-vue-component-library.min.js",
   "files": [
     "dist/*",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/**/*.scss"
   ],
   "dependencies": {
     "bootstrap": "^5.1.3"

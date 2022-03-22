@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/lib-styles/variables.scss";
+@import "../lib-styles/variables.scss";
 
 .storybook-button {
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -67,6 +67,7 @@ export default {
 }
 .storybook-button--primary {
   color: white;
+  // background-color: #1ea7fd;
   background-color: $primary-sun;
 }
 .storybook-button--secondary {
