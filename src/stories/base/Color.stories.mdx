@@ -8,173 +8,70 @@ import { Meta } from "@storybook/addon-docs";
 />
 
 <style>{`
-  .subheading {
-    --mediumdark: '#999999';
-    font-weight: 900;
-    font-size: 13px;
-    color: #999;
-    letter-spacing: 6px;
-    line-height: 24px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    margin-top: 40px;
-  }
-
   .link-list {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 10px;
-  }
-
-  @media (min-width: 620px) {
-    .link-list {
-      row-gap: 20px;
-      column-gap: 20px;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @media all and (-ms-high-contrast:none) {
-  .link-list {
-      display: -ms-grid;
-      -ms-grid-columns: 1fr 1fr;
-      -ms-grid-rows: 1fr 1fr;
-    }
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 1fr;
   }
 
   .link-item {
     display: block;
     padding: 20px 30px 20px 15px;
-    border: 1px solid #00000010;
-    border-radius: 5px;
-    transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
     color: #333333;
     display: flex;
     align-items: flex-start;
   }
 
-  .link-item:hover {
-    border-color: #1EA7FD50;
-    transform: translate3d(0, -3px, 0);
-    box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
-  }
-
-  .link-item:active {
-    border-color: #1EA7FD;
-    transform: translate3d(0, 0, 0);
-  }
-
   .link-item strong {
     font-weight: 700;
+    font-size: 18px;
     display: block;
     margin-bottom: 2px;
-  }
-  
-  .link-item img {
-    height: 40px;
-    width: 40px;
-    margin-right: 15px;
-    flex: none;
   }
 
   .link-item span {
     font-size: 14px;
     line-height: 20px;
+    text-align: justify;
   }
-
-  .tip {
-    display: inline-block;
-    border-radius: 1em;
-    font-size: 11px;
-    line-height: 12px;
-    font-weight: 700;
-    background: #E7FDD8;
-    color: #66BF3C;
-    padding: 4px 12px;
-    margin-right: 10px;
-    vertical-align: top;
-  }
-
-  .tip-wrapper {
-    font-size: 13px;
-    line-height: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .tip-wrapper code {
-    font-size: 12px;
-    display: inline-block;
-  }
-
-  
 `}</style>
 
 # Color
 
 ## Introduction
 
-Our color system was designed to establish a flexible range of colors that support our brand, comms, and product teams. GT design team are on a full ranged color palette which includes many shades for each color.
-
-<div className="subheading">Configure</div>
-
-<div className="link-list">
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/addons/addon-types"
-    target="_blank"
-  >
-    <span>
-      <strong>Presets for popular tools</strong>
-      Easy setup for TypeScript, SCSS and more.
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/webpack"
-    target="_blank"
-  >
-    <span>
-      <strong>Build configuration</strong>
-      How to customize webpack and Babel
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/styling-and-css"
-    target="_blank"
-  >
-    <span>
-      <strong>Styling</strong>
-      How to load and configure CSS libraries
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/get-started/setup#configure-storybook-for-your-stack"
-    target="_blank"
-  >
-    <span>
-      <strong>Data</strong>
-      Providers and mocking for data libraries
-    </span>
-  </a>
-</div>
+Sistem warna yang kami miliki dirancang untuk menetapkan rentang warna yang fleksibel sehingga mampu untuk mendukung brand, komunikasi, dan tim produk kami. **GT design team library** menggunakan palet warna lengkap yang mencakup banyak corak untuk setiap warna.
 
 ## Color Principles
 
-### Accessible
-
-We go to great lengths to ensure that every color we use meets accessibility standards. both in terms of external accessibility (how easy it is for all users to see color combinations) and internal accessibility (how easy it is for designers and developers to find and use palettes).
-
-### Hierarchial
-
-Existing colors can indicate which elements are interactive, and make it easier for users to know more deeply the differences between one element and another.
-
-### Clarity
-
-With existing colors, all elements like text, icons, etc. legibility, clarity and having a sharp focus on functionality motivates the design.
+<div className="link-list">
+  <div className="link-item">
+    <span>
+      <strong>Accessible</strong>
+      Kami berusaha keras untuk memastikan bahwa setiap warna yang kami gunakan memenuhi
+      standar aksesibilitas.
+      <br />
+      Baik dalam hal aksesibilitas eksternal (kemudahan semua pengguna melihat kombinasi
+      warna) dan aksesibilitas internal (kemudahan bagi desainer dan pengembang untuk
+      menemukan dan menggunakan palet).
+    </span>
+  </div>
+  <div className="link-item">
+    <span>
+      <strong>Hierarchial</strong>
+      Warna yang ada dapat menunjukkan elemen mana yang interaktif, dan memudahkan
+      pengguna untuk mengetahui lebih dalam perbedaan antara satu elemen dengan elemen
+      lainnya.
+    </span>
+  </div>
+  <div className="link-item">
+    <span>
+      <strong>Clarity</strong>
+      Dengan warna yang ada, semua elemen seperti teks, ikon, dll. memiliki keterbacaan,
+      kejelasan, dan fokus yang tajam pada fungsionalitas memotivasi desain.
+    </span>
+  </div>
+</div>
 
 ## Usage
 
@@ -182,25 +79,25 @@ Lorem ipsum dolor sir amet
 
 ## Primary
 
-The primary colors are the most used colors across the brand and UI designs. These colors can be combined with shade colors which is used as accents.
+Warna _primary_ adalah warna yang paling sering digunakan di seluruh _brand_ dan desain UI. Warna-warna tersebut dapat dipadukan dengan warna _shade_ yang digunakan sebagai aksen.
 
 **Primary color list here...**
 
 ## Secondary
 
-These colours appear far less frequently, and act more like accent colours. Secondary colour are often used in the case of complex data visualisation or graphs. Secondary colours are optional, but they provide more opportunities to distinguish your product. For example, by adding in a secondary colour, we can make our UI more interesting.
+Warna-warna ini muncul jauh lebih jarang, dan bertindak lebih seperti warna aksen. Warna sekunder sering digunakan dalam kasus visualisasi data yang kompleks atau grafik. Warna sekunder juga bersifat opsional, tetapi memberikan lebih banyak peluang untuk membedakan produk Anda. Misalnya, dengan menambahkan warna sekunder, kita bisa membuat UI kita lebih menarik.
 
 **Secondary color list here...**
 
 ## Neutrals
 
-Neutrals have a supportive role in UI design — these colours are usually made for text and background. In Material design, instead of defining specific code for black or grey, they use the opacity of black to apply typography a value. In other words, they use the ‘shades’ approach mentioned above.
+Warna netral memiliki peran yang mendukung dalam mendesain UI — warna-warna ini biasanya dibuat untuk teks dan latar belakang _(background)_. Dalam _Google Material Design_, alih-alih mendefinisikan kode khusus untuk hitam atau abu-abu, mereka menggunakan opacity hitam untuk menerapkan nilai warna pada _tipografi_. Dengan kata lain, mereka menggunakan pendekatan 'nuansa' yang disebutkan di atas.
 
 **Neutrals color list here...**
 
 ## Semantic Colors
 
-These are the colors that communicate purpose. They help users convey messages. For example, Green has a positive connotation. We use Green to convey success, confirmation messages, etc.
+Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian, warna ini membantu pengguna dalam menyampaikan pesan. Misalnya, Hijau memiliki konotasi positif. Kami menggunakan Hijau untuk menyampaikan kesuksesan, pesan konfirmasi, dll.
 
 **Semantic color list here...**
 
@@ -210,8 +107,8 @@ These are the colors that communicate purpose. They help users convey messages. 
 
 ## Accessibility
 
-Using various forms of contrast is the most important consideration when making user-friendly color and interface choices. Awareness of standards and best practices is the key to accessible color selection.
+Menggunakan berbagai bentuk kontras adalah pertimbangan paling penting saat membuat pilihan warna dan antarmuka yang ramah pengguna. Kesadaran akan standar dan praktik terbaik adalah kunci pemilihan warna yang dapat diakses.
 
-The full color palette contain some values from 50 to 900 and some palette have values more than the other. Black text is WCAG (Web Content Accessibility Guideline) AA accessible on colors ranging from 0 to 500 while white text is accessible on colors from 600 to 900/1200.
+_Full color palette_ berisi beberapa nilai dari 50 hingga 900 dan beberapa palet memiliki nilai lebih dari yang lain. Teks hitam adalah WCAG _(Web Content Accessibility Guideline)_ AA yang dapat diakses dalam warna mulai dari 0 hingga 500 sedangkan teks putih dapat diakses pada warna dari 600 hingga 900/1200.
 
 **Accessibility color guideline list here...**
