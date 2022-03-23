@@ -7,7 +7,7 @@ $navy-blue-400: #39bdfc;
 $navy-blue-500: #26b1fb;
 $navy-blue-600: #23a2eb;
 $navy-blue-700: #208fd7;
-$navy-blue-800: #1d7ec3;
+$navy-blue-800: #1d7dc3;
 $navy-blue-900: #175da1;
 $sea-foam-50: #e5f1f5;
 $sea-foam-100: #bfdce5;
@@ -27,14 +27,14 @@ $sun-400: #f9eb55;
 $sun-500: #f6e635;
 $sun-600: #f8d733;
 $sun-700: #f7bf2a;
-$sun-800: #f5a721;
+$sun-800: #f5a821;
 $sun-900: #f17f11;
 $mustard-50: #fffbe7;
 $mustard-100: #fff5c3;
 $mustard-200: #ffee9d;
 $mustard-300: #ffe877;
 $mustard-400: #ffe45b;
-$mustard-500: #fdde40;
+$mustard-500: #ffe35b;
 $mustard-600: #fbcd3d;
 $mustard-700: #f7b638;
 $mustard-800: #f39e32;
@@ -125,15 +125,15 @@ $neutral-1100: #040404;
 $neutral-1200: #000000;
 
 // primary colors
-$primary-navy-blue: $navy-blue-700;
+$primary-navy-blue: $navy-blue-800;
 $primary-sea-foam: $sea-foam-100;
-$primary-sun: #f5a821;
-$primary-mustard: #ffe35b;
+$primary-sun: $sun-800;
+$primary-mustard: $mustard-500;
 
 // secondary colors
+$secondary-charcoal: $charcoal-800;
 $secondary-teal: $teal-500;
 $secondary-chocolate: $chocolate-900;
-$secondary-charcoal: $charcoal-800;
 
 // Semantic colors
 $semantic-success: $green-700;
