@@ -1,24 +1,3 @@
-// primary colors
-$primary-navy-blue: #1d7dc3;
-$primary-sea-foam: #bfdce5;
-$primary-sun: #f5a821;
-$primary-mustard: #ffe35b;
-
-// secondary colors
-$secondary-teal: #08c4b2;
-$secondary-chocolate: #c3621d;
-$secondary-charcoal: #36454f;
-
-// neutral colors
-$neutral-black: #000000;
-$neutral-white: #ffffff;
-
-// Semantic colors
-$semantic-success: #0ca750;
-$semantic-link: #2079c3;
-$semantic-error: #db3e3e;
-$semantic-warning: #ffbc00;
-
 // Full color pallete
 $navy-blue-50: #e2f6ff;
 $navy-blue-100: #b6e8fe;
@@ -144,3 +123,20 @@ $neutral-900: #273333;
 $neutral-1000: #162020;
 $neutral-1100: #040404;
 $neutral-1200: #000000;
+
+// primary colors
+$primary-navy-blue: $navy-blue-700;
+$primary-sea-foam: $sea-foam-100;
+$primary-sun: #f5a821;
+$primary-mustard: #ffe35b;
+
+// secondary colors
+$secondary-teal: $teal-500;
+$secondary-chocolate: $chocolate-900;
+$secondary-charcoal: $charcoal-800;
+
+// Semantic colors
+$semantic-success: $green-700;
+$semantic-link: $blue-700;
+$semantic-error: $red-700;
+$semantic-warning: $yellow-600;

@@ -1,0 +1,20 @@
+// Roboto
+$roboto-font-family: "Roboto"; // sama di sebuah font
+$h1-font-size: 96px; // sama di semua font
+$roboto-h1-font-style: "normal"; // beda di semua font
+$roboto-h1-font-weight: 600; // beda di semua font
+$roboto-h1-line-height: 88px; // beda di semua font
+$h1-letter-spacing: -0.015em; // sama di semua font
+$h1-text-align: left; // sama di semua font
+
+.roboto-h1 {
+  font-family: Roboto;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 88px;
+  letter-spacing: -0.015em;
+  text-align: left;
+}
+
+// <p class="roboto-h1">Hello World!</p>
