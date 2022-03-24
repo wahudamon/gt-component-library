@@ -75,7 +75,33 @@ Sistem warna yang kami miliki dirancang untuk menetapkan rentang warna yang flek
 
 ## Usage
 
-Lorem ipsum dolor sir amet
+Untuk memberikan warna pada latar belakang _(background)_ sebuah element atau komponen dapat dituliskan sebagai berikut:
+
+`.bg--<tipe warna>--<nama warna>` dan `.bg--<nama warna>--<level>`
+
+Contoh:
+
+```html
+<div class="bg--semantic--success"></div>
+```
+
+```html
+<div class="bg--chocolate--500"></div>
+```
+
+Untuk memberikan warna pada element atau komponen dapat dituliskan sebagai berikut:
+
+`.text--<tipe warna>--<nama warna>` dan `.text--<nama warna>--<level>`
+
+Contoh:
+
+```html
+<p class="text--primary--mustard">Hello World!</p>
+```
+
+```html
+<p class="text--sea-foam--500">Hello World!</p>
+```
 
 ## Primary
 
@@ -83,18 +109,18 @@ Warna _primary_ adalah warna yang paling sering digunakan di seluruh _brand_ dan
 
 <ColorPalette>
   <ColorItem
-    title="$primary-navy-blue"
+    title="primary--navy-blue"
     subtitle="Navy Blue"
     colors={{ NavyBlue: "#1d7ec3" }}
   />
   <ColorItem
-    title="$primary-sea-foam"
+    title="primary--sea-foam"
     subtitle="Sea Foam"
     colors={{ SeaFoam: "#bfdce5" }}
   />
-  <ColorItem title="$primary-sun" subtitle="Sun" colors={{ Sun: "#f5a821" }} />
+  <ColorItem title="primary--sun" subtitle="Sun" colors={{ Sun: "#f5a821" }} />
   <ColorItem
-    title="$primary-mustard"
+    title="primary--mustard"
     subtitle="Mustard"
     colors={{ Mustard: "#ffe35b" }}
   />
@@ -106,17 +132,17 @@ Warna-warna ini muncul jauh lebih jarang, dan bertindak lebih seperti warna akse
 
 <ColorPalette>
   <ColorItem
-    title="$secondary-charcoal"
+    title="secondary--charcoal"
     subtitle="Charcoal"
     colors={{ Charcoal: "#36454f" }}
   />
   <ColorItem
-    title="$secondary-teal"
+    title="secondary--teal"
     subtitle="Teal"
     colors={{ Teal: "#08c4b2" }}
   />
   <ColorItem
-    title="$secondary-chocolate"
+    title="secondary--chocolate"
     subtitle="Chocolate"
     colors={{ Chocolate: "#c3621d" }}
   />
@@ -128,12 +154,12 @@ Warna netral memiliki peran yang mendukung dalam mendesain UI — warna-warna in
 
 <ColorPalette>
   <ColorItem
-    title="$neutral-0"
+    title="neutral--0"
     subtitle="White"
     colors={{ White: "#ffffff" }}
   />
   <ColorItem
-    title="$neutral-1200"
+    title="neutral--1200"
     subtitle="Black"
     colors={{ Black: "#000000" }}
   />
@@ -145,22 +171,22 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$semantic-success"
+    title="semantic--success"
     subtitle="Success"
     colors={{ Success: "#0ca750" }}
   />
   <ColorItem
-    title="$semantic-link"
+    title="semantic--link"
     subtitle="Link"
     colors={{ Link: "#2079c3" }}
   />
   <ColorItem
-    title="$semantic-error"
+    title="semantic--error"
     subtitle="Error"
     colors={{ Error: "#db3e3e" }}
   />
   <ColorItem
-    title="$semantic-warning"
+    title="semantic--warning"
     subtitle="Warning"
     colors={{ Warning: "#ffbc00" }}
   />
@@ -172,52 +198,52 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$navy-blue-50"
+    title="navy-blue--50"
     subtitle="Navy Blue 50"
     colors={{ NavyBlue50: "#d2e5f3" }}
   />
   <ColorItem
-    title="$navy-blue-100"
+    title="navy-blue--100"
     subtitle="Navy Blue 100"
     colors={{ NavyBlue100: "#bbd8ed" }}
   />
   <ColorItem
-    title="$navy-blue-200"
+    title="navy-blue--200"
     subtitle="Navy Blue 200"
     colors={{ NavyBlue200: "#a5cbe7" }}
   />
   <ColorItem
-    title="$navy-blue-300"
+    title="navy-blue--300"
     subtitle="Navy Blue 300"
     colors={{ NavyBlue300: "#8ebee1" }}
   />
   <ColorItem
-    title="$navy-blue-400"
+    title="navy-blue--400"
     subtitle="Navy Blue 400"
     colors={{ NavyBlue400: "#77b1db" }}
   />
   <ColorItem
-    title="$navy-blue-500"
+    title="navy-blue--500"
     subtitle="Navy Blue 500"
     colors={{ NavyBlue500: "#61a4d5" }}
   />
   <ColorItem
-    title="$navy-blue-600"
+    title="navy-blue--600"
     subtitle="Navy Blue 600"
     colors={{ NavyBlue600: "#4a97cf" }}
   />
   <ColorItem
-    title="$navy-blue-700"
+    title="navy-blue--700"
     subtitle="Navy Blue 700"
     colors={{ NavyBlue700: "#348ac9" }}
   />
   <ColorItem
-    title="$navy-blue-800"
+    title="navy-blue--800"
     subtitle="Navy Blue 800"
     colors={{ NavyBlue800: "#1d7ec3" }}
   />
   <ColorItem
-    title="$navy-blue-900"
+    title="navy-blue--900"
     subtitle="Navy Blue 900"
     colors={{ NavyBlue900: "#1a71b0" }}
   />
@@ -227,52 +253,52 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$sea-foam-50"
+    title="sea-foam--50"
     subtitle="Sea Foam 50"
     colors={{ SeaFoam50: "#e5f1f5" }}
   />
   <ColorItem
-    title="$sea-foam-100"
+    title="sea-foam--100"
     subtitle="Sea Foam 100"
     colors={{ SeaFoam100: "#bfdce5" }}
   />
   <ColorItem
-    title="$sea-foam-200"
+    title="sea-foam--200"
     subtitle="Sea Foam 200"
     colors={{ SeaFoam200: "#91c7d9" }}
   />
   <ColorItem
-    title="$sea-foam-300"
+    title="sea-foam--300"
     subtitle="Sea Foam 300"
     colors={{ SeaFoam300: "#61b3d0" }}
   />
   <ColorItem
-    title="$sea-foam-400"
+    title="sea-foam--400"
     subtitle="Sea Foam 400"
     colors={{ SeaFoam400: "#3ea5cc" }}
   />
   <ColorItem
-    title="$sea-foam-500"
+    title="sea-foam--500"
     subtitle="Sea Foam 500"
     colors={{ SeaFoam500: "#1697c8" }}
   />
   <ColorItem
-    title="$sea-foam-600"
+    title="sea-foam--600"
     subtitle="Sea Foam 600"
     colors={{ SeaFoam600: "#0f8abb" }}
   />
   <ColorItem
-    title="$sea-foam-700"
+    title="sea-foam--700"
     subtitle="Sea Foam 700"
     colors={{ SeaFoam700: "#0079a9" }}
   />
   <ColorItem
-    title="$sea-foam-800"
+    title="sea-foam--800"
     subtitle="Sea Foam 800"
     colors={{ SeaFoam800: "#006896" }}
   />
   <ColorItem
-    title="$sea-foam-900"
+    title="sea-foam--900"
     subtitle="Sea Foam 900"
     colors={{ SeaFoam900: "#004a78" }}
   />
@@ -281,49 +307,49 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 ### Sun
 
 <ColorPalette>
-  <ColorItem title="$sun-50" subtitle="Sun 50" colors={{ Sun50: "#fef6e9" }} />
+  <ColorItem title="sun--50" subtitle="Sun 50" colors={{ Sun50: "#fef6e9" }} />
   <ColorItem
-    title="$sun-100"
+    title="sun--100"
     subtitle="Sun 100"
     colors={{ Sun100: "#fdeed3" }}
   />
   <ColorItem
-    title="$sun-200"
+    title="sun--200"
     subtitle="Sun 200"
     colors={{ Sun200: "#fce5bc" }}
   />
   <ColorItem
-    title="$sun-300"
+    title="sun--300"
     subtitle="Sun 300"
     colors={{ Sun300: "#fbdca6" }}
   />
   <ColorItem
-    title="$sun-400"
+    title="sun--400"
     subtitle="Sun 400"
     colors={{ Sun400: "#fad490" }}
   />
   <ColorItem
-    title="$sun-500"
+    title="sun--500"
     subtitle="Sun 500"
     colors={{ Sun500: "#f9cb7a" }}
   />
   <ColorItem
-    title="$sun-600"
+    title="sun--600"
     subtitle="Sun 600"
     colors={{ Sun600: "#f8c264" }}
   />
   <ColorItem
-    title="$sun-700"
+    title="sun--700"
     subtitle="Sun 700"
     colors={{ Sun700: "#f7b94d" }}
   />
   <ColorItem
-    title="$sun-800"
+    title="sun--800"
     subtitle="Sun 800"
     colors={{ Sun800: "#f5a821" }}
   />
   <ColorItem
-    title="$sun-900"
+    title="sun--900"
     subtitle="Sun 900"
     colors={{ Sun900: "#dd971e" }}
   />
@@ -333,52 +359,52 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$mustard-50"
+    title="mustard--50"
     subtitle="Mustard 50"
     colors={{ Mustard50: "#fff9d8" }}
   />
   <ColorItem
-    title="$mustard-100"
+    title="mustard--100"
     subtitle="Mustard 100"
     colors={{ Mustard100: "#fff6cb" }}
   />
   <ColorItem
-    title="$mustard-200"
+    title="mustard--200"
     subtitle="Mustard 200"
     colors={{ Mustard200: "#fff3ba" }}
   />
   <ColorItem
-    title="$mustard-300"
+    title="mustard--300"
     subtitle="Mustard 300"
     colors={{ Mustard300: "#fff0a3" }}
   />
   <ColorItem
-    title="$mustard-400"
+    title="mustard--400"
     subtitle="Mustard 400"
     colors={{ Mustard400: "#ffea84" }}
   />
   <ColorItem
-    title="$mustard-500"
+    title="mustard--500"
     subtitle="Mustard 500"
     colors={{ Mustard500: "#ffe35b" }}
   />
   <ColorItem
-    title="$mustard-600"
+    title="mustard--600"
     subtitle="Mustard 600"
     colors={{ Mustard600: "#e9ca3d" }}
   />
   <ColorItem
-    title="$mustard-700"
+    title="mustard--700"
     subtitle="Mustard 700"
     colors={{ Mustard700: "#d7b323" }}
   />
   <ColorItem
-    title="$mustard-800"
+    title="mustard--800"
     subtitle="Mustard 800"
     colors={{ Mustard800: "#af9125" }}
   />
   <ColorItem
-    title="$mustard-900"
+    title="mustard--900"
     subtitle="Mustard 900"
     colors={{ Mustard900: "#8f7726" }}
   />
@@ -388,52 +414,52 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$teal-50"
+    title="teal--50"
     subtitle="Teal 50"
     colors={{ Teal50: "#ddf5f2" }}
   />
   <ColorItem
-    title="$teal-100"
+    title="teal--100"
     subtitle="Teal 100"
     colors={{ Teal100: "#cdf7ef" }}
   />
   <ColorItem
-    title="$teal-200"
+    title="teal--200"
     subtitle="Teal 200"
     colors={{ Teal200: "#b3f2e6" }}
   />
   <ColorItem
-    title="$teal-300"
+    title="teal--300"
     subtitle="Teal 300"
     colors={{ Teal300: "#7dead5" }}
   />
   <ColorItem
-    title="$teal-400"
+    title="teal--400"
     subtitle="Teal 400"
     colors={{ Teal400: "#24e0c5" }}
   />
   <ColorItem
-    title="$teal-500"
+    title="teal--500"
     subtitle="Teal 500"
     colors={{ Teal500: "#08c4b2" }}
   />
   <ColorItem
-    title="$teal-600"
+    title="teal--600"
     subtitle="Teal 600"
     colors={{ Teal600: "#00a99c" }}
   />
   <ColorItem
-    title="$teal-700"
+    title="teal--700"
     subtitle="Teal 700"
     colors={{ Teal700: "#0b968f" }}
   />
   <ColorItem
-    title="$teal-800"
+    title="teal--800"
     subtitle="Teal 800"
     colors={{ Teal800: "#067c7c" }}
   />
   <ColorItem
-    title="$teal-900"
+    title="teal--900"
     subtitle="Teal 900"
     colors={{ Teal900: "#026661" }}
   />
@@ -443,52 +469,52 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$chocolate-50"
+    title="chocolate--50"
     subtitle="Chocolate 50"
     colors={{ Chocolate50: "#faf3e3" }}
   />
   <ColorItem
-    title="$chocolate-100"
+    title="chocolate--100"
     subtitle="Chocolate 100"
     colors={{ Chocolate100: "#f4e0b8" }}
   />
   <ColorItem
-    title="$chocolate-200"
+    title="chocolate--200"
     subtitle="Chocolate 200"
     colors={{ Chocolate200: "#edcc8a" }}
   />
   <ColorItem
-    title="$chocolate-300"
+    title="chocolate--300"
     subtitle="Chocolate 300"
     colors={{ Chocolate300: "#e7b95e" }}
   />
   <ColorItem
-    title="$chocolate-400"
+    title="chocolate--400"
     subtitle="Chocolate 400"
     colors={{ Chocolate400: "#e3aa41" }}
   />
   <ColorItem
-    title="$chocolate-500"
+    title="chocolate--500"
     subtitle="Chocolate 500"
     colors={{ Chocolate500: "#e09d30" }}
   />
   <ColorItem
-    title="$chocolate-600"
+    title="chocolate--600"
     subtitle="Chocolate 600"
     colors={{ Chocolate600: "#dc922b" }}
   />
   <ColorItem
-    title="$chocolate-700"
+    title="chocolate--700"
     subtitle="Chocolate 700"
     colors={{ Chocolate700: "#d58426" }}
   />
   <ColorItem
-    title="$chocolate-800"
+    title="chocolate--800"
     subtitle="Chocolate 800"
     colors={{ Chocolate800: "#cf7722" }}
   />
   <ColorItem
-    title="$chocolate-900"
+    title="chocolate--900"
     subtitle="Chocolate 900"
     colors={{ Chocolate900: "#c3621d" }}
   />
@@ -498,52 +524,52 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$charcoal-50"
+    title="charcoal--50"
     subtitle="Charcoal 50"
     colors={{ Charcoal50: "#ebeff2" }}
   />
   <ColorItem
-    title="$charcoal-100"
+    title="charcoal--100"
     subtitle="Charcoal 100"
     colors={{ Charcoal100: "#ced7dd" }}
   />
   <ColorItem
-    title="$charcoal-200"
+    title="charcoal--200"
     subtitle="Charcoal 200"
     colors={{ Charcoal200: "#afbdc6" }}
   />
   <ColorItem
-    title="$charcoal-300"
+    title="charcoal--300"
     subtitle="Charcoal 300"
     colors={{ Charcoal300: "#8fa2af" }}
   />
   <ColorItem
-    title="$charcoal-400"
+    title="charcoal--400"
     subtitle="Charcoal 400"
     colors={{ Charcoal400: "#788e9d" }}
   />
   <ColorItem
-    title="$charcoal-500"
+    title="charcoal--500"
     subtitle="Charcoal 500"
     colors={{ Charcoal500: "#607a8c" }}
   />
   <ColorItem
-    title="$charcoal-600"
+    title="charcoal--600"
     subtitle="Charcoal 600"
     colors={{ Charcoal600: "#546c7a" }}
   />
   <ColorItem
-    title="$charcoal-700"
+    title="charcoal--700"
     subtitle="Charcoal 700"
     colors={{ Charcoal700: "#445864" }}
   />
   <ColorItem
-    title="$charcoal-800"
+    title="charcoal--800"
     subtitle="Charcoal 800"
     colors={{ Charcoal800: "#36454f" }}
   />
   <ColorItem
-    title="$charcoal-900"
+    title="charcoal--900"
     subtitle="Charcoal 900"
     colors={{ Charcoal900: "#253038" }}
   />
@@ -553,52 +579,52 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$blue-50"
+    title="blue--50"
     subtitle="Blue 50"
     colors={{ Blue50: "#e9f8ff" }}
   />
   <ColorItem
-    title="$blue-100"
+    title="blue--100"
     subtitle="Blue 100"
     colors={{ Blue100: "#dcf2ff" }}
   />
   <ColorItem
-    title="$blue-200"
+    title="blue--200"
     subtitle="Blue 200"
     colors={{ Blue200: "#c7e4f9" }}
   />
   <ColorItem
-    title="$blue-300"
+    title="blue--300"
     subtitle="Blue 300"
     colors={{ Blue300: "#a1d2f8" }}
   />
   <ColorItem
-    title="$blue-400"
+    title="blue--400"
     subtitle="Blue 400"
     colors={{ Blue400: "#56adf5" }}
   />
   <ColorItem
-    title="$blue-500"
+    title="blue--500"
     subtitle="Blue 500"
     colors={{ Blue500: "#3896e3" }}
   />
   <ColorItem
-    title="$blue-600"
+    title="blue--600"
     subtitle="Blue 600"
     colors={{ Blue600: "#2b87d3" }}
   />
   <ColorItem
-    title="$blue-700"
+    title="blue--700"
     subtitle="Blue 700"
     colors={{ Blue700: "#2079c3" }}
   />
   <ColorItem
-    title="$blue-800"
+    title="blue--800"
     subtitle="Blue 800"
     colors={{ Blue800: "#116daa" }}
   />
   <ColorItem
-    title="$blue-900"
+    title="blue--900"
     subtitle="Blue 900"
     colors={{ Blue900: "#0c5689" }}
   />
@@ -608,52 +634,52 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$green-50"
+    title="green--50"
     subtitle="Green 50"
     colors={{ Green50: "#ebf9eb" }}
   />
   <ColorItem
-    title="$green-100"
+    title="green--100"
     subtitle="Green 100"
     colors={{ Green100: "#d7f4d7" }}
   />
   <ColorItem
-    title="$green-200"
+    title="green--200"
     subtitle="Green 200"
     colors={{ Green200: "#c2f2bd" }}
   />
   <ColorItem
-    title="$green-300"
+    title="green--300"
     subtitle="Green 300"
     colors={{ Green300: "#98e58e" }}
   />
   <ColorItem
-    title="$green-400"
+    title="green--400"
     subtitle="Green 400"
     colors={{ Green400: "#75dd66" }}
   />
   <ColorItem
-    title="$green-500"
+    title="green--500"
     subtitle="Green 500"
     colors={{ Green500: "#59cb59" }}
   />
   <ColorItem
-    title="$green-600"
+    title="green--600"
     subtitle="Green 600"
     colors={{ Green600: "#2bb656" }}
   />
   <ColorItem
-    title="$green-700"
+    title="green--700"
     subtitle="Green 700"
     colors={{ Green700: "#0ca750" }}
   />
   <ColorItem
-    title="$green-800"
+    title="green--800"
     subtitle="Green 800"
     colors={{ Green800: "#008b46" }}
   />
   <ColorItem
-    title="$green-900"
+    title="green--900"
     subtitle="Green 900"
     colors={{ Green900: "#006b40" }}
   />
@@ -662,49 +688,49 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 ### Red
 
 <ColorPalette>
-  <ColorItem title="$red-50" subtitle="Red 50" colors={{ Red50: "#ffeae9" }} />
+  <ColorItem title="red--50" subtitle="Red 50" colors={{ Red50: "#ffeae9" }} />
   <ColorItem
-    title="$red-100"
+    title="red--100"
     subtitle="Red 100"
     colors={{ Red100: "#ffd5d2" }}
   />
   <ColorItem
-    title="$red-200"
+    title="red--200"
     subtitle="Red 200"
     colors={{ Red200: "#ffb8b1" }}
   />
   <ColorItem
-    title="$red-300"
+    title="red--300"
     subtitle="Red 300"
     colors={{ Red300: "#ff9c8f" }}
   />
   <ColorItem
-    title="$red-400"
+    title="red--400"
     subtitle="Red 400"
     colors={{ Red400: "#ff7f6e" }}
   />
   <ColorItem
-    title="$red-500"
+    title="red--500"
     subtitle="Red 500"
     colors={{ Red500: "#f76054" }}
   />
   <ColorItem
-    title="$red-600"
+    title="red--600"
     subtitle="Red 600"
     colors={{ Red600: "#ed4c42" }}
   />
   <ColorItem
-    title="$red-700"
+    title="red--700"
     subtitle="Red 700"
     colors={{ Red700: "#db3e3e" }}
   />
   <ColorItem
-    title="$red-800"
+    title="red--800"
     subtitle="Red 800"
     colors={{ Red800: "#c63434" }}
   />
   <ColorItem
-    title="$red-900"
+    title="red--900"
     subtitle="Red 900"
     colors={{ Red900: "#992222" }}
   />
@@ -714,52 +740,52 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$yellow-50"
+    title="yellow--50"
     subtitle="Yellow 50"
     colors={{ Yellow50: "#fff8e2" }}
   />
   <ColorItem
-    title="$yellow-100"
+    title="yellow--100"
     subtitle="Yellow 100"
     colors={{ Yellow100: "#fdefcd" }}
   />
   <ColorItem
-    title="$yellow-200"
+    title="yellow--200"
     subtitle="Yellow 200"
     colors={{ Yellow200: "#ffe99a" }}
   />
   <ColorItem
-    title="$yellow-300"
+    title="yellow--300"
     subtitle="Yellow 300"
     colors={{ Yellow300: "#ffe16e" }}
   />
   <ColorItem
-    title="$yellow-400"
+    title="yellow--400"
     subtitle="Yellow 400"
     colors={{ Yellow400: "#ffd943" }}
   />
   <ColorItem
-    title="$yellow-500"
+    title="yellow--500"
     subtitle="Yellow 500"
     colors={{ Yellow500: "#ffcd1c" }}
   />
   <ColorItem
-    title="$yellow-600"
+    title="yellow--600"
     subtitle="Yellow 600"
     colors={{ Yellow600: "#ffbc00" }}
   />
   <ColorItem
-    title="$yellow-700"
+    title="yellow--700"
     subtitle="Yellow 700"
     colors={{ Yellow700: "#dd9903" }}
   />
   <ColorItem
-    title="$yellow-800"
+    title="yellow--800"
     subtitle="Yellow 800"
     colors={{ Yellow800: "#ba7506" }}
   />
   <ColorItem
-    title="$yellow-900"
+    title="yellow--900"
     subtitle="Yellow 900"
     colors={{ Yellow900: "#944c0c" }}
   />
@@ -769,72 +795,72 @@ Ini adalah warna yang mengkomunikasikan tujuan dari konsep desain. Dalam artian,
 
 <ColorPalette>
   <ColorItem
-    title="$neutral-0"
+    title="neutral--0"
     subtitle="Neutral 0"
     colors={{ Neutral0: "#ffffff" }}
   />
   <ColorItem
-    title="$neutral-50"
+    title="neutral--50"
     subtitle="Neutral 50"
     colors={{ Neutral50: "#f9fafa" }}
   />
   <ColorItem
-    title="$neutral-100"
+    title="neutral--100"
     subtitle="Neutral 100"
     colors={{ Neutral100: "#f3f4f4" }}
   />
   <ColorItem
-    title="$neutral-200"
+    title="neutral--200"
     subtitle="Neutral 200"
     colors={{ Neutral200: "#dee1e1" }}
   />
   <ColorItem
-    title="$neutral-300"
+    title="neutral--300"
     subtitle="Neutral 300"
     colors={{ Neutral300: "#c8cccc" }}
   />
   <ColorItem
-    title="$neutral-400"
+    title="neutral--400"
     subtitle="Neutral 400"
     colors={{ Neutral400: "#b0b6b7" }}
   />
   <ColorItem
-    title="$neutral-500"
+    title="neutral--500"
     subtitle="Neutral 500"
     colors={{ Neutral500: "#929a9b" }}
   />
   <ColorItem
-    title="$neutral-600"
+    title="neutral--600"
     subtitle="Neutral 600"
     colors={{ Neutral600: "#6e797a" }}
   />
   <ColorItem
-    title="$neutral-700"
+    title="neutral--700"
     subtitle="Neutral 700"
     colors={{ Neutral700: "#515e5f" }}
   />
   <ColorItem
-    title="$neutral-800"
+    title="neutral--800"
     subtitle="Neutral 800"
     colors={{ Neutral800: "#364141" }}
   />
   <ColorItem
-    title="$neutral-900"
+    title="neutral--900"
     subtitle="Neutral 900"
     colors={{ Neutral900: "#273333" }}
   />
   <ColorItem
-    title="$neutral-1000"
+    title="neutral--1000"
     subtitle="Neutral 1000"
     colors={{ Neutral1000: "#162020" }}
   />
   <ColorItem
-    title="$neutral-1100"
+    title="neutral--1100"
     subtitle="Neutral 1100"
     colors={{ Neutral1100: "#040404" }}
   />
   <ColorItem
-    title="$neutral-1200"
+    title="neutral--1200"
     subtitle="Neutral 1200"
     colors={{ Neutral1200: "#000000" }}
   />
