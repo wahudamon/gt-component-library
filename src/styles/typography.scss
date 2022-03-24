@@ -1,22 +1,4 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-}
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 // How to implement
 // <p class="roboto-h1">Hello World!</p>
@@ -566,7 +548,7 @@
 
 // Playfair Display
 .playfair-display-h1 {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 96px;
   font-style: normal;
   font-weight: 800;
@@ -576,7 +558,7 @@
 }
 
 .playfair-display-h2 {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 80px;
   font-style: normal;
   font-weight: 400;
@@ -586,7 +568,7 @@
 }
 
 .playfair-display-h3 {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 400;
@@ -596,7 +578,7 @@
 }
 
 .playfair-display-h4 {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
@@ -606,7 +588,7 @@
 }
 
 .playfair-display-h5 {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -616,7 +598,7 @@
 }
 
 .playfair-display-h6 {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -626,7 +608,7 @@
 }
 
 .playfair-display-h7 {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -636,7 +618,7 @@
 }
 
 .playfair-display-st1-regular {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -646,7 +628,7 @@
 }
 
 .playfair-display-st1-medium {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -656,7 +638,7 @@
 }
 
 .playfair-display-st2-regular {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -666,7 +648,7 @@
 }
 
 .playfair-display-st2-medium {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -676,7 +658,7 @@
 }
 
 .playfair-display-b1-regular {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -686,7 +668,7 @@
 }
 
 .playfair-display-b1-medium {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -696,7 +678,7 @@
 }
 
 .playfair-display-b2-regular {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -706,7 +688,7 @@
 }
 
 .playfair-display-b2-medium {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -716,7 +698,7 @@
 }
 
 .playfair-display-btn-1 {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -726,7 +708,7 @@
 }
 
 .playfair-display-btn-2 {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -736,7 +718,7 @@
 }
 
 .playfair-display-caption {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
