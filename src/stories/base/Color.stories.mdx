@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
 
 <Meta
   title="Guidelines/Color"
@@ -81,7 +81,24 @@ Lorem ipsum dolor sir amet
 
 Warna _primary_ adalah warna yang paling sering digunakan di seluruh _brand_ dan desain UI. Warna-warna tersebut dapat dipadukan dengan warna _shade_ yang digunakan sebagai aksen.
 
-**Primary color list here...**
+<ColorPalette>
+  <ColorItem
+    title="$primary-navy-blue"
+    subtitle="Navy Blue"
+    colors={{ NavyBlue: "#1d7ec3" }}
+  />
+  <ColorItem
+    title="$primary-sea-foam"
+    subtitle="Sea Foam"
+    colors={{ SeaFoam: "#bfdce5" }}
+  />
+  <ColorItem title="$primary-sun" subtitle="Sun" colors={{ Sun: "#f5a821" }} />
+  <ColorItem
+    title="$primary-mustard"
+    subtitle="Mustard"
+    colors={{ Mustard: "#ffe35b" }}
+  />
+</ColorPalette>
 
 ## Secondary
 

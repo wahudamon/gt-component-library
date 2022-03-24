@@ -53,10 +53,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "../styles/color";
-@import "../styles/typography";
-
+<style>
 .storybook-button {
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
