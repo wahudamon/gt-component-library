@@ -65,7 +65,7 @@ export default {
 }
 .storybook-button--primary {
   color: white;
-  background-color: #1ea7fd;
+  background-color: #24e0c5;
 }
 .storybook-button--secondary {
   color: #333;
