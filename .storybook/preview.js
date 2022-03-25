@@ -16,7 +16,6 @@ export const parameters = {
         "Contributing",
         "Guidelines",
         ["Introduction", "Fonts"],
-        "Components",
       ],
     },
   },
