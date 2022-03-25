@@ -1,0 +1,389 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta
+  title="Guidelines/Typography/Fonts/Playfair Display"
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+<style>{`
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  .sample--container {
+    margin-bottom: 70px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
+    padding-left: 5%;
+  }
+
+  .playfair-display-h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 128px;
+    letter-spacing: -0.015em;
+    text-align: left;
+  }
+
+  .playfair-display-h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 104px;
+    letter-spacing: -0.015em;
+    text-align: left;
+  }
+
+  .playfair-display-h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 88px;
+    letter-spacing: 0.005em;
+    text-align: left;
+  }
+
+  .playfair-display-h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0.0025em;
+    text-align: left;
+  }
+
+  .playfair-display-h5 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.0025em;
+    text-align: left;
+  }
+
+  .playfair-display-h6 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-h7 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-st1-regular {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-st1-medium {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-st2-regular {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-st2-medium {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-b1-regular {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-b1-medium {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-b2-regular {
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-b2-medium {
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-btn-1 {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-btn-2 {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .playfair-display-caption {
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+`}</style>
+
+# Playfair Display
+
+## Why Playfair Display?
+
+Karena Ini adalah font serif dengan kurva yang indah dan sudut membulat, font ini sangat cocok untuk situs web tradisional dan modern. Font ini sangat baik untuk heading (terutama karena jenis italicnya yang indah). Namun, untuk body copy yang panjang, goresan halus dan kontras tinggi dapat menghalangi keterbacaan, terutama bila digunakan pada ukuran yang lebih kecil. Oleh karena itu, kami sarankan untuk menggunakan font ini untuk bagian heading saja.
+
+## Heading 1
+
+```css
+playfair-display-h1
+```
+
+<div class="sample--container">
+  <p class="playfair-display-h1">Hello World!</p>
+</div>
+
+## Heading 2
+
+```css
+playfair-display-h2
+```
+
+<div class="sample--container">
+  <p class="playfair-display-h2">Hello World!</p>
+</div>
+
+## Heading 3
+
+```css
+playfair-display-h3
+```
+
+<div class="sample--container">
+  <p class="playfair-display-h3">Hello World!</p>
+</div>
+
+## Heading 4
+
+```css
+playfair-display-h4
+```
+
+<div class="sample--container">
+  <p class="playfair-display-h4">Hello World!</p>
+</div>
+
+## Heading 5
+
+```css
+playfair-display-h5
+```
+
+<div class="sample--container">
+  <p class="playfair-display-h5">Hello World!</p>
+</div>
+
+## Heading 6
+
+```css
+playfair-display-h6
+```
+
+<div class="sample--container">
+  <p class="playfair-display-h6">Hello World!</p>
+</div>
+
+## Heading 7
+
+```css
+playfair-display-h7
+```
+
+<div class="sample--container">
+  <p class="playfair-display-h7">Hello World!</p>
+</div>
+
+## Subtitle 1/Regular
+
+```css
+playfair-display-st1-regular
+```
+
+<div class="sample--container">
+  <p class="playfair-display-st1-regular">Hello World!</p>
+</div>
+
+## Subtitle 1/Medium
+
+```css
+playfair-display-st1-medium
+```
+
+<div class="sample--container">
+  <p class="playfair-display-st1-medium">Hello World!</p>
+</div>
+
+## Subtitle 2/Regular
+
+```css
+playfair-display-st2-regular
+```
+
+<div class="sample--container">
+  <p class="playfair-display-st2-regular">Hello World!</p>
+</div>
+
+## Subtitle 2/Medium
+
+```css
+playfair-display-st2-medium
+```
+
+<div class="sample--container">
+  <p class="playfair-display-st2-medium">Hello World!</p>
+</div>
+
+## Body 1/Regular
+
+```css
+playfair-display-b1-regular
+```
+
+<div class="sample--container">
+  <p class="playfair-display-b1-regular">Hello World!</p>
+</div>
+
+## Body 1/Medium
+
+```css
+playfair-display-b1-medium
+```
+
+<div class="sample--container">
+  <p class="playfair-display-b1-medium">Hello World!</p>
+</div>
+
+## Body 2/Regular
+
+```css
+playfair-display-b2-regular
+```
+
+<div class="sample--container">
+  <p class="playfair-display-b2-regular">Hello World!</p>
+</div>
+
+## Body 2/Medium
+
+```css
+playfair-display-b2-medium
+```
+
+<div class="sample--container">
+  <p class="playfair-display-b2-medium">Hello World!</p>
+</div>
+
+## Button 1
+
+```css
+playfair-display-btn-1
+```
+
+<div class="sample--container">
+  <p class="playfair-display-btn-1">Hello World!</p>
+</div>
+
+## Button 2
+
+```css
+playfair-display-btn-2
+```
+
+<div class="sample--container">
+  <p class="playfair-display-btn-2">Hello World!</p>
+</div>
+
+## Caption
+
+```css
+playfair-display-caption
+```
+
+<div class="sample--container">
+  <p class="playfair-display-caption">Hello World!</p>
+</div>

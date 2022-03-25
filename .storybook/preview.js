@@ -11,7 +11,12 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ["Getting Started", "Contributing", "Guidelines", "Components"],
+      order: [
+        "Getting Started",
+        "Contributing",
+        "Guidelines",
+        ["Introduction", "Fonts"],
+      ],
     },
   },
   previewTabs: {

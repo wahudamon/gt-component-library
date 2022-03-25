@@ -1,0 +1,389 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta
+  title="Guidelines/Typography/Fonts/Poppins"
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+<style>{`
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  .sample--container {
+    margin-bottom: 70px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
+    padding-left: 5%;
+  }
+
+  .poppins-h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 128px;
+    letter-spacing: -0.015em;
+    text-align: left;
+  }
+
+  .poppins-h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 104px;
+    letter-spacing: -0.015em;
+    text-align: left;
+  }
+
+  .poppins-h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 88px;
+    letter-spacing: 0.005em;
+    text-align: left;
+  }
+
+  .poppins-h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0.0025em;
+    text-align: left;
+  }
+
+  .poppins-h5 {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.0025em;
+    text-align: left;
+  }
+
+  .poppins-h6 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-h7 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-st1-regular {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-st1-medium {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-st2-regular {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-st2-medium {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-b1-regular {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-b1-medium {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-b2-regular {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-b2-medium {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-btn-1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-btn-2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+
+  .poppins-caption {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
+`}</style>
+
+# Poppins
+
+## Why Poppins?
+
+Alasannya karena font tampilan Poppins terlihat menarik dan dapat dibaca dengan baik di semua device. Yang berarti sangat cocok untuk gamatechno yang menekankan keterbacaan yang kuat di setiap desain. Font poppins ini banyak digunakan pada aplikasi mobile, dan gamatechno sendiri memiliki banyak project berbasis mobile, sehingga menurut kami font ini tidak hanya nyaman untuk dibaca tetapi juga memberikan kesan hidup pada aplikasi mobile yang kita buat.
+
+## Heading 1
+
+```css
+poppins-h1
+```
+
+<div class="sample--container">
+  <p class="poppins-h1">Hello World!</p>
+</div>
+
+## Heading 2
+
+```css
+poppins-h2
+```
+
+<div class="sample--container">
+  <p class="poppins-h2">Hello World!</p>
+</div>
+
+## Heading 3
+
+```css
+poppins-h3
+```
+
+<div class="sample--container">
+  <p class="poppins-h3">Hello World!</p>
+</div>
+
+## Heading 4
+
+```css
+poppins-h4
+```
+
+<div class="sample--container">
+  <p class="poppins-h4">Hello World!</p>
+</div>
+
+## Heading 5
+
+```css
+poppins-h5
+```
+
+<div class="sample--container">
+  <p class="poppins-h5">Hello World!</p>
+</div>
+
+## Heading 6
+
+```css
+poppins-h6
+```
+
+<div class="sample--container">
+  <p class="poppins-h6">Hello World!</p>
+</div>
+
+## Heading 7
+
+```css
+poppins-h7
+```
+
+<div class="sample--container">
+  <p class="poppins-h7">Hello World!</p>
+</div>
+
+## Subtitle 1/Regular
+
+```css
+poppins-st1-regular
+```
+
+<div class="sample--container">
+  <p class="poppins-st1-regular">Hello World!</p>
+</div>
+
+## Subtitle 1/Medium
+
+```css
+poppins-st1-medium
+```
+
+<div class="sample--container">
+  <p class="poppins-st1-medium">Hello World!</p>
+</div>
+
+## Subtitle 2/Regular
+
+```css
+poppins-st2-regular
+```
+
+<div class="sample--container">
+  <p class="poppins-st2-regular">Hello World!</p>
+</div>
+
+## Subtitle 2/Medium
+
+```css
+poppins-st2-medium
+```
+
+<div class="sample--container">
+  <p class="poppins-st2-medium">Hello World!</p>
+</div>
+
+## Body 1/Regular
+
+```css
+poppins-b1-regular
+```
+
+<div class="sample--container">
+  <p class="poppins-b1-regular">Hello World!</p>
+</div>
+
+## Body 1/Medium
+
+```css
+poppins-b1-medium
+```
+
+<div class="sample--container">
+  <p class="poppins-b1-medium">Hello World!</p>
+</div>
+
+## Body 2/Regular
+
+```css
+poppins-b2-regular
+```
+
+<div class="sample--container">
+  <p class="poppins-b2-regular">Hello World!</p>
+</div>
+
+## Body 2/Medium
+
+```css
+poppins-b2-medium
+```
+
+<div class="sample--container">
+  <p class="poppins-b2-medium">Hello World!</p>
+</div>
+
+## Button 1
+
+```css
+poppins-btn-1
+```
+
+<div class="sample--container">
+  <p class="poppins-btn-1">Hello World!</p>
+</div>
+
+## Button 2
+
+```css
+poppins-btn-2
+```
+
+<div class="sample--container">
+  <p class="poppins-btn-2">Hello World!</p>
+</div>
+
+## Caption
+
+```css
+poppins-caption
+```
+
+<div class="sample--container">
+  <p class="poppins-caption">Hello World!</p>
+</div>
