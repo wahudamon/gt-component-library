@@ -7,184 +7,186 @@
 // <p class="roboto-h1">Hello World!</p>
 
 // Roboto
-.roboto-h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 96px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 112px;
-  letter-spacing: -0.015em;
-  text-align: left;
-}
+.roboto {
+  &--h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 112px;
+    letter-spacing: -0.015em;
+    text-align: left;
+  }
 
-.roboto-h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 96px;
-  letter-spacing: -0.015em;
-  text-align: left;
-}
+  &--h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 96px;
+    letter-spacing: -0.015em;
+    text-align: left;
+  }
 
-.roboto-h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 80px;
-  letter-spacing: 0.005em;
-  text-align: left;
-}
+  &--h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: 0.005em;
+    text-align: left;
+  }
 
-.roboto-h4 {
-  font-family: "Roboto", sans-serif;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 64px;
-  letter-spacing: 0.0025em;
-  text-align: left;
-}
+  &--h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0.0025em;
+    text-align: left;
+  }
 
-.roboto-h5 {
-  font-family: "Roboto", sans-serif;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0.0025em;
-  text-align: left;
-}
+  &--h5 {
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.0025em;
+    text-align: left;
+  }
 
-.roboto-h6 {
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 32px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--h6 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-h7 {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--h7 {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-st1-regular {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--st1-regular {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-st1-medium {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 26px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--st1-medium {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-st2-regular {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--st2-regular {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-st2-medium {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 22px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--st2-medium {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-b1-regular {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--b1-regular {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-b1-medium {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--b1-medium {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-b2-regular {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--b2-regular {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-b2-medium {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--b2-medium {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-btn-1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--btn-1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-btn-2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: 0.0015em;
-  text-align: left;
-}
+  &--btn-2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 
-.roboto-caption {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0.0015em;
-  text-align: left;
+  &--caption {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.0015em;
+    text-align: left;
+  }
 }
 
 // Poppins
