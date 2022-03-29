@@ -13,13 +13,16 @@ export default Vue.extend({
 <template>
   <div id="app">
     <!-- <Button primary size="small" label="Hello World!" /> -->
-    <div class="sample-box cr--lg bg--secondary-teal"></div>
+    <div
+      class="sample-box cr--lg bottom-elevation--high bg--navy-blue-300"
+    ></div>
   </div>
 </template>
 
 <style lang="scss">
 @import "../src/styles/color";
 @import "../src/styles/corner-radius";
+@import "../src/styles/elevation";
 
 .sample-box {
   margin-top: 50px;

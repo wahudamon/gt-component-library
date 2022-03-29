@@ -1,0 +1,29 @@
+.bottom-elevation {
+  &--low {
+    box-shadow: 0px 2px 4px 0px #6e797a26;
+  }
+  &--low-medium {
+    box-shadow: 0px 4px 8px 0px #6e797a26;
+  }
+  &--medium {
+    box-shadow: 0px 8px 16px 0px #6e797a26;
+  }
+  &--high {
+    box-shadow: 0px 16px 32px 0px #6e797a26;
+  }
+}
+
+.top-elevation {
+  &--low {
+    box-shadow: 0px -2px 4px 0px #6e797a26;
+  }
+  &--low-medium {
+    box-shadow: 0px -4px 8px 0px #6e797a26;
+  }
+  &--medium {
+    box-shadow: 0px -8px 16px 0px #6e797a26;
+  }
+  &--high {
+    box-shadow: 0px -16px 32px 0px #6e797a26;
+  }
+}
