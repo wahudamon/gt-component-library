@@ -17,7 +17,7 @@ export const parameters = {
         "Guidelines",
         "Color",
         ["Introduction", "Fonts"],
-        ["Corner Radius", "Elevation", "Padding"],
+        ["Corner Radius", "Elevation", "Padding", "Margin"],
       ],
     },
   },

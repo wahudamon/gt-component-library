@@ -1,0 +1,69 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta
+  title="Guidelines/Spatial System/Margin"
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+<style>{`
+  .sample-box {
+    width: 120px;
+    height: 120px;
+    background-color: #FFD5D2;
+  }
+`}</style>
+
+# Margin
+
+## Usage
+
+Langkah awal yang harus dilakukan sebelum menggunakan class utilities dari margin adalah dengan meng-import margin styles list dari package ke dalam section style komponen target.
+
+```html
+<style lang="scss">
+  @import "gamatechno-vue-component-library/src/styles/margin";
+</style>
+```
+
+Untuk menggunakan utility class dari margin pada sebuah element atau komponen dapat dengan menuliskan nama classnya seperti contoh di bawah ini:
+
+```html
+<div class="m--1"></div>
+<div class="mx--2"></div>
+<div class="my--3"></div>
+<div class="mt--4"></div>
+<div class="mb--5"></div>
+<div class="ml--6"></div>
+<div class="mr--7"></div>
+```
+
+## List of Utility Classes
+
+### Margin Type
+
+| Class       | Description                     |
+| ----------- | ------------------------------- |
+| m--(value)  | margin top, right, bottom, left |
+| mx--(value) | margin horizontal (left, right) |
+| my--(value) | margin vertical (top, bottom)   |
+| mt--(value) | margin top                      |
+| mb--(value) | margin bottom                   |
+| ml--(value) | margin left                     |
+| mr--(value) | margin right                    |
+
+### Margin Value
+
+| Class      | Value |
+| ---------- | :---: |
+| (type)--1  |  8px  |
+| (type)--2  | 16px  |
+| (type)--3  | 24px  |
+| (type)--4  | 32px  |
+| (type)--5  | 40px  |
+| (type)--6  | 48px  |
+| (type)--7  | 56px  |
+| (type)--8  | 64px  |
+| (type)--9  | 72px  |
+| (type)--10 | 80px  |
