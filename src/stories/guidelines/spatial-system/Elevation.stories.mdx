@@ -1,0 +1,75 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta
+  title="Guidelines/Spatial System/Elevation"
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+<style>{`
+  .sample-box {
+    width: 120px;
+    height: 120px;
+    background-color: #FFD5D2;
+  }
+
+  .be--low {
+    box-shadow: 0px 2px 4px 0px #6e797a26;
+  }
+  .be--low-medium {
+    box-shadow: 0px 4px 8px 0px #6e797a26;
+  }
+  .be--medium {
+    box-shadow: 0px 8px 16px 0px #6e797a26;
+  }
+  .be--high {
+    box-shadow: 0px 16px 32px 0px #6e797a26;
+  }
+  .te--low {
+    box-shadow: 0px -2px 4px 0px #6e797a26;
+  }
+  .te--low-medium {
+    box-shadow: 0px -4px 8px 0px #6e797a26;
+  }
+  .te--medium {
+    box-shadow: 0px -8px 16px 0px #6e797a26;
+  }
+  .te--high {
+    box-shadow: 0px -16px 32px 0px #6e797a26;
+  }
+`}</style>
+
+# Elevation
+
+Elevation membawa kedalaman pada aplikasi dan mewakili tingkat kepentingan secara berbeda sesuai dengan komponen tertentu. Ini lebih menekankan pada sebagian besar elemen antarmuka (UI) aplikasi.
+
+## Usage
+
+Langkah awal yang harus dilakukan sebelum menggunakan class utilities dari elevation adalah dengan meng-import elevation styles list dari package ke dalam section style komponen target.
+
+```html
+<style lang="scss">
+  @import "gamatechno-vue-component-library/src/styles/elevation";
+</style>
+```
+
+Untuk menggunakan utility class dari elevation pada sebuah element atau komponen dapat dengan menuliskan nama classnya seperti contoh di bawah ini:
+
+```html
+<div class="be--low"></div>
+<div class="te--high"></div>
+```
+
+## List of Utility Classes
+
+| Class          | Color   | Opacity | (x,y)   | Blur | Example                                       |
+| -------------- | ------- | ------- | ------- | ---- | --------------------------------------------- |
+| be--low        | #6E797A | 15%     | (0,2)   | 4    | <div class="sample-box be--low"></div>        |
+| be--low-medium | #6E797A | 15%     | (0,4)   | 8    | <div class="sample-box be--low-medium"></div> |
+| be--medium     | #6E797A | 15%     | (0,8)   | 16   | <div class="sample-box be--medium"></div>     |
+| be--high       | #6E797A | 15%     | (0,16)  | 32   | <div class="sample-box be--high"></div>       |
+| te--low        | #6E797A | 15%     | (0,-2)  | 4    | <div class="sample-box te--low"></div>        |
+| te--low-medium | #6E797A | 15%     | (0,-4)  | 8    | <div class="sample-box te--low-medium"></div> |
+| te--medium     | #6E797A | 15%     | (0,-8)  | 16   | <div class="sample-box te--medium"></div>     |
+| te--high       | #6E797A | 15%     | (0,-16) | 32   | <div class="sample-box te--high"></div>       |

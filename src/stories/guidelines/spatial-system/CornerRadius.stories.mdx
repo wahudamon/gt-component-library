@@ -1,0 +1,72 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta
+  title="Guidelines/Spatial System/Corner Radius"
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+<style>{`
+  .sample-box {
+    width: 120px;
+    height: 120px;
+    background-color: #FFD5D2;
+  }
+
+  .cr--xxs {
+    border-radius: 8px;
+  }
+  .cr--xs {
+    border-radius: 16px;
+  }
+  .cr--sm {
+    border-radius: 24px;
+  }
+  .cr--md {
+    border-radius: 32px;
+  }
+  .cr--lg {
+    border-radius: 40px;
+  }
+  .cr--xl {
+    border-radius: 48px;
+  }
+  .cr--xxl {
+    border-radius: 56px;
+  }
+`}</style>
+
+# Corner Radius
+
+Untuk desainer dan developer selalu gunakan nilai radius sudut yang telah ditentukan sebelumnya untuk membulatkan elemen umum seperti cards, buttons dan messages. Nilai alternatif harus dihindari kecuali saat membuat bentuk elemen yang custom.
+
+Kemudian perlu dingat bahwa tidak semua komponen memerlukan radius sudut. Dan radius sudut yang digunakan oleh **GT Design Team Library** akan mengikuti sistem gird yang digunakan yaitu menggunakan nilai kelipatan 8px.
+
+## Usage
+
+Langkah awal yang harus dilakukan sebelum menggunakan class utilities dari corner radius styles list adalah dengan meng-import corner radius dari package ke dalam section style komponen target.
+
+```html
+<style lang="scss">
+  @import "gamatechno-vue-component-library/src/styles/corner-radius";
+</style>
+```
+
+Untuk menggunakan utility class dari corner radius pada sebuah element atau komponen dapat dengan menuliskan nama classnya seperti contoh di bawah ini:
+
+```html
+<div class="cr--md"></div>
+```
+
+## List of Utility Classes
+
+|  Class  | Value |                Example                 |
+| :-----: | :---: | :------------------------------------: |
+| cr--xxs |  8px  | <div class="sample-box cr--xxs"></div> |
+| cr--xs  | 16px  | <div class="sample-box cr--xs"></div>  |
+| cr--sm  | 24px  | <div class="sample-box cr--sm"></div>  |
+| cr--md  | 32px  | <div class="sample-box cr--md"></div>  |
+| cr--lg  | 40px  | <div class="sample-box cr--lg"></div>  |
+| cr--xl  | 48px  | <div class="sample-box cr--xl"></div>  |
+| cr--xxl | 56px  | <div class="sample-box cr--xxl"></div> |
