@@ -1,0 +1,69 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta
+  title="Guidelines/Spatial System/Padding"
+  parameters={{
+    viewMode: "docs",
+  }}
+/>
+
+<style>{`
+  .sample-box {
+    width: 120px;
+    height: 120px;
+    background-color: #FFD5D2;
+  }
+`}</style>
+
+# Padding
+
+## Usage
+
+Langkah awal yang harus dilakukan sebelum menggunakan class utilities dari padding adalah dengan meng-import padding styles list dari package ke dalam section style komponen target.
+
+```html
+<style lang="scss">
+  @import "gamatechno-vue-component-library/src/styles/padding";
+</style>
+```
+
+Untuk menggunakan utility class dari padding pada sebuah element atau komponen dapat dengan menuliskan nama classnya seperti contoh di bawah ini:
+
+```html
+<div class="p--1"></div>
+<div class="px--2"></div>
+<div class="py--3"></div>
+<div class="pt--4"></div>
+<div class="pb--5"></div>
+<div class="pl--6"></div>
+<div class="pr--7"></div>
+```
+
+## List of Utility Classes
+
+### Padding Type
+
+| Class       | Description                      |
+| ----------- | -------------------------------- |
+| p--(value)  | padding top, right, bottom, left |
+| px--(value) | padding horizontal (left, right) |
+| py--(value) | padding vertical (top, bottom)   |
+| pt--(value) | padding top                      |
+| pb--(value) | padding bottom                   |
+| pl--(value) | padding left                     |
+| pr--(value) | padding right                    |
+
+### Padding Value
+
+| Class      | Value |
+| ---------- | :---: |
+| (type)--1  |  8px  |
+| (type)--2  | 16px  |
+| (type)--3  | 24px  |
+| (type)--4  | 32px  |
+| (type)--5  | 40px  |
+| (type)--6  | 48px  |
+| (type)--7  | 56px  |
+| (type)--8  | 64px  |
+| (type)--9  | 72px  |
+| (type)--10 | 80px  |
