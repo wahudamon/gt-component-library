@@ -1,13 +1,23 @@
-$padding--1: 8px;
-$padding--2: 16px;
-$padding--3: 24px;
-$padding--4: 32px;
-$padding--5: 40px;
-$padding--6: 48px;
-$padding--7: 56px;
-$padding--8: 64px;
-$padding--9: 72px;
-$padding--10: 80px;
+$padding--1: 4px;
+$padding--2: 8px;
+$padding--3: 12px;
+$padding--4: 16px;
+$padding--5: 20px;
+$padding--6: 24px;
+$padding--7: 28px;
+$padding--8: 32px;
+$padding--9: 36px;
+$padding--10: 40px;
+$padding--11: 44px;
+$padding--12: 48px;
+$padding--13: 52px;
+$padding--14: 56px;
+$padding--15: 60px;
+$padding--16: 64px;
+$padding--17: 68px;
+$padding--18: 72px;
+$padding--19: 76px;
+$padding--20: 80px;
 
 .p {
   &--1 {
@@ -39,6 +49,36 @@ $padding--10: 80px;
   }
   &--10 {
     padding: $padding--10;
+  }
+  &--11 {
+    padding: $padding--11;
+  }
+  &--12 {
+    padding: $padding--12;
+  }
+  &--13 {
+    padding: $padding--13;
+  }
+  &--14 {
+    padding: $padding--14;
+  }
+  &--15 {
+    padding: $padding--15;
+  }
+  &--16 {
+    padding: $padding--16;
+  }
+  &--17 {
+    padding: $padding--17;
+  }
+  &--18 {
+    padding: $padding--18;
+  }
+  &--19 {
+    padding: $padding--19;
+  }
+  &--20 {
+    padding: $padding--20;
   }
 }
 
@@ -73,6 +113,36 @@ $padding--10: 80px;
   &--10 {
     padding: 0 $padding--10;
   }
+  &--11 {
+    padding: 0 $padding--11;
+  }
+  &--12 {
+    padding: 0 $padding--12;
+  }
+  &--13 {
+    padding: 0 $padding--13;
+  }
+  &--14 {
+    padding: 0 $padding--14;
+  }
+  &--15 {
+    padding: 0 $padding--15;
+  }
+  &--16 {
+    padding: 0 $padding--16;
+  }
+  &--17 {
+    padding: 0 $padding--17;
+  }
+  &--18 {
+    padding: 0 $padding--18;
+  }
+  &--19 {
+    padding: 0 $padding--19;
+  }
+  &--20 {
+    padding: 0 $padding--20;
+  }
 }
 
 .py {
@@ -105,6 +175,36 @@ $padding--10: 80px;
   }
   &--10 {
     padding: $padding--10 0;
+  }
+  &--11 {
+    padding: $padding--11 0;
+  }
+  &--12 {
+    padding: $padding--12 0;
+  }
+  &--13 {
+    padding: $padding--13 0;
+  }
+  &--14 {
+    padding: $padding--14 0;
+  }
+  &--15 {
+    padding: $padding--15 0;
+  }
+  &--16 {
+    padding: $padding--16 0;
+  }
+  &--17 {
+    padding: $padding--17 0;
+  }
+  &--18 {
+    padding: $padding--18 0;
+  }
+  &--19 {
+    padding: $padding--19 0;
+  }
+  &--20 {
+    padding: $padding--20 0;
   }
 }
 
@@ -139,6 +239,36 @@ $padding--10: 80px;
   &--10 {
     padding-top: $padding--10;
   }
+  &--11 {
+    padding-top: $padding--11;
+  }
+  &--12 {
+    padding-top: $padding--12;
+  }
+  &--13 {
+    padding-top: $padding--13;
+  }
+  &--14 {
+    padding-top: $padding--14;
+  }
+  &--15 {
+    padding-top: $padding--15;
+  }
+  &--16 {
+    padding-top: $padding--16;
+  }
+  &--17 {
+    padding-top: $padding--17;
+  }
+  &--18 {
+    padding-top: $padding--18;
+  }
+  &--19 {
+    padding-top: $padding--19;
+  }
+  &--20 {
+    padding-top: $padding--20;
+  }
 }
 
 .pb {
@@ -171,6 +301,36 @@ $padding--10: 80px;
   }
   &--10 {
     padding-bottom: $padding--10;
+  }
+  &--11 {
+    padding-bottom: $padding--11;
+  }
+  &--12 {
+    padding-bottom: $padding--12;
+  }
+  &--13 {
+    padding-bottom: $padding--13;
+  }
+  &--14 {
+    padding-bottom: $padding--14;
+  }
+  &--15 {
+    padding-bottom: $padding--15;
+  }
+  &--16 {
+    padding-bottom: $padding--16;
+  }
+  &--17 {
+    padding-bottom: $padding--17;
+  }
+  &--18 {
+    padding-bottom: $padding--18;
+  }
+  &--19 {
+    padding-bottom: $padding--19;
+  }
+  &--20 {
+    padding-bottom: $padding--20;
   }
 }
 
@@ -205,6 +365,36 @@ $padding--10: 80px;
   &--10 {
     padding-left: $padding--10;
   }
+  &--11 {
+    padding-left: $padding--11;
+  }
+  &--12 {
+    padding-left: $padding--12;
+  }
+  &--13 {
+    padding-left: $padding--13;
+  }
+  &--14 {
+    padding-left: $padding--14;
+  }
+  &--15 {
+    padding-left: $padding--15;
+  }
+  &--16 {
+    padding-left: $padding--16;
+  }
+  &--17 {
+    padding-left: $padding--17;
+  }
+  &--18 {
+    padding-left: $padding--18;
+  }
+  &--19 {
+    padding-left: $padding--19;
+  }
+  &--20 {
+    padding-left: $padding--20;
+  }
 }
 
 .pr {
@@ -237,5 +427,35 @@ $padding--10: 80px;
   }
   &--10 {
     padding-right: $padding--10;
+  }
+  &--11 {
+    padding-right: $padding--11;
+  }
+  &--12 {
+    padding-right: $padding--12;
+  }
+  &--13 {
+    padding-right: $padding--13;
+  }
+  &--14 {
+    padding-right: $padding--14;
+  }
+  &--15 {
+    padding-right: $padding--15;
+  }
+  &--16 {
+    padding-right: $padding--16;
+  }
+  &--17 {
+    padding-right: $padding--17;
+  }
+  &--18 {
+    padding-right: $padding--18;
+  }
+  &--19 {
+    padding-right: $padding--19;
+  }
+  &--20 {
+    padding-right: $padding--20;
   }
 }
