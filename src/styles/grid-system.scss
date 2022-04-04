@@ -1,0 +1,73 @@
+$columns: 13;
+
+$no-gutter: 0px;
+$gutter-sm: 8px;
+$gutter-md: 16px;
+$gutter-lg: 24px;
+$gutter-xl: 32px;
+
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin gridColumn($number, $gutter) {
+  width: calc((#{percentage($number / 12)} - #{$gutter}));
+  margin-top: 20px;
+  margin-right: calc(#{$gutter} / 2);
+  margin-left: calc(#{$gutter} / 2);
+  float: left;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.grid-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  .grid-row {
+    @include clearfix();
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @for $i from 1 to $columns {
+      .grid-col-#{$i} {
+        @include gridColumn($i, $no-gutter);
+
+        &--gu {
+          &-sm {
+            @include gridColumn($i, $gutter-sm);
+          }
+          &-md {
+            @include gridColumn($i, $gutter-md);
+          }
+          &-lg {
+            @include gridColumn($i, $gutter-lg);
+          }
+          &-xl {
+            @include gridColumn($i, $gutter-xl);
+          }
+        }
+      }
+    }
+  }
+}
