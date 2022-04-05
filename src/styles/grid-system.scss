@@ -1,12 +1,6 @@
-$columns-sm: 5;
-$columns-md: 9;
-$columns-lg: 13;
-
-// list of column length based on device types
-// 12 => lg => desktop
-// 8 => md => tablet
-// 4 => sm => phone
-
+$columns-sm: 4;
+$columns-md: 8;
+$columns-lg: 12;
 $no-gutter: 0px;
 $gutter-sm: 8px;
 $gutter-md: 16px;
@@ -22,7 +16,6 @@ $gutter-xl: 32px;
 }
 
 @mixin gridColumn($columnLength, $number, $gutter) {
-  // width: calc((#{percentage($number / 12)} - #{$gutter}));
   width: calc((#{percentage($number / $columnLength)} - #{$gutter}));
   margin-top: 20px;
   margin-right: calc(#{$gutter} / 2);
@@ -50,6 +43,22 @@ $gutter-xl: 32px;
   @include gridColumn(12, $number, $gutter);
 }
 
+@mixin insertMediaQueries($tier) {
+  @if $tier == "sm" {
+    @media only screen and (max-width: 320px) {
+      @include insertSmallCol(4, $no-gutter);
+    }
+  } @else if $tier == "md" {
+    @media only screen and (max-width: 480px) {
+      @include insertMediumCol(8, $no-gutter);
+    }
+  } @else if $tier == "lg" {
+    @media only screen and (max-width: 840px) {
+      @include insertLargeCol(12, $no-gutter);
+    }
+  }
+}
+
 *,
 *:before,
 *:after {
@@ -69,64 +78,79 @@ $gutter-xl: 32px;
     justify-content: center;
     flex-wrap: wrap;
 
-    @for $i from 1 to $columns-sm {
+    @for $i from 1 through $columns-sm {
       .grid--col-sm-#{$i} {
         @include insertSmallCol($i, $no-gutter);
+        @include insertMediaQueries("sm");
 
         &--gu {
           &-sm {
             @include insertSmallCol($i, $gutter-sm);
+            @include insertMediaQueries("sm");
           }
           &-md {
             @include insertSmallCol($i, $gutter-md);
+            @include insertMediaQueries("sm");
           }
           &-lg {
             @include insertSmallCol($i, $gutter-lg);
+            @include insertMediaQueries("sm");
           }
           &-xl {
             @include insertSmallCol($i, $gutter-xl);
+            @include insertMediaQueries("sm");
           }
         }
       }
     }
 
-    @for $i from 1 to $columns-md {
+    @for $i from 1 through $columns-md {
       .grid--col-md-#{$i} {
         @include insertMediumCol($i, $no-gutter);
+        @include insertMediaQueries("md");
 
         &--gu {
           &-sm {
             @include insertMediumCol($i, $gutter-sm);
+            @include insertMediaQueries("md");
           }
           &-md {
             @include insertMediumCol($i, $gutter-md);
+            @include insertMediaQueries("md");
           }
           &-lg {
             @include insertMediumCol($i, $gutter-lg);
+            @include insertMediaQueries("md");
           }
           &-xl {
             @include insertMediumCol($i, $gutter-xl);
+            @include insertMediaQueries("md");
           }
         }
       }
     }
 
-    @for $i from 1 to $columns-lg {
+    @for $i from 1 through $columns-lg {
       .grid--col-lg-#{$i} {
         @include insertLargeCol($i, $no-gutter);
+        @include insertMediaQueries("lg");
 
         &--gu {
           &-sm {
             @include insertLargeCol($i, $gutter-sm);
+            @include insertMediaQueries("lg");
           }
           &-md {
             @include insertLargeCol($i, $gutter-md);
+            @include insertMediaQueries("lg");
           }
           &-lg {
             @include insertLargeCol($i, $gutter-lg);
+            @include insertMediaQueries("lg");
           }
           &-xl {
             @include insertLargeCol($i, $gutter-xl);
+            @include insertMediaQueries("lg");
           }
         }
       }
