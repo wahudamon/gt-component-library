@@ -20,26 +20,26 @@ export default Vue.extend({
 
     <!-- <p class="playfair playfair--overline">Lorem ipsum, dolor sit amet.</p> -->
     <!-- <Button primary size="small" label="Hello World!" /> -->
-    <div class="grid-container text-center mt--20">
+    <div class="grid--container text-center mt--20">
       <!-- <div class="grid-row">
         <div class="grid--col-lg-12--gu-xl bg--teal-300">1</div>
       </div> -->
-      <div class="grid-row">
+      <div class="grid--row">
         <div class="grid--col-sm-2--gu-xl bg--teal-300">Phone</div>
         <div class="grid--col-sm-2--gu-xl bg--yellow-300">Phone</div>
       </div>
-      <!-- <div class="grid-row">
+      <!-- <div class="grid--row">
         <div class="grid--col-lg-4--gu-xl bg--teal-300">1</div>
         <div class="grid--col-lg-4--gu-xl bg--yellow-300">2</div>
         <div class="grid--col-lg-4--gu-xl bg--green-300">3</div>
       </div> -->
-      <div class="grid-row">
+      <div class="grid--row">
         <div class="grid--col-md-2--gu-xl bg--teal-300">Tablet</div>
         <div class="grid--col-md-2--gu-xl bg--yellow-300">Tablet</div>
         <div class="grid--col-md-2--gu-xl bg--green-300">Tablet</div>
         <div class="grid--col-md-2--gu-xl bg--red-300">Tablet</div>
       </div>
-      <div class="grid-row">
+      <div class="grid--row">
         <div class="grid--col-lg-2--gu-xl bg--teal-300">Desktop</div>
         <div class="grid--col-lg-2--gu-xl bg--yellow-300">Desktop</div>
         <div class="grid--col-lg-2--gu-xl bg--green-300">Desktop</div>
