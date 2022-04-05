@@ -12,9 +12,12 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <div class="sample-box--parent bg--chocolate-200 m--20">
+    <div class="sample-box--child m--20 cr--sm bg--chocolate-400"></div>
+
+    <!-- <div class="sample-box--parent bg--chocolate-200 m--20">
       <div class="sample-box--child bg--mustard-400"></div>
-    </div>
+    </div> -->
+
     <!-- <p class="playfair playfair--overline">Lorem ipsum, dolor sit amet.</p> -->
     <!-- <Button primary size="small" label="Hello World!" /> -->
     <!-- <div class="grid-container text-center">
