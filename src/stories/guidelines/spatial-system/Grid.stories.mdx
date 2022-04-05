@@ -33,32 +33,32 @@ Untuk menggunakan utility class dari grid system pada sebuah element atau kompon
 <img src={GridExampleImg} alt="grid example" />
 
 ```html
-<div class="grid-container text-center">
-  <div class="grid-row">
-    <div class="grid-col-12 bg--teal-300">1</div>
+<div class="grid--container text-center">
+  <div class="grid--row">
+    <div class="grid--col-lg-12 bg--teal-300">1</div>
   </div>
-  <div class="grid-row">
-    <div class="grid-col-6 bg--teal-300">1</div>
-    <div class="grid-col-6 bg--yellow-300">2</div>
+  <div class="grid--row">
+    <div class="grid--col-sm-2 bg--teal-300">1</div>
+    <div class="grid--col-sm-2 bg--yellow-300">2</div>
   </div>
-  <div class="grid-row">
-    <div class="grid-col-4--gu-sm bg--teal-300">1</div>
-    <div class="grid-col-4--gu-sm bg--yellow-300">2</div>
-    <div class="grid-col-4--gu-sm bg--green-300">3</div>
+  <div class="grid--row">
+    <div class="grid--col-lg-4--gu-sm bg--teal-300">1</div>
+    <div class="grid--col-lg-4--gu-sm bg--yellow-300">2</div>
+    <div class="grid--col-lg-4--gu-sm bg--green-300">3</div>
   </div>
-  <div class="grid-row">
-    <div class="grid-col-3--gu-md bg--teal-300">1</div>
-    <div class="grid-col-3--gu-md bg--yellow-300">2</div>
-    <div class="grid-col-3--gu-md bg--green-300">3</div>
-    <div class="grid-col-3--gu-md bg--red-300">4</div>
+  <div class="grid--row">
+    <div class="grid--col-md-2--gu-md bg--teal-300">1</div>
+    <div class="grid--col-md-2--gu-md bg--yellow-300">2</div>
+    <div class="grid--col-md-2--gu-md bg--green-300">3</div>
+    <div class="grid--col-md-2--gu-md bg--red-300">4</div>
   </div>
-  <div class="grid-row">
-    <div class="grid-col-2--gu-lg bg--teal-300">1</div>
-    <div class="grid-col-2--gu-lg bg--yellow-300">2</div>
-    <div class="grid-col-2--gu-lg bg--green-300">3</div>
-    <div class="grid-col-2--gu-lg bg--red-300">4</div>
-    <div class="grid-col-2--gu-lg bg--mustard-300">5</div>
-    <div class="grid-col-2--gu-lg bg--navy-blue-300">6</div>
+  <div class="grid--row">
+    <div class="grid--col-lg-2--gu-lg bg--teal-300">1</div>
+    <div class="grid--col-lg-2--gu-lg bg--yellow-300">2</div>
+    <div class="grid--col-lg-2--gu-lg bg--green-300">3</div>
+    <div class="grid--col-lg-2--gu-lg bg--red-300">4</div>
+    <div class="grid--col-lg-2--gu-lg bg--mustard-300">5</div>
+    <div class="grid--col-lg-2--gu-lg bg--navy-blue-300">6</div>
   </div>
 </div>
 ```
@@ -67,20 +67,54 @@ Untuk menggunakan utility class dari grid system pada sebuah element atau kompon
 
 ### Grid Column Type List
 
-| Class       | Description     |
-| ----------- | --------------- |
-| grid-col-1  | 1 column width  |
-| grid-col-2  | 2 column width  |
-| grid-col-3  | 3 column width  |
-| grid-col-4  | 4 column width  |
-| grid-col-5  | 5 column width  |
-| grid-col-6  | 6 column width  |
-| grid-col-7  | 7 column width  |
-| grid-col-8  | 8 column width  |
-| grid-col-9  | 9 column width  |
-| grid-col-10 | 10 column width |
-| grid-col-11 | 11 column width |
-| grid-col-12 | 12 column width |
+<br />
+
+#### Small Grid
+
+Grid ini digunakan pada perangkat dengan ukuran layar kurang dari `480px` (small devices)
+
+| Class          | Description    |
+| -------------- | -------------- |
+| grid--col-sm-1 | 1 column width |
+| grid--col-sm-2 | 2 column width |
+| grid--col-sm-3 | 3 column width |
+| grid--col-sm-4 | 4 column width |
+
+#### Medium Grid
+
+Grid ini digunakan pada perangkat dengan ukuran layar di antara `480px` dan `840px` (medium devices)
+
+| Class          | Description    |
+| -------------- | -------------- |
+| grid--col-md-1 | 1 column width |
+| grid--col-md-2 | 2 column width |
+| grid--col-md-3 | 3 column width |
+| grid--col-md-4 | 4 column width |
+| grid--col-md-5 | 5 column width |
+| grid--col-md-6 | 6 column width |
+| grid--col-md-7 | 7 column width |
+| grid--col-md-8 | 8 column width |
+
+#### Large Grid
+
+Grid ini digunakan pada perangkat dengan ukuran layar lebih dari dari `840px` (large devices)
+
+| Class           | Description     |
+| --------------- | --------------- |
+| grid--col-lg-1  | 1 column width  |
+| grid--col-lg-2  | 2 column width  |
+| grid--col-lg-3  | 3 column width  |
+| grid--col-lg-4  | 4 column width  |
+| grid--col-lg-5  | 5 column width  |
+| grid--col-lg-6  | 6 column width  |
+| grid--col-lg-7  | 7 column width  |
+| grid--col-lg-8  | 8 column width  |
+| grid--col-lg-9  | 9 column width  |
+| grid--col-lg-10 | 10 column width |
+| grid--col-lg-11 | 11 column width |
+| grid--col-lg-12 | 12 column width |
+
+<br />
 
 ### Gutter Type List
 

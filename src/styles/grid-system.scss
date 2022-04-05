@@ -1,5 +1,6 @@
-$columns: 13;
-
+$columns-sm: 4;
+$columns-md: 8;
+$columns-lg: 12;
 $no-gutter: 0px;
 $gutter-sm: 8px;
 $gutter-md: 16px;
@@ -14,8 +15,8 @@ $gutter-xl: 32px;
   }
 }
 
-@mixin gridColumn($number, $gutter) {
-  width: calc((#{percentage($number / 12)} - #{$gutter}));
+@mixin gridColumn($columnLength, $number, $gutter) {
+  width: calc((#{percentage($number / $columnLength)} - #{$gutter}));
   margin-top: 20px;
   margin-right: calc(#{$gutter} / 2);
   margin-left: calc(#{$gutter} / 2);
@@ -30,41 +31,126 @@ $gutter-xl: 32px;
   }
 }
 
+@mixin insertSmallCol($number, $gutter) {
+  @include gridColumn(4, $number, $gutter);
+}
+
+@mixin insertMediumCol($number, $gutter) {
+  @include gridColumn(8, $number, $gutter);
+}
+
+@mixin insertLargeCol($number, $gutter) {
+  @include gridColumn(12, $number, $gutter);
+}
+
+@mixin insertMediaQueries($tier) {
+  @if $tier == "sm" {
+    @media only screen and (max-width: 320px) {
+      @include insertSmallCol(4, $no-gutter);
+    }
+  } @else if $tier == "md" {
+    @media only screen and (max-width: 480px) {
+      @include insertMediumCol(8, $no-gutter);
+    }
+  } @else if $tier == "lg" {
+    @media only screen and (max-width: 840px) {
+      @include insertLargeCol(12, $no-gutter);
+    }
+  }
+}
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
 
-.grid-container {
+.grid--container {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 80px;
   padding-right: 80px;
 
-  .grid-row {
+  .grid--row {
     @include clearfix();
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
-    @for $i from 1 to $columns {
-      .grid-col-#{$i} {
-        @include gridColumn($i, $no-gutter);
+    @for $i from 1 through $columns-sm {
+      .grid--col-sm-#{$i} {
+        @include insertSmallCol($i, $no-gutter);
+        @include insertMediaQueries("sm");
 
         &--gu {
           &-sm {
-            @include gridColumn($i, $gutter-sm);
+            @include insertSmallCol($i, $gutter-sm);
+            @include insertMediaQueries("sm");
           }
           &-md {
-            @include gridColumn($i, $gutter-md);
+            @include insertSmallCol($i, $gutter-md);
+            @include insertMediaQueries("sm");
           }
           &-lg {
-            @include gridColumn($i, $gutter-lg);
+            @include insertSmallCol($i, $gutter-lg);
+            @include insertMediaQueries("sm");
           }
           &-xl {
-            @include gridColumn($i, $gutter-xl);
+            @include insertSmallCol($i, $gutter-xl);
+            @include insertMediaQueries("sm");
+          }
+        }
+      }
+    }
+
+    @for $i from 1 through $columns-md {
+      .grid--col-md-#{$i} {
+        @include insertMediumCol($i, $no-gutter);
+        @include insertMediaQueries("md");
+
+        &--gu {
+          &-sm {
+            @include insertMediumCol($i, $gutter-sm);
+            @include insertMediaQueries("md");
+          }
+          &-md {
+            @include insertMediumCol($i, $gutter-md);
+            @include insertMediaQueries("md");
+          }
+          &-lg {
+            @include insertMediumCol($i, $gutter-lg);
+            @include insertMediaQueries("md");
+          }
+          &-xl {
+            @include insertMediumCol($i, $gutter-xl);
+            @include insertMediaQueries("md");
+          }
+        }
+      }
+    }
+
+    @for $i from 1 through $columns-lg {
+      .grid--col-lg-#{$i} {
+        @include insertLargeCol($i, $no-gutter);
+        @include insertMediaQueries("lg");
+
+        &--gu {
+          &-sm {
+            @include insertLargeCol($i, $gutter-sm);
+            @include insertMediaQueries("lg");
+          }
+          &-md {
+            @include insertLargeCol($i, $gutter-md);
+            @include insertMediaQueries("lg");
+          }
+          &-lg {
+            @include insertLargeCol($i, $gutter-lg);
+            @include insertMediaQueries("lg");
+          }
+          &-xl {
+            @include insertLargeCol($i, $gutter-xl);
+            @include insertMediaQueries("lg");
           }
         }
       }

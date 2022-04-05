@@ -1,23 +1,14 @@
 .cr {
-  &--xxs {
-    border-radius: 8px;
-  }
-  &--xs {
-    border-radius: 16px;
-  }
   &--sm {
-    border-radius: 24px;
+    border-radius: 4px;
   }
   &--md {
-    border-radius: 32px;
+    border-radius: 8px;
   }
   &--lg {
-    border-radius: 40px;
+    border-radius: 16px;
   }
   &--xl {
-    border-radius: 48px;
-  }
-  &--xxl {
-    border-radius: 56px;
+    border-radius: 50%;
   }
 }
