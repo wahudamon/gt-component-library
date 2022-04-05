@@ -15,6 +15,7 @@ export default Vue.extend({
     <div class="sample-box--parent bg--chocolate-200 m--20">
       <div class="sample-box--child bg--mustard-400"></div>
     </div>
+    <!-- <p class="playfair playfair--overline">Lorem ipsum, dolor sit amet.</p> -->
     <!-- <Button primary size="small" label="Hello World!" /> -->
     <!-- <div class="grid-container text-center">
       <div class="grid-row">
@@ -49,6 +50,7 @@ export default Vue.extend({
 
 <style lang="scss">
 @import "../src/styles/color";
+@import "../src/styles/typography";
 @import "../src/styles/corner-radius";
 @import "../src/styles/elevation";
 @import "../src/styles/padding";
