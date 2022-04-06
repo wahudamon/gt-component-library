@@ -1,0 +1,14 @@
+.cr--sm {
+  border-radius: 4px;
+}
+.cr--md {
+  border-radius: 8px;
+}
+.cr--lg {
+  border-radius: 16px;
+}
+.cr--xl {
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=corner-radius.css.map */
