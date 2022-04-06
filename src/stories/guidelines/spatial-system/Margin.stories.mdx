@@ -19,12 +19,10 @@ import { Meta } from "@storybook/addon-docs";
 
 ## Usage
 
-Langkah awal yang harus dilakukan sebelum menggunakan class utilities dari margin adalah dengan meng-import margin styles list dari package ke dalam section style komponen target.
+Langkah awal yang harus dilakukan sebelum menggunakan class utilities dari margin adalah dengan meng-import margin styles list dari package ke dalam file `main.js` atau root file dari project.
 
-```html
-<style lang="scss">
-  @import "gamatechno-vue-component-library/src/styles/margin";
-</style>
+```js
+import "gamatechno-vue-component-library/scss/margin.scss";
 ```
 
 Untuk menggunakan utility class dari margin pada sebuah element atau komponen dapat dengan menuliskan nama classnya seperti contoh di bawah ini:

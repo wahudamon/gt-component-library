@@ -52,13 +52,13 @@ export default Vue.extend({
 </template>
 
 <style lang="scss">
-@import "../src/styles/color";
-@import "../src/styles/typography";
-@import "../src/styles/corner-radius";
-@import "../src/styles/elevation";
-@import "../src/styles/padding";
-@import "../src/styles/margin";
-@import "../src/styles/grid-system";
+@import "../scss/color";
+@import "../scss/typography";
+@import "../scss/corner-radius";
+@import "../scss/elevation";
+@import "../scss/padding";
+@import "../scss/margin";
+@import "../scss/grid-system";
 
 .sample-grid--container {
   display: grid;
