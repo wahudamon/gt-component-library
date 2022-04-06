@@ -1,6 +1,6 @@
 {
   "name": "gamatechno-vue-component-library",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Gamatechno UI component library built using vue",
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",
@@ -59,8 +59,7 @@
     "vue-template-compiler": "^2.6.14"
   },
   "peerDependencies": {
-    "bootstrap": "^5.1.3",
-    "vue": "^2.6.14"
+    "bootstrap": "^5.1.3"
   },
   "engines": {
     "node": ">=12"
