@@ -9,11 +9,13 @@ import { Meta } from "@storybook/addon-docs";
 
 # Gamatechno Component Library
 
+**`Currently this library only support Vue 2 projects`**
+
 Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang dapat digunakan oleh pengembang aplikasi dari PT Gamatechno Indonesia dalam menyusun layout produk digital yang sedang dikembangkan pada platform web dengan lebih mudah dan cepat.
 
 ## Installation
 
-Agar dapat menggunakan library ini di produk atau projek yang sedang dibangun, library ini harus diinstal terlebih dahulu menggunakan beberapa cara dibawah ini:
+Agar dapat menggunakan library ini di produk atau projek yang sedang dibangun, library ini harus diinstal terlebih dahulu untuk instalasi menggunakan beberapa cara dibawah ini:
 
 ### Install menggunakan NPM
 
@@ -25,4 +27,25 @@ Agar dapat menggunakan library ini di produk atau projek yang sedang dibangun, l
 
 ```bash
   yarn add gamatechno-vue-component-library
+```
+
+Setelah instalasi gamatechno-vue-component-library selesai, selanjutnya adalah menginstal package yang dibutuhkan ketika menggunakan agar dapat menggunakan library gamatechno-vue-component-library yaitu Bootstrap 5. Cara instalasinya adalah sebagai berikut:
+
+### Install menggunakan NPM
+
+```bash
+  npm install bootstrap@5.1.3
+```
+
+### Install menggunakan Yarn
+
+```bash
+  yarn add bootstrap@5.1.3
+```
+
+Kemudian meng-import Bootstrap package yang sudah diinstal pada root file di project yakni `main.js`.
+
+```js
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 ```
