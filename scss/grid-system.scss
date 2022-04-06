@@ -16,7 +16,7 @@ $gutter-xl: 32px;
 }
 
 @mixin gridColumn($columnLength, $number, $gutter) {
-  width: calc((#{percentage($number / $columnLength)} - #{$gutter}));
+  width: calc((#{percentage(calc($number / $columnLength))} - #{$gutter}));
   margin-top: 20px;
   margin-right: calc(#{$gutter} / 2);
   margin-left: calc(#{$gutter} / 2);
