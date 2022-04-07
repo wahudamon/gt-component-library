@@ -1,13 +1,13 @@
 {
   "name": "gamatechno-vue-component-library",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Gamatechno UI component library built using vue",
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",
     "storybook": "start-storybook -p 6006",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "test:unit": "vue-cli-service test:unit",
-    "build:css": "sass --update scss:css",
+    "build:css": "sass --update src/scss:src/css",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:storybook": "build-storybook",
@@ -22,8 +22,8 @@
   "files": [
     "dist/*",
     "src/**/*.vue",
-    "css/*.css",
-    "css/*.css.map"
+    "src/**/*.css",
+    "src/**/*.css.map"
   ],
   "dependencies": {
     "bootstrap": "^5.1.3"
