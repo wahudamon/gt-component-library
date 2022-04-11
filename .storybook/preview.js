@@ -1,5 +1,6 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import storybookTheme from "./storybookTheme";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,6 +9,9 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  docs: {
+    theme: storybookTheme,
   },
   options: {
     storySort: {
