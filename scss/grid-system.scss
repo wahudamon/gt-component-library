@@ -67,7 +67,7 @@ $gutter-xl: 32px;
   .grid--row {
     @include clearfix();
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-wrap: wrap;
 
     @for $i from 1 through $columns-sm {
