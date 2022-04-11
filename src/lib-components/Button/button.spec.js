@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import Button from "@/lib-components/Button.vue";
+import Button from "./Button.vue";
 
 describe("Button.vue", () => {
   it("renders the props when passed", () => {
