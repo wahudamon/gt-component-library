@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "Button",
+  name: "GTButton",
 
   props: {
     label: {

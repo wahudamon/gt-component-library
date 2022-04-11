@@ -11,10 +11,10 @@ Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang d
 
 ## Membuat komponen baru
 
-- Buat file baru dengan ekstensi .vue pada folder lib-components
+- Buat file baru dengan ekstensi .vue pada folder components
 - Tambahkan properti name pada section script
 - Buat struktur, styling dan behavior komponen
-- Import as default komponen pada lib-components/index.js
+- Import as default komponen pada components/index.js
 - Import dan deklarasikan komponen pada dev/serve.vue
 - Buat file stories dengan format (Nama Komponen).stories.js di dalam folder stories
 - Buat stories untuk komponen yang sedang dibuat
@@ -24,7 +24,7 @@ Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang d
 
 ## Mengubah komponen yang sudah ada
 
-- Buat perubahan untuk komponen pada folder lib-components
+- Buat perubahan untuk komponen pada folder components
 - Tambahkan test case baru untuk perubahan yang dilakukan pada komponen (jika ada)
 - Tambahkan perubahan pada komponen ke dalam file stories komponen
 
