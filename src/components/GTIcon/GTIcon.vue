@@ -38,4 +38,80 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@mixin setIconSize($size) {
+  width: $size;
+  height: $size;
+}
+
+// @mixin setIconColor($color) {
+//   color: $color;
+//   fill: $color;
+// }
+
+$small-size: 8px;
+$medium-size: 16px;
+$large-size: 24px;
+$extra-large-size: 32px;
+
+// $icon-colors: (
+//   "primary-navy-blue": $primary-navy-blue,
+//   "primary-sea-foam": $primary-sea-foam,
+//   "primary-mustard": $primary-mustard,
+//   "primary-sun": $primary-sun,
+//   "secondary-charcoal": $secondary-charcoal,
+//   "secondary-teal": $secondary-teal,
+// );
+
+// $bg-colors: (
+//   "primary-navy-blue": $primary-navy-blue,
+//   "primary-sea-foam": $primary-sea-foam,
+//   "primary-mustard": $primary-mustard,
+//   "primary-sun": $primary-sun,
+//   "secondary-charcoal": $secondary-charcoal,
+//   "secondary-teal": $secondary-teal,
+// );
+
+.gt-icon {
+  @include setIconSize($medium-size);
+  // @include setIconColor(currentColor);
+
+  display: inline-block;
+  vertical-align: middle;
+  stroke-width: 2px;
+
+  &--small {
+    @include setIconSize($small-size);
+  }
+
+  &--medium {
+    @include setIconSize($medium-size);
+  }
+
+  &--large {
+    @include setIconSize($large-size);
+  }
+
+  &--x-large {
+    @include setIconSize($extra-large-size);
+  }
+
+  // &--color {
+  //   @each $name, $colorVariable in $icon-colors {
+  //     &-#{$name} {
+  //       @include setIconColor($colorVariable);
+  //     }
+  //   }
+  // }
+
+  // &--bg {
+  //   @each $name, $colorVariable in $bg-colors {
+  //     &-#{$name} {
+  //       padding: 12px;
+  //       background-color: $colorVariable;
+  //       border-radius: 100%;
+  //     }
+  //   }
+  // }
+}
+</style>
