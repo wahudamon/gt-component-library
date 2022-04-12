@@ -20,7 +20,7 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Button },
+  components: { GTButton },
   template: '<GTButton @onClick="onClick" v-bind="$props" />',
 });
 
