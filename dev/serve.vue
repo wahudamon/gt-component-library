@@ -1,9 +1,9 @@
 <script>
 import Vue from "vue";
-import { GTButton } from "@/entry.esm";
-// import GridSystem from "./examples/GridSystem.vue";
-// import Typography from "./examples/Typography.vue";
-// import CornerRadius from "./examples/CornerRadius.vue";
+import { GTButton, GTIcon } from "@/entry.esm";
+import GridSystem from "./examples/GridSystem.vue";
+import Typography from "./examples/Typography.vue";
+import CornerRadius from "./examples/CornerRadius.vue";
 import CheckboxExample from "./examples/CheckboxExample.vue";
 import RadioButtonExample from "./examples/RadioButtonExample.vue";
 
@@ -13,15 +13,19 @@ export default Vue.extend({
     CheckboxExample,
     RadioButtonExample,
     GTButton,
-    // GridSystem,
-    // Typography,
-    // CornerRadius,
+    GTIcon,
+    GridSystem,
+    Typography,
+    CornerRadius,
   },
 });
 </script>
 
 <template>
   <div id="app">
+    <button class="ml--20">
+      <GTIcon name="gt-apps" size="40" />
+    </button>
     <GTButton class="ml--20 mt--20" primary size="small" label="Hello World!" />
     <checkbox-example class="ml--20 mt--10" />
     <radio-button-example class="ml--20 mt--10" />
