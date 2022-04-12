@@ -36,14 +36,20 @@ Secondary.args = {
   label: "Click Me!",
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-  label: "Click Me!",
-};
-
 export const Small = Template.bind({});
 Small.args = {
   size: "small",
+  label: "Click Me!",
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
+  size: "medium",
+  label: "Click Me!",
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  size: "large",
   label: "Click Me!",
 };
