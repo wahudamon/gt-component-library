@@ -24,7 +24,7 @@ export default Vue.extend({
 <template>
   <div id="app">
     <button class="ml--20">
-      <GTIcon name="gt-add-block" size="40" />
+      <GTIcon name="gt-address-book-r" size="md" />
     </button>
     <GTButton class="ml--20 mt--20" primary size="small" label="Hello" />
     <checkbox-example class="ml--20 mt--10" />

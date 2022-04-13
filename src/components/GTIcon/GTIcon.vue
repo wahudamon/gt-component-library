@@ -1,5 +1,10 @@
 <template>
-  <svg :width="size" :height="size" :viewBox="selectedIcon.viewBox" fill="none">
+  <svg
+    :width="selectedSizeValue"
+    :height="selectedSizeValue"
+    :viewBox="selectedIcon.viewBox"
+    fill="none"
+  >
     <path v-bind="selectedIcon.path" />
   </svg>
 </template>
@@ -16,16 +21,29 @@ export default {
     },
     size: {
       type: String,
-      default: "",
+      default: "md",
+      validator: function (value) {
+        return ["sm", "md", "lg", "xl"].indexOf(value) !== -1;
+      },
     },
   },
   data() {
     return {
       selectedIcon: {},
+      selectedSizeValue: "32",
     };
+  },
+  watch: {
+    size: {
+      handler() {
+        this.getIconSize(this.size);
+      },
+      deep: true,
+    },
   },
   mounted() {
     this.getIconByName(this.name);
+    this.getIconSize(this.size);
   },
   methods: {
     getIconByName(name) {
@@ -33,6 +51,23 @@ export default {
         viewBox: icons[name].viewBox,
         path: icons[name].path,
       };
+    },
+    getIconSize(size) {
+      switch (size) {
+        case "sm":
+          this.selectedSizeValue = "24";
+          break;
+        case "md":
+          this.selectedSizeValue = "32";
+          break;
+        case "lg":
+          this.selectedSizeValue = "40";
+          break;
+        case "xl":
+          this.selectedSizeValue = "48";
+          break;
+      }
+      console.log(this.selectedSizeValue);
     },
   },
 };

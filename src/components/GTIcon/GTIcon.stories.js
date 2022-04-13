@@ -18,7 +18,7 @@ export default {
       name: "size",
       description: "icon's size",
       control: { type: "select" },
-      options: ["40", "60", "80"],
+      options: ["sm", "md", "lg", "xl"],
     },
   },
   parameters: {
@@ -35,7 +35,7 @@ const Template = (args) => ({
 export const Primary = Template.bind({});
 Primary.args = {
   name: "gt-address-book-r",
-  size: "40",
+  size: "md",
 };
 
 export const CommunicationRegular = (args) => ({
@@ -52,7 +52,7 @@ export const CommunicationRegular = (args) => ({
         :key="index"
         style="text-align: center; padding: 2rem"
       >
-        <GTIcon :name="icon.name" size="40" />
+        <GTIcon :name="icon.name" size="lg" />
         <p> {{ icon.name }} </p>
       </div>
     </div>
@@ -73,7 +73,7 @@ export const CommunicationSolid = (args) => ({
         :key="index"
         style="text-align: center; padding: 2rem"
       >
-        <GTIcon :name="icon.name" size="40" />
+        <GTIcon :name="icon.name" size="lg" />
         <p> {{ icon.name }} </p>
       </div>
     </div>
