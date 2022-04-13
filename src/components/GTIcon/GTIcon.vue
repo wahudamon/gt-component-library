@@ -67,7 +67,6 @@ export default {
           this.selectedSizeValue = "48";
           break;
       }
-      console.log(this.selectedSizeValue);
     },
   },
 };
