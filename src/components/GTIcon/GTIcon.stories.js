@@ -1,7 +1,8 @@
 import GTIcon from "./GTIcon.vue";
 import libIcons from "../../lib/icons";
 
-const availableIcons = Object.keys(libIcons);
+const availableIconsName = Object.keys(libIcons);
+const availableIconsObj = libIcons;
 
 export default {
   title: "Components/GTIcon",
@@ -11,7 +12,7 @@ export default {
       name: "name",
       description: "icon's name",
       control: { type: "select" },
-      options: availableIcons,
+      options: availableIconsName,
     },
     size: {
       name: "size",
@@ -37,25 +38,44 @@ Primary.args = {
   size: "40",
 };
 
-export const AllIcons = (args) => ({
+export const CommunicationSolid = (args) => ({
   props: Object.keys(args),
   components: { GTIcon },
   data: () => ({
-    icons: [...availableIcons],
+    icons: availableIconsObj,
   }),
   template: `
-  <div>
-    <p style="font-size: 20px; padding-left: 20px; margin: 0;"> All icons </p>
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
       <div
-        v-for="(name, index) in icons"
+        v-for="(icon, index) in icons"
+        v-if="icon.type == 'comm-solid'"
         :key="index"
         style="text-align: center; padding: 2rem"
       >
-        <GTIcon v-bind="{ name }" size="40" />
-        <p> {{ name }} </p>
+        <GTIcon :name="icon.name" size="40" />
+        <p> {{ icon.name }} </p>
       </div>
     </div>
-  </div>
+  `,
+});
+
+export const CommunicationRegular = (args) => ({
+  props: Object.keys(args),
+  components: { GTIcon },
+  data: () => ({
+    icons: availableIconsObj,
+  }),
+  template: `
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+      <div
+        v-for="(icon, index) in icons"
+        v-if="icon.type == 'comm-regular'"
+        :key="index"
+        style="text-align: center; padding: 2rem"
+      >
+        <GTIcon :name="icon.name" size="40" />
+        <p> {{ icon.name }} </p>
+      </div>
+    </div>
   `,
 });

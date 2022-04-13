@@ -1,5 +1,7 @@
 const icons = {
   "gt-rc-italic": {
+    name: "gt-rc-italic",
+    type: "comm-solid",
     viewBox: "0 0 24 24",
     path: {
       fill: "currentColor",
@@ -7,6 +9,8 @@ const icons = {
     },
   },
   "gt-rc-bold": {
+    name: "gt-rc-bold",
+    type: "comm-solid",
     viewBox: "0 0 24 24",
     path: {
       fill: "currentColor",
@@ -14,6 +18,8 @@ const icons = {
     },
   },
   "gt-add-block": {
+    name: "gt-add-block",
+    type: "comm-solid",
     viewBox: "0 0 24 24",
     path: {
       fill: "currentColor",
@@ -21,6 +27,8 @@ const icons = {
     },
   },
   "gt-add-edit-block": {
+    name: "gt-add-edit-block",
+    type: "comm-regular",
     viewBox: "0 0 24 24",
     path: {
       fill: "currentColor",
@@ -28,6 +36,8 @@ const icons = {
     },
   },
   "gt-apps": {
+    name: "gt-apps",
+    type: "comm-regular",
     viewBox: "0 0 24 24",
     path: {
       fill: "none",
@@ -37,6 +47,8 @@ const icons = {
     },
   },
   "gt-apps-2": {
+    name: "gt-apps-2",
+    type: "comm-regular",
     viewBox: "0 0 24 24",
     path: {
       fill: "currentColor",
