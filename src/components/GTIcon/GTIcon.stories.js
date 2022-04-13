@@ -59,23 +59,23 @@ export const CommunicationRegular = (args) => ({
   `,
 });
 
-// export const CommunicationSolid = (args) => ({
-//   props: Object.keys(args),
-//   components: { GTIcon },
-//   data: () => ({
-//     icons: availableIconsObj,
-//   }),
-//   template: `
-//     <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-//       <div
-//         v-for="(icon, index) in icons"
-//         v-if="icon.type == 'comm-solid'"
-//         :key="index"
-//         style="text-align: center; padding: 2rem"
-//       >
-//         <GTIcon :name="icon.name" size="40" />
-//         <p> {{ icon.name }} </p>
-//       </div>
-//     </div>
-//   `,
-// });
+export const CommunicationSolid = (args) => ({
+  props: Object.keys(args),
+  components: { GTIcon },
+  data: () => ({
+    icons: availableIconsObj,
+  }),
+  template: `
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div
+        v-for="(icon, index) in icons"
+        v-if="icon.type == 'comm-solid'"
+        :key="index"
+        style="text-align: center; padding: 2rem"
+      >
+        <GTIcon :name="icon.name" size="40" />
+        <p> {{ icon.name }} </p>
+      </div>
+    </div>
+  `,
+});
