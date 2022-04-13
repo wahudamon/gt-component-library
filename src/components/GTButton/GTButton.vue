@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "Button",
+  name: "GTButton",
 
   props: {
     label: {
@@ -33,6 +33,7 @@ export default {
     classes() {
       return {
         "storybook-button": true,
+        "bg--primary-navy-blue": true,
         "storybook-button--primary": this.primary,
         "storybook-button--secondary": !this.primary,
         [`storybook-button--${this.size}`]: true,
@@ -54,7 +55,11 @@ export default {
 </script>
 
 <style>
+@import "../../../css/color.css";
+
 .storybook-button {
+  min-width: 200px;
+  height: 48px;
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
@@ -65,7 +70,7 @@ export default {
 }
 .storybook-button--primary {
   color: white;
-  background-color: #24e0c5;
+  /* background-color: #24e0c5; */
 }
 .storybook-button--secondary {
   color: #333;

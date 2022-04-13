@@ -1,6 +1,6 @@
 {
   "name": "gamatechno-vue-component-library",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Gamatechno UI component library built using vue",
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",
@@ -23,7 +23,8 @@
     "dist/*",
     "src/**/*.vue",
     "css/*.css",
-    "css/*.css.map"
+    "css/*.css.map",
+    "src/lib/*"
   ],
   "dependencies": {
     "bootstrap": "^5.1.3"
@@ -49,6 +50,7 @@
     "babel-loader": "^8.2.3",
     "chromatic": "^6.5.3",
     "cross-env": "^7.0.3",
+    "js-beautify": "^1.14.3",
     "minimist": "^1.2.6",
     "node-sass": "^5.0.0",
     "rimraf": "^3.0.2",

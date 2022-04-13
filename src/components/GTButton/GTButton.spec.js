@@ -1,12 +1,12 @@
 import { shallowMount } from "@vue/test-utils";
-import Button from "./Button.vue";
+import GTButton from "./GTButton.vue";
 
-describe("Button.vue", () => {
+describe("GTButton.vue", () => {
   it("renders the props when passed", () => {
     const label = "Hello World!";
     const primary = true;
     const size = "medium";
-    const wrapper = shallowMount(Button, {
+    const wrapper = shallowMount(GTButton, {
       propsData: { label, primary, size },
     });
     expect(wrapper.props().label).toBe(label);
