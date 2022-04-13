@@ -19,9 +19,9 @@ export default {
     },
     size: {
       type: String,
-      default: "medium",
+      default: "md",
       validator: function (value) {
-        return ["small", "medium", "large"].indexOf(value) !== -1;
+        return ["sm", "md", "lg"].indexOf(value) !== -1;
       },
     },
     backgroundColor: {
@@ -32,11 +32,14 @@ export default {
   computed: {
     classes() {
       return {
-        "storybook-button": true,
+        "gt-btn": true,
         "bg--primary-navy-blue": true,
-        "storybook-button--primary": this.primary,
-        "storybook-button--secondary": !this.primary,
-        [`storybook-button--${this.size}`]: true,
+        "gt-btn--primary": this.primary,
+        "gt-btn--secondary": !this.primary,
+        [`gt-btn--${this.size}`]: true,
+        "cr--md": true,
+        "poppins poppins--btn-2": true,
+        "text-center": true,
       };
     },
     style() {
@@ -56,37 +59,36 @@ export default {
 
 <style>
 @import "../../../css/color.css";
+@import "../../../css/typography.css";
+@import "../../../css/corner-radius.css";
 
-.storybook-button {
-  min-width: 200px;
-  height: 48px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+.gt-btn {
   border: 0;
-  border-radius: 3em;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
 }
-.storybook-button--primary {
+.gt-btn--primary {
   color: white;
-  /* background-color: #24e0c5; */
 }
-.storybook-button--secondary {
+.gt-btn--secondary {
   color: #333;
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
-.storybook-button--small {
-  font-size: 12px;
-  padding: 10px 16px;
+.gt-btn--sm {
+  min-width: 104px;
+  height: 40px;
+  padding: 8px, 16px, 8px, 16px;
 }
-.storybook-button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
+.gt-btn--md {
+  min-width: 160px;
+  height: 48px;
+  padding: 12px, 16px, 12px, 16px;
 }
-.storybook-button--large {
-  font-size: 16px;
-  padding: 12px 24px;
+.gt-btn--lg {
+  min-width: 224px;
+  height: 56px;
+  padding: 16px;
 }
 </style>

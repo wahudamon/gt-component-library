@@ -23,12 +23,12 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <button class="ml--20">
+    <GTButton class="ml--20 mt--20" primary size="md" label="Button" />
+    <!-- <checkbox-example class="ml--20 mt--10" />
+    <radio-button-example class="ml--20 mt--10" /> -->
+    <!-- <button class="ml--20">
       <GTIcon name="gt-address-book-r" size="md" />
-    </button>
-    <GTButton class="ml--20 mt--20" primary size="small" label="Hello" />
-    <checkbox-example class="ml--20 mt--10" />
-    <radio-button-example class="ml--20 mt--10" />
+    </button> -->
     <!-- <typography />
     <grid-system />
     <corner-radius /> -->
