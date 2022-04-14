@@ -53,6 +53,7 @@ export default Vue.extend({
             icon="gt-paper-plane-s"
             text="Button"
           />
+          <GTButton class="ml--5 bg--red-200" primary isLoading size="sm" />
         </div>
         <div class="grid--col-lg-12">
           <GTButton class="bg--red-200" primary size="md" text="Button" />
@@ -92,6 +93,7 @@ export default Vue.extend({
             icon="gt-paper-plane-s"
             text="Button"
           />
+          <GTButton class="ml--5 bg--red-200" primary isLoading size="md" />
         </div>
         <div class="grid--col-lg-12">
           <GTButton class="bg--red-200" primary size="lg" text="Button" />
@@ -134,6 +136,7 @@ export default Vue.extend({
               icon="gt-paper-plane-s"
               text="Button"
             />
+            <GTButton class="ml--5 bg--red-200" primary isLoading size="lg" />
           </div>
         </div>
       </div>

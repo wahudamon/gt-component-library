@@ -1,20 +1,23 @@
 <template>
   <button
     type="button"
-    :disabled="isDisabled"
+    :disabled="isDisabled || isLoading"
     :class="classes"
     @click="onClick"
   >
-    <template v-if="!icon">
+    <template v-if="isLoading && !icon">
+      <GTIcon name="gt-rotate-right-s" :size="size" />
+    </template>
+    <template v-else-if="!isLoading && !icon">
       {{ text }}
     </template>
     <template v-else-if="icon && isPrependIcon">
-      <GTIcon name="gt-paper-plane-s" :size="size" />
+      <GTIcon :name="icon" :size="size" />
       <span> {{ text }}</span>
     </template>
     <template v-else-if="icon && isAppendIcon">
       <span>{{ text }} </span>
-      <GTIcon name="gt-paper-plane-s" :size="size" />
+      <GTIcon :name="icon" :size="size" />
     </template>
     <template v-else>
       <GTIcon :name="icon" :size="size" />
@@ -62,6 +65,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    isLoading: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -71,6 +78,7 @@ export default {
         "bg--primary-navy-blue": true,
         "gt-btn--primary": this.primary,
         "gt-btn--secondary": !this.primary,
+        "gt-btn--loading": this.isLoading,
         [`gt-btn--${this.size}`]: true,
         "cr--md": true,
         "poppins poppins--btn-2": true,

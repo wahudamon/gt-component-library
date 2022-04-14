@@ -44,9 +44,11 @@
   }
 
   &[disabled] {
-    @extend .bg--neutral-400;
-    @extend .text--neutral-600;
-
     cursor: not-allowed;
+
+    &:not(.gt-btn--loading) {
+      @extend .bg--neutral-400;
+      @extend .text--neutral-600;
+    }
   }
 }
