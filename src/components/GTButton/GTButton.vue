@@ -13,6 +13,10 @@ export default {
       type: String,
       required: true,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
     primary: {
       type: Boolean,
       default: false,
@@ -33,7 +37,8 @@ export default {
     classes() {
       return {
         "gt-btn": true,
-        "bg--primary-navy-blue": true,
+        "bg--primary-sun": true,
+        disabled: this.disabled,
         "gt-btn--primary": this.primary,
         "gt-btn--secondary": !this.primary,
         [`gt-btn--${this.size}`]: true,
@@ -57,38 +62,6 @@ export default {
 };
 </script>
 
-<style>
-@import "../../../css/color.css";
-@import "../../../css/typography.css";
-@import "../../../css/corner-radius.css";
-
-.gt-btn {
-  border: 0;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-}
-.gt-btn--primary {
-  color: white;
-}
-.gt-btn--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
-.gt-btn--sm {
-  min-width: 104px;
-  height: 40px;
-  padding: 8px, 16px, 8px, 16px;
-}
-.gt-btn--md {
-  min-width: 160px;
-  height: 48px;
-  padding: 12px, 16px, 12px, 16px;
-}
-.gt-btn--lg {
-  min-width: 224px;
-  height: 56px;
-  padding: 16px;
-}
+<style lang="scss">
+@import "./GTButton.scss";
 </style>
