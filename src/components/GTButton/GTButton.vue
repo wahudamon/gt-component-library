@@ -8,6 +8,14 @@
     <template v-if="!icon">
       {{ text }}
     </template>
+    <template v-else-if="icon && isPrependIcon">
+      <GTIcon name="gt-paper-plane-s" :size="size" />
+      <span> {{ text }}</span>
+    </template>
+    <template v-else-if="icon && isAppendIcon">
+      <span>{{ text }} </span>
+      <GTIcon name="gt-paper-plane-s" :size="size" />
+    </template>
     <template v-else>
       <GTIcon :name="icon" :size="size" />
     </template>
@@ -45,6 +53,14 @@ export default {
     icon: {
       type: String,
       default: "",
+    },
+    isPrependIcon: {
+      type: Boolean,
+      default: false,
+    },
+    isAppendIcon: {
+      type: Boolean,
+      default: false,
     },
   },
 

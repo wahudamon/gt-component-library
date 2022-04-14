@@ -3,6 +3,7 @@ import Vue from "vue";
 import { GTButton, GTIcon } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
+import ButtonsList from "./examples/ButtonsList.vue";
 import CornerRadius from "./examples/CornerRadius.vue";
 import CheckboxExample from "./examples/CheckboxExample.vue";
 import RadioButtonExample from "./examples/RadioButtonExample.vue";
@@ -16,6 +17,7 @@ export default Vue.extend({
     GTIcon,
     GridSystem,
     Typography,
+    ButtonsList,
     CornerRadius,
   },
 });
@@ -23,41 +25,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTButton
-      class="ml--20 mt--20 bg--red-200"
-      primary
-      size="sm"
-      text="Button"
-    />
-
-    <br />
-
-    <GTButton
-      class="ml--20 mt--5 bg--red-200"
-      isDisabled
-      primary
-      size="sm"
-      text="Button"
-    />
-
-    <br />
-
-    <GTButton
-      class="ml--20 mt--5 bg--red-200"
-      primary
-      size="sm"
-      icon="gt-paper-plane-s"
-    />
-
-    <br />
-
-    <GTButton
-      class="ml--20 mt--5 bg--red-200"
-      isDisabled
-      primary
-      size="sm"
-      icon="gt-paper-plane-s"
-    />
+    <buttons-list />
     <!-- <checkbox-example class="ml--20 mt--10" />
     <radio-button-example class="ml--20 mt--10" /> -->
     <!-- <button class="ml--20">
@@ -69,6 +37,8 @@ export default Vue.extend({
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import "../css/typography";
 @import "../css/margin";
+@import "../css/grid-system";
 </style>
