@@ -3,6 +3,7 @@
     :width="selectedSizeValue"
     :height="selectedSizeValue"
     :viewBox="selectedIcon.viewBox"
+    :class="classes"
     fill="none"
   >
     <path v-bind="selectedIcon.path" />
@@ -26,12 +27,23 @@ export default {
         return ["sm", "md", "lg", "xl"].indexOf(value) !== -1;
       },
     },
+    animate: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
       selectedIcon: {},
       selectedSizeValue: "32",
     };
+  },
+  computed: {
+    classes() {
+      return {
+        "gt-icon--animate": this.animate,
+      };
+    },
   },
   watch: {
     size: {
@@ -78,37 +90,22 @@ export default {
   height: $size;
 }
 
-// @mixin setIconColor($color) {
-//   color: $color;
-//   fill: $color;
-// }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 $small-size: 8px;
 $medium-size: 16px;
 $large-size: 24px;
 $extra-large-size: 32px;
 
-// $icon-colors: (
-//   "primary-navy-blue": $primary-navy-blue,
-//   "primary-sea-foam": $primary-sea-foam,
-//   "primary-mustard": $primary-mustard,
-//   "primary-sun": $primary-sun,
-//   "secondary-charcoal": $secondary-charcoal,
-//   "secondary-teal": $secondary-teal,
-// );
-
-// $bg-colors: (
-//   "primary-navy-blue": $primary-navy-blue,
-//   "primary-sea-foam": $primary-sea-foam,
-//   "primary-mustard": $primary-mustard,
-//   "primary-sun": $primary-sun,
-//   "secondary-charcoal": $secondary-charcoal,
-//   "secondary-teal": $secondary-teal,
-// );
-
 .gt-icon {
   @include setIconSize($medium-size);
-  // @include setIconColor(currentColor);
 
   display: inline-block;
   vertical-align: middle;
@@ -130,22 +127,10 @@ $extra-large-size: 32px;
     @include setIconSize($extra-large-size);
   }
 
-  // &--color {
-  //   @each $name, $colorVariable in $icon-colors {
-  //     &-#{$name} {
-  //       @include setIconColor($colorVariable);
-  //     }
-  //   }
-  // }
-
-  // &--bg {
-  //   @each $name, $colorVariable in $bg-colors {
-  //     &-#{$name} {
-  //       padding: 12px;
-  //       background-color: $colorVariable;
-  //       border-radius: 100%;
-  //     }
-  //   }
-  // }
+  &--animate {
+    animation-name: rotate;
+    animation-duration: 750ms;
+    animation-iteration-count: infinite;
+  }
 }
 </style>

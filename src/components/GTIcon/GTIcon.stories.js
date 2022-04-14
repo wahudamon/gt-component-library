@@ -20,6 +20,11 @@ export default {
       control: { type: "select" },
       options: ["sm", "md", "lg", "xl"],
     },
+    animate: {
+      name: "animate",
+      description: "icon's animation toggler",
+      control: { type: "boolean" },
+    },
   },
   parameters: {
     viewMode: "docs",

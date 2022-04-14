@@ -6,7 +6,7 @@
     @click="onClick"
   >
     <template v-if="isLoading && !icon">
-      <GTIcon name="gt-rotate-right-s" :size="size" />
+      <GTIcon animate name="gt-rotate-right-s" :size="size" />
     </template>
     <template v-else-if="!isLoading && !icon">
       {{ text }}
