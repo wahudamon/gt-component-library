@@ -1,5 +1,11 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">
+  <button
+    type="button"
+    :disabled="isDisabled"
+    :class="classes"
+    @click="onClick"
+    :style="style"
+  >
     {{ label }}
   </button>
 </template>
@@ -13,11 +19,11 @@ export default {
       type: String,
       required: true,
     },
-    disabled: {
+    primary: {
       type: Boolean,
       default: false,
     },
-    primary: {
+    isDisabled: {
       type: Boolean,
       default: false,
     },
@@ -37,8 +43,7 @@ export default {
     classes() {
       return {
         "gt-btn": true,
-        "bg--primary-sun": true,
-        disabled: this.disabled,
+        "bg--primary-navy-blue": true,
         "gt-btn--primary": this.primary,
         "gt-btn--secondary": !this.primary,
         [`gt-btn--${this.size}`]: true,

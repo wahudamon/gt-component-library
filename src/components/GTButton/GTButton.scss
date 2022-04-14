@@ -8,9 +8,10 @@
   cursor: pointer;
   display: inline-block;
   line-height: 1;
+  background-color: yellowgreen;
   transition: box-shadow 0.3s;
 
-  &:hover {
+  &:hover:not([disabled]) {
     @extend .be--medium;
   }
 
@@ -40,5 +41,12 @@
     min-width: 224px;
     height: 56px;
     padding: 16px;
+  }
+
+  &[disabled] {
+    @extend .bg--neutral-400;
+    @extend .text--neutral-600;
+
+    cursor: not-allowed;
   }
 }
