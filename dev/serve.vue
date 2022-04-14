@@ -23,7 +23,41 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTButton class="ml--20 mt--20" primary size="sm" label="Button" />
+    <GTButton
+      class="ml--20 mt--20 bg--red-200"
+      primary
+      size="sm"
+      text="Button"
+    />
+
+    <br />
+
+    <GTButton
+      class="ml--20 mt--5 bg--red-200"
+      isDisabled
+      primary
+      size="sm"
+      text="Button"
+    />
+
+    <br />
+
+    <GTButton
+      class="ml--20 mt--5 bg--red-200"
+      primary
+      size="sm"
+      icon="gt-paper-plane-s"
+    />
+
+    <br />
+
+    <GTButton
+      class="ml--20 mt--5 bg--red-200"
+      isDisabled
+      primary
+      size="sm"
+      icon="gt-paper-plane-s"
+    />
     <!-- <checkbox-example class="ml--20 mt--10" />
     <radio-button-example class="ml--20 mt--10" /> -->
     <!-- <button class="ml--20">

@@ -4,18 +4,26 @@
     :disabled="isDisabled"
     :class="classes"
     @click="onClick"
-    :style="style"
   >
-    {{ label }}
+    <template v-if="!icon">
+      {{ text }}
+    </template>
+    <template v-else>
+      <GTIcon :name="icon" :size="size" />
+    </template>
   </button>
 </template>
 
 <script>
+import GTIcon from "../GTIcon/GTIcon.vue";
+
 export default {
   name: "GTButton",
 
+  components: { GTIcon },
+
   props: {
-    label: {
+    text: {
       type: String,
       required: true,
     },
@@ -34,8 +42,9 @@ export default {
         return ["sm", "md", "lg"].indexOf(value) !== -1;
       },
     },
-    backgroundColor: {
+    icon: {
       type: String,
+      default: "",
     },
   },
 
@@ -50,11 +59,6 @@ export default {
         "cr--md": true,
         "poppins poppins--btn-2": true,
         "text-center": true,
-      };
-    },
-    style() {
-      return {
-        backgroundColor: this.backgroundColor,
       };
     },
   },
