@@ -34,10 +34,6 @@ export default {
   components: { GTIcon },
 
   props: {
-    text: {
-      type: String,
-      required: true,
-    },
     primary: {
       type: Boolean,
       default: false,
@@ -52,6 +48,15 @@ export default {
       validator: function (value) {
         return ["sm", "md", "lg"].indexOf(value) !== -1;
       },
+    },
+    variant: {
+      type: String,
+      default: "",
+    },
+    // should be deleted!
+    text: {
+      type: String,
+      required: true,
     },
     icon: {
       type: String,
@@ -75,11 +80,12 @@ export default {
     classes() {
       return {
         "gt-btn": true,
-        "bg--primary-navy-blue": true,
         "gt-btn--primary": this.primary,
         "gt-btn--secondary": !this.primary,
         "gt-btn--loading": this.isLoading,
         [`gt-btn--${this.size}`]: true,
+        "bg--primary-navy-blue": !this.variant && this.primary,
+        [`bg--${this.variant}`]: this.variant && this.primary,
         "cr--md": true,
         "poppins poppins--btn-2": true,
         "text-center": true,
