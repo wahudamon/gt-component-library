@@ -11,10 +11,6 @@
   line-height: 1;
   transition: box-shadow 0.3s;
 
-  &:hover:not([disabled]) {
-    @extend .be--medium;
-  }
-
   &--sm {
     min-width: 104px;
     height: 40px;
@@ -36,8 +32,12 @@
   &--primary {
     @extend .text--neutral-50;
 
-    &:active {
-      @extend .bg--red-900;
+    &:active:not(.gt-btn--loading) {
+      @extend .bg--red-300;
+    }
+
+    &:hover:not([disabled]) {
+      @extend .be--medium;
     }
 
     &[disabled] {
@@ -56,8 +56,8 @@
     border-width: 1px;
     transition: background-color 0.3s;
 
-    &:active:not([disabled]) {
-      @extend .bg--red-900;
+    &:active:not([disabled], .gt-btn--loading) {
+      @extend .bg--red-300;
       @extend .text--neutral-50;
     }
 
@@ -73,10 +73,10 @@
 
   &--link {
     background-color: transparent;
-    transition: color 0.3s;
+    transition: color 0.1s;
 
-    &:active:not([disabled]) {
-      @extend .text--neutral-50;
+    &:active:not([disabled], .gt-btn--loading) {
+      @extend .text--red-300;
     }
 
     &[disabled] {
