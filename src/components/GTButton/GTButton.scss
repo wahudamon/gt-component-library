@@ -16,7 +16,7 @@
   }
 
   &--primary {
-    color: white;
+    @extend .text--neutral-50;
   }
 
   &--secondary {
@@ -41,6 +41,10 @@
     min-width: 224px;
     height: 56px;
     padding: 12px, 16px, 12px, 16px;
+  }
+
+  &:active {
+    @extend .bg--navy-blue-900;
   }
 
   &[disabled] {
