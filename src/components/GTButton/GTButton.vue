@@ -34,13 +34,16 @@ export default {
   components: { GTIcon },
 
   props: {
-    primary: {
-      type: Boolean,
-      default: false,
-    },
     isDisabled: {
       type: Boolean,
       default: false,
+    },
+    type: {
+      type: String,
+      default: "primary",
+      validator: function (value) {
+        return ["primary", "secondary", "link"].indexOf(value) !== -1;
+      },
     },
     size: {
       type: String,
@@ -80,12 +83,11 @@ export default {
     classes() {
       return {
         "gt-btn": true,
-        "gt-btn--primary": this.primary,
-        "gt-btn--secondary": !this.primary,
+        [`gt-btn--${this.type}`]: true,
         "gt-btn--loading": this.isLoading,
         [`gt-btn--${this.size}`]: true,
-        "bg--primary-navy-blue": !this.variant && this.primary,
-        [`bg--${this.variant}`]: this.variant && this.primary,
+        "bg--primary-navy-blue": !this.variant && this.type == "primary",
+        [`bg--${this.variant}`]: this.variant && this.type == "primary",
         "cr--md": true,
         "poppins poppins--btn-2": true,
         "text-center": true,
