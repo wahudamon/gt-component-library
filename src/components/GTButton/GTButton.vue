@@ -88,6 +88,7 @@ export default {
         [`gt-btn--${this.size}`]: true,
         "bg--primary-navy-blue": !this.variant && this.type == "primary",
         [`bg--${this.variant}`]: this.variant && this.type == "primary",
+        [`border--${this.variant}`]: this.variant && this.type == "secondary",
         "cr--md": true,
         "poppins poppins--btn-2": true,
         "text-center": true,

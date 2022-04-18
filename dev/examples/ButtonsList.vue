@@ -167,5 +167,64 @@ export default Vue.extend({
         </div>
       </div>
     </div>
+    <p class="mt--10 ml--20 playfair playfair--h3">Secondary Buttons</p>
+    <div class="mt--5 mb--15 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-12">
+          <GTButton
+            type="secondary"
+            variant="red-200"
+            size="sm"
+            text="Button"
+          />
+          <GTButton
+            class="ml--5"
+            isDisabled
+            type="secondary"
+            size="sm"
+            text="Button"
+          />
+          <GTButton
+            class="ml--5"
+            type="secondary"
+            variant="red-200"
+            size="sm"
+            icon="gt-paper-plane-s"
+          />
+          <GTButton
+            class="ml--5"
+            isDisabled
+            type="secondary"
+            size="sm"
+            icon="gt-paper-plane-s"
+          />
+          <GTButton
+            class="ml--5"
+            type="secondary"
+            variant="red-200"
+            size="sm"
+            isPrependIcon
+            icon="gt-paper-plane-s"
+            text="Button"
+          />
+          <GTButton
+            class="ml--5"
+            type="secondary"
+            variant="red-200"
+            size="sm"
+            isAppendIcon
+            icon="gt-paper-plane-s"
+            text="Button"
+          />
+          <GTButton
+            class="ml--5"
+            type="secondary"
+            variant="red-200"
+            isLoading
+            size="sm"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>

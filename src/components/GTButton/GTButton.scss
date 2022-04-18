@@ -15,16 +15,6 @@
     @extend .be--medium;
   }
 
-  &--primary {
-    @extend .text--neutral-50;
-  }
-
-  &--secondary {
-    color: #333;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  }
-
   &--sm {
     min-width: 104px;
     height: 40px;
@@ -43,16 +33,58 @@
     padding: 12px, 16px, 12px, 16px;
   }
 
-  &:active {
-    @extend .bg--red-900;
+  &--primary {
+    @extend .text--neutral-50;
+
+    &:active {
+      @extend .bg--red-900;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+
+      &:not(.gt-btn--loading) {
+        @extend .bg--neutral-300;
+        @extend .text--neutral-500;
+      }
+    }
   }
 
-  &[disabled] {
-    cursor: not-allowed;
+  &--secondary {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    transition: background-color 0.3s;
 
-    &:not(.gt-btn--loading) {
-      @extend .bg--neutral-300;
-      @extend .text--neutral-500;
+    &:active:not([disabled]) {
+      @extend .bg--red-900;
+      @extend .text--neutral-50;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+
+      &:not(.gt-btn--loading) {
+        @extend .border--neutral-300;
+        @extend .text--neutral-500;
+      }
+    }
+  }
+
+  &--link {
+    background-color: transparent;
+    transition: color 0.3s;
+
+    &:active:not([disabled]) {
+      @extend .text--neutral-50;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+
+      &:not(.gt-btn--loading) {
+        @extend .text--neutral-500;
+      }
     }
   }
 }
