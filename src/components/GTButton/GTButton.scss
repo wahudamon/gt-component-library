@@ -47,8 +47,8 @@
     cursor: not-allowed;
 
     &:not(.gt-btn--loading) {
-      @extend .bg--neutral-400;
-      @extend .text--neutral-600;
+      @extend .bg--neutral-300;
+      @extend .text--neutral-500;
     }
   }
 }
