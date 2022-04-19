@@ -1,8 +1,8 @@
 <template>
   <label :class="classes">
-    <p class="label--title poppins poppins--b1-medium">Label</p>
-    <p class="label--subtitle poppins poppins--caption">Lorem Ipsum</p>
-    <input type="checkbox" :disabled="isDisabled" />
+    <p class="label--title poppins poppins--b1-medium">{{ text }}</p>
+    <p class="label--subtitle poppins poppins--caption">{{ subtext }}</p>
+    <input id="checkbox" type="checkbox" :disabled="isDisabled" />
     <span class="checkmark"></span>
   </label>
 </template>

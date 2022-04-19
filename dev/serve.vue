@@ -27,8 +27,13 @@ export default Vue.extend({
 <template>
   <div id="app">
     <!-- <buttons-list /> -->
-    <GTCheckbox class="ml--20 mt--20" type="primary" />
-    <GTCheckbox class="ml--20 mt--5" type="secondary" />
+    <GTCheckbox class="ml--20 mt--20" type="primary" text="Text" />
+    <GTCheckbox
+      class="ml--20 mt--5"
+      type="secondary"
+      text="Text"
+      subtext="Subtext"
+    />
     <GTCheckbox class="ml--20 mt--5" isDisabled />
     <!-- <checkbox-example class="ml--20 mt--10" /> -->
     <!-- <radio-button-example class="ml--20 mt--10" /> -->
