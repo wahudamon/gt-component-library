@@ -4,9 +4,6 @@
 @import "../../../css/margin";
 
 .gt-checkbox {
-  @extend .poppins;
-  @extend .poppins--b1-medium;
-
   display: block;
   position: relative;
   padding-left: 35px;
@@ -25,7 +22,19 @@
     width: 0;
   }
 
+  p {
+    margin-bottom: 0;
+  }
+
   &--primary {
+    .label--title {
+      @extend .text--neutral-900;
+    }
+
+    .label--subtitle {
+      @extend .text--neutral-700;
+    }
+
     input:checked ~ .checkmark {
       @extend .bg--primary-navy-blue;
       border: none;
@@ -55,6 +64,14 @@
   }
 
   &--secondary {
+    .label--title {
+      @extend .text--neutral-900;
+    }
+
+    .label--subtitle {
+      @extend .text--neutral-700;
+    }
+
     input:checked ~ .checkmark {
       @extend .bg--semantic-error;
       border: none;
@@ -84,7 +101,13 @@
   }
 
   &--disabled {
-    @extend .text--neutral-500;
+    .label--title {
+      @extend .text--neutral-500;
+    }
+
+    .label--subtitle {
+      @extend .text--neutral-500;
+    }
 
     .checkmark {
       @extend .cr--md;
