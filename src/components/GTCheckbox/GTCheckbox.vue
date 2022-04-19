@@ -1,7 +1,7 @@
 <template>
   <label :class="classes">
     Label
-    <input type="checkbox" />
+    <input type="checkbox" :disabled="isDisabled" />
     <span class="checkmark"></span>
   </label>
 </template>
@@ -19,7 +19,7 @@ export default {
       type: String,
       default: "primary",
       validator: function (value) {
-        return ["primary", "secondary", "link"].indexOf(value) !== -1;
+        return ["primary", "secondary"].indexOf(value) !== -1;
       },
     },
     size: {
@@ -29,10 +29,13 @@ export default {
         return ["sm", "md", "lg"].indexOf(value) !== -1;
       },
     },
-    // should be deleted!
     text: {
       type: String,
-      required: true,
+      default: "",
+    },
+    subtext: {
+      type: String,
+      default: "",
     },
   },
 
@@ -40,6 +43,8 @@ export default {
     classes() {
       return {
         "gt-checkbox": true,
+        "gt-checkbox--disabled": this.isDisabled,
+        [`gt-checkbox--${this.type}`]: true,
       };
     },
   },

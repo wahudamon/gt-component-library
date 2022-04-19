@@ -25,13 +25,84 @@
     width: 0;
   }
 
-  input:checked ~ .checkmark {
-    @extend .bg--primary-navy-blue;
-    border: none;
+  &--primary {
+    input:checked ~ .checkmark {
+      @extend .bg--primary-navy-blue;
+      border: none;
+    }
+
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .checkmark {
+      @extend .cr--md;
+      @extend .border--neutral-600;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      border: solid 1px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
   }
 
-  input:checked ~ .checkmark:after {
-    display: block;
+  &--secondary {
+    input:checked ~ .checkmark {
+      @extend .bg--semantic-error;
+      border: none;
+    }
+
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .checkmark {
+      @extend .cr--md;
+      @extend .border--semantic-error;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      border: solid 1px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+  }
+
+  &--disabled {
+    @extend .text--neutral-500;
+
+    .checkmark {
+      @extend .cr--md;
+      @extend .bg--neutral-300;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      border: none;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
   }
 
   .checkmark:after {
@@ -44,23 +115,5 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
-}
-
-.checkmark {
-  @extend .cr--md;
-  @extend .border--neutral-600;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  border: solid 1px;
-
-  &:after {
-    content: "";
-    position: absolute;
-    display: none;
   }
 }
