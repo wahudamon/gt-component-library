@@ -1,0 +1,140 @@
+@import "../../../css/typography";
+@import "../../../css/color";
+@import "../../../css/corner-radius";
+@import "../../../css/margin";
+
+.gt-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  --webkit-user-select: none;
+  --moz-user-select: none;
+  --ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &--primary {
+    .label--title {
+      @extend .text--neutral-900;
+    }
+
+    .label--subtitle {
+      @extend .text--neutral-700;
+    }
+
+    input:checked ~ .checkmark {
+      @extend .bg--primary-navy-blue;
+      border: none;
+    }
+
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .checkmark {
+      @extend .cr--md;
+      @extend .border--neutral-600;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+  }
+
+  &--secondary {
+    .label--title {
+      @extend .text--neutral-900;
+    }
+
+    .label--subtitle {
+      @extend .text--neutral-700;
+    }
+
+    input:checked ~ .checkmark {
+      @extend .bg--semantic-error;
+      border: none;
+    }
+
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .checkmark {
+      @extend .cr--md;
+      @extend .border--semantic-error;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+  }
+
+  &--disabled {
+    .label--title {
+      @extend .text--neutral-500;
+    }
+
+    .label--subtitle {
+      @extend .text--neutral-500;
+    }
+
+    .checkmark {
+      @extend .cr--md;
+      @extend .bg--neutral-300;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+  }
+
+  .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+}
