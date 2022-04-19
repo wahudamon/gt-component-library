@@ -59,7 +59,7 @@ export default {
     // should be deleted!
     text: {
       type: String,
-      required: true,
+      default: "",
     },
     icon: {
       type: String,
