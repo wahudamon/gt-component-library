@@ -1,7 +1,12 @@
 @import "../../../css/typography";
+@import "../../../css/color";
+@import "../../../css/corner-radius";
 @import "../../../css/margin";
 
-.container {
+.gt-checkbox {
+  @extend .poppins;
+  @extend .poppins--b1-medium;
+
   display: block;
   position: relative;
   padding-left: 35px;
@@ -21,7 +26,8 @@
   }
 
   input:checked ~ .checkmark {
-    background-color: #2196f3;
+    @extend .bg--primary-navy-blue;
+    border: none;
   }
 
   input:checked ~ .checkmark:after {
@@ -42,12 +48,15 @@
 }
 
 .checkmark {
+  @extend .cr--md;
+  @extend .border--neutral-600;
+
   position: absolute;
   top: 0;
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  border: solid 1px;
 
   &:after {
     content: "";
