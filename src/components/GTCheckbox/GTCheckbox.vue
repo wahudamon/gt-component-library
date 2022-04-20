@@ -1,8 +1,8 @@
 <template>
   <label :class="classes">
-    <p class="label--title poppins poppins--b1-medium">{{ text }}</p>
-    <p class="label--subtitle poppins poppins--caption">{{ subtext }}</p>
-    <input id="checkbox" type="checkbox" :disabled="isDisabled" />
+    <p class="label--title">{{ text }}</p>
+    <p class="label--subtitle">{{ subtext }}</p>
+    <input type="checkbox" :disabled="isDisabled" />
     <span class="checkmark"></span>
   </label>
 </template>
@@ -46,6 +46,7 @@ export default {
         "gt-checkbox": true,
         "gt-checkbox--disabled": this.isDisabled,
         [`gt-checkbox--${this.type}`]: !this.isDisabled,
+        [`gt-checkbox--${this.size}`]: true,
       };
     },
   },
