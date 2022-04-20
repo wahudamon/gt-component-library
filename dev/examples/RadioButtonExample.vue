@@ -1,39 +1,170 @@
-<template>
-  <div>
-    <h1>Display Radio Buttons</h1>
-    <form>
-      <p>Please select your favorite Web language:</p>
-      <input type="radio" id="html" name="fav_language" value="HTML" />
-      <label class="ml--2" for="html">HTML</label><br />
-      <input type="radio" id="css" name="fav_language" value="CSS" />
-      <label class="ml--2" for="css">CSS</label><br />
-      <input
-        type="radio"
-        id="javascript"
-        name="fav_language"
-        value="JavaScript"
-      />
-      <label class="ml--2" for="javascript">JavaScript</label>
-
-      <p class="mt--5">Please select your age:</p>
-      <input type="radio" id="age1" name="age" value="30" />
-      <label class="ml--2" for="age1">0 - 30</label><br />
-      <input type="radio" id="age2" name="age" value="60" />
-      <label class="ml--2" for="age2">31 - 60</label><br />
-      <input type="radio" id="age3" name="age" value="100" />
-      <label class="ml--2" for="age3">61 - 100</label><br /><br />
-      <input type="submit" value="Submit" />
-    </form>
-  </div>
-</template>
-
 <script>
+import { GTRadioButton } from "@/entry.esm";
+
 export default {
   name: "radio-button-example",
+
+  components: { GTRadioButton },
 };
 </script>
 
-<style lang="scss" scoped>
-@import "../../css/typography";
-@import "../../css/margin";
-</style>
+<template>
+  <div>
+    <p class="mt--10 ml--20 playfair playfair--h5">Primary Radio Buttons</p>
+    <div class="mb--15 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" size="sm" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" size="sm" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="primary"
+            size="sm"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" size="md" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" size="md" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="primary"
+            size="md"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" size="lg" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" size="lg" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="primary"
+            size="lg"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+    </div>
+    <p class="mt--5 ml--20 playfair playfair--h5">Secondary Radio Buttons</p>
+    <div class="mb--15 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="secondary" size="sm" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="secondary" size="sm" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="secondary"
+            size="sm"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="secondary" size="md" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="secondary" size="md" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="secondary"
+            size="md"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="secondary" size="lg" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="secondary" size="lg" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="secondary"
+            size="lg"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+    </div>
+    <p class="mt--5 ml--20 playfair playfair--h5">Disabled Radio Buttons</p>
+    <div class="mb--15 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" isDisabled size="sm" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" isDisabled size="sm" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="primary"
+            isDisabled
+            size="sm"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" isDisabled size="md" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" isDisabled size="md" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="primary"
+            isDisabled
+            size="md"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" isDisabled size="lg" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" isDisabled size="lg" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="primary"
+            isDisabled
+            size="lg"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
