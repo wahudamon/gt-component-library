@@ -1,8 +1,8 @@
 <template>
   <label :class="classes">
-    <p class="label--title poppins poppins--b1-medium">{{ text }}</p>
-    <p class="label--subtitle poppins poppins--caption">{{ subtext }}</p>
-    <input id="radio" type="radio" name="radio" :disabled="isDisabled" />
+    <p class="label--title">{{ text }}</p>
+    <p class="label--subtitle">{{ subtext }}</p>
+    <input type="radio" name="radio" :disabled="isDisabled" :value="{ text }" />
     <span class="checkmark"></span>
   </label>
 </template>
@@ -44,6 +44,7 @@ export default {
         "gt-radio": true,
         "gt-radio--disabled": this.isDisabled,
         [`gt-radio--${this.type}`]: !this.isDisabled,
+        [`gt-radio--${this.size}`]: true,
       };
     },
   },

@@ -14,13 +14,50 @@ export default {
     <div class="mb--15 grid--container">
       <div class="grid--row">
         <div class="grid--col-lg-2">
-          <GTRadioButton type="primary" />
+          <GTRadioButton type="primary" size="sm" />
         </div>
         <div class="grid--col-lg-2">
-          <GTRadioButton type="primary" text="Text" />
+          <GTRadioButton type="primary" size="sm" text="Text" />
         </div>
         <div class="grid--col-lg-2">
-          <GTRadioButton type="primary" text="Text" subtext="this is subtext" />
+          <GTRadioButton
+            type="primary"
+            size="sm"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" size="md" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" size="md" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="primary"
+            size="md"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" size="lg" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" size="lg" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="primary"
+            size="lg"
+            text="Text"
+            subtext="this is subtext"
+          />
         </div>
       </div>
     </div>
@@ -28,14 +65,47 @@ export default {
     <div class="mb--15 grid--container">
       <div class="grid--row">
         <div class="grid--col-lg-2">
-          <GTRadioButton type="secondary" />
+          <GTRadioButton type="secondary" size="sm" />
         </div>
         <div class="grid--col-lg-2">
-          <GTRadioButton type="secondary" text="Text" />
+          <GTRadioButton type="secondary" size="sm" text="Text" />
         </div>
         <div class="grid--col-lg-2">
           <GTRadioButton
             type="secondary"
+            size="sm"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="secondary" size="md" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="secondary" size="md" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="secondary"
+            size="md"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="secondary" size="lg" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="secondary" size="lg" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="secondary"
+            size="lg"
             text="Text"
             subtext="this is subtext"
           />
@@ -46,15 +116,50 @@ export default {
     <div class="mb--15 grid--container">
       <div class="grid--row">
         <div class="grid--col-lg-2">
-          <GTRadioButton type="primary" isDisabled />
+          <GTRadioButton type="primary" isDisabled size="sm" />
         </div>
         <div class="grid--col-lg-2">
-          <GTRadioButton type="primary" isDisabled text="Text" />
+          <GTRadioButton type="primary" isDisabled size="sm" text="Text" />
         </div>
         <div class="grid--col-lg-2">
           <GTRadioButton
             type="primary"
             isDisabled
+            size="sm"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" isDisabled size="md" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" isDisabled size="md" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="primary"
+            isDisabled
+            size="md"
+            text="Text"
+            subtext="this is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" isDisabled size="lg" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton type="primary" isDisabled size="lg" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTRadioButton
+            type="primary"
+            isDisabled
+            size="lg"
             text="Text"
             subtext="this is subtext"
           />
