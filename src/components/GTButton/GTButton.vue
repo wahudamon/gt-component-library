@@ -1,47 +1,117 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">
-    {{ label }}
+  <button
+    type="button"
+    :disabled="isDisabled || isLoading"
+    :class="classes"
+    @click="onClick"
+  >
+    <template v-if="isLoading && !icon">
+      <GTIcon animate name="gt-rotate-right-s" :size="size" />
+    </template>
+    <template v-else-if="!isLoading && !icon">
+      {{ text }}
+    </template>
+    <template v-else-if="icon && isPrependIcon">
+      <GTIcon :name="icon" :size="size" />
+      <span> {{ text }}</span>
+    </template>
+    <template v-else-if="icon && isAppendIcon">
+      <span>{{ text }} </span>
+      <GTIcon :name="icon" :size="size" />
+    </template>
+    <template v-else>
+      <GTIcon :name="icon" :size="size" />
+    </template>
   </button>
 </template>
 
 <script>
+import GTIcon from "../GTIcon/GTIcon.vue";
+
 export default {
   name: "GTButton",
 
+  components: { GTIcon },
+
   props: {
-    label: {
-      type: String,
-      required: true,
-    },
-    primary: {
+    isDisabled: {
       type: Boolean,
       default: false,
     },
-    size: {
+    type: {
       type: String,
-      default: "medium",
+      default: "primary",
       validator: function (value) {
-        return ["small", "medium", "large"].indexOf(value) !== -1;
+        return ["primary", "secondary", "link"].indexOf(value) !== -1;
       },
     },
-    backgroundColor: {
+    size: {
       type: String,
+      default: "md",
+      validator: function (value) {
+        return ["sm", "md", "lg"].indexOf(value) !== -1;
+      },
+    },
+    variant: {
+      type: String,
+      default: "navy-blue",
+      validator: function (value) {
+        return (
+          [
+            "navy-blue",
+            "sea-foam",
+            "sun",
+            "mustard",
+            "charcoal",
+            "chocolate",
+            "teal",
+            "success",
+            "link",
+            "error",
+            "warning",
+          ].indexOf(value) !== -1
+        );
+      },
+    },
+    // should be deleted!
+    text: {
+      type: String,
+      default: "",
+    },
+    icon: {
+      type: String,
+      default: "",
+    },
+    isPrependIcon: {
+      type: Boolean,
+      default: false,
+    },
+    isAppendIcon: {
+      type: Boolean,
+      default: false,
+    },
+    isLoading: {
+      type: Boolean,
+      default: false,
     },
   },
 
   computed: {
     classes() {
       return {
-        "storybook-button": true,
-        "bg--primary-navy-blue": true,
-        "storybook-button--primary": this.primary,
-        "storybook-button--secondary": !this.primary,
-        [`storybook-button--${this.size}`]: true,
-      };
-    },
-    style() {
-      return {
-        backgroundColor: this.backgroundColor,
+        "gt-btn": true,
+        [`gt-btn--${this.type}`]: true,
+        "gt-btn--loading": this.isLoading,
+        [`gt-btn--${this.size}`]: true,
+        [`bg--${this.formatVariant(this.variant)}`]:
+          this.variant && this.type == "primary",
+        [`border--${this.formatVariant(this.variant)}`]:
+          this.variant && this.type == "secondary",
+        [`text--${this.formatVariant(this.variant)}`]:
+          this.variant && this.type == "link",
+        "cr--md": true,
+        "poppins poppins--btn-2": true,
+        "text-center": true,
       };
     },
   },
@@ -50,43 +120,31 @@ export default {
     onClick() {
       this.$emit("onClick");
     },
+    formatVariant(variant) {
+      let formattedVariant = "";
+      if (
+        variant === "navy-blue" ||
+        variant === "sea-foam" ||
+        variant === "sun" ||
+        variant === "mustard"
+      ) {
+        formattedVariant = `primary-${variant}`;
+      } else if (
+        variant === "charcoal" ||
+        variant === "chocolate" ||
+        variant === "teal"
+      ) {
+        formattedVariant = `secondary-${variant}`;
+      } else {
+        formattedVariant = `semantic-${variant}`;
+      }
+
+      return formattedVariant;
+    },
   },
 };
 </script>
 
-<style>
-@import "../../../css/color.css";
-
-.storybook-button {
-  min-width: 200px;
-  height: 48px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-}
-.storybook-button--primary {
-  color: white;
-  /* background-color: #24e0c5; */
-}
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
-.storybook-button--small {
-  font-size: 12px;
-  padding: 10px 16px;
-}
-.storybook-button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
-}
-.storybook-button--large {
-  font-size: 16px;
-  padding: 12px 24px;
-}
+<style lang="scss">
+@import "./GTButton.scss";
 </style>

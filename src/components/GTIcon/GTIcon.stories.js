@@ -20,6 +20,11 @@ export default {
       control: { type: "select" },
       options: ["sm", "md", "lg", "xl"],
     },
+    animate: {
+      name: "animate",
+      description: "icon's animation toggler",
+      control: { type: "boolean" },
+    },
   },
   parameters: {
     viewMode: "docs",
@@ -70,6 +75,27 @@ export const CommunicationSolid = (args) => ({
       <div
         v-for="(icon, index) in icons"
         v-if="icon.type == 'comm-solid'"
+        :key="index"
+        style="text-align: center; padding: 2rem"
+      >
+        <GTIcon :name="icon.name" size="lg" />
+        <p> {{ icon.name }} </p>
+      </div>
+    </div>
+  `,
+});
+
+export const NavigationSolid = (args) => ({
+  props: Object.keys(args),
+  components: { GTIcon },
+  data: () => ({
+    icons: availableIconsObj,
+  }),
+  template: `
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div
+        v-for="(icon, index) in icons"
+        v-if="icon.type == 'nav-solid'"
         :key="index"
         style="text-align: center; padding: 2rem"
       >
