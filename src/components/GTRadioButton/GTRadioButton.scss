@@ -36,7 +36,6 @@
 
     input:checked ~ .checkmark {
       @extend .bg--primary-navy-blue;
-      border: none;
     }
 
     input:checked ~ .checkmark:after {
@@ -45,7 +44,6 @@
 
     .checkmark {
       @extend .cr--md;
-      @extend .border--neutral-600;
 
       position: absolute;
       top: 0;
@@ -131,10 +129,11 @@
   }
 
   .checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
+    top: 8px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
+    background-color: #ffffff;
   }
 }
