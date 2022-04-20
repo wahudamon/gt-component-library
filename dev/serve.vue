@@ -1,6 +1,6 @@
 <script>
 import Vue from "vue";
-import { GTIcon, GTCheckbox } from "@/entry.esm";
+import { GTIcon } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
 import ButtonsList from "./examples/ButtonsList.vue";
@@ -14,7 +14,6 @@ export default Vue.extend({
     CheckboxExample,
     RadioButtonExample,
     GTIcon,
-    GTCheckbox,
     GridSystem,
     Typography,
     ButtonsList,
@@ -26,16 +25,8 @@ export default Vue.extend({
 <template>
   <div id="app">
     <!-- <buttons-list /> -->
-    <!-- <GTCheckbox class="ml--20 mt--20" type="primary" text="Text" />
-    <GTCheckbox
-      class="ml--20 mt--5"
-      type="secondary"
-      text="Text"
-      subtext="Subtext"
-    />
-    <GTCheckbox class="ml--20 mt--5" isDisabled /> -->
-    <!-- <checkbox-example class="ml--20 mt--10" /> -->
-    <radio-button-example class="ml--20 mt--10" />
+    <checkbox-example class="ml--20 mt--10" />
+    <!-- <radio-button-example class="ml--20 mt--10" /> -->
     <!-- <button class="ml--20">
       <GTIcon name="gt-address-book-r" size="md" />
     </button> -->

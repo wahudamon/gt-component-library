@@ -1,25 +1,38 @@
-<template>
-  <div>
-    <h1>Show Checkboxes</h1>
-    <form>
-      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-      <label class="ml--2" for="vehicle1"> I have a bike</label><br />
-      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
-      <label class="ml--2" for="vehicle2"> I have a car</label><br />
-      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-      <label class="ml--2" for="vehicle3"> I have a boat</label><br /><br />
-      <input type="submit" value="Submit" />
-    </form>
-  </div>
-</template>
-
 <script>
+import { GTCheckbox } from "@/entry.esm";
+
 export default {
   name: "checkbox-example",
+
+  components: { GTCheckbox },
 };
 </script>
 
-<style lang="scss" scoped>
-@import "../../css/typography";
-@import "../../css/margin";
-</style>
+<template>
+  <div>
+    <p class="mt--10 ml--20 playfair playfair--h5">Primary Checkboxes</p>
+    <div class="mb--15 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" text="Text" subtext="This is subtext" />
+        </div>
+      </div>
+    </div>
+    <p class="mt--5 ml--20 playfair playfair--h5">Secondary Checkboxes</p>
+    <div class="mb--15 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="secondary" text="Text" subtext="This is subtext" />
+        </div>
+      </div>
+    </div>
+    <p class="mt--5 ml--20 playfair playfair--h5">Disabled Checkboxes</p>
+    <div class="mb--15 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox isDisabled text="Text" subtext="This is subtext" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
