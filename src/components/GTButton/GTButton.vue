@@ -54,12 +54,29 @@ export default {
     },
     variant: {
       type: String,
-      default: "",
+      default: "navy-blue",
+      validator: function (value) {
+        return (
+          [
+            "navy-blue",
+            "sea-foam",
+            "sun",
+            "mustard",
+            "charcoal",
+            "chocolate",
+            "teal",
+            "success",
+            "link",
+            "error",
+            "warning",
+          ].indexOf(value) !== -1
+        );
+      },
     },
     // should be deleted!
     text: {
       type: String,
-      required: true,
+      default: "",
     },
     icon: {
       type: String,
@@ -86,9 +103,12 @@ export default {
         [`gt-btn--${this.type}`]: true,
         "gt-btn--loading": this.isLoading,
         [`gt-btn--${this.size}`]: true,
-        "bg--primary-navy-blue": !this.variant && this.type == "primary",
-        [`bg--${this.variant}`]: this.variant && this.type == "primary",
-        [`border--${this.variant}`]: this.variant && this.type == "secondary",
+        [`bg--${this.formatVariant(this.variant)}`]:
+          this.variant && this.type == "primary",
+        [`border--${this.formatVariant(this.variant)}`]:
+          this.variant && this.type == "secondary",
+        [`text--${this.formatVariant(this.variant)}`]:
+          this.variant && this.type == "link",
         "cr--md": true,
         "poppins poppins--btn-2": true,
         "text-center": true,
@@ -99,6 +119,27 @@ export default {
   methods: {
     onClick() {
       this.$emit("onClick");
+    },
+    formatVariant(variant) {
+      let formattedVariant = "";
+      if (
+        variant === "navy-blue" ||
+        variant === "sea-foam" ||
+        variant === "sun" ||
+        variant === "mustard"
+      ) {
+        formattedVariant = `primary-${variant}`;
+      } else if (
+        variant === "charcoal" ||
+        variant === "chocolate" ||
+        variant === "teal"
+      ) {
+        formattedVariant = `secondary-${variant}`;
+      } else {
+        formattedVariant = `semantic-${variant}`;
+      }
+
+      return formattedVariant;
     },
   },
 };
