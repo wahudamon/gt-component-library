@@ -16,7 +16,7 @@ export default Vue.extend({
     <div class="mt--5 mb--15 grid--container">
       <div class="grid--row">
         <div class="grid--col-lg-12">
-          <GTButton type="primary" size="sm" text="Button" />
+          <GTButton type="primary" variant="sea-foam" size="sm" text="Button" />
           <GTButton
             class="ml--5"
             isDisabled
@@ -27,6 +27,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="primary"
+            variant="sea-foam"
             size="sm"
             icon="gt-paper-plane-s"
           />
@@ -40,6 +41,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="primary"
+            variant="sea-foam"
             size="sm"
             isPrependIcon
             icon="gt-paper-plane-s"
@@ -48,25 +50,34 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="primary"
+            variant="sea-foam"
             size="sm"
             isAppendIcon
             icon="gt-paper-plane-s"
             text="Button"
           />
-          <GTButton class="ml--5" type="primary" isLoading size="sm" />
+          <GTButton
+            class="ml--5"
+            type="primary"
+            variant="sea-foam"
+            isLoading
+            size="sm"
+          />
         </div>
         <div class="grid--col-lg-12">
-          <GTButton type="primary" size="md" text="Button" />
+          <GTButton type="primary" variant="sea-foam" size="md" text="Button" />
           <GTButton
             class="ml--5"
             isDisabled
             type="primary"
+            variant="sea-foam"
             size="md"
             text="Button"
           />
           <GTButton
             class="ml--5"
             type="primary"
+            variant="sea-foam"
             size="md"
             icon="gt-paper-plane-s"
           />
@@ -80,6 +91,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="primary"
+            variant="sea-foam"
             size="md"
             isPrependIcon
             icon="gt-paper-plane-s"
@@ -88,15 +100,22 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="primary"
+            variant="sea-foam"
             size="md"
             isAppendIcon
             icon="gt-paper-plane-s"
             text="Button"
           />
-          <GTButton class="ml--5" type="primary" isLoading size="md" />
+          <GTButton
+            class="ml--5"
+            type="primary"
+            variant="sea-foam"
+            isLoading
+            size="md"
+          />
         </div>
         <div class="grid--col-lg-12">
-          <GTButton type="primary" size="lg" text="Button" />
+          <GTButton type="primary" variant="sea-foam" size="lg" text="Button" />
           <GTButton
             class="ml--5"
             isDisabled
@@ -107,6 +126,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="primary"
+            variant="sea-foam"
             size="lg"
             icon="gt-paper-plane-s"
           />
@@ -120,6 +140,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="primary"
+            variant="sea-foam"
             size="lg"
             isPrependIcon
             icon="gt-paper-plane-s"
@@ -131,11 +152,18 @@ export default Vue.extend({
             <GTButton
               type="primary"
               size="lg"
+              variant="sea-foam"
               isAppendIcon
               icon="gt-paper-plane-s"
               text="Button"
             />
-            <GTButton class="ml--5" type="primary" isLoading size="lg" />
+            <GTButton
+              class="ml--5"
+              type="primary"
+              variant="sea-foam"
+              isLoading
+              size="lg"
+            />
           </div>
         </div>
       </div>
@@ -144,7 +172,12 @@ export default Vue.extend({
     <div class="mt--5 mb--15 grid--container">
       <div class="grid--row">
         <div class="grid--col-lg-12">
-          <GTButton type="secondary" size="sm" text="Button" />
+          <GTButton
+            type="secondary"
+            variant="chocolate"
+            size="sm"
+            text="Button"
+          />
           <GTButton
             class="ml--5"
             isDisabled
@@ -155,6 +188,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="secondary"
+            variant="chocolate"
             size="sm"
             icon="gt-paper-plane-s"
           />
@@ -168,6 +202,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="secondary"
+            variant="chocolate"
             size="sm"
             isPrependIcon
             icon="gt-paper-plane-s"
@@ -176,15 +211,27 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="secondary"
+            variant="chocolate"
             size="sm"
             isAppendIcon
             icon="gt-paper-plane-s"
             text="Button"
           />
-          <GTButton class="ml--5" type="secondary" isLoading size="sm" />
+          <GTButton
+            class="ml--5"
+            type="secondary"
+            variant="chocolate"
+            isLoading
+            size="sm"
+          />
         </div>
         <div class="grid--col-lg-12">
-          <GTButton type="secondary" size="md" text="Button" />
+          <GTButton
+            type="secondary"
+            variant="chocolate"
+            size="md"
+            text="Button"
+          />
           <GTButton
             class="ml--5"
             isDisabled
@@ -195,6 +242,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="secondary"
+            variant="chocolate"
             size="md"
             icon="gt-paper-plane-s"
           />
@@ -208,6 +256,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="secondary"
+            variant="chocolate"
             size="md"
             isPrependIcon
             icon="gt-paper-plane-s"
@@ -216,15 +265,27 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="secondary"
+            variant="chocolate"
             size="md"
             isAppendIcon
             icon="gt-paper-plane-s"
             text="Button"
           />
-          <GTButton class="ml--5" type="secondary" isLoading size="md" />
+          <GTButton
+            class="ml--5"
+            type="secondary"
+            variant="chocolate"
+            isLoading
+            size="md"
+          />
         </div>
         <div class="grid--col-lg-12">
-          <GTButton type="secondary" size="lg" text="Button" />
+          <GTButton
+            type="secondary"
+            variant="chocolate"
+            size="lg"
+            text="Button"
+          />
           <GTButton
             class="ml--5"
             isDisabled
@@ -235,6 +296,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="secondary"
+            variant="chocolate"
             size="lg"
             icon="gt-paper-plane-s"
           />
@@ -248,6 +310,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="secondary"
+            variant="chocolate"
             size="lg"
             isPrependIcon
             icon="gt-paper-plane-s"
@@ -257,12 +320,19 @@ export default Vue.extend({
         <div class="grid--col-lg-12">
           <GTButton
             type="secondary"
+            variant="chocolate"
             size="lg"
             isAppendIcon
             icon="gt-paper-plane-s"
             text="Button"
           />
-          <GTButton class="ml--5" type="secondary" isLoading size="lg" />
+          <GTButton
+            class="ml--5"
+            type="secondary"
+            variant="chocolate"
+            isLoading
+            size="lg"
+          />
         </div>
       </div>
     </div>
@@ -270,7 +340,7 @@ export default Vue.extend({
     <div class="mt--5 mb--15 grid--container">
       <div class="grid--row">
         <div class="grid--col-lg-12">
-          <GTButton type="link" size="sm" text="Button" />
+          <GTButton type="link" variant="error" size="sm" text="Button" />
           <GTButton
             class="ml--5"
             isDisabled
@@ -281,6 +351,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="link"
+            variant="error"
             size="sm"
             icon="gt-paper-plane-s"
           />
@@ -294,6 +365,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="link"
+            variant="error"
             size="sm"
             isPrependIcon
             icon="gt-paper-plane-s"
@@ -302,15 +374,22 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="link"
+            variant="error"
             size="sm"
             isAppendIcon
             icon="gt-paper-plane-s"
             text="Button"
           />
-          <GTButton class="ml--5" type="link" isLoading size="sm" />
+          <GTButton
+            class="ml--5"
+            type="link"
+            variant="error"
+            isLoading
+            size="sm"
+          />
         </div>
         <div class="grid--col-lg-12">
-          <GTButton type="link" size="md" text="Button" />
+          <GTButton type="link" variant="error" size="md" text="Button" />
           <GTButton
             class="ml--5"
             isDisabled
@@ -321,6 +400,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="link"
+            variant="error"
             size="md"
             icon="gt-paper-plane-s"
           />
@@ -334,6 +414,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="link"
+            variant="error"
             size="md"
             isPrependIcon
             icon="gt-paper-plane-s"
@@ -342,15 +423,22 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="link"
+            variant="error"
             size="md"
             isAppendIcon
             icon="gt-paper-plane-s"
             text="Button"
           />
-          <GTButton class="ml--5" type="link" isLoading size="md" />
+          <GTButton
+            class="ml--5"
+            type="link"
+            variant="error"
+            isLoading
+            size="md"
+          />
         </div>
         <div class="grid--col-lg-12">
-          <GTButton type="link" size="lg" text="Button" />
+          <GTButton type="link" variant="error" size="lg" text="Button" />
           <GTButton
             class="ml--5"
             isDisabled
@@ -361,6 +449,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="link"
+            variant="error"
             size="lg"
             icon="gt-paper-plane-s"
           />
@@ -374,6 +463,7 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="link"
+            variant="error"
             size="lg"
             isPrependIcon
             icon="gt-paper-plane-s"
@@ -384,12 +474,19 @@ export default Vue.extend({
           <GTButton
             class="ml--5"
             type="link"
+            variant="error"
             size="lg"
             isAppendIcon
             icon="gt-paper-plane-s"
             text="Button"
           />
-          <GTButton class="ml--5" type="link" isLoading size="lg" />
+          <GTButton
+            class="ml--5"
+            type="link"
+            variant="error"
+            isLoading
+            size="lg"
+          />
         </div>
       </div>
     </div>
