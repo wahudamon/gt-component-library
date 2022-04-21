@@ -6,14 +6,19 @@ export default {
   component: GTButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
-    backgroundColor: { control: "color" },
     size: {
       control: { type: "select" },
-      options: ["small", "medium", "large"],
+      options: ["sm", "md", "lg"],
     },
   },
   parameters: {
     viewMode: "docs",
+    docs: {
+      description: {
+        component:
+          "Buttons are used to initialize an action. Button text express what action will occur when the user interacts with it.",
+      },
+    },
   },
 };
 
@@ -27,29 +32,65 @@ const Template = (args, { argTypes }) => ({
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
-  primary: true,
-  label: "Click Me!",
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: "Click Me!",
+  type: "primary",
+  text: "Click Me!",
+  size: "md",
+  icon: "",
+  isDisabled: false,
+  isPrependIcon: false,
+  isAppendIcon: false,
+  isLoading: false,
 };
 
 export const Small = Template.bind({});
 Small.args = {
+  text: "Click Me!",
   size: "sm",
-  label: "Click Me!",
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
+  text: "Click Me!",
   size: "md",
-  label: "Click Me!",
 };
 
 export const Large = Template.bind({});
 Large.args = {
+  text: "Click Me!",
   size: "lg",
-  label: "Click Me!",
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  text: "Click Me!",
+  size: "md",
+  isDisabled: true,
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  icon: "gt-paper-plane-s",
+  size: "md",
+};
+
+export const PrependIcon = Template.bind({});
+PrependIcon.args = {
+  text: "Click Me!",
+  icon: "gt-paper-plane-s",
+  isPrependIcon: true,
+  size: "md",
+};
+
+export const AppendIcon = Template.bind({});
+AppendIcon.args = {
+  text: "Click Me!",
+  icon: "gt-paper-plane-s",
+  isAppendIcon: true,
+  size: "md",
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  size: "md",
+  isLoading: true,
 };

@@ -7,6 +7,7 @@
     "storybook": "start-storybook -p 6006",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "test:unit": "vue-cli-service test:unit",
+    "watch:css": "sass --watch scss:css",
     "build:css": "sass --update scss:css",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
