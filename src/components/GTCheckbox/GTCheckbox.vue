@@ -2,7 +2,7 @@
   <label :class="classes">
     <p class="label--title">{{ text }}</p>
     <p class="label--subtitle">{{ subtext }}</p>
-    <input type="checkbox" :disabled="isDisabled" />
+    <input id="gt-checkbox" type="checkbox" :disabled="isDisabled" />
     <span class="checkmark"></span>
   </label>
 </template>
@@ -47,7 +47,14 @@ export default {
         "gt-checkbox--disabled": this.isDisabled,
         [`gt-checkbox--${this.type}`]: !this.isDisabled,
         [`gt-checkbox--${this.size}`]: true,
+        [`gt-checkbox--${this.size}-indeterminate`]: this.checkIndeterminate(),
       };
+    },
+  },
+
+  methods: {
+    checkIndeterminate() {
+      return document.getElementById("gt-checkbox").indeterminate;
     },
   },
 };
