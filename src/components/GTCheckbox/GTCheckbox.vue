@@ -54,7 +54,8 @@ export default {
 
   methods: {
     checkIndeterminate() {
-      return document.getElementById("gt-checkbox").indeterminate;
+      let checkboxObj = document.getElementById("gt-checkbox");
+      return checkboxObj ? checkboxObj.indeterminate : false;
     },
   },
 };
