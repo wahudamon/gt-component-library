@@ -145,6 +145,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "./GTButton.scss";
+<style>
+@import "../../../css/GTButton.css";
 </style>

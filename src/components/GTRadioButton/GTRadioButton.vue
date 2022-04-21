@@ -52,5 +52,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./GTRadioButton";
+@import "../../../css/GTRadioButton.css";
 </style>

@@ -61,6 +61,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "./GTCheckbox";
+<style>
+@import "../../../css/GTCheckbox.css";
 </style>
