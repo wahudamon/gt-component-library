@@ -1,6 +1,6 @@
 {
   "name": "gamatechno-vue-component-library",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Gamatechno UI component library built using vue",
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",
