@@ -51,6 +51,6 @@ export default {
 };
 </script>
 
-<style>
-@import "../../../css/GTRadioButton.css";
+<style lang="scss">
+@import "../../../scss/components/GTRadioButton.scss";
 </style>
