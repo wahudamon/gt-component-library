@@ -2,7 +2,7 @@
   <label :class="classes">
     <p class="label--title">{{ text }}</p>
     <p class="label--subtitle">{{ subtext }}</p>
-    <input type="radio" name="radio" :disabled="isDisabled" :value="{ text }" />
+    <input type="radio" name="radio" :disabled="isDisabled" :value="text" />
     <span class="checkmark"></span>
   </label>
 </template>
