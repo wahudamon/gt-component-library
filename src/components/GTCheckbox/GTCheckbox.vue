@@ -2,7 +2,12 @@
   <label :class="classes">
     <p class="label--title">{{ text }}</p>
     <p class="label--subtitle">{{ subtext }}</p>
-    <input id="gt-checkbox" type="checkbox" :disabled="isDisabled" />
+    <input
+      id="gt-checkbox"
+      type="checkbox"
+      :disabled="isDisabled"
+      :value="text"
+    />
     <span class="checkmark"></span>
   </label>
 </template>
@@ -61,6 +66,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "./GTCheckbox";
+<style>
+@import "../../../css/GTCheckbox.css";
 </style>

@@ -10,7 +10,8 @@ export default {
 
 <template>
   <div>
-    <p class="mt--10 ml--20 playfair playfair--h5">Primary Checkboxes</p>
+    <p class="mt--10 ml--20 playfair playfair--h4">Checkboxes</p>
+    <p class="mt--2 ml--20 playfair playfair--h5">Primary Checkboxes</p>
     <div class="mb--15 grid--container">
       <div class="grid--row">
         <div class="grid--col-lg-2">

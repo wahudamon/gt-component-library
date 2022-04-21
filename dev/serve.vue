@@ -24,9 +24,9 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <!-- <buttons-list /> -->
-    <checkbox-example class="ml--20 mt--10" />
-    <!-- <radio-button-example class="ml--20 mt--10" /> -->
+    <buttons-list />
+    <checkbox-example class="mt--10" />
+    <radio-button-example class="mt--10" />
     <!-- <button class="ml--20">
       <GTIcon name="gt-address-book-r" size="md" />
     </button> -->

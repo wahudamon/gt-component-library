@@ -2,7 +2,7 @@
   <label :class="classes">
     <p class="label--title">{{ text }}</p>
     <p class="label--subtitle">{{ subtext }}</p>
-    <input type="radio" name="radio" :disabled="isDisabled" :value="{ text }" />
+    <input type="radio" name="radio" :disabled="isDisabled" :value="text" />
     <span class="checkmark"></span>
   </label>
 </template>
@@ -51,6 +51,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "./GTRadioButton";
+<style>
+@import "../../../css/GTRadioButton.css";
 </style>

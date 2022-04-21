@@ -1,18 +1,18 @@
 <script>
-import Vue from "vue";
 import { GTButton } from "@/entry.esm";
 
-export default Vue.extend({
+export default {
   name: "ButtonsList",
   components: {
     GTButton,
   },
-});
+};
 </script>
 
 <template>
   <div>
-    <p class="mt--10 ml--20 playfair playfair--h5">Primary Buttons</p>
+    <p class="mt--10 ml--20 playfair playfair--h4">Buttons</p>
+    <p class="mt--2 ml--20 playfair playfair--h5">Primary Buttons</p>
     <div class="mt--5 mb--15 grid--container">
       <div class="grid--row">
         <div class="grid--col-lg-12">
