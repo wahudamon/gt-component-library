@@ -1,25 +1,170 @@
-<template>
-  <div>
-    <h1>Show Checkboxes</h1>
-    <form>
-      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-      <label class="ml--2" for="vehicle1"> I have a bike</label><br />
-      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
-      <label class="ml--2" for="vehicle2"> I have a car</label><br />
-      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-      <label class="ml--2" for="vehicle3"> I have a boat</label><br /><br />
-      <input type="submit" value="Submit" />
-    </form>
-  </div>
-</template>
-
 <script>
+import { GTCheckbox } from "@/entry.esm";
+
 export default {
   name: "checkbox-example",
+
+  components: { GTCheckbox },
 };
 </script>
 
-<style lang="scss" scoped>
-@import "../../css/typography";
-@import "../../css/margin";
-</style>
+<template>
+  <div>
+    <p class="mt--10 ml--20 playfair playfair--h5">Primary Checkboxes</p>
+    <div class="mb--15 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" size="sm" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" size="sm" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox
+            type="primary"
+            size="sm"
+            text="Text"
+            subtext="This is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" size="md" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" size="md" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox
+            type="primary"
+            size="md"
+            text="Text"
+            subtext="This is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" size="lg" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" size="lg" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox
+            type="primary"
+            size="lg"
+            text="Text"
+            subtext="This is subtext"
+          />
+        </div>
+      </div>
+    </div>
+    <p class="mt--5 ml--20 playfair playfair--h5">Secondary Checkboxes</p>
+    <div class="mb--15 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="secondary" size="sm" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="secondary" size="sm" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox
+            type="secondary"
+            size="sm"
+            text="Text"
+            subtext="This is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="secondary" size="md" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="secondary" size="md" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox
+            type="secondary"
+            size="md"
+            text="Text"
+            subtext="This is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="secondary" size="lg" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="secondary" size="lg" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox
+            type="secondary"
+            size="lg"
+            text="Text"
+            subtext="This is subtext"
+          />
+        </div>
+      </div>
+    </div>
+    <p class="mt--5 ml--20 playfair playfair--h5">Disabled Checkboxes</p>
+    <div class="mb--15 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" isDisabled size="sm" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" isDisabled size="sm" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox
+            type="primary"
+            isDisabled
+            size="sm"
+            text="Text"
+            subtext="This is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" isDisabled size="md" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" isDisabled size="md" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox
+            type="primary"
+            isDisabled
+            size="md"
+            text="Text"
+            subtext="This is subtext"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" isDisabled size="lg" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox type="primary" isDisabled size="lg" text="Text" />
+        </div>
+        <div class="grid--col-lg-2">
+          <GTCheckbox
+            type="primary"
+            isDisabled
+            size="lg"
+            text="Text"
+            subtext="This is subtext"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
