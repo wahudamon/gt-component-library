@@ -66,6 +66,6 @@ export default {
 };
 </script>
 
-<style>
-@import "../../../css/GTCheckbox.css";
+<style lang="scss">
+@import "../../../scss/components/GTCheckbox.scss";
 </style>

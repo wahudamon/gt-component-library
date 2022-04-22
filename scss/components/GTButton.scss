@@ -1,8 +1,8 @@
-@import "./color";
-@import "./typography";
-@import "./corner-radius";
-@import "./elevation";
-@import "./margin";
+@import "../color.scss";
+@import "../typography.scss";
+@import "../corner-radius.scss";
+@import "../elevation.scss";
+@import "../margin.scss";
 
 .gt-btn {
   border: 0;

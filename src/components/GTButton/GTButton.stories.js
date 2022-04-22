@@ -42,6 +42,20 @@ Primary.args = {
   isLoading: false,
 };
 
+export const Secondary = Template.bind({});
+Secondary.args = {
+  type: "secondary",
+  text: "Click Me!",
+  size: "md",
+};
+
+export const Link = Template.bind({});
+Link.args = {
+  type: "link",
+  text: "Click Me!",
+  size: "md",
+};
+
 export const Small = Template.bind({});
 Small.args = {
   text: "Click Me!",
