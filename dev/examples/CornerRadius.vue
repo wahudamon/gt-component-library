@@ -9,9 +9,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../css/color";
-@import "../../css/corner-radius";
-@import "../../css/margin";
+@import "../../css/foundations/style.css";
 
 .sample-box {
   &--child {
