@@ -10,7 +10,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "../../css/color";
-@import "../../css/typography";
+<style>
+@import "../../css/foundations/style.css";
 </style>

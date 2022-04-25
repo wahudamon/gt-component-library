@@ -1,9 +1,8 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import storybookTheme from "./storybookTheme";
-import "../css/components/GTButton.css";
-import "../css/components/GTCheckbox.css";
-import "../css/components/GTRadioButton.css";
+import "../css/components/style.css";
+import "../css/foundations/style.css";
 
 var beautify_html = require("js-beautify").html;
 

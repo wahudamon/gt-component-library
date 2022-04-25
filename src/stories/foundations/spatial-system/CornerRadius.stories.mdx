@@ -1,4 +1,5 @@
 import { Meta } from "@storybook/addon-docs";
+import "../../../../css/foundations/style.css";
 
 <Meta
   title="Foundations/Spatial System/Corner Radius"
@@ -13,19 +14,6 @@ import { Meta } from "@storybook/addon-docs";
     height: 120px;
     background-color: #FFD5D2;
   }
-
-  .cr--sm {
-    border-radius: 4px;
-  }
-  .cr--md {
-    border-radius: 8px;
-  }
-  .cr--lg {
-    border-radius: 16px;
-  }
-  .cr--xl {
-    border-radius: 50%;
-  }
 `}</style>
 
 # Corner Radius
@@ -36,10 +24,10 @@ Kemudian perlu dingat bahwa tidak semua komponen memerlukan radius sudut. Dan ra
 
 ## Usage
 
-Langkah awal yang harus dilakukan sebelum menggunakan class utilities dari corner radius styles list adalah dengan meng-import corner radius styles list dari package ke dalam style tag yang sudah ditambahkan `lang="scss"` pada file `App.vue`.
+Langkah awal yang harus dilakukan sebelum menggunakan class utilities dari corner radius adalah dengan meng-import gamatechno component library style file ke dalam pada file `main.js` atau root file pada projek.
 
-```css
-@import "gamatechno-vue-component-library/css/corner-radius";
+```js
+import "gamatechno-vue-component-library/css/foundations/style.css";
 ```
 
 Untuk menggunakan utility class dari corner radius pada sebuah element atau komponen dapat dengan menuliskan nama classnya seperti contoh di bawah ini:

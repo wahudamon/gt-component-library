@@ -2,7 +2,6 @@
 node_modules/
 /dist/
 /storybook-static/
-src/assets/
 
 # local env files
 .env.local

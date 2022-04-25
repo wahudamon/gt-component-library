@@ -1,4 +1,5 @@
 import { Meta } from "@storybook/addon-docs";
+import "../../../../css/foundations/style.css";
 
 <Meta
   title="Foundations/Spatial System/Elevation"
@@ -13,31 +14,6 @@ import { Meta } from "@storybook/addon-docs";
     height: 120px;
     background-color: #FFD5D2;
   }
-
-  .be--low {
-    box-shadow: 0px 2px 4px 0px #6e797a26;
-  }
-  .be--low-medium {
-    box-shadow: 0px 4px 8px 0px #6e797a26;
-  }
-  .be--medium {
-    box-shadow: 0px 8px 16px 0px #6e797a26;
-  }
-  .be--high {
-    box-shadow: 0px 16px 32px 0px #6e797a26;
-  }
-  .te--low {
-    box-shadow: 0px -2px 4px 0px #6e797a26;
-  }
-  .te--low-medium {
-    box-shadow: 0px -4px 8px 0px #6e797a26;
-  }
-  .te--medium {
-    box-shadow: 0px -8px 16px 0px #6e797a26;
-  }
-  .te--high {
-    box-shadow: 0px -16px 32px 0px #6e797a26;
-  }
 `}</style>
 
 # Elevation
@@ -46,10 +22,10 @@ Elevation membawa kedalaman pada aplikasi dan mewakili tingkat kepentingan secar
 
 ## Usage
 
-Langkah awal yang harus dilakukan sebelum menggunakan class utilities dari elevation adalah dengan meng-import elevation styles list dari package ke dalam style tag yang sudah ditambahkan `lang="scss"` pada file `App.vue`.
+Langkah awal yang harus dilakukan sebelum menggunakan class utilities dari elevation adalah dengan meng-import gamatechno component library style file ke dalam pada file `main.js` atau root file pada projek.
 
-```css
-@import "gamatechno-vue-component-library/css/elevation";
+```js
+import "gamatechno-vue-component-library/css/foundations/style.css";
 ```
 
 Untuk menggunakan utility class dari elevation pada sebuah element atau komponen dapat dengan menuliskan nama classnya seperti contoh di bawah ini:
