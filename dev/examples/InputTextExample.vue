@@ -15,7 +15,7 @@ export default {
     <div class="mb--15 grid--container">
       <div class="grid--row">
         <div class="grid--col-lg-12">
-          <GTInputText />
+          <GTInputText placeholder="Insert here..." />
         </div>
       </div>
     </div>
