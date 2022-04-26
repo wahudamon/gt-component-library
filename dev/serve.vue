@@ -39,8 +39,6 @@ export default Vue.extend({
   </div>
 </template>
 
-<style lang="scss">
-@import "../css/typography";
-@import "../css/margin";
-@import "../css/grid-system";
+<style>
+@import "../css/components/style.css";
 </style>

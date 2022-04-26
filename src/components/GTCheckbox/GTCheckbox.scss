@@ -1,9 +1,6 @@
-@import "../typography.scss";
-@import "../color.scss";
-@import "../corner-radius.scss";
-@import "../margin.scss";
+@import "../../../scss/foundations/style.scss";
 
-.gt-radio {
+.gt-checkbox {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -13,12 +10,13 @@
   --webkit-user-select: none;
   --moz-user-select: none;
   --ms-user-select: none;
-  user-select: none;
 
   input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
+    height: 0;
+    width: 0;
   }
 
   p {
@@ -42,15 +40,14 @@
     }
 
     .checkmark {
-      @extend .cr--md;
+      @extend .cr--sm;
 
       position: absolute;
       top: 2px;
       left: 6px;
       height: 16px;
       width: 16px;
-      background-color: #eee;
-      border-radius: 50%;
+      border: solid 1px;
 
       &:after {
         content: "";
@@ -60,26 +57,40 @@
     }
 
     .checkmark:after {
-      top: 4px;
-      left: 4px;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background-color: #ffffff;
+      left: 5px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    &-indeterminate {
+      .checkmark:after {
+        left: 7px;
+        top: 3px;
+        width: 2px;
+        border-width: 0 2px 0 0;
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
     }
   }
 
   &--md {
     .checkmark {
-      @extend .cr--md;
+      @extend .cr--sm;
 
       position: absolute;
-      top: 1px;
+      top: 2px;
       left: 5px;
       height: 20px;
       width: 20px;
-      background-color: #eee;
-      border-radius: 50%;
+      border: solid 1px;
 
       &:after {
         content: "";
@@ -89,26 +100,37 @@
     }
 
     .checkmark:after {
-      top: 5px;
-      left: 5px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background-color: #ffffff;
+      left: 8px;
+      top: 4px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    &-indeterminate {
+      .checkmark:after {
+        border-width: 0 2px 0 0;
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
     }
   }
 
   &--lg {
     .checkmark {
-      @extend .cr--md;
+      @extend .cr--sm;
 
       position: absolute;
       top: 0;
       left: 4px;
       height: 24px;
       width: 24px;
-      background-color: #eee;
-      border-radius: 50%;
+      border: solid 1px;
 
       &:after {
         content: "";
@@ -118,12 +140,24 @@
     }
 
     .checkmark:after {
-      top: 7px;
-      left: 7px;
-      width: 10px;
+      left: 10px;
+      top: 6px;
+      width: 5px;
       height: 10px;
-      border-radius: 50%;
-      background-color: #ffffff;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    &-indeterminate {
+      .checkmark:after {
+        border-width: 0 2px 0 0;
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
     }
   }
 
@@ -138,10 +172,15 @@
 
     input:checked ~ .checkmark {
       @extend .bg--primary-navy-blue;
+      border: none;
     }
 
     input:checked ~ .checkmark:after {
       display: block;
+    }
+
+    .checkmark {
+      @extend .border--neutral-600;
     }
   }
 
@@ -162,6 +201,10 @@
     input:checked ~ .checkmark:after {
       display: block;
     }
+
+    .checkmark {
+      @extend .border--semantic-error;
+    }
   }
 
   &--disabled {
@@ -171,6 +214,11 @@
 
     .label--subtitle {
       @extend .text--neutral-500;
+    }
+
+    .checkmark {
+      @extend .bg--neutral-300;
+      border: none;
     }
   }
 }
