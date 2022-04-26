@@ -10,6 +10,7 @@
   border-style: solid;
   border-width: 1px;
   padding-left: 12px;
+  outline: none;
 
   &--sm {
     height: 40px;
@@ -41,7 +42,7 @@
     @extend .text--neutral-500;
   }
 
-  &:hover:not([disabled]) {
+  &:hover:not([disabled], .gt-inputtext:focus) {
     @extend .border--neutral-900;
     @extend .text--neutral-500;
   }
