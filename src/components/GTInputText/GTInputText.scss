@@ -12,6 +12,10 @@
   padding-left: 12px;
   outline: none;
 
+  &--error {
+    border-color: #db3e3e !important;
+  }
+
   &--sm {
     height: 40px;
   }
@@ -32,17 +36,17 @@
     width: 480px;
   }
 
-  &:active:not([disabled]) {
+  &:active:not([disabled], .gt-inputtext--error) {
     @extend .border--neutral-700;
     @extend .text--neutral-700;
   }
 
-  &:focus:not([disabled]) {
-    @extend .border--primary-navy-blue;
+  &:focus:not([disabled], .gt-inputtext--error) {
+    border-color: #1d7ec3 !important;
     @extend .text--neutral-500;
   }
 
-  &:hover:not([disabled], .gt-inputtext:focus) {
+  &:hover:not([disabled], .gt-inputtext:focus, .gt-inputtext--error) {
     @extend .border--neutral-900;
     @extend .text--neutral-500;
   }

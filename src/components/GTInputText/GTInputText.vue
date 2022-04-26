@@ -12,6 +12,10 @@
 export default {
   name: "GTInputText",
   props: {
+    isError: {
+      type: Boolean,
+      default: false,
+    },
     type: {
       type: String,
       default: "primary",
@@ -46,8 +50,8 @@ export default {
     classes() {
       return {
         "gt-inputtext": true,
-        "gt-inputtext--disabled": this.isDisabled,
-        [`gt-inputtext--${this.type}`]: !this.isDisabled,
+        "gt-inputtext--error": this.isError,
+        [`gt-inputtext--${this.type}`]: true,
         [`gt-inputtext--${this.size}`]: true,
         [`gt-inputtext--length-${this.length}`]: true,
       };

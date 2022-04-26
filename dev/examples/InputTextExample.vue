@@ -53,6 +53,38 @@ export default {
         </div>
       </div>
     </div>
+    <div class="mb--20 grid--container">
+      <div class="grid--row">
+        <div class="grid--col-lg-6">
+          <GTInputText
+            isError
+            size="sm"
+            length="sm"
+            placeholder="Input Placeholder"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-6">
+          <GTInputText
+            isError
+            size="sm"
+            length="md"
+            placeholder="Input Placeholder"
+          />
+        </div>
+      </div>
+      <div class="grid--row">
+        <div class="grid--col-lg-6">
+          <GTInputText
+            isError
+            size="sm"
+            length="lg"
+            placeholder="Input Placeholder"
+          />
+        </div>
+      </div>
+    </div>
     <div class="mb--15 grid--container">
       <div class="grid--row">
         <div class="grid--col-lg-6">
