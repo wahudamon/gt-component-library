@@ -1,6 +1,6 @@
 <template>
   <input
-    class="gt-inputtext"
+    :class="classes"
     type="text"
     name=""
     id=""
@@ -12,10 +12,6 @@
 export default {
   name: "GTInputText",
   props: {
-    isDisabled: {
-      type: Boolean,
-      default: false,
-    },
     type: {
       type: String,
       default: "primary",
@@ -24,6 +20,13 @@ export default {
       },
     },
     size: {
+      type: String,
+      default: "md",
+      validator: function (value) {
+        return ["sm", "md"].indexOf(value) !== -1;
+      },
+    },
+    length: {
       type: String,
       default: "md",
       validator: function (value) {
@@ -39,16 +42,17 @@ export default {
       default: "",
     },
   },
-  // computed: {
-  //   classes() {
-  //     return {
-  //       "gt-radio": true,
-  //       "gt-radio--disabled": this.isDisabled,
-  //       [`gt-radio--${this.type}`]: !this.isDisabled,
-  //       [`gt-radio--${this.size}`]: true,
-  //     };
-  //   },
-  // },
+  computed: {
+    classes() {
+      return {
+        "gt-inputtext": true,
+        "gt-inputtext--disabled": this.isDisabled,
+        [`gt-inputtext--${this.type}`]: !this.isDisabled,
+        [`gt-inputtext--${this.size}`]: true,
+        [`gt-inputtext--length-${this.length}`]: true,
+      };
+    },
+  },
 };
 </script>
 
