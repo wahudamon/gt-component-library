@@ -53,5 +53,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../scss/components/GTInputText.scss";
+@import "./GTInputText.scss";
 </style>
