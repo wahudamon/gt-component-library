@@ -14,6 +14,9 @@
 
   &--error {
     border-color: #db3e3e !important;
+    &:active:not([disabled]) {
+      @extend .text--neutral-700;
+    }
   }
 
   &--sm {
