@@ -8,6 +8,7 @@ import CornerRadius from "./examples/CornerRadius.vue";
 import CheckboxExample from "./examples/CheckboxExample.vue";
 import RadioButtonExample from "./examples/RadioButtonExample.vue";
 import InputTextExample from "./examples/InputTextExample.vue";
+import LabeledInputText from "../src/components/GTInputText/LabeledInputText.vue";
 
 export default Vue.extend({
   name: "ServeDev",
@@ -15,6 +16,7 @@ export default Vue.extend({
     CheckboxExample,
     RadioButtonExample,
     InputTextExample,
+    LabeledInputText,
     GTIcon,
     GridSystem,
     Typography,
@@ -26,7 +28,13 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <input-text-example />
+    <LabeledInputText
+      class="mt--15 ml--15"
+      size="sm"
+      length="sm"
+      placeholder="Input Placeholder"
+    />
+    <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->
     <!-- <checkbox-example class="mt--10" /> -->
     <!-- <radio-button-example class="mt--10" /> -->
