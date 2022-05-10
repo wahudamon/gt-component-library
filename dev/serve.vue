@@ -29,12 +29,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTInputText
-      class="mt--15 ml--15"
-      size="sm"
-      length="sm"
-      placeholder="Label"
-    />
+    <GTInputText class="mt--15 ml--15" size="sm" length="sm" />
     <!-- <LabeledInputText
       class="mt--15 ml--15"
       size="sm"

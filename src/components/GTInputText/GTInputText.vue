@@ -1,11 +1,15 @@
 <template>
-  <input
+  <!-- <input
     :class="classes"
     type="text"
     name=""
     id=""
     :placeholder="placeholder"
-  />
+  /> -->
+  <label :class="classes">
+    <input type="text" class="gt-inputtext__field" :placeholder="placeholder" />
+    <span class="gt-inputtext__label">Label</span>
+  </label>
 </template>
 
 <script>
@@ -50,10 +54,10 @@ export default {
     classes() {
       return {
         "gt-inputtext": true,
-        "gt-inputtext--error": this.isError,
-        [`gt-inputtext--${this.type}`]: true,
-        [`gt-inputtext--${this.size}`]: true,
-        [`gt-inputtext--length-${this.length}`]: true,
+        "gt-inputtext__field--error": this.isError,
+        [`gt-inputtext__field--${this.type}`]: true,
+        [`gt-inputtext__field--${this.size}`]: true,
+        [`gt-inputtext__fiekd--length-${this.length}`]: true,
       };
     },
   },
