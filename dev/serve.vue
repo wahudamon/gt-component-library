@@ -1,6 +1,6 @@
 <script>
 import Vue from "vue";
-import { GTIcon } from "@/entry.esm";
+import { GTIcon, GTInputText } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
 import ButtonsList from "./examples/ButtonsList.vue";
@@ -18,6 +18,7 @@ export default Vue.extend({
     InputTextExample,
     LabeledInputText,
     GTIcon,
+    GTInputText,
     GridSystem,
     Typography,
     ButtonsList,
@@ -28,12 +29,18 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <LabeledInputText
+    <GTInputText
+      class="mt--15 ml--15"
+      size="sm"
+      length="sm"
+      placeholder="Label"
+    />
+    <!-- <LabeledInputText
       class="mt--15 ml--15"
       size="sm"
       length="sm"
       placeholder="Input Placeholder"
-    />
+    /> -->
     <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->
     <!-- <checkbox-example class="mt--10" /> -->

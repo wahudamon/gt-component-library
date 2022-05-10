@@ -1,0 +1,63 @@
+@import "../../../scss/foundations/style.scss";
+
+.gt-inputtext {
+  @extend .poppins;
+  @extend .poppins--b1-regular;
+  @extend .cr--md;
+  @extend .border--neutral-700;
+  @extend .text--neutral-500;
+
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 12px;
+  outline: none;
+
+  &--error {
+    border-color: #db3e3e !important;
+    &:active:not([disabled]) {
+      @extend .text--neutral-700;
+    }
+  }
+
+  &--sm {
+    height: 40px;
+  }
+
+  &--md {
+    height: 56px;
+  }
+
+  &--length-sm {
+    width: 256px;
+  }
+
+  &--length-md {
+    width: 368px;
+  }
+
+  &--length-lg {
+    width: 480px;
+  }
+
+  &:active:not([disabled], .gt-inputtext--error) {
+    @extend .border--neutral-700;
+    @extend .text--neutral-700;
+  }
+
+  &:focus:not([disabled], .gt-inputtext--error) {
+    border-color: #1d7ec3 !important;
+    @extend .text--neutral-500;
+  }
+
+  &:hover:not([disabled], .gt-inputtext:focus, .gt-inputtext--error) {
+    @extend .border--neutral-900;
+    @extend .text--neutral-500;
+  }
+
+  &[disabled] {
+    @extend .border--neutral-300;
+    @extend .text--neutral-500;
+
+    cursor: not-allowed;
+  }
+}

@@ -1,13 +1,20 @@
 <template>
-  <label class="input">
-    <input class="input__field" type="text" placeholder=" " />
-    <span class="input__label">Some Fancy Label</span>
+  <label :class="classes">
+    <input class="gt-input__field" type="text" placeholder=" " />
+    <span class="gt-input__label">Label</span>
   </label>
 </template>
 
 <script>
 export default {
   name: "LabeledInputText",
+  computed: {
+    classes() {
+      return {
+        "gt-input": true,
+      };
+    },
+  },
 };
 </script>
 

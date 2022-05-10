@@ -1,3 +1,5 @@
+@import "../../../scss/foundations/style.scss";
+
 $color-light: white;
 $color-dark: #212121;
 $color-signal: #fab700;
@@ -8,6 +10,101 @@ $color-accent: $color-signal;
 
 $size-bezel: 0.5rem;
 $size-radius: 4px;
+
+.gt-input {
+  @extend .poppins;
+  @extend .poppins--b1-regular;
+  @extend .cr--md;
+  @extend .border--neutral-700;
+  @extend .text--neutral-500;
+
+  position: relative;
+
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 12px;
+  outline: none;
+
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: calc($size-bezel * 0.75) calc($size-bezel * 0.5);
+    margin: calc($size-bezel * 0.75 + 3px) calc($size-bezel * 0.5);
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transform-origin: 0 0;
+    background: $color-background;
+    transition: transform 120ms ease-in;
+    line-height: 1.2;
+  }
+  &__field {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: calc($size-bezel * 1.5) $size-bezel;
+    background: transparent;
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + .gt-input__label {
+        @extend .text--primary-navy-blue;
+        transform: translate(0.25rem, -65%) scale(0.8);
+      }
+    }
+  }
+
+  &--error {
+    border-color: #db3e3e !important;
+    &:active:not([disabled]) {
+      @extend .text--neutral-700;
+    }
+  }
+
+  &--sm {
+    height: 40px;
+  }
+
+  &--md {
+    height: 56px;
+  }
+
+  &--length-sm {
+    width: 256px;
+  }
+
+  &--length-md {
+    width: 368px;
+  }
+
+  &--length-lg {
+    width: 480px;
+  }
+
+  // &:active:not([disabled], .gt-inputtext--error) {
+  //   @extend .border--primary-navy-blue;
+  //   @extend .text--neutral-700;
+  // }
+
+  // &:focus:not([disabled], .gt-inputtext--error) {
+  //   border-color: #1d7ec3 !important;
+  //   @extend .text--neutral-500;
+  // }
+
+  // &:hover:not([disabled], .gt-inputtext:focus, .gt-inputtext--error) {
+  //   @extend .border--neutral-900;
+  //   @extend .text--neutral-500;
+  // }
+
+  // &[disabled] {
+  //   @extend .border--neutral-300;
+  //   @extend .text--neutral-500;
+
+  //   cursor: not-allowed;
+  // }
+}
 
 .input {
   position: relative;
