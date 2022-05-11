@@ -1,15 +1,6 @@
 @import "../../../scss/foundations/style.scss";
 
-$color-light: white;
-$color-dark: #212121;
-$color-signal: #fab700;
-
-$color-background: $color-light;
-$color-text: $color-dark;
-$color-accent: $color-signal;
-
 $size-bezel: 0.5rem;
-$size-radius: 4px;
 
 .gt-inputtext {
   @extend .poppins;
@@ -38,21 +29,11 @@ $size-radius: 4px;
     box-sizing: border-box;
     display: block;
     width: 100%;
-    // border: none;
     border-style: solid;
     border-width: 1px;
-    padding-left: 12px;
     outline: none;
     padding: calc($size-bezel * 1.5) $size-bezel;
     background: transparent;
-
-    // &:focus,
-    // &:not(:placeholder-shown) {
-    //   & + .gt-inputtext__label {
-    //     @extend .text--primary-navy-blue;
-    //     transform: translate(0.25rem, -65%) scale(0.8);
-    //   }
-    // }
 
     &--error {
       border-color: #db3e3e !important;

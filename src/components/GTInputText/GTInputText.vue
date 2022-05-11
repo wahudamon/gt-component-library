@@ -1,14 +1,7 @@
 <template>
-  <!-- <input
-    :class="classes"
-    type="text"
-    name=""
-    id=""
-    :placeholder="placeholder"
-  /> -->
   <label :class="classes">
     <input type="text" class="gt-inputtext__field" :placeholder="placeholder" />
-    <span class="gt-inputtext__label">Label</span>
+    <span v-if="!placeholder" class="gt-inputtext__label">Label</span>
   </label>
 </template>
 
@@ -20,13 +13,13 @@ export default {
       type: Boolean,
       default: false,
     },
-    type: {
-      type: String,
-      default: "primary",
-      validator: function (value) {
-        return ["primary", "secondary"].indexOf(value) !== -1;
-      },
-    },
+    // type: {
+    //   type: String,
+    //   default: "primary",
+    //   validator: function (value) {
+    //     return ["primary", "secondary"].indexOf(value) !== -1;
+    //   },
+    // },
     size: {
       type: String,
       default: "md",
@@ -55,9 +48,9 @@ export default {
       return {
         "gt-inputtext": true,
         "gt-inputtext__field--error": this.isError,
-        [`gt-inputtext__field--${this.type}`]: true,
+        // [`gt-inputtext__field--${this.type}`]: true,
         [`gt-inputtext__field--${this.size}`]: true,
-        [`gt-inputtext__fiekd--length-${this.length}`]: true,
+        [`gt-inputtext__field--length-${this.length}`]: true,
       };
     },
   },
