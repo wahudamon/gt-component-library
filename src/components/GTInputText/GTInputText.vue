@@ -1,13 +1,21 @@
 <template>
   <label :class="classes">
     <input type="text" class="gt-inputtext__field" :placeholder="placeholder" />
-    <span v-if="!placeholder" class="gt-inputtext__label">Label</span>
+    <span v-if="!placeholder" class="gt-inputtext__label">
+      <span><GTIcon name="gt-rotate-right-s" :size="size" /></span>
+      Label
+    </span>
   </label>
 </template>
 
 <script>
+import GTIcon from "../GTIcon/GTIcon.vue";
+
 export default {
   name: "GTInputText",
+
+  components: { GTIcon },
+
   props: {
     isError: {
       type: Boolean,
@@ -43,6 +51,7 @@ export default {
       default: "",
     },
   },
+
   computed: {
     classes() {
       return {
