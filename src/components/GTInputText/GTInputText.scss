@@ -39,8 +39,17 @@ $size-bezel: 0.5rem;
 
     &--error {
       border-color: #db3e3e !important;
+
       &:active:not([disabled]) {
         @extend .text--neutral-700;
+      }
+
+      &:focus:not([disabled]) {
+        @extend .border--semantic-error;
+
+        & + .gt-inputtext__label {
+          @extend .text--semantic-error;
+        }
       }
     }
 
@@ -69,8 +78,8 @@ $size-bezel: 0.5rem;
       @extend .text--neutral-700;
     }
 
-    &:focus:not([disabled], .gt-inputtext__field--error) {
-      border-color: #1d7ec3 !important;
+    &:focus:not([disabled]) {
+      @extend .border--primary-navy-blue;
       @extend .text--neutral-500;
 
       & + .gt-inputtext__label {
@@ -103,7 +112,7 @@ $size-bezel: 0.5rem;
     .gt-inputtext__field {
       padding: calc($size-bezel * 1.5) 35px;
 
-      &:focus:not([disabled], .gt-inputtext__field--error) {
+      &:focus:not([disabled]) {
         & + .gt-inputtext__label {
           transform: translate(-1.5rem, -85%) scale(0.8);
         }
@@ -119,7 +128,7 @@ $size-bezel: 0.5rem;
     .gt-inputtext__field {
       padding: calc($size-bezel * 1.5) 10px calc($size-bezel * 1.5) 35px;
 
-      &:focus:not([disabled], .gt-inputtext__field--error) {
+      &:focus:not([disabled]) {
         & + .gt-inputtext__label {
           transform: translate(-1.5rem, -85%) scale(0.8);
         }

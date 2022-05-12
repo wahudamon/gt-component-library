@@ -20,7 +20,7 @@ export default {
   components: { GTIcon },
 
   props: {
-    isError: {
+    error: {
       type: Boolean,
       default: false,
     },
@@ -68,7 +68,7 @@ export default {
     inputFieldClasses() {
       return {
         "gt-inputtext__field": true,
-        "gt-inputtext__field--error": this.isError,
+        "gt-inputtext__field--error": this.error,
         [`gt-inputtext__field--${this.size}`]: true,
         [`gt-inputtext__field--length-${this.length}`]: true,
       };
