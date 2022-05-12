@@ -1,10 +1,13 @@
 <template>
   <label :class="classes">
+    <div class="gt-inputtext__leading-icon">
+      <GTIcon name="gt-rotate-right-s" :size="size" />
+    </div>
     <input type="text" class="gt-inputtext__field" :placeholder="placeholder" />
-    <span v-if="!placeholder" class="gt-inputtext__label">
-      <span><GTIcon name="gt-rotate-right-s" :size="size" /></span>
-      Label
-    </span>
+    <span v-if="!placeholder" class="gt-inputtext__label">Label</span>
+    <div class="gt-inputtext__trailing-icon">
+      <GTIcon name="gt-rotate-right-s" :size="size" />
+    </div>
   </label>
 </template>
 
@@ -49,6 +52,15 @@ export default {
     placeholder: {
       type: String,
       default: "",
+    },
+    leadingIcon: {
+      type: String,
+      default: "gt-rotate-right-s",
+      // default: "",
+    },
+    trailingIcon: {
+      type: String,
+      default: "gt-rotate-right-s",
     },
   },
 
