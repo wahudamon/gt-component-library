@@ -1,12 +1,12 @@
 <template>
   <label :class="classes">
-    <div class="gt-inputtext__leading-icon">
-      <GTIcon name="gt-rotate-right-s" :size="size" />
+    <div v-if="leadingIcon" class="leading-icon">
+      <GTIcon :name="leadingIcon" :size="size" />
     </div>
     <input type="text" :class="inputFieldClasses" :placeholder="placeholder" />
     <span v-if="!placeholder" class="gt-inputtext__label">Label</span>
-    <div class="gt-inputtext__trailing-icon">
-      <GTIcon name="gt-rotate-right-s" :size="size" />
+    <div v-if="trailingIcon" class="trailing-icon">
+      <GTIcon :name="trailingIcon" :size="size" />
     </div>
   </label>
 </template>
@@ -24,13 +24,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    // type: {
-    //   type: String,
-    //   default: "primary",
-    //   validator: function (value) {
-    //     return ["primary", "secondary"].indexOf(value) !== -1;
-    //   },
-    // },
     size: {
       type: String,
       default: "md",
@@ -55,12 +48,11 @@ export default {
     },
     leadingIcon: {
       type: String,
-      default: "gt-rotate-right-s",
-      // default: "",
+      default: "",
     },
     trailingIcon: {
       type: String,
-      default: "gt-rotate-right-s",
+      default: "",
     },
   },
 
@@ -68,7 +60,9 @@ export default {
     classes() {
       return {
         "gt-inputtext": true,
-        // [`gt-inputtext__field--${this.type}`]: true,
+        "gt-inputtext--icons": this.leadingIcon && this.trailingIcon,
+        "gt-inputtext--leading-icon": this.leadingIcon && !this.trailingIcon,
+        "gt-inputtext--trailing-icon": this.trailingIcon && !this.leadingIcon,
       };
     },
     inputFieldClasses() {

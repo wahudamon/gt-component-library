@@ -29,7 +29,12 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTInputText class="mt--15 ml--15" size="sm" length="sm" />
+    <GTInputText
+      class="mt--15 ml--15"
+      size="sm"
+      length="sm"
+      trailingIcon="gt-rotate-right-s"
+    />
     <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->
     <!-- <checkbox-example class="mt--10" /> -->
