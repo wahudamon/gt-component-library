@@ -3,7 +3,7 @@
     <div class="gt-inputtext__leading-icon">
       <GTIcon name="gt-rotate-right-s" :size="size" />
     </div>
-    <input type="text" class="gt-inputtext__field" :placeholder="placeholder" />
+    <input type="text" :class="inputFieldClasses" :placeholder="placeholder" />
     <span v-if="!placeholder" class="gt-inputtext__label">Label</span>
     <div class="gt-inputtext__trailing-icon">
       <GTIcon name="gt-rotate-right-s" :size="size" />
@@ -68,8 +68,13 @@ export default {
     classes() {
       return {
         "gt-inputtext": true,
-        "gt-inputtext__field--error": this.isError,
         // [`gt-inputtext__field--${this.type}`]: true,
+      };
+    },
+    inputFieldClasses() {
+      return {
+        "gt-inputtext__field": true,
+        "gt-inputtext__field--error": this.isError,
         [`gt-inputtext__field--${this.size}`]: true,
         [`gt-inputtext__field--length-${this.length}`]: true,
       };
