@@ -8,6 +8,9 @@
     <div v-if="trailingIcon" class="trailing-icon">
       <GTIcon :name="trailingIcon" :size="size" />
     </div>
+    <div :class="helperClasses">
+      <p>Helper text</p>
+    </div>
   </label>
 </template>
 
@@ -71,6 +74,13 @@ export default {
         "gt-inputtext__field--error": this.error,
         [`gt-inputtext__field--${this.size}`]: true,
         [`gt-inputtext__field--length-${this.length}`]: true,
+      };
+    },
+    helperClasses() {
+      return {
+        "gt-inputtext__helper": true,
+        "gt-inputtext__helper--error": this.error,
+        "ml--4": true,
       };
     },
   },

@@ -104,6 +104,15 @@ $size-bezel: 0.5rem;
     }
   }
 
+  &__helper {
+    @extend .poppins;
+    @extend .poppins--caption;
+
+    &--error {
+      @extend .text--semantic-error;
+    }
+  }
+
   &--icons {
     .gt-inputtext__label {
       margin: calc($size-bezel * 1.3) 35px;
