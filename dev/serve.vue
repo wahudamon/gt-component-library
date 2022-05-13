@@ -33,7 +33,6 @@ export default Vue.extend({
       class="mt--15 ml--15"
       size="sm"
       length="sm"
-      trailingIcon="gt-rotate-right-s"
       label="Label"
       helperText="Helper Text"
     />

@@ -69,6 +69,7 @@ export default {
     classes() {
       return {
         "gt-inputtext": true,
+        [`gt-inputtext--${this.length}`]: true,
         "gt-inputtext--icons": this.leadingIcon && this.trailingIcon,
         "gt-inputtext--leading-icon": this.leadingIcon && !this.trailingIcon,
         "gt-inputtext--trailing-icon": this.trailingIcon && !this.leadingIcon,
