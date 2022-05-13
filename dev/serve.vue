@@ -30,11 +30,12 @@ export default Vue.extend({
 <template>
   <div id="app">
     <GTInputText
-      disabled
       class="mt--15 ml--15"
+      variant="horizontal"
       size="sm"
       length="sm"
-      label="Label"
+      label="Input Label"
+      placeholder="Placeholder"
     />
     <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->

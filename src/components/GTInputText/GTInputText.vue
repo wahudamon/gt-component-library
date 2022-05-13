@@ -1,5 +1,10 @@
 <template>
   <label :class="classes">
+    <div v-if="variant === 'horizontal'">
+      <p class="gt-inputtext__horizontal-label mb--2">
+        {{ label }}
+      </p>
+    </div>
     <div v-if="leadingIcon" class="leading-icon">
       <GTIcon :name="leadingIcon" :size="size" />
     </div>
@@ -9,7 +14,10 @@
       :placeholder="placeholder"
       :disabled="disabled"
     />
-    <span v-if="!placeholder" class="gt-inputtext__label">
+    <span
+      v-if="!placeholder && variant === 'outline'"
+      class="gt-inputtext__label"
+    >
       {{ error ? `${label}*` : label }}
     </span>
     <div v-if="trailingIcon" class="trailing-icon">

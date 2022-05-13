@@ -23,6 +23,10 @@ $size-bezel: 0.5rem;
     line-height: 1.2;
   }
 
+  &__horizontal-label {
+    @extend .text--neutral-900;
+  }
+
   &__field {
     @extend .cr--md;
     @extend .border--neutral-700;
