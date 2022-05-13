@@ -4,7 +4,9 @@
       <GTIcon :name="leadingIcon" :size="size" />
     </div>
     <input type="text" :class="inputFieldClasses" :placeholder="placeholder" />
-    <span v-if="!placeholder" class="gt-inputtext__label">Label</span>
+    <span v-if="!placeholder" class="gt-inputtext__label">
+      {{ error ? `${label}*` : label }}
+    </span>
     <div v-if="trailingIcon" class="trailing-icon">
       <GTIcon :name="trailingIcon" :size="size" />
     </div>
