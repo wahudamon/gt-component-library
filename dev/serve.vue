@@ -30,11 +30,11 @@ export default Vue.extend({
 <template>
   <div id="app">
     <GTInputText
+      disabled
       class="mt--15 ml--15"
       size="sm"
       length="sm"
       label="Label"
-      helperText="Helper Text"
     />
     <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->

@@ -3,7 +3,12 @@
     <div v-if="leadingIcon" class="leading-icon">
       <GTIcon :name="leadingIcon" :size="size" />
     </div>
-    <input type="text" :class="inputFieldClasses" :placeholder="placeholder" />
+    <input
+      type="text"
+      :class="inputFieldClasses"
+      :placeholder="placeholder"
+      :disabled="disabled"
+    />
     <span v-if="!placeholder" class="gt-inputtext__label">
       {{ error ? `${label}*` : label }}
     </span>
@@ -29,6 +34,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
     size: {
       type: String,
       default: "md",
@@ -41,6 +50,13 @@ export default {
       default: "md",
       validator: function (value) {
         return ["sm", "md", "lg"].indexOf(value) !== -1;
+      },
+    },
+    variant: {
+      type: String,
+      default: "outline",
+      validator: function (value) {
+        return ["outline", "horizontal", "vertical"].indexOf(value) !== -1;
       },
     },
     label: {
