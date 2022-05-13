@@ -10,8 +10,8 @@
     <div v-if="trailingIcon" class="trailing-icon">
       <GTIcon :name="trailingIcon" :size="size" />
     </div>
-    <div :class="helperClasses">
-      <p>Helper text</p>
+    <div v-if="helperText" :class="helperClasses">
+      <p>{{ helperText }}</p>
     </div>
   </label>
 </template>
@@ -56,6 +56,10 @@ export default {
       default: "",
     },
     trailingIcon: {
+      type: String,
+      default: "",
+    },
+    helperText: {
       type: String,
       default: "",
     },

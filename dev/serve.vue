@@ -35,6 +35,7 @@ export default Vue.extend({
       length="sm"
       trailingIcon="gt-rotate-right-s"
       label="Label"
+      helperText="Helper Text"
     />
     <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->
