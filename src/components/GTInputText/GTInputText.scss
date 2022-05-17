@@ -111,6 +111,10 @@ $size-bezel: 0.5rem;
       @extend .text--neutral-500;
 
       cursor: not-allowed;
+
+      & + .gt-inputtext__helper {
+        @extend .text--neutral-300;
+      }
     }
   }
 

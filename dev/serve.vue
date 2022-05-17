@@ -28,7 +28,7 @@ export default Vue.extend({
 <template>
   <div id="app">
     <GTInputText
-      error
+      disabled
       class="mt--15 ml--15"
       variant="outline"
       size="sm"
@@ -36,6 +36,7 @@ export default Vue.extend({
       label="Username"
       placeholder="Placeholder"
       helperText="Helper Text"
+      trailingIcon="gt-paper-plane-s"
     />
     <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->
