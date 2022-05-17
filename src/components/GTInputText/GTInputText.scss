@@ -27,6 +27,12 @@ $size-bezel: 0.5rem;
     @extend .text--neutral-900;
   }
 
+  &__horizontal-label {
+    @extend .text--neutral-900;
+
+    width: 120px;
+  }
+
   &__field {
     @extend .cr--md;
     @extend .border--neutral-700;
