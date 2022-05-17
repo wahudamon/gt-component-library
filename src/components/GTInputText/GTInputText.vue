@@ -1,7 +1,7 @@
 <template>
   <label :class="classes">
-    <div v-if="variant === 'horizontal'">
-      <p class="gt-inputtext__horizontal-label mb--2">
+    <div v-if="variant === 'vertical'">
+      <p class="gt-inputtext__vertical-label mb--2">
         {{ label }}
       </p>
     </div>
