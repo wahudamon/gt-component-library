@@ -42,8 +42,6 @@ $size-bezel: 0.5rem;
     }
 
     &--error {
-      border-color: #db3e3e !important;
-
       &:active:not([disabled]) {
         @extend .text--neutral-700;
       }
@@ -52,6 +50,10 @@ $size-bezel: 0.5rem;
         @extend .border--semantic-error;
 
         & + .gt-inputtext__label {
+          @extend .text--semantic-error;
+        }
+
+        & + .gt-inputtext__helper {
           @extend .text--semantic-error;
         }
       }
@@ -93,6 +95,10 @@ $size-bezel: 0.5rem;
 
         transform: translate(0.05rem, -85%) scale(0.8);
       }
+
+      & + .gt-inputtext__helper {
+        @extend .text--primary-navy-blue;
+      }
     }
 
     &:hover:not([disabled], .gt-inputtext__field:focus, .gt-inputtext__field--error) {
@@ -111,10 +117,6 @@ $size-bezel: 0.5rem;
   &__helper {
     @extend .poppins;
     @extend .poppins--caption;
-
-    &--error {
-      @extend .text--semantic-error;
-    }
   }
 
   &--sm {

@@ -28,6 +28,7 @@ export default Vue.extend({
 <template>
   <div id="app">
     <GTInputText
+      error
       class="mt--15 ml--15"
       variant="outline"
       size="sm"
