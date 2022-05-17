@@ -1,19 +1,22 @@
 <script>
 import Vue from "vue";
-import { GTIcon } from "@/entry.esm";
+import { GTIcon, GTInputText } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
 import ButtonsList from "./examples/ButtonsList.vue";
 import CornerRadius from "./examples/CornerRadius.vue";
 import CheckboxExample from "./examples/CheckboxExample.vue";
 import RadioButtonExample from "./examples/RadioButtonExample.vue";
+import InputTextExample from "./examples/InputTextExample.vue";
 
 export default Vue.extend({
   name: "ServeDev",
   components: {
     CheckboxExample,
     RadioButtonExample,
+    InputTextExample,
     GTIcon,
+    GTInputText,
     GridSystem,
     Typography,
     ButtonsList,
@@ -24,9 +27,20 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <buttons-list />
-    <checkbox-example class="mt--10" />
-    <radio-button-example class="mt--10" />
+    <GTInputText
+      class="mt--15 ml--15"
+      variant="horizontal"
+      size="sm"
+      length="sm"
+      label="Masukkan username baru"
+      placeholder="Placeholder"
+      helperText="Helper Text"
+      trailingIcon="gt-paper-plane-s"
+    />
+    <!-- <input-text-example /> -->
+    <!-- <buttons-list /> -->
+    <!-- <checkbox-example class="mt--10" /> -->
+    <!-- <radio-button-example class="mt--10" /> -->
     <!-- <button class="ml--20">
       <GTIcon name="gt-address-book-r" size="md" />
     </button> -->
