@@ -34,9 +34,7 @@ export default Vue.extend({
       size="sm"
       length="sm"
       label="Username"
-      placeholder="Placeholder"
       helperText="Helper Text"
-      leadingIcon="gt-paper-plane-s"
     />
     <!-- <GTInputText
       disabled
