@@ -28,7 +28,16 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTInputArea class="mt--15 ml--15" />
+    <GTInputArea
+      class="mt--15 ml--15"
+      variant="outline"
+      size="sm"
+      length="sm"
+      label="Username"
+      placeholder="Placeholder"
+      helperText="Helper Text"
+      leadingIcon="gt-paper-plane-s"
+    />
     <!-- <GTInputText
       disabled
       class="mt--15 ml--15"
