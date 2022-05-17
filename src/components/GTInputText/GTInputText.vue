@@ -1,18 +1,18 @@
 <template>
   <div :class="inputContainerClasses">
-    <div v-if="variant === 'horizontal'">
-      <p class="horizontal-label mb--2">
+    <div v-if="variant === 'horizontal'" class="mr--2">
+      <label class="label--horizontal">
         {{ label }}
-      </p>
+      </label>
     </div>
-    <div v-if="variant === 'vertical'">
-      <p class="vertical-label mb--2">
+    <div v-if="variant === 'vertical'" class="mb--2">
+      <label class="label--vertical">
         {{ label }}
-      </p>
+      </label>
     </div>
     <label :class="classes">
       <div>
-        <div v-if="leadingIcon" class="leading-icon">
+        <div v-if="leadingIcon" class="icon icon--leading">
           <GTIcon :name="leadingIcon" :size="size" />
         </div>
         <input
@@ -27,7 +27,7 @@
         >
           {{ error ? `${label}*` : label }}
         </span>
-        <div v-if="trailingIcon" class="trailing-icon">
+        <div v-if="trailingIcon" class="icon icon--trailing">
           <GTIcon :name="trailingIcon" :size="size" />
         </div>
         <div v-if="helperText" :class="helperClasses">

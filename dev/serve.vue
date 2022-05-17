@@ -32,9 +32,10 @@ export default Vue.extend({
       variant="horizontal"
       size="sm"
       length="sm"
-      label="Input Label"
+      label="Masukkan username baru"
       placeholder="Placeholder"
       helperText="Helper Text"
+      trailingIcon="gt-paper-plane-s"
     />
     <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->

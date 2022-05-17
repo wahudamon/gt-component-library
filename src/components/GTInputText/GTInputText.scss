@@ -23,16 +23,6 @@ $size-bezel: 0.5rem;
     line-height: 1.2;
   }
 
-  // &__vertical-label {
-  //   @extend .text--neutral-900;
-  // }
-
-  // &__horizontal-label {
-  //   @extend .text--neutral-900;
-
-  //   width: 120px;
-  // }
-
   &__field {
     @extend .cr--md;
     @extend .border--neutral-700;
@@ -179,26 +169,26 @@ $size-bezel: 0.5rem;
   }
 }
 
-.vertical-label {
-  @extend .text--neutral-900;
+.label {
+  &--horizontal,
+  &--vertical {
+    @extend .poppins;
+    @extend .poppins--b1-regular;
+    @extend .text--neutral-900;
+
+    width: auto;
+  }
 }
 
-.horizontal-label {
-  @extend .text--neutral-900;
-
-  width: 120px;
-}
-
-.leading-icon {
+.icon {
   position: absolute;
   top: 0;
-  left: 0;
   margin: 7px 10px;
-}
 
-.trailing-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 7px 10px;
+  &--leading {
+    left: 0;
+  }
+  &--trailing {
+    right: 0;
+  }
 }
