@@ -29,13 +29,12 @@ export default Vue.extend({
   <div id="app">
     <GTInputText
       class="mt--15 ml--15"
-      variant="horizontal"
+      variant="outline"
       size="sm"
       length="sm"
-      label="Masukkan username baru"
+      label="Username"
       placeholder="Placeholder"
       helperText="Helper Text"
-      trailingIcon="gt-paper-plane-s"
     />
     <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->

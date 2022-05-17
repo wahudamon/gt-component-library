@@ -37,6 +37,10 @@ $size-bezel: 0.5rem;
     padding-right: $size-bezel;
     background: transparent;
 
+    &::placeholder {
+      @extend .text--neutral-500;
+    }
+
     &--error {
       border-color: #db3e3e !important;
 
@@ -80,7 +84,7 @@ $size-bezel: 0.5rem;
 
     &:focus:not([disabled]) {
       @extend .border--primary-navy-blue;
-      @extend .text--neutral-500;
+      @extend .text--neutral-700;
 
       & + .gt-inputtext__label {
         @extend .poppins;
