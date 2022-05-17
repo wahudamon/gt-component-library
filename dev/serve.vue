@@ -1,6 +1,6 @@
 <script>
 import Vue from "vue";
-import { GTIcon, GTInputText } from "@/entry.esm";
+import { GTIcon, GTInputText, GTInputArea } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
 import ButtonsList from "./examples/ButtonsList.vue";
@@ -17,6 +17,7 @@ export default Vue.extend({
     InputTextExample,
     GTIcon,
     GTInputText,
+    GTInputArea,
     GridSystem,
     Typography,
     ButtonsList,
@@ -27,7 +28,8 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTInputText
+    <GTInputArea class="mt--15 ml--15" />
+    <!-- <GTInputText
       disabled
       class="mt--15 ml--15"
       variant="outline"
@@ -37,7 +39,7 @@ export default Vue.extend({
       placeholder="Placeholder"
       helperText="Helper Text"
       trailingIcon="gt-paper-plane-s"
-    />
+    /> -->
     <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->
     <!-- <checkbox-example class="mt--10" /> -->
