@@ -23,15 +23,15 @@ $size-bezel: 0.5rem;
     line-height: 1.2;
   }
 
-  &__vertical-label {
-    @extend .text--neutral-900;
-  }
+  // &__vertical-label {
+  //   @extend .text--neutral-900;
+  // }
 
-  &__horizontal-label {
-    @extend .text--neutral-900;
+  // &__horizontal-label {
+  //   @extend .text--neutral-900;
 
-    width: 120px;
-  }
+  //   width: 120px;
+  // }
 
   &__field {
     @extend .cr--md;
@@ -177,6 +177,16 @@ $size-bezel: 0.5rem;
       padding: calc($size-bezel * 1.5) 35px calc($size-bezel * 1.5) 10px;
     }
   }
+}
+
+.vertical-label {
+  @extend .text--neutral-900;
+}
+
+.horizontal-label {
+  @extend .text--neutral-900;
+
+  width: 120px;
 }
 
 .leading-icon {

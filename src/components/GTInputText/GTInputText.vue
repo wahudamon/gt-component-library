@@ -1,45 +1,41 @@
 <template>
-  <label :class="classes">
-    <div
-      v-if="variant === 'vertical'"
-      class="gt-inputtext__vertical-label mb--2"
-    >
-      <p>
+  <div :class="inputContainerClasses">
+    <div v-if="variant === 'horizontal'">
+      <p class="horizontal-label mb--2">
         {{ label }}
       </p>
     </div>
-    <div
-      v-if="variant === 'horizontal'"
-      class="gt-inputtext__horizontal-label mb--2"
-    >
-      <p>
+    <div v-if="variant === 'vertical'">
+      <p class="vertical-label mb--2">
         {{ label }}
       </p>
     </div>
-    <div>
-      <div v-if="leadingIcon" class="leading-icon">
-        <GTIcon :name="leadingIcon" :size="size" />
+    <label :class="classes">
+      <div>
+        <div v-if="leadingIcon" class="leading-icon">
+          <GTIcon :name="leadingIcon" :size="size" />
+        </div>
+        <input
+          type="text"
+          :class="inputFieldClasses"
+          :placeholder="placeholder"
+          :disabled="disabled"
+        />
+        <span
+          v-if="!placeholder && variant === 'outline'"
+          class="gt-inputtext__label"
+        >
+          {{ error ? `${label}*` : label }}
+        </span>
+        <div v-if="trailingIcon" class="trailing-icon">
+          <GTIcon :name="trailingIcon" :size="size" />
+        </div>
+        <div v-if="helperText" :class="helperClasses">
+          <p>{{ helperText }}</p>
+        </div>
       </div>
-      <input
-        type="text"
-        :class="inputFieldClasses"
-        :placeholder="placeholder"
-        :disabled="disabled"
-      />
-      <span
-        v-if="!placeholder && variant === 'outline'"
-        class="gt-inputtext__label"
-      >
-        {{ error ? `${label}*` : label }}
-      </span>
-      <div v-if="trailingIcon" class="trailing-icon">
-        <GTIcon :name="trailingIcon" :size="size" />
-      </div>
-      <div v-if="helperText" :class="helperClasses">
-        <p>{{ helperText }}</p>
-      </div>
-    </div>
-  </label>
+    </label>
+  </div>
 </template>
 
 <script>
@@ -110,6 +106,10 @@ export default {
         "gt-inputtext--icons": this.leadingIcon && this.trailingIcon,
         "gt-inputtext--leading-icon": this.leadingIcon && !this.trailingIcon,
         "gt-inputtext--trailing-icon": this.trailingIcon && !this.leadingIcon,
+      };
+    },
+    inputContainerClasses() {
+      return {
         "d-flex flex-row": this.variant === "horizontal",
       };
     },
