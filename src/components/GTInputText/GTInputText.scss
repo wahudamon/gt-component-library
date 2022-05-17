@@ -37,9 +37,11 @@ $size-bezel: 0.5rem;
     padding-right: $size-bezel;
     background: transparent;
 
-    &--error {
-      border-color: #db3e3e !important;
+    &::placeholder {
+      @extend .text--neutral-500;
+    }
 
+    &--error {
       &:active:not([disabled]) {
         @extend .text--neutral-700;
       }
@@ -48,6 +50,10 @@ $size-bezel: 0.5rem;
         @extend .border--semantic-error;
 
         & + .gt-inputtext__label {
+          @extend .text--semantic-error;
+        }
+
+        & + .gt-inputtext__helper {
           @extend .text--semantic-error;
         }
       }
@@ -80,7 +86,7 @@ $size-bezel: 0.5rem;
 
     &:focus:not([disabled]) {
       @extend .border--primary-navy-blue;
-      @extend .text--neutral-500;
+      @extend .text--neutral-700;
 
       & + .gt-inputtext__label {
         @extend .poppins;
@@ -88,6 +94,10 @@ $size-bezel: 0.5rem;
         @extend .text--primary-navy-blue;
 
         transform: translate(0.05rem, -85%) scale(0.8);
+      }
+
+      & + .gt-inputtext__helper {
+        @extend .text--primary-navy-blue;
       }
     }
 
@@ -101,16 +111,16 @@ $size-bezel: 0.5rem;
       @extend .text--neutral-500;
 
       cursor: not-allowed;
+
+      & + .gt-inputtext__helper {
+        @extend .text--neutral-300;
+      }
     }
   }
 
   &__helper {
     @extend .poppins;
     @extend .poppins--caption;
-
-    &--error {
-      @extend .text--semantic-error;
-    }
   }
 
   &--sm {
