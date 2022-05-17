@@ -1,0 +1,204 @@
+@import "../../../scss/foundations/style.scss";
+
+$size-bezel: 0.5rem;
+
+.gt-inputtext {
+  @extend .poppins;
+  @extend .poppins--b1-regular;
+  @extend .text--neutral-500;
+
+  position: relative;
+
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: calc($size-bezel * 0.1) calc($size-bezel * 0.5);
+    margin: calc($size-bezel * 1.3);
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transform-origin: 0 0;
+    background: #ffffff;
+    transition: transform 160ms ease-in;
+    line-height: 1.2;
+  }
+
+  &__field {
+    @extend .cr--md;
+    @extend .border--neutral-700;
+
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    outline: none;
+    padding-left: $size-bezel;
+    padding-right: $size-bezel;
+    background: transparent;
+
+    &::placeholder {
+      @extend .text--neutral-500;
+    }
+
+    &--error {
+      &:active:not([disabled]) {
+        @extend .text--neutral-700;
+      }
+
+      &:focus:not([disabled]) {
+        @extend .border--semantic-error;
+
+        & + .gt-inputtext__label {
+          @extend .text--semantic-error;
+        }
+
+        & + .gt-inputtext__helper {
+          @extend .text--semantic-error;
+        }
+      }
+    }
+
+    &--sm {
+      height: 40px;
+    }
+
+    &--md {
+      height: 56px;
+    }
+
+    &--length-sm {
+      width: 256px;
+    }
+
+    &--length-md {
+      width: 368px;
+    }
+
+    &--length-lg {
+      width: 480px;
+    }
+
+    &:active:not([disabled], .gt-inputtext__field--error) {
+      @extend .border--neutral-700;
+      @extend .text--neutral-700;
+    }
+
+    &:focus:not([disabled]) {
+      @extend .border--primary-navy-blue;
+      @extend .text--neutral-700;
+
+      & + .gt-inputtext__label {
+        @extend .poppins;
+        @extend .poppins--b2-regular;
+        @extend .text--primary-navy-blue;
+
+        transform: translate(0.05rem, -85%) scale(0.8);
+      }
+
+      & + .gt-inputtext__helper {
+        @extend .text--primary-navy-blue;
+      }
+    }
+
+    &:hover:not([disabled], .gt-inputtext__field:focus, .gt-inputtext__field--error) {
+      @extend .border--neutral-900;
+      @extend .text--neutral-500;
+    }
+
+    &[disabled] {
+      @extend .border--neutral-300;
+      @extend .text--neutral-500;
+
+      cursor: not-allowed;
+
+      & + .gt-inputtext__helper {
+        @extend .text--neutral-300;
+      }
+    }
+  }
+
+  &__helper {
+    @extend .poppins;
+    @extend .poppins--caption;
+  }
+
+  &--sm {
+    width: 256px;
+  }
+
+  &--md {
+    width: 368px;
+  }
+
+  &--lg {
+    width: 480px;
+  }
+
+  &--icons {
+    .gt-inputtext__label {
+      margin: calc($size-bezel * 1.3) 35px;
+    }
+
+    .gt-inputtext__field {
+      padding: calc($size-bezel * 1.5) 35px;
+
+      &:focus:not([disabled]) {
+        & + .gt-inputtext__label {
+          transform: translate(-1.5rem, -85%) scale(0.8);
+        }
+      }
+    }
+  }
+
+  &--leading-icon {
+    .gt-inputtext__label {
+      margin: calc($size-bezel * 1.3) 0 calc($size-bezel * 1.3) 35px;
+    }
+
+    .gt-inputtext__field {
+      padding: calc($size-bezel * 1.5) 10px calc($size-bezel * 1.5) 35px;
+
+      &:focus:not([disabled]) {
+        & + .gt-inputtext__label {
+          transform: translate(-1.5rem, -85%) scale(0.8);
+        }
+      }
+    }
+  }
+
+  &--trailing-icon {
+    .gt-inputtext__label {
+      margin: calc($size-bezel * 1.3) 35px calc($size-bezel * 1.3)
+        calc($size-bezel * 1.3);
+    }
+
+    .gt-inputtext__field {
+      padding: calc($size-bezel * 1.5) 35px calc($size-bezel * 1.5) 10px;
+    }
+  }
+}
+
+.label {
+  &--horizontal,
+  &--vertical {
+    @extend .poppins;
+    @extend .poppins--b1-regular;
+    @extend .text--neutral-900;
+
+    width: auto;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  margin: 7px 10px;
+
+  &--leading {
+    left: 0;
+  }
+  &--trailing {
+    right: 0;
+  }
+}
