@@ -27,9 +27,12 @@ export default Vue.extend({
   data() {
     return {
       crumbs: [
-        { name: "Breadcrumb 1", path: "#" },
+        { name: "Breadcrumb", path: "#" },
         { name: "Breadcrumb 2", path: "#" },
         { name: "Breadcrumb 3", path: "#" },
+        { name: "Breadcrumb 4", path: "#" },
+        { name: "Breadcrumb 5", path: "#" },
+        { name: "Breadcrumb 6", path: "#" },
       ],
     };
   },
