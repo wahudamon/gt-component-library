@@ -1,1 +1,17 @@
 @import "../../../scss/foundations/style.scss";
+
+.gt-breadcrumb {
+  &__item {
+    a {
+      text-decoration: none;
+    }
+
+    &--previous {
+      @extend .text--primary-navy-blue;
+    }
+
+    &--active {
+      @extend .text--neutral-900;
+    }
+  }
+}
