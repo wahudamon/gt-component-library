@@ -8,13 +8,19 @@
           class="breadcrumb-item gt-breadcrumb__item"
         >
           <a
-            v-if="!isLastCrumb(i)"
+            v-if="i === 0 && homeIcon"
+            class="gt-breadcrumb__item--previous"
+            :href="crumb.path"
+          >
+            <GTIcon class="mb--2" name="gt-house-chimpney-s" size="sm" />
+          </a>
+          <a
+            v-else-if="!isLastCrumb(i)"
             class="gt-breadcrumb__item--previous"
             :href="crumb.path"
           >
             {{ crumb.name }}
           </a>
-
           <span v-else class="gt-breadcrumb__item--active">{{
             crumb.name
           }}</span>
@@ -26,7 +32,14 @@
           :key="i"
           class="breadcrumb-item gt-breadcrumb__item"
         >
-          <a class="gt-breadcrumb__item--previous" :href="crumb.path">
+          <a
+            v-if="i === 0 && homeIcon"
+            class="gt-breadcrumb__item--previous"
+            :href="crumb.path"
+          >
+            <GTIcon class="mb--2" name="gt-house-chimpney-s" size="sm" />
+          </a>
+          <a v-else class="gt-breadcrumb__item--previous" :href="crumb.path">
             {{ crumb.name }}
           </a>
         </li>
@@ -42,8 +55,11 @@
 </template>
 
 <script>
+import GTIcon from "../GTIcon/GTIcon.vue";
+
 export default {
   name: "GTBreadcrumb",
+  components: { GTIcon },
   props: {
     crumbs: {
       type: Array,
@@ -55,6 +71,10 @@ export default {
       validator: function (value) {
         return ["/", "-", "|", ">"].indexOf(value) !== -1;
       },
+    },
+    homeIcon: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

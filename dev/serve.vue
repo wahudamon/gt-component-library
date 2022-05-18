@@ -51,6 +51,7 @@ export default Vue.extend({
       :crumbs="crumbs"
       separatorSign="/"
       :selected="selected"
+      homeIcon
     />
     <!-- <GTInputArea
       class="mt--15 ml--15"
