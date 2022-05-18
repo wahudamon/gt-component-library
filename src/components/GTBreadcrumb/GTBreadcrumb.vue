@@ -105,9 +105,6 @@ export default {
     isLastCrumb(index) {
       return index === this.crumbs.length - 1;
     },
-    selected(crumb) {
-      this.$emit("selected", crumb);
-    },
     getLastCrumb() {
       if (this.crumbs.length !== 0) {
         this.lastCrumb = this.crumbs.slice(-1)[0];
