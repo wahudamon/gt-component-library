@@ -43,7 +43,12 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTBreadcrumb class="mt--15 ml--15" :crumbs="crumbs" :selected="selected" />
+    <GTBreadcrumb
+      class="mt--15 ml--15"
+      :crumbs="crumbs"
+      separatorSign="/"
+      :selected="selected"
+    />
     <!-- <GTInputArea
       class="mt--15 ml--15"
       variant="outline"

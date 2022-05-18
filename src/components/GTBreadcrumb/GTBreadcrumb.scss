@@ -1,6 +1,21 @@
 @import "../../../scss/foundations/style.scss";
 
 .gt-breadcrumb {
+  &__separator {
+    &--slash {
+      --bs-breadcrumb-divider: "/";
+    }
+    &--minus {
+      --bs-breadcrumb-divider: "-";
+    }
+    &--pipe {
+      --bs-breadcrumb-divider: "|";
+    }
+    &--angle-bracket {
+      --bs-breadcrumb-divider: ">";
+    }
+  }
+
   &__item {
     a {
       text-decoration: none;

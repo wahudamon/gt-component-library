@@ -1,5 +1,5 @@
 <template>
-  <nav class="gt-breadcrumb" aria-label="breadcrumb">
+  <nav :class="classes" aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li
         v-for="(crumb, i) in crumbs"
@@ -28,6 +28,23 @@ export default {
       type: Array,
       required: true,
     },
+    separatorSign: {
+      type: String,
+      default: "/",
+      validator: function (value) {
+        return ["/", "-", "|", ">"].indexOf(value) !== -1;
+      },
+    },
+  },
+  computed: {
+    classes() {
+      return {
+        "gt-breadcrumb": true,
+        [`gt-breadcrumb__separator--${this.getSeparatorName(
+          this.separatorSign
+        )}`]: true,
+      };
+    },
   },
   methods: {
     isLast(index) {
@@ -35,6 +52,20 @@ export default {
     },
     selected(crumb) {
       this.$emit("selected", crumb);
+    },
+    getSeparatorName(sign) {
+      switch (sign) {
+        case "/":
+          return "slash";
+        case "-":
+          return "minus";
+        case "|":
+          return "pipe";
+        case ">":
+          return "angle-bracket";
+        default:
+          return "slash";
+      }
     },
   },
 };
