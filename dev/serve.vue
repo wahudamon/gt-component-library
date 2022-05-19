@@ -1,6 +1,12 @@
 <script>
 import Vue from "vue";
-import { GTIcon, GTInputText, GTInputArea, GTBreadcrumb } from "@/entry.esm";
+import {
+  GTIcon,
+  GTInputText,
+  GTInputArea,
+  GTBreadcrumb,
+  GTAlert,
+} from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
 import ButtonsList from "./examples/ButtonsList.vue";
@@ -19,6 +25,7 @@ export default Vue.extend({
     GTInputText,
     GTInputArea,
     GTBreadcrumb,
+    GTAlert,
     GridSystem,
     Typography,
     ButtonsList,
@@ -36,22 +43,18 @@ export default Vue.extend({
       ],
     };
   },
-  methods: {
-    selected(crumb) {
-      console.log(crumb);
-    },
-  },
 });
 </script>
 
 <template>
   <div id="app">
-    <GTBreadcrumb
+    <GTAlert class="mt--15 ml--15" />
+    <!-- <GTBreadcrumb
       class="mt--15 ml--15"
       :crumbs="crumbs"
       separatorSign="/"
       homeIcon
-    />
+    /> -->
     <!-- <GTInputArea
       class="mt--15 ml--15"
       variant="outline"

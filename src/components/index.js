@@ -6,3 +6,4 @@ export { default as GTRadioButton } from "./GTRadioButton/GTRadioButton.vue";
 export { default as GTInputText } from "./GTInputText/GTInputText.vue";
 export { default as GTInputArea } from "./GTInputArea/GTInputArea.vue";
 export { default as GTBreadcrumb } from "./GTBreadcrumb/GTBreadcrumb.vue";
+export { default as GTAlert } from "./GTAlert/GTAlert.vue";
