@@ -1,5 +1,20 @@
 @import "../../../scss/foundations/style.scss";
 
 .gt-alert {
-  background-color: white;
+  @extend .bg--primary-navy-blue;
+  @extend .be--medium;
+
+  border-radius: 8px !important;
+  border-color: transparent !important;
+
+  &__title {
+    @extend .poppins;
+    @extend .poppins--b1-medium;
+    @extend .text--neutral-900;
+  }
+
+  &__content {
+    @extend .poppins;
+    @extend .poppins--st2-regular;
+  }
 }

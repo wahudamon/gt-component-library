@@ -1,5 +1,5 @@
 <template>
-  <div class="card" style="width: 416px">
+  <div :class="classes" style="width: 30rem">
     <div class="row g-0">
       <div class="col-md-1 text-end">
         <div class="card-body">
@@ -8,8 +8,8 @@
       </div>
       <div class="col-md-11">
         <div class="card-body">
-          <h5 class="card-title mb-2">Informational Alert</h5>
-          <p class="card-text">
+          <h5 class="gt-alert__title card-title mb-2">Informational Alert</h5>
+          <p class="gt-alert__content card-text">
             Explain how to resolve the issue by including any troubleshooting
             actions or next steps.
           </p>
@@ -55,6 +55,14 @@ export default {
       validator: function (value) {
         return ["left", "right"].indexOf(value) !== -1;
       },
+    },
+  },
+  computed: {
+    classes() {
+      return {
+        card: true,
+        "gt-alert": true,
+      };
     },
   },
 };
