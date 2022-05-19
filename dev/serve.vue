@@ -1,6 +1,6 @@
 <script>
 import Vue from "vue";
-import { GTIcon, GTInputText } from "@/entry.esm";
+import { GTIcon, GTInputText, GTInputArea, GTBreadcrumb } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
 import ButtonsList from "./examples/ButtonsList.vue";
@@ -17,17 +17,50 @@ export default Vue.extend({
     InputTextExample,
     GTIcon,
     GTInputText,
+    GTInputArea,
+    GTBreadcrumb,
     GridSystem,
     Typography,
     ButtonsList,
     CornerRadius,
+  },
+  data() {
+    return {
+      crumbs: [
+        { name: "Breadcrumb", path: "#" },
+        { name: "Breadcrumb 2", path: "#" },
+        { name: "Breadcrumb 3", path: "#" },
+        { name: "Breadcrumb 4", path: "#" },
+        { name: "Breadcrumb 5", path: "#" },
+        { name: "Breadcrumb 6", path: "#" },
+      ],
+    };
+  },
+  methods: {
+    selected(crumb) {
+      console.log(crumb);
+    },
   },
 });
 </script>
 
 <template>
   <div id="app">
-    <GTInputText
+    <GTBreadcrumb
+      class="mt--15 ml--15"
+      :crumbs="crumbs"
+      separatorSign="/"
+      homeIcon
+    />
+    <!-- <GTInputArea
+      class="mt--15 ml--15"
+      variant="outline"
+      size="sm"
+      length="sm"
+      label="Username"
+      helperText="Helper Text"
+    /> -->
+    <!-- <GTInputText
       disabled
       class="mt--15 ml--15"
       variant="outline"
@@ -37,7 +70,7 @@ export default Vue.extend({
       placeholder="Placeholder"
       helperText="Helper Text"
       trailingIcon="gt-paper-plane-s"
-    />
+    /> -->
     <!-- <input-text-example /> -->
     <!-- <buttons-list /> -->
     <!-- <checkbox-example class="mt--10" /> -->
