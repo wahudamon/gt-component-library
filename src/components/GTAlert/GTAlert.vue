@@ -25,6 +25,38 @@ import GTIcon from "../GTIcon/GTIcon.vue";
 export default {
   name: "GTAlert",
   components: { GTIcon },
+  props: {
+    type: {
+      type: String,
+      default: "info",
+      validator: function (value) {
+        return ["info", "warning", "danger", "success"].indexOf(value) !== -1;
+      },
+    },
+    suppressed: {
+      type: Boolean,
+      default: false,
+    },
+    closeIcon: {
+      type: Boolean,
+      default: false,
+    },
+    ghostButton: {
+      type: Boolean,
+      default: false,
+    },
+    alertAction: {
+      type: Boolean,
+      default: false,
+    },
+    alertActionAlign: {
+      type: String,
+      default: "left",
+      validator: function (value) {
+        return ["left", "right"].indexOf(value) !== -1;
+      },
+    },
+  },
 };
 </script>
 
