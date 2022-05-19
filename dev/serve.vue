@@ -19,6 +19,7 @@ export default Vue.extend({
     GTInputText,
     GTInputArea,
     GTBreadcrumb,
+    GTSlider,
     GridSystem,
     Typography,
     ButtonsList,
@@ -46,12 +47,13 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTBreadcrumb
+    <GTSlider class="mt--15 ml--15" />
+    <!-- <GTBreadcrumb
       class="mt--15 ml--15"
       :crumbs="crumbs"
       separatorSign="/"
       homeIcon
-    />
+    /> -->
     <!-- <GTInputArea
       class="mt--15 ml--15"
       variant="outline"
