@@ -32,6 +32,13 @@
       </div>
       <div class="col-md-3"></div>
     </div>
+    <div class="row g-0">
+      <div v-if="actionAlign !== 'center'" class="col-md-1"></div>
+      <div :class="actionClasses" style="padding: 0 1rem 1rem 1rem">
+        <GTButton class="mr--2" type="primary" size="sm" text="Button" />
+        <GTButton class="ml--2" type="secondary" size="sm" text="Button" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -62,15 +69,15 @@ export default {
       type: Boolean,
       default: false,
     },
-    alertAction: {
+    actionButton: {
       type: Boolean,
       default: false,
     },
-    alertActionAlign: {
+    actionAlign: {
       type: String,
       default: "left",
       validator: function (value) {
-        return ["left", "right"].indexOf(value) !== -1;
+        return ["left", "center", "right"].indexOf(value) !== -1;
       },
     },
   },
@@ -80,6 +87,25 @@ export default {
         card: true,
         "gt-alert": true,
       };
+    },
+    actionClasses() {
+      return {
+        "col-md-11": this.actionAlign !== "center",
+        "col-md-12": this.actionAlign === "center",
+        [`text-${this.getActionAlign(this.actionAlign)}`]: true,
+      };
+    },
+  },
+  methods: {
+    getActionAlign(alignValue) {
+      switch (alignValue) {
+        case "center":
+          return "center";
+        case "right":
+          return "end";
+        default:
+          return "start";
+      }
     },
   },
 };
