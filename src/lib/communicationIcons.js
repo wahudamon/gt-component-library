@@ -315,3 +315,5 @@ const communication = {
     },
   },
 };
+
+export default communication;
