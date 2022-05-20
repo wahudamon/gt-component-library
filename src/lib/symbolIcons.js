@@ -72,7 +72,7 @@ const symbol = {
     },
   },
   "gt-greater-than-s": {
-    name: "gt-greather-than-s",
+    name: "gt-greater-than-s",
     type: "symbol",
     viewBox: "0 0 24 24",
     path: {

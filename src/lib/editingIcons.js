@@ -225,7 +225,7 @@ const editing = {
     },
   },
   "gt-pen-s": {
-    name: "g-pen-s",
+    name: "gt-pen-s",
     type: "editing",
     viewBox: "0 0 24 24",
     path: {
