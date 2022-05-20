@@ -1,4 +1,4 @@
-const icons = {
+const oldIcons = {
   "gt-address-book-r": {
     name: "gt-address-book-r",
     type: "comm-regular",
@@ -450,5 +450,3 @@ const icons = {
     },
   },
 };
-
-export default icons;
