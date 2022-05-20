@@ -162,3 +162,5 @@ const accessibility = {
     },
   },
 };
+
+export default accessibility;
