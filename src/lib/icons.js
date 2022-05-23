@@ -5,6 +5,7 @@ import building from "./buildingIcons";
 import communication from "./communicationIcons";
 import connectivity from "./connectivityIcons";
 import editing from "./editingIcons";
+import navigation from "./navigationIcons";
 import symbol from "./symbolIcons";
 
 const icons = Object.assign(
@@ -15,6 +16,7 @@ const icons = Object.assign(
   communication,
   connectivity,
   editing,
+  navigation,
   symbol
 );
 
