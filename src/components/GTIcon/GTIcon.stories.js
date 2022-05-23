@@ -116,7 +116,7 @@ export const BuildingIcons = (args) => ({
     <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
       <div
         v-for="(icon, index) in icons"
-        v-if="icon.type == 'buildings'"
+        v-if="icon.type == 'building'"
         :key="index"
         style="text-align: center; padding: 2rem"
       >
