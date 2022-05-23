@@ -39,11 +39,11 @@ const Template = (args) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
-  name: "gt-address-book-r",
+  name: "gt-meteor-s",
   size: "md",
 };
 
-export const CommunicationRegular = (args) => ({
+export const AccessibilityIcons = (args) => ({
   props: Object.keys(args),
   components: { GTIcon },
   data: () => ({
@@ -53,7 +53,7 @@ export const CommunicationRegular = (args) => ({
     <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
       <div
         v-for="(icon, index) in icons"
-        v-if="icon.type == 'comm-regular'"
+        v-if="icon.type == 'accessibility'"
         :key="index"
         style="text-align: center; padding: 2rem"
       >
@@ -64,7 +64,7 @@ export const CommunicationRegular = (args) => ({
   `,
 });
 
-export const CommunicationSolid = (args) => ({
+export const AstronomyIcons = (args) => ({
   props: Object.keys(args),
   components: { GTIcon },
   data: () => ({
@@ -74,7 +74,7 @@ export const CommunicationSolid = (args) => ({
     <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
       <div
         v-for="(icon, index) in icons"
-        v-if="icon.type == 'comm-solid'"
+        v-if="icon.type == 'astronomy'"
         :key="index"
         style="text-align: center; padding: 2rem"
       >
@@ -85,7 +85,7 @@ export const CommunicationSolid = (args) => ({
   `,
 });
 
-export const NavigationSolid = (args) => ({
+export const AutomotiveIcons = (args) => ({
   props: Object.keys(args),
   components: { GTIcon },
   data: () => ({
@@ -95,7 +95,7 @@ export const NavigationSolid = (args) => ({
     <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
       <div
         v-for="(icon, index) in icons"
-        v-if="icon.type == 'nav-solid'"
+        v-if="icon.type == 'automotive'"
         :key="index"
         style="text-align: center; padding: 2rem"
       >
@@ -106,7 +106,7 @@ export const NavigationSolid = (args) => ({
   `,
 });
 
-export const Buildings = (args) => ({
+export const BuildingIcons = (args) => ({
   props: Object.keys(args),
   components: { GTIcon },
   data: () => ({
@@ -116,7 +116,112 @@ export const Buildings = (args) => ({
     <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
       <div
         v-for="(icon, index) in icons"
-        v-if="icon.type == 'buildings'"
+        v-if="icon.type == 'building'"
+        :key="index"
+        style="text-align: center; padding: 2rem"
+      >
+        <GTIcon :name="icon.name" size="lg" />
+        <p> {{ icon.name }} </p>
+      </div>
+    </div>
+  `,
+});
+
+export const CommunicationIcons = (args) => ({
+  props: Object.keys(args),
+  components: { GTIcon },
+  data: () => ({
+    icons: availableIconsObj,
+  }),
+  template: `
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div
+        v-for="(icon, index) in icons"
+        v-if="icon.type == 'communication'"
+        :key="index"
+        style="text-align: center; padding: 2rem"
+      >
+        <GTIcon :name="icon.name" size="lg" />
+        <p> {{ icon.name }} </p>
+      </div>
+    </div>
+  `,
+});
+
+export const ConnectivityIcons = (args) => ({
+  props: Object.keys(args),
+  components: { GTIcon },
+  data: () => ({
+    icons: availableIconsObj,
+  }),
+  template: `
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div
+        v-for="(icon, index) in icons"
+        v-if="icon.type == 'connectivity'"
+        :key="index"
+        style="text-align: center; padding: 2rem"
+      >
+        <GTIcon :name="icon.name" size="lg" />
+        <p> {{ icon.name }} </p>
+      </div>
+    </div>
+  `,
+});
+
+export const EditingIcons = (args) => ({
+  props: Object.keys(args),
+  components: { GTIcon },
+  data: () => ({
+    icons: availableIconsObj,
+  }),
+  template: `
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div
+        v-for="(icon, index) in icons"
+        v-if="icon.type == 'editing'"
+        :key="index"
+        style="text-align: center; padding: 2rem"
+      >
+        <GTIcon :name="icon.name" size="lg" />
+        <p> {{ icon.name }} </p>
+      </div>
+    </div>
+  `,
+});
+
+export const NavigationIcons = (args) => ({
+  props: Object.keys(args),
+  components: { GTIcon },
+  data: () => ({
+    icons: availableIconsObj,
+  }),
+  template: `
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div
+        v-for="(icon, index) in icons"
+        v-if="icon.type == 'navigation'"
+        :key="index"
+        style="text-align: center; padding: 2rem"
+      >
+        <GTIcon :name="icon.name" size="lg" />
+        <p> {{ icon.name }} </p>
+      </div>
+    </div>
+  `,
+});
+
+export const SymbolIcons = (args) => ({
+  props: Object.keys(args),
+  components: { GTIcon },
+  data: () => ({
+    icons: availableIconsObj,
+  }),
+  template: `
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div
+        v-for="(icon, index) in icons"
+        v-if="icon.type == 'symbol'"
         :key="index"
         style="text-align: center; padding: 2rem"
       >
