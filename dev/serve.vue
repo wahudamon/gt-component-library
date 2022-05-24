@@ -33,6 +33,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      showAlert: true,
       crumbs: [
         { name: "Breadcrumb", path: "#" },
         { name: "Breadcrumb 2", path: "#" },
@@ -49,10 +50,10 @@ export default Vue.extend({
 <template>
   <div id="app">
     <GTAlert
+      :show.sync="showAlert"
       closeIcon
       linkButton
       actionButton
-      :show="true"
       class="mt--15 ml--15"
       type="info"
       actionAlign="right"

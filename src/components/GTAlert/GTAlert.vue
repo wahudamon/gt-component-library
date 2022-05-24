@@ -20,7 +20,11 @@
           <div v-if="linkButton" :class="linkButtonClasses">
             <GTButton type="link" size="sm" text="Button" />
           </div>
-          <div v-if="closeIcon" :class="closeIconClasses">
+          <div
+            v-if="closeIcon"
+            :class="closeIconClasses"
+            @click="showAlert = false"
+          >
             <GTIcon
               class="mr--4 mt--2 gt-alert__close-icon"
               name="gt-xmark-s"
@@ -111,6 +115,9 @@ export default {
     show(val) {
       this.showAlert = val;
     },
+    showAlert(val) {
+      this.$emit("update:show", val);
+    },
   },
   computed: {
     classes() {
@@ -148,6 +155,9 @@ export default {
         [`text-${this.getActionAlign(this.actionAlign)}`]: true,
       };
     },
+  },
+  mounted() {
+    this.showAlert = this.show;
   },
   methods: {
     getActionAlign(alignValue) {

@@ -59,5 +59,6 @@ $text-close-icon: color.$neutral-500;
 
   &__close-icon {
     color: $text-close-icon;
+    cursor: pointer;
   }
 }
