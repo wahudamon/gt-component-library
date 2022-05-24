@@ -1,15 +1,18 @@
 @use "../../assets/styles/color.scss";
 @import "../../../scss/foundations/style.scss";
 
+$bg-alert-base: color.$neutral-50;
 $bg-suppressed-info: color.$blue-50;
 $bg-suppressed-success: color.$green-50;
 $bg-suppressed-warning: color.$yellow-50;
 $bg-suppressed-error: color.$red-50;
 
+$text-close-icon: color.$neutral-500;
+
 .gt-alert {
-  @extend .bg--neutral-50;
   @extend .be--medium;
 
+  background-color: $bg-alert-base !important;
   border-radius: 8px !important;
   border-color: transparent !important;
 
@@ -52,5 +55,9 @@ $bg-suppressed-error: color.$red-50;
   &__content {
     @extend .poppins;
     @extend .poppins--st2-regular;
+  }
+
+  &__close-icon {
+    color: $text-close-icon;
   }
 }

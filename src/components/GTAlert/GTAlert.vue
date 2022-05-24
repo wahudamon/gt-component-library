@@ -21,7 +21,11 @@
             <GTButton type="link" size="sm" text="Button" />
           </div>
           <div class="col-md-4 text-end">
-            <GTIcon class="mr--4 mt--2" name="gt-xmark-s" size="sm" />
+            <GTIcon
+              class="mr--4 mt--2 gt-alert__close-icon"
+              name="gt-xmark-s"
+              size="sm"
+            />
           </div>
         </div>
       </div>

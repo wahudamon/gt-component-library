@@ -49,7 +49,6 @@ export default Vue.extend({
 <template>
   <div id="app">
     <GTAlert
-      suppressed
       class="mt--15 ml--15"
       type="info"
       actionAlign="right"
