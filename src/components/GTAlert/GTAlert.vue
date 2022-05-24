@@ -97,8 +97,9 @@ export default {
   computed: {
     classes() {
       return {
-        card: true,
         "gt-alert": true,
+        [`gt-alert__suppressed--${this.type}`]: this.suppressed,
+        card: true,
       };
     },
     alertIconClasses() {

@@ -1,11 +1,32 @@
+@use "../../assets/styles/color.scss";
 @import "../../../scss/foundations/style.scss";
 
+$bg-suppressed-info: color.$blue-50;
+$bg-suppressed-success: color.$green-50;
+$bg-suppressed-warning: color.$yellow-50;
+$bg-suppressed-error: color.$red-50;
+
 .gt-alert {
-  @extend .bg--primary-navy-blue;
+  @extend .bg--neutral-50;
   @extend .be--medium;
 
   border-radius: 8px !important;
   border-color: transparent !important;
+
+  &__suppressed {
+    &--info {
+      background-color: $bg-suppressed-info !important;
+    }
+    &--warning {
+      background-color: $bg-suppressed-warning !important;
+    }
+    &--error {
+      background-color: $bg-suppressed-error !important;
+    }
+    &--success {
+      background-color: $bg-suppressed-success !important;
+    }
+  }
 
   &__icon {
     &--info {
