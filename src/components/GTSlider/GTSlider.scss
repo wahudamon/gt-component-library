@@ -1,5 +1,42 @@
 @import "../../../scss/foundations/style.scss";
 
 .gt-slider {
-  background-color: transparent;
+  &__container {
+    width: 30%;
+  }
+
+  &__field {
+    @extend .bg--neutral-100;
+
+    -webkit-transition: 0.2s;
+    -webkit-appearance: none;
+    transition: opacity 0.2s;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      @extend .bg--neutral-0;
+      @extend .border--neutral-500;
+
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      @extend .bg--neutral-0;
+      @extend .border--neutral-500;
+
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
 }

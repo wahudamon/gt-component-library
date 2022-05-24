@@ -1,6 +1,12 @@
 <script>
 import Vue from "vue";
-import { GTIcon, GTInputText, GTInputArea, GTBreadcrumb } from "@/entry.esm";
+import {
+  GTIcon,
+  GTInputText,
+  GTInputArea,
+  GTBreadcrumb,
+  GTSlider,
+} from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
 import ButtonsList from "./examples/ButtonsList.vue";
