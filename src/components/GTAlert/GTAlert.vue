@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes" style="width: 600px">
+  <div v-if="showAlert" :class="classes" style="max-width: 600px">
     <div class="row g-0">
       <div class="col-md-1">
         <div class="card-body">
@@ -64,6 +64,10 @@ export default {
         return ["info", "warning", "danger", "success"].indexOf(value) !== -1;
       },
     },
+    show: {
+      type: Boolean,
+      default: false,
+    },
     suppressed: {
       type: Boolean,
       default: false,
@@ -96,6 +100,16 @@ export default {
       type: String,
       default: "",
       required: true,
+    },
+  },
+  data() {
+    return {
+      showAlert: false,
+    };
+  },
+  watch: {
+    show(val) {
+      this.showAlert = val;
     },
   },
   computed: {

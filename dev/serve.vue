@@ -52,6 +52,7 @@ export default Vue.extend({
       closeIcon
       linkButton
       actionButton
+      :show="true"
       class="mt--15 ml--15"
       type="info"
       actionAlign="right"
