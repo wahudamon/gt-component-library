@@ -48,7 +48,13 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTAlert class="mt--15 ml--15" type="info" actionAlign="right" />
+    <GTAlert
+      class="mt--15 ml--15"
+      type="info"
+      actionAlign="right"
+      alertTitle="Informational Alert"
+      alertContent="Explain how to resolve the issue by including any troubleshooting actions or next steps."
+    />
     <!-- <GTBreadcrumb
       class="mt--15 ml--15"
       :crumbs="crumbs"

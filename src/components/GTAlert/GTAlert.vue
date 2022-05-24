@@ -12,7 +12,7 @@
       </div>
       <div class="col-md-7" style="padding-top: 0.3rem">
         <div class="card-body" style="padding-bottom: 0">
-          <h5 class="gt-alert__title card-title">Informational Alert</h5>
+          <h5 class="gt-alert__title card-title">{{ alertTitle }}</h5>
         </div>
       </div>
       <div class="col-md-4">
@@ -30,8 +30,7 @@
       <div class="col-md-1"></div>
       <div class="col-md-8" style="padding-left: 1rem; padding-bottom: 1rem">
         <p class="gt-alert__content card-text">
-          Explain how to resolve the issue by including any troubleshooting
-          actions or next steps.
+          {{ alertContent }}
         </p>
       </div>
       <div class="col-md-3"></div>
@@ -83,6 +82,16 @@ export default {
       validator: function (value) {
         return ["left", "center", "right"].indexOf(value) !== -1;
       },
+    },
+    alertTitle: {
+      type: String,
+      default: "",
+      required: true,
+    },
+    alertContent: {
+      type: String,
+      default: "",
+      required: true,
     },
   },
   computed: {
