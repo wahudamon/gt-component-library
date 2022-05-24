@@ -15,12 +15,12 @@
           <h5 class="gt-alert__title card-title">{{ alertTitle }}</h5>
         </div>
       </div>
-      <div class="col-md-4">
+      <div v-if="closeIcon || linkButton" class="col-md-4">
         <div class="row g-0">
-          <div class="col-md-8 text-end">
+          <div v-if="linkButton" :class="linkButtonClasses">
             <GTButton type="link" size="sm" text="Button" />
           </div>
-          <div class="col-md-4 text-end">
+          <div v-if="closeIcon" :class="closeIconClasses">
             <GTIcon
               class="mr--4 mt--2 gt-alert__close-icon"
               name="gt-xmark-s"
@@ -39,7 +39,7 @@
       </div>
       <div class="col-md-3"></div>
     </div>
-    <div class="row g-0">
+    <div v-if="actionButton" class="row g-0">
       <div v-if="actionAlign !== 'center'" class="col-md-1"></div>
       <div :class="actionClasses" style="padding: 0 1rem 1rem 1rem">
         <GTButton class="mr--2" type="primary" size="sm" text="Button" />
@@ -72,7 +72,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    ghostButton: {
+    linkButton: {
       type: Boolean,
       default: false,
     },
@@ -111,6 +111,20 @@ export default {
         "gt-alert__icon": true,
         [`gt-alert__icon--${this.type}`]: this.type,
         "ml--3": true,
+      };
+    },
+    linkButtonClasses() {
+      return {
+        "col-md-8": this.closeIcon,
+        "col-md-12": !this.closeIcon,
+        "text-end": true,
+      };
+    },
+    closeIconClasses() {
+      return {
+        "col-md-4": this.linkButton,
+        "col-md-12": !this.linkButton,
+        "text-end": true,
       };
     },
     actionClasses() {
