@@ -1,9 +1,13 @@
 <template>
   <div :class="classes" style="width: 600px">
     <div class="row g-0">
-      <div class="col-md-1 text-end">
+      <div class="col-md-1">
         <div class="card-body">
-          <GTIcon :class="alertIconClasses" name="gt-circle-info-s" size="sm" />
+          <GTIcon
+            :class="alertIconClasses"
+            :name="getAlertIconName()"
+            size="sm"
+          />
         </div>
       </div>
       <div class="col-md-7" style="padding-top: 0.3rem">
@@ -92,6 +96,7 @@ export default {
       return {
         "gt-alert__icon": true,
         [`gt-alert__icon--${this.type}`]: this.type,
+        "ml--3": true,
       };
     },
     actionClasses() {
@@ -111,6 +116,18 @@ export default {
           return "end";
         default:
           return "start";
+      }
+    },
+    getAlertIconName() {
+      switch (this.type) {
+        case "success":
+          return "gt-circle-check-s";
+        case "warning":
+          return "gt-triangle-exclamation-s";
+        case "error":
+          return "gt-circle-exclamation-s";
+        default:
+          return "gt-circle-info-s";
       }
     },
   },
