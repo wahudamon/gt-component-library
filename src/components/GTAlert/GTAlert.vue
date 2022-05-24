@@ -3,7 +3,7 @@
     <div class="row g-0">
       <div class="col-md-1 text-end">
         <div class="card-body">
-          <GTIcon name="gt-house-chimpney-s" size="sm" />
+          <GTIcon :class="alertIconClasses" name="gt-circle-info-s" size="sm" />
         </div>
       </div>
       <div class="col-md-7" style="padding-top: 0.3rem">
@@ -17,7 +17,7 @@
             <GTButton type="link" size="sm" text="Button" />
           </div>
           <div class="col-md-4 text-end">
-            <GTIcon class="mr--4 mt--2" name="gt-comment-r" size="sm" />
+            <GTIcon class="mr--4 mt--2" name="gt-xmark-s" size="sm" />
           </div>
         </div>
       </div>
@@ -86,6 +86,12 @@ export default {
       return {
         card: true,
         "gt-alert": true,
+      };
+    },
+    alertIconClasses() {
+      return {
+        "gt-alert__icon": true,
+        [`gt-alert__icon--${this.type}`]: this.type,
       };
     },
     actionClasses() {

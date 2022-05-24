@@ -7,6 +7,21 @@
   border-radius: 8px !important;
   border-color: transparent !important;
 
+  &__icon {
+    &--info {
+      @extend .text--primary-navy-blue;
+    }
+    &--warning {
+      @extend .text--semantic-warning;
+    }
+    &--error {
+      @extend .text--semantic-error;
+    }
+    &--success {
+      @extend .text--semantic-success;
+    }
+  }
+
   &__title {
     @extend .poppins;
     @extend .poppins--b1-medium;

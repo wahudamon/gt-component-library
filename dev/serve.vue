@@ -48,7 +48,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTAlert class="mt--15 ml--15" actionAlign="right" />
+    <GTAlert class="mt--15 ml--15" type="info" actionAlign="right" />
     <!-- <GTBreadcrumb
       class="mt--15 ml--15"
       :crumbs="crumbs"
