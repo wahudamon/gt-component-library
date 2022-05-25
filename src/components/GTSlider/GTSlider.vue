@@ -1,13 +1,61 @@
 <template>
   <div class="gt-slider__container">
-    <input class="gt-slider__field" type="range" min="1" max="100" value="20" />
-    <!-- <input class="dummy__field" type="range" min="1" max="100" value="20" /> -->
+    <input
+      v-model="sliderVal"
+      class="gt-slider__field"
+      id="gt-slider__field"
+      type="range"
+      :min="min"
+      :max="max"
+    />
   </div>
 </template>
 
 <script>
 export default {
   name: "GTSlider",
+
+  props: {
+    min: {
+      type: String,
+      default: "0",
+      required: true,
+    },
+    max: {
+      type: String,
+      default: "0",
+      required: true,
+    },
+  },
+
+  data() {
+    return {
+      sliderVal: "0",
+      sliderElement: null,
+    };
+  },
+
+  mounted() {
+    this.sliderElement = document.getElementById("gt-slider__field");
+
+    if (this.sliderElement) {
+      this.sliderElement.addEventListener("input", this.handleInputChange);
+    }
+  },
+
+  methods: {
+    handleInputChange(e) {
+      let target = e.target;
+      if (target) {
+        const min = target.min;
+        const max = target.max;
+        const value = target.value;
+
+        target.style.backgroundSize =
+          ((value - min) * 100) / (max - min) + "% 100%";
+      }
+    },
+  },
 };
 </script>
 
