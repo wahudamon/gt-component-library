@@ -538,6 +538,9 @@ $semantic-warning: $yellow-600;
     }
   }
   &--neutral {
+    &-0 {
+      color: $neutral-0;
+    }
     &-50 {
       color: $neutral-50;
     }

@@ -9,6 +9,26 @@ $bg-slider-track-disabled: color.$neutral-300;
     width: 30%;
   }
 
+  &__value-label {
+    @extend .poppins;
+    @extend .poppins--b1-medium;
+    @extend .bg--primary-navy-blue;
+    @extend .text--neutral-0;
+
+    position: relative;
+    transform-origin: center center;
+    display: block;
+    width: 32px;
+    height: 38px;
+    border-radius: 4px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 3px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    left: attr(value);
+  }
+
   &__field {
     @extend .bg--neutral-100;
 
