@@ -8,6 +8,7 @@
       :min="min"
       :max="max"
       :disabled="disabled"
+      @input="handleInputChange"
     />
   </div>
 </template>
@@ -43,14 +44,24 @@ export default {
   mounted() {
     this.sliderElement = document.getElementById("gt-slider__field");
 
-    if (this.sliderElement) {
-      this.sliderElement.addEventListener("input", this.handleInputChange);
-    }
+    this.initialTrackFill(this.sliderElement);
   },
 
   methods: {
+    initialTrackFill(element) {
+      if (element) {
+        const min = element.min;
+        const max = element.max;
+        const value = element.value;
+
+        element.style.backgroundSize =
+          ((value - min) * 100) / (max - min) + "% 100%";
+      }
+    },
+
     handleInputChange(e) {
       let target = e.target;
+
       if (target) {
         const min = target.min;
         const max = target.max;

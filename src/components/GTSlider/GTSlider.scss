@@ -21,7 +21,7 @@ $bg-slider-track-disabled: color.$neutral-300;
     border-radius: 5px;
     outline: none;
     background-image: linear-gradient($bg-slider-track, $bg-slider-track);
-    background-size: 50% 100%;
+    background-size: 0% 100%;
     background-repeat: no-repeat;
 
     &::-webkit-slider-thumb {
@@ -52,7 +52,7 @@ $bg-slider-track-disabled: color.$neutral-300;
         $bg-slider-track-disabled,
         $bg-slider-track-disabled
       );
-      background-size: 50% 100%;
+      background-size: 0% 100%;
       background-repeat: no-repeat;
 
       &::-webkit-slider-thumb {
