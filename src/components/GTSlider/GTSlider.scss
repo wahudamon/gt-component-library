@@ -27,6 +27,11 @@ $bg-slider-track-disabled: color.$neutral-300;
     margin-bottom: 5px;
     box-sizing: border-box;
     left: attr(value);
+
+    &--disabled {
+      @extend .bg--neutral-300;
+      @extend .text--neutral-100;
+    }
   }
 
   &__field {

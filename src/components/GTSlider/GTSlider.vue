@@ -1,6 +1,10 @@
 <template>
   <div class="gt-slider__container">
-    <span id="gt-slider__value-label" class="gt-slider__value-label">
+    <span
+      v-if="valueLabel"
+      id="gt-slider__value-label"
+      :class="valueLabelClasses"
+    >
       {{ sliderVal }}
     </span>
     <input
@@ -25,6 +29,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    valueLabel: {
+      type: Boolean,
+      default: false,
+    },
     min: {
       type: String,
       default: "0",
@@ -39,18 +47,32 @@ export default {
 
   data() {
     return {
-      sliderVal: "50",
+      sliderVal: "0",
       sliderElement: null,
       valueLabelElement: null,
     };
   },
 
+  computed: {
+    valueLabelClasses() {
+      return {
+        "gt-slider__value-label": true,
+        "gt-slider__value-label--disabled": this.disabled,
+      };
+    },
+  },
+
   mounted() {
     this.sliderElement = document.getElementById("gt-slider__field");
-    this.valueLabelElement = document.getElementById("gt-slider__value-label");
 
     this.initialTrackFill(this.sliderElement);
-    this.initialValueLabelPosition(this.sliderElement);
+
+    if (this.valueLabel) {
+      this.valueLabelElement = document.getElementById(
+        "gt-slider__value-label"
+      );
+      this.initialValueLabelPosition(this.sliderElement);
+    }
   },
 
   methods: {
@@ -94,14 +116,17 @@ export default {
         target.style.backgroundSize =
           ((value - min) * 100) / (max - min) + "% 100%";
 
-        this.valueLabelElement.innerHTML = value;
+        if (this.valueLabel) {
+          this.valueLabelElement.innerHTML = value;
 
-        let valueLabelPosition = value / max;
+          let valueLabelPosition = value / max;
 
-        if (value === min) {
-          this.valueLabelElement.style.left = 0;
-        } else {
-          this.valueLabelElement.style.left = valueLabelPosition * 22.5 + "rem";
+          if (value === min) {
+            this.valueLabelElement.style.left = 0;
+          } else {
+            this.valueLabelElement.style.left =
+              valueLabelPosition * 22.5 + "rem";
+          }
         }
       }
     },
