@@ -7,6 +7,7 @@
       type="range"
       :min="min"
       :max="max"
+      :disabled="disabled"
     />
   </div>
 </template>
@@ -16,6 +17,10 @@ export default {
   name: "GTSlider",
 
   props: {
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
     min: {
       type: String,
       default: "0",
@@ -30,7 +35,7 @@ export default {
 
   data() {
     return {
-      sliderVal: "0",
+      sliderVal: "50",
       sliderElement: null,
     };
   },
