@@ -15,7 +15,6 @@
       :min="min"
       :max="max"
       :disabled="disabled"
-      @input="handleInputChange"
     />
   </div>
 </template>
@@ -53,6 +52,28 @@ export default {
     };
   },
 
+  watch: {
+    valueLabel: {
+      handler() {
+        setTimeout(() => {
+          if (this.valueLabel) {
+            this.sliderElement = document.getElementById("gt-slider__field");
+
+            this.valueLabelElement = document.getElementById(
+              "gt-slider__value-label"
+            );
+
+            this.sliderElement.addEventListener(
+              "input",
+              this.handleInputChange
+            );
+          }
+        }, 500);
+      },
+      deep: true,
+    },
+  },
+
   computed: {
     valueLabelClasses() {
       return {
@@ -64,6 +85,8 @@ export default {
 
   mounted() {
     this.sliderElement = document.getElementById("gt-slider__field");
+
+    this.sliderElement.addEventListener("input", this.handleInputChange);
 
     this.initialTrackFill(this.sliderElement);
 
@@ -116,17 +139,14 @@ export default {
         target.style.backgroundSize =
           ((value - min) * 100) / (max - min) + "% 100%";
 
-        if (this.valueLabel) {
-          this.valueLabelElement.innerHTML = value;
+        this.valueLabelElement.innerHTML = value;
 
-          let valueLabelPosition = value / max;
+        let valueLabelPosition = value / max;
 
-          if (value === min) {
-            this.valueLabelElement.style.left = 0;
-          } else {
-            this.valueLabelElement.style.left =
-              valueLabelPosition * 22.5 + "rem";
-          }
+        if (value === min) {
+          this.valueLabelElement.style.left = 0;
+        } else {
+          this.valueLabelElement.style.left = valueLabelPosition * 22.5 + "rem";
         }
       }
     },
