@@ -54,6 +54,8 @@ export default Vue.extend({
       closeIcon
       linkButton
       actionButton
+      leftButtonText="Yes"
+      rightButtonText="No"
       class="mt--15 ml--15"
       type="info"
       actionAlign="right"

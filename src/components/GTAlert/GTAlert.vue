@@ -17,9 +17,6 @@
       </div>
       <div v-if="closeIcon || linkButton" class="col-md-4">
         <div class="row g-0">
-          <div v-if="linkButton" :class="linkButtonClasses">
-            <GTButton type="link" size="sm" text="Button" />
-          </div>
           <div
             v-if="closeIcon"
             :class="closeIconClasses"
@@ -46,8 +43,18 @@
     <div v-if="actionButton" class="row g-0">
       <div v-if="actionAlign !== 'center'" class="col-md-1"></div>
       <div :class="actionClasses" style="padding: 0 1rem 1rem 1rem">
-        <GTButton class="mr--2" type="primary" size="sm" text="Button" />
-        <GTButton class="ml--2" type="secondary" size="sm" text="Button" />
+        <GTButton
+          class="mr--2"
+          type="primary"
+          size="sm"
+          :text="leftButtonText"
+        />
+        <GTButton
+          class="ml--2"
+          type="secondary"
+          size="sm"
+          :text="rightButtonText"
+        />
       </div>
     </div>
   </div>
@@ -80,13 +87,17 @@ export default {
       type: Boolean,
       default: false,
     },
-    linkButton: {
-      type: Boolean,
-      default: false,
-    },
     actionButton: {
       type: Boolean,
       default: false,
+    },
+    leftButtonText: {
+      type: String,
+      default: "Button",
+    },
+    rightButtonText: {
+      type: String,
+      default: "Button",
     },
     actionAlign: {
       type: String,
@@ -134,17 +145,9 @@ export default {
         "ml--3": true,
       };
     },
-    linkButtonClasses() {
-      return {
-        "col-md-8": this.closeIcon,
-        "col-md-12": !this.closeIcon,
-        "text-end": true,
-      };
-    },
     closeIconClasses() {
       return {
-        "col-md-4": this.linkButton,
-        "col-md-12": !this.linkButton,
+        "col-md-12": true,
         "text-end": true,
       };
     },
