@@ -1,33 +1,59 @@
-// import GTSlider from "./GTSlider.vue";
+import GTSlider from "./GTSlider.vue";
 
-// export default {
-//   title: "Components/GTSlider",
-//   component: GTSlider,
-//   argTypes: {
-//     separatorSign: {
-//       control: { type: "select" },
-//       options: ["/", "-", "|", ">"],
-//     },
-//   },
-//   parameters: {
-//     viewMode: "docs",
-//     docs: {
-//       description: {
-//         component:
-//           "Slider usually located at the top of the webpage and tells the user exactly what pages they've been on and how they have ended up where they are.",
-//       },
-//     },
-//   },
-// };
+export default {
+  title: "Components/GTSlider",
+  component: GTSlider,
+  parameters: {
+    viewMode: "docs",
+    docs: {
+      description: {
+        component:
+          "Slider type that provided in this library are range slider. It allows you to select a value or range of values between a specified provided minimal and maximal value.",
+      },
+    },
+  },
+};
 
-// const Template = (args, { argTypes }) => ({
-//   props: Object.keys(argTypes),
-//   components: { GTSlider },
-//   template: '<GTSlider v-bind="$props" />',
-// });
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTSlider },
+  template: '<GTSlider v-bind="$props" />',
+});
 
-// export const Primary = Template.bind({});
-// Primary.args = {
-//   crumbs: crumbsData,
-//   separatorSign: "/",
-// };
+export const Primary = Template.bind({});
+Primary.args = {
+  min: "1",
+  max: "100",
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
+  min: "1",
+  max: "100",
+};
+
+export const WithValueLabel = Template.bind({});
+WithValueLabel.args = {
+  valueLabel: true,
+  min: "1",
+  max: "100",
+};
+
+export const WithIcons = Template.bind({});
+WithIcons.args = {
+  icons: true,
+  min: "1",
+  max: "100",
+  prependIcon: "gt-minus-s",
+  appendIcon: "gt-plus-s",
+};
+
+export const WithLeftRightValue = Template.bind({});
+WithLeftRightValue.args = {
+  leftRightValue: true,
+  min: "1",
+  max: "100",
+  prependIcon: "gt-minus-s",
+  appendIcon: "gt-plus-s",
+};
