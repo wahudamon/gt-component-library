@@ -32,15 +32,24 @@
         :disabled="disabled"
       />
     </div>
-    <div v-if="icons || leftRightValue" class="ml--4">
+    <div
+      v-if="icons || leftRightValue || rightValue || showAppendIcon"
+      class="ml--4"
+    >
       <GTIcon
-        v-if="icons && !leftRightValue"
+        v-if="
+          (icons && !leftRightValue) ||
+          (showAppendIcon && !rightValue && !leftRightValue)
+        "
         :class="sliderIconsClasses"
         :name="appendIcon"
         size="sm"
       />
       <span
-        v-if="leftRightValue && !icons && !valueLabel"
+        v-if="
+          (leftRightValue && !icons && !valueLabel) ||
+          (rightValue && !showAppendIcon && !icons && !valueLabel)
+        "
         :class="valueLabelClasses"
       >
         {{ sliderVal }}
@@ -70,6 +79,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    rightValue: {
+      type: Boolean,
+      default: false,
+    },
     min: {
       type: String,
       default: "0",
@@ -85,6 +98,10 @@ export default {
       default: "0",
     },
     icons: {
+      type: Boolean,
+      default: false,
+    },
+    showAppendIcon: {
       type: Boolean,
       default: false,
     },
