@@ -40,6 +40,22 @@ WithValueLabel.args = {
   max: "100",
 };
 
+export const WithRightValueLabel = Template.bind({});
+WithRightValueLabel.args = {
+  rightValue: true,
+  min: "1",
+  max: "100",
+};
+
+export const WithLeftRightValue = Template.bind({});
+WithLeftRightValue.args = {
+  leftRightValue: true,
+  min: "1",
+  max: "100",
+  prependIcon: "gt-minus-s",
+  appendIcon: "gt-plus-s",
+};
+
 export const WithIcons = Template.bind({});
 WithIcons.args = {
   icons: true,
@@ -49,9 +65,9 @@ WithIcons.args = {
   appendIcon: "gt-plus-s",
 };
 
-export const WithLeftRightValue = Template.bind({});
-WithLeftRightValue.args = {
-  leftRightValue: true,
+export const WithAppendIcon = Template.bind({});
+WithAppendIcon.args = {
+  showAppendIcon: true,
   min: "1",
   max: "100",
   prependIcon: "gt-minus-s",
