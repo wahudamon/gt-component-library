@@ -1,7 +1,18 @@
 <template>
   <div :class="sliderContainerClasses">
-    <div v-if="icons" class="mr--4 text-end">
-      <GTIcon :class="sliderIconsClasses" :name="prependIcon" size="sm" />
+    <div v-if="icons || leftRightValue" class="mr--4 text-end">
+      <GTIcon
+        v-if="icons && !leftRightValue"
+        :class="sliderIconsClasses"
+        :name="prependIcon"
+        size="sm"
+      />
+      <span
+        v-if="leftRightValue && !icons && !valueLabel"
+        :class="valueLabelClasses"
+      >
+        {{ sliderVal }}
+      </span>
     </div>
     <div>
       <span
@@ -21,8 +32,19 @@
         :disabled="disabled"
       />
     </div>
-    <div v-if="icons" class="ml--4">
-      <GTIcon :class="sliderIconsClasses" :name="appendIcon" size="sm" />
+    <div v-if="icons || leftRightValue" class="ml--4">
+      <GTIcon
+        v-if="icons && !leftRightValue"
+        :class="sliderIconsClasses"
+        :name="appendIcon"
+        size="sm"
+      />
+      <span
+        v-if="leftRightValue && !icons && !valueLabel"
+        :class="valueLabelClasses"
+      >
+        {{ sliderVal }}
+      </span>
     </div>
   </div>
 </template>
@@ -41,6 +63,10 @@ export default {
       default: false,
     },
     valueLabel: {
+      type: Boolean,
+      default: false,
+    },
+    leftRightValue: {
       type: Boolean,
       default: false,
     },

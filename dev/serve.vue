@@ -54,8 +54,7 @@ export default Vue.extend({
 <template>
   <div id="app">
     <GTSlider
-      icons
-      valueLabel
+      leftRightValue
       class="mt--15 ml--15"
       min="1"
       max="100"
