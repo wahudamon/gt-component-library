@@ -1,27 +1,39 @@
 <template>
-  <div class="gt-slider__container">
-    <span
-      v-if="valueLabel"
-      id="gt-slider__value-label"
-      :class="valueLabelClasses"
-    >
-      {{ sliderVal }}
-    </span>
-    <input
-      v-model="sliderVal"
-      class="gt-slider__field"
-      id="gt-slider__field"
-      type="range"
-      :min="min"
-      :max="max"
-      :disabled="disabled"
-    />
+  <div :class="sliderContainerClasses">
+    <div v-if="icons" class="mr--4 text-end">
+      <GTIcon :class="sliderIconsClasses" :name="prependIcon" size="sm" />
+    </div>
+    <div>
+      <span
+        v-if="valueLabel"
+        id="gt-slider__value-label"
+        :class="valueLabelClasses"
+      >
+        {{ sliderVal }}
+      </span>
+      <input
+        v-model="sliderVal"
+        class="gt-slider__field"
+        id="gt-slider__field"
+        type="range"
+        :min="min"
+        :max="max"
+        :disabled="disabled"
+      />
+    </div>
+    <div v-if="icons" class="ml--4">
+      <GTIcon :class="sliderIconsClasses" :name="appendIcon" size="sm" />
+    </div>
   </div>
 </template>
 
 <script>
+import GTIcon from "../GTIcon/GTIcon.vue";
+
 export default {
   name: "GTSlider",
+
+  components: { GTIcon },
 
   props: {
     disabled: {
@@ -42,11 +54,28 @@ export default {
       default: "0",
       required: true,
     },
+    value: {
+      type: String,
+      default: "0",
+      required: true,
+    },
+    icons: {
+      type: Boolean,
+      default: false,
+    },
+    prependIcon: {
+      type: String,
+      default: "gt-icons-s",
+    },
+    appendIcon: {
+      type: String,
+      default: "gt-icons-s",
+    },
   },
 
   data() {
     return {
-      sliderVal: "0",
+      sliderVal: this.value,
       sliderElement: null,
       valueLabelElement: null,
     };
@@ -75,10 +104,23 @@ export default {
   },
 
   computed: {
+    sliderContainerClasses() {
+      return {
+        "gt-slider__container": true,
+        "align-items-center": !this.valueLabel,
+        "align-items-end": this.valueLabel,
+      };
+    },
     valueLabelClasses() {
       return {
         "gt-slider__value-label": true,
         "gt-slider__value-label--disabled": this.disabled,
+      };
+    },
+    sliderIconsClasses() {
+      return {
+        "gt-slider__icons": true,
+        "gt-slider__icons--disabled": this.disabled,
       };
     },
   },
@@ -123,7 +165,7 @@ export default {
         if (value === min) {
           this.valueLabelElement.style.left = 0;
         } else {
-          this.valueLabelElement.style.left = valueLabelPosition * 22.5 + "rem";
+          this.valueLabelElement.style.left = valueLabelPosition * 21.5 + "rem";
         }
       }
     },
@@ -139,14 +181,17 @@ export default {
         target.style.backgroundSize =
           ((value - min) * 100) / (max - min) + "% 100%";
 
-        this.valueLabelElement.innerHTML = value;
+        if (this.valueLabel) {
+          this.valueLabelElement.innerHTML = value;
 
-        let valueLabelPosition = value / max;
+          let valueLabelPosition = value / max;
 
-        if (value === min) {
-          this.valueLabelElement.style.left = 0;
-        } else {
-          this.valueLabelElement.style.left = valueLabelPosition * 22.5 + "rem";
+          if (value === min) {
+            this.valueLabelElement.style.left = 0;
+          } else {
+            this.valueLabelElement.style.left =
+              valueLabelPosition * 21.5 + "rem";
+          }
         }
       }
     },

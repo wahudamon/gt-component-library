@@ -6,7 +6,9 @@ $bg-slider-track-disabled: color.$neutral-300;
 
 .gt-slider {
   &__container {
-    width: 30%;
+    height: 60px;
+    width: 50%;
+    display: flex;
   }
 
   &__value-label {
@@ -34,6 +36,12 @@ $bg-slider-track-disabled: color.$neutral-300;
     }
   }
 
+  &__icons {
+    &--disabled {
+      @extend .text--neutral-500;
+    }
+  }
+
   &__field {
     @extend .bg--neutral-100;
 
@@ -41,7 +49,7 @@ $bg-slider-track-disabled: color.$neutral-300;
     -webkit-appearance: none;
     transition: opacity 0.2s;
     appearance: none;
-    width: 100%;
+    width: 372px;
     height: 4px;
     border-radius: 5px;
     outline: none;

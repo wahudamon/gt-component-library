@@ -53,7 +53,14 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTSlider class="mt--15 ml--15" min="1" max="100" valueLabel />
+    <GTSlider
+      icons
+      valueLabel
+      class="mt--15 ml--15"
+      min="1"
+      max="100"
+      value="50"
+    />
     <!-- <GTBreadcrumb
       class="mt--15 ml--15"
       :crumbs="crumbs"
