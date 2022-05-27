@@ -113,29 +113,14 @@ WithCloseButton.args = {
   alertContent: "Lorem ipsum dolor sir amet.",
 };
 
-export const WithLinkButton = Template.bind({});
-WithLinkButton.args = {
-  show: true,
-  linkButton: true,
-  alertTitle: "Lorem Ipsum",
-  alertContent: "Lorem ipsum dolor sir amet.",
-};
-
-export const WithLinkAndCloseButton = Template.bind({});
-WithLinkAndCloseButton.args = {
-  show: true,
-  linkButton: true,
-  closeIcon: true,
-  alertTitle: "Lorem Ipsum",
-  alertContent: "Lorem ipsum dolor sir amet.",
-};
-
 export const WithActionButton = Template.bind({});
 WithActionButton.args = {
   show: true,
   actionButton: true,
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
+  leftButtonText: "Yes",
+  rightButtonText: "No",
 };
 
 export const WithCenterActionButton = Template.bind({});
@@ -145,6 +130,8 @@ WithCenterActionButton.args = {
   actionAlign: "center",
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
+  leftButtonText: "Yes",
+  rightButtonText: "No",
 };
 
 export const WithRightActionButton = Template.bind({});
@@ -154,4 +141,6 @@ WithRightActionButton.args = {
   actionAlign: "right",
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
+  leftButtonText: "Yes",
+  rightButtonText: "No",
 };
