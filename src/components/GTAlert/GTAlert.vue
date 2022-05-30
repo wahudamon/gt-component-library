@@ -140,9 +140,6 @@ export default {
     show(val) {
       this.showAlert = val;
     },
-    showAlert(val) {
-      this.$emit("update:show", val);
-    },
   },
   computed: {
     classes() {
