@@ -6,6 +6,7 @@ import {
   GTInputArea,
   GTBreadcrumb,
   GTAlert,
+  GTCombobox,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -26,6 +27,7 @@ export default Vue.extend({
     GTInputArea,
     GTBreadcrumb,
     GTAlert,
+    GTCombobox,
     GridSystem,
     Typography,
     ButtonsList,
@@ -54,7 +56,8 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTAlert
+    <GTCombobox class="mt--15 ml--15" />
+    <!-- <GTAlert
       :show.sync="showAlert"
       closeIcon
       linkButton
@@ -68,7 +71,7 @@ export default Vue.extend({
       actionAlign="right"
       alertTitle="Informational Alert"
       alertContent="Explain how to resolve the issue by including any troubleshooting actions or next steps."
-    />
+    /> -->
     <!-- <GTBreadcrumb
       class="mt--15 ml--15"
       :crumbs="crumbs"
