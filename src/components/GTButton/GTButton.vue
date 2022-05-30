@@ -1,9 +1,9 @@
 <template>
   <button
     type="button"
+    @click="click"
     :disabled="isDisabled || isLoading"
     :class="classes"
-    @click="onClick"
   >
     <template v-if="isLoading && !icon">
       <GTIcon animate name="gt-rotate-right-s" :size="size" />
@@ -37,6 +37,12 @@ export default {
     isDisabled: {
       type: Boolean,
       default: false,
+    },
+    click: {
+      type: Function,
+      default: () => {
+        return false;
+      },
     },
     type: {
       type: String,
@@ -117,9 +123,6 @@ export default {
   },
 
   methods: {
-    onClick() {
-      this.$emit("onClick");
-    },
     formatVariant(variant) {
       let formattedVariant = "";
       if (

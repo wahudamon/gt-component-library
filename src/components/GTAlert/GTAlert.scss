@@ -1,0 +1,64 @@
+@use "../../assets/styles/color.scss";
+@import "../../../scss/foundations/style.scss";
+
+$bg-alert-base: color.$neutral-50;
+$bg-suppressed-info: color.$blue-50;
+$bg-suppressed-success: color.$green-50;
+$bg-suppressed-warning: color.$yellow-50;
+$bg-suppressed-error: color.$red-50;
+
+$text-close-icon: color.$neutral-500;
+
+.gt-alert {
+  @extend .be--medium;
+
+  background-color: $bg-alert-base !important;
+  border-radius: 8px !important;
+  border-color: transparent !important;
+
+  &__suppressed {
+    &--info {
+      background-color: $bg-suppressed-info !important;
+    }
+    &--warning {
+      background-color: $bg-suppressed-warning !important;
+    }
+    &--error {
+      background-color: $bg-suppressed-error !important;
+    }
+    &--success {
+      background-color: $bg-suppressed-success !important;
+    }
+  }
+
+  &__icon {
+    &--info {
+      @extend .text--primary-navy-blue;
+    }
+    &--warning {
+      @extend .text--semantic-warning;
+    }
+    &--error {
+      @extend .text--semantic-error;
+    }
+    &--success {
+      @extend .text--semantic-success;
+    }
+  }
+
+  &__title {
+    @extend .poppins;
+    @extend .poppins--b1-medium;
+    @extend .text--neutral-900;
+  }
+
+  &__content {
+    @extend .poppins;
+    @extend .poppins--st2-regular;
+  }
+
+  &__close-icon {
+    color: $text-close-icon;
+    cursor: pointer;
+  }
+}

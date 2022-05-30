@@ -35,6 +35,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      showAlert: true,
       crumbs: [
         { name: "Breadcrumb", path: "#" },
         { name: "Breadcrumb 2", path: "#" },
@@ -46,8 +47,8 @@ export default Vue.extend({
     };
   },
   methods: {
-    selected(crumb) {
-      console.log(crumb);
+    clickAlertButton() {
+      console.log("this button are clicked!");
     },
   },
 });
