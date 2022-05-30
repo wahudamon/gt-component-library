@@ -47,12 +47,14 @@
           class="mr--2"
           type="primary"
           size="sm"
+          :click="leftButtonFunction"
           :text="leftButtonText"
         />
         <GTButton
           class="ml--2"
           type="secondary"
           size="sm"
+          :click="rightButtonFunction"
           :text="rightButtonText"
         />
       </div>
@@ -95,9 +97,21 @@ export default {
       type: String,
       default: "Button",
     },
+    leftButtonFunction: {
+      type: Function,
+      default: () => {
+        return false;
+      },
+    },
     rightButtonText: {
       type: String,
       default: "Button",
+    },
+    rightButtonFunction: {
+      type: Function,
+      default: () => {
+        return false;
+      },
     },
     actionAlign: {
       type: String,

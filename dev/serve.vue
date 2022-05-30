@@ -44,6 +44,11 @@ export default Vue.extend({
       ],
     };
   },
+  methods: {
+    clickAlertButton() {
+      console.log("this button are clicked!");
+    },
+  },
 });
 </script>
 
@@ -56,6 +61,8 @@ export default Vue.extend({
       actionButton
       leftButtonText="Yes"
       rightButtonText="No"
+      :leftButtonFunction="clickAlertButton"
+      :rightButtonFunction="clickAlertButton"
       class="mt--15 ml--15"
       type="info"
       actionAlign="right"
