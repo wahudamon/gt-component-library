@@ -1,5 +1,104 @@
+@use "../../assets/styles/color.scss";
 @import "../../../scss/foundations/style.scss";
 
-.gt-multi-slider {
-  background-color: transparent;
+$bg-slider-track: color.$primary-navy-blue;
+$bg-slider-track-disabled: color.$neutral-300;
+
+.gt-slider {
+  &__container {
+    height: 60px;
+    width: 50%;
+    display: flex;
+  }
+
+  &__value-label {
+    @extend .poppins;
+    @extend .poppins--b1-medium;
+    @extend .bg--primary-navy-blue;
+    @extend .text--neutral-0;
+
+    position: relative;
+    transform-origin: center center;
+    display: block;
+    width: 32px;
+    height: 38px;
+    border-radius: 4px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 3px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    left: attr(value);
+
+    &--disabled {
+      @extend .bg--neutral-300;
+      @extend .text--neutral-100;
+    }
+  }
+
+  &__icons {
+    &--disabled {
+      @extend .text--neutral-500;
+    }
+  }
+
+  &__field {
+    @extend .bg--neutral-100;
+
+    -webkit-transition: 0.2s;
+    -webkit-appearance: none;
+    transition: opacity 0.2s;
+    appearance: none;
+    width: 372px;
+    height: 4px;
+    border-radius: 5px;
+    outline: none;
+    background-image: linear-gradient($bg-slider-track, $bg-slider-track);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+
+    &::-webkit-slider-thumb {
+      @extend .bg--neutral-0;
+      @extend .border--neutral-500;
+
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      @extend .bg--neutral-0;
+      @extend .border--neutral-500;
+
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      background-image: linear-gradient(
+        $bg-slider-track-disabled,
+        $bg-slider-track-disabled
+      );
+      background-size: 0% 100%;
+      background-repeat: no-repeat;
+
+      &::-webkit-slider-thumb {
+        @extend .bg--neutral-100;
+
+        cursor: not-allowed;
+      }
+
+      &::-moz-range-thumb {
+        @extend .bg--neutral-100;
+
+        cursor: not-allowed;
+      }
+    }
+  }
 }

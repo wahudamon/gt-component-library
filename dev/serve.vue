@@ -27,6 +27,7 @@ export default Vue.extend({
     GTInputArea,
     GTBreadcrumb,
     GTSlider,
+    GTMultiRangeSlider,
     GridSystem,
     Typography,
     ButtonsList,
