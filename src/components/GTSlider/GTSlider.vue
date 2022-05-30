@@ -1,19 +1,5 @@
 <template>
   <div :class="sliderContainerClasses">
-    <div v-if="icons || leftRightValue" class="mr--4 text-end">
-      <GTIcon
-        v-if="icons && !leftRightValue"
-        :class="sliderIconsClasses"
-        :name="prependIcon"
-        size="sm"
-      />
-      <span
-        v-if="leftRightValue && !icons && !valueLabel"
-        :class="valueLabelClasses"
-      >
-        {{ sliderVal }}
-      </span>
-    </div>
     <div>
       <span
         v-if="valueLabel"
@@ -32,24 +18,15 @@
         :disabled="disabled"
       />
     </div>
-    <div
-      v-if="icons || leftRightValue || rightValue || showAppendIcon"
-      class="ml--4"
-    >
+    <div v-if="rightValue || showAppendIcon" class="ml--4">
       <GTIcon
-        v-if="
-          (icons && !leftRightValue) ||
-          (showAppendIcon && !rightValue && !leftRightValue)
-        "
+        v-if="showAppendIcon && !rightValue"
         :class="sliderIconsClasses"
         :name="appendIcon"
         size="sm"
       />
       <span
-        v-if="
-          (leftRightValue && !icons && !valueLabel) ||
-          (rightValue && !showAppendIcon && !icons && !valueLabel)
-        "
+        v-if="rightValue && !showAppendIcon && !valueLabel"
         :class="valueLabelClasses"
       >
         {{ sliderVal }}
@@ -75,10 +52,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    leftRightValue: {
-      type: Boolean,
-      default: false,
-    },
     rightValue: {
       type: Boolean,
       default: false,
@@ -97,17 +70,9 @@ export default {
       type: String,
       default: "0",
     },
-    icons: {
-      type: Boolean,
-      default: false,
-    },
     showAppendIcon: {
       type: Boolean,
       default: false,
-    },
-    prependIcon: {
-      type: String,
-      default: "gt-icons-s",
     },
     appendIcon: {
       type: String,

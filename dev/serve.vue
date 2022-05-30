@@ -55,7 +55,13 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTSlider showAppendIcon class="mt--15 ml--15" min="1" max="100" />
+    <GTSlider
+      showAppendIcon
+      appendIcon="gt-plus-s"
+      class="mt--15 ml--15"
+      min="1"
+      max="100"
+    />
     <GTMultiRangeSlider class="mt--10 ml--15" />
     <!-- <GTBreadcrumb
       class="mt--15 ml--15"
