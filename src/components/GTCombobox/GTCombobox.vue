@@ -28,6 +28,12 @@ export default {
     },
   },
 
+  data() {
+    return {
+      selectedItem: "",
+    }
+  },
+
   computed: {
     classes() {
       return {
@@ -74,6 +80,10 @@ export default {
         ll = selElmnt.length;
         a = document.createElement("DIV");
         a.setAttribute("class", "select-selected");
+        a.setAttribute("id", "selected");
+        a.addEventListener("click", () => {
+          this.selectedItem = a.innerText
+        });
         a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
         x[i].appendChild(a);
         b = document.createElement("DIV");
@@ -96,6 +106,7 @@ export default {
                     y[k].removeAttribute("class");
                   }
                   this.setAttribute("class", "same-as-selected");
+                  this.selectedItem = this.innerText;
                   break;
                 }
               }
