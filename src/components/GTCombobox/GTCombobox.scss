@@ -1,6 +1,94 @@
+@use "../../assets/styles/color.scss";
 @import "../../../scss/foundations/style.scss";
 
-.gt-combobox {
-  width: 30% !important;
-  border-radius: 8px !important;
+$combobox-bg-base: color.$neutral-50;
+$combobox-border: color.$neutral-300;
+$combobox-text: color.$neutral-900;
+$combobox-arrow: color.$neutral-700;
+$combobox-items-hover: color.$neutral-200;
+$combobox-selected-item: color.$primary-navy-blue;
+
+.custom-select {
+  position: relative;
+  width: 382px;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  @extend .cr--md;
+
+  background-color: $combobox-bg-base;
+  border: 1px solid $combobox-border;
+  color: $combobox-text;
+  padding: 8px 16px;
+  cursor: pointer;
+  user-select: none;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: $combobox-arrow transparent transparent transparent;
+  }
+
+  &.select-arrow-active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &::after {
+      border-color: transparent transparent $combobox-arrow transparent;
+      top: 11px;
+    }
+  }
+}
+
+.select-items {
+  div {
+    color: $combobox-text;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent rgba(0, 0, 0, 0.1) transparent rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    user-select: none;
+
+    &:first-child {
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) transparent
+        rgba(0, 0, 0, 0.1);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-color: transparent rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1)
+        rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.select-items {
+  position: absolute;
+  background-color: $combobox-bg-base;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover {
+  background-color: $combobox-items-hover;
+}
+
+.same-as-selected {
+  color: $combobox-selected-item !important;
 }
