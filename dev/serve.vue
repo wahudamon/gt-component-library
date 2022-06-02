@@ -58,7 +58,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTCombobox class="mt--15 ml--15" placeholder="Select a car..." :items="comboboxOptions" />
+    <GTCombobox class="mt--15 ml--15" placeholder="Select a car..." />
     <!-- <GTAlert
       :show.sync="showAlert"
       closeIcon

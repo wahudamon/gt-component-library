@@ -63,11 +63,18 @@ $combobox-selected-item: color.$primary-navy-blue;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 
+  & + .select-empty {
+    cursor: default;
+  }
+
+  &:not(.select-empty) {
+    cursor: pointer;
+  }
+
   div {
     color: $combobox-text;
     padding: 8px 16px;
     border: 1px solid transparent;
-    cursor: pointer;
     user-select: none;
   }
 }
@@ -76,7 +83,16 @@ $combobox-selected-item: color.$primary-navy-blue;
   display: none;
 }
 
-.select-items div:hover {
+.select-empty {
+  cursor: default;
+
+  p {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+}
+
+.select-items div:hover:not(.select-empty) {
   background-color: $combobox-items-hover;
 }
 
