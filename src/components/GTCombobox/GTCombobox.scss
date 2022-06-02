@@ -51,35 +51,25 @@ $combobox-selected-item: color.$primary-navy-blue;
 }
 
 .select-items {
-  div {
-    color: $combobox-text;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent rgba(0, 0, 0, 0.1) transparent rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    user-select: none;
-
-    &:first-child {
-      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) transparent
-        rgba(0, 0, 0, 0.1);
-    }
-
-    &:last-child {
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
-      border-color: transparent rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1)
-        rgba(0, 0, 0, 0.1);
-    }
-  }
-}
-
-.select-items {
   position: absolute;
   background-color: $combobox-bg-base;
   top: 100%;
   left: 0;
   right: 0;
+  max-height: 192px;
+  overflow-y: scroll;
   z-index: 99;
+  border: 1px solid $combobox-border;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  div {
+    color: $combobox-text;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    user-select: none;
+  }
 }
 
 .select-hide {

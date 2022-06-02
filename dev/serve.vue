@@ -44,7 +44,8 @@ export default Vue.extend({
         { name: "Breadcrumb 5", path: "#" },
         { name: "Breadcrumb 6", path: "#" },
       ],
-      comboboxOptions: ["Lamborghini", "Ferarri", "Mitsubishi", "Toyota", "Suzuki", "Supra", "Chevrolet", "Pulsar"]
+      comboboxOptions: ["Lamborghini", "Ferarri", "Mitsubishi", "Toyota", "Suzuki", "Supra", "Chevrolet", "Pulsar"],
+      miniCbxOptions: ["Lamborghini", "Ferarri"],
     };
   },
   methods: {
