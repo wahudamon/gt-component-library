@@ -1,6 +1,12 @@
 <script>
 import Vue from "vue";
-import { GTIcon, GTInputText, GTInputArea, GTBreadcrumb } from "@/entry.esm";
+import {
+  GTIcon,
+  GTInputText,
+  GTInputArea,
+  GTBreadcrumb,
+  GTAlert,
+} from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
 import ButtonsList from "./examples/ButtonsList.vue";
@@ -19,6 +25,7 @@ export default Vue.extend({
     GTInputText,
     GTInputArea,
     GTBreadcrumb,
+    GTAlert,
     GridSystem,
     Typography,
     ButtonsList,
@@ -26,6 +33,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      showAlert: true,
       crumbs: [
         { name: "Breadcrumb", path: "#" },
         { name: "Breadcrumb 2", path: "#" },
@@ -37,8 +45,8 @@ export default Vue.extend({
     };
   },
   methods: {
-    selected(crumb) {
-      console.log(crumb);
+    clickAlertButton() {
+      console.log("this button are clicked!");
     },
   },
 });
@@ -46,12 +54,27 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTBreadcrumb
+    <GTAlert
+      :show.sync="showAlert"
+      closeIcon
+      linkButton
+      actionButton
+      leftButtonText="Yes"
+      rightButtonText="No"
+      :leftButtonFunction="clickAlertButton"
+      :rightButtonFunction="clickAlertButton"
+      class="mt--15 ml--15"
+      type="info"
+      actionAlign="right"
+      alertTitle="Informational Alert"
+      alertContent="Explain how to resolve the issue by including any troubleshooting actions or next steps."
+    />
+    <!-- <GTBreadcrumb
       class="mt--15 ml--15"
       :crumbs="crumbs"
       separatorSign="/"
       homeIcon
-    />
+    /> -->
     <!-- <GTInputArea
       class="mt--15 ml--15"
       variant="outline"
