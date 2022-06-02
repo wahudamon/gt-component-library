@@ -37,6 +37,12 @@ export default {
     }
   },
 
+  watch: {
+    items() {
+      let selectContainer = document.getElementsByClassName("select-items")[0];
+    },
+  },
+
   computed: {
     classes() {
       return {
@@ -52,6 +58,9 @@ export default {
   },
 
   methods: {
+    createExpandElement(itemsLength) {
+      console.log("creating expand element!");
+    },
     initComboboxElement() {
       var x, i, j, l, ll, selElmnt, a, b, c;
 

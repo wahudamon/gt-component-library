@@ -1,37 +1,50 @@
-// import GTCombobox from "./GTCombobox.vue";
+import GTCombobox from "./GTCombobox.vue";
 
-// // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
-// export default {
-//   title: "Components/GTCombobox",
-//   component: GTCombobox,
-//   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
-//   argTypes: {
-//     size: {
-//       control: { type: "select" },
-//       options: ["sm", "md", "lg"],
-//     },
-//   },
-//   parameters: {
-//     viewMode: "docs",
-//     docs: {
-//       description: {
-//         component:
-//           "Combobox is shown as a square box that is ticked (checked) when activated. Checkboxes are used to let a user select one or more options of a limited number of choices.",
-//       },
-//     },
-//   },
-// };
+const comboboxOptions = [
+  "Lamborghini",
+  "Ferarri",
+  "Mitsubishi",
+  "Toyota",
+  "Suzuki",
+  "Supra",
+  "Chevrolet",
+  "Pulsar",
+];
 
-// // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
-// const Template = (args, { argTypes }) => ({
-//   props: Object.keys(argTypes),
-//   components: { GTCombobox },
-//   template: '<GTCombobox v-bind="$props" />',
-// });
+export default {
+  title: "Components/GTCombobox",
+  component: GTCombobox,
+  // argTypes: {
+  //   separatorSign: {
+  //     control: { type: "select" },
+  //     options: ["/", "-", "|", ">"],
+  //   },
+  // },
+  parameters: {
+    viewMode: "docs",
+    docs: {
+      description: {
+        component:
+          "A combo box is a commonly used graphical user interface widget (or control). it is a combination of a drop-down list or list box and a single-line editable textbox, allowing the user to either type a value directly or select a value from the list.",
+      },
+    },
+  },
+};
 
-// export const Primary = Template.bind({});
-// // More on args: https://storybook.js.org/docs/vue/writing-stories/args
-// Primary.args = {
-//   type: "primary",
-//   text: "Text",
-// };
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTCombobox },
+  template: '<GTCombobox v-bind="$props" />',
+});
+
+export const Primary = Template.bind({});
+Primary.args = {
+  items: comboboxOptions,
+  placeholder: "Select a car...",
+};
+
+export const EmptyDataState = Template.bind({});
+EmptyDataState.args = {
+  items: [],
+  placeholder: "Select an animal...",
+};
