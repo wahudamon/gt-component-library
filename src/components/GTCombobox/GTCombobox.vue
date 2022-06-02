@@ -1,15 +1,8 @@
 <template>
   <div class="custom-select">
     <select>
-      <option value="select">Placeholder</option>
-      <option value="lamborghini">Lamborghini</option>
-      <option value="ferrari">Ferrari</option>
-      <option value="mitsubishi">Mitsubishi</option>
-      <option value="toyota">Toyota</option>
-      <option value="suzuki">Suzuki</option>
-      <option value="supra">Supra</option>
-      <option value="chevrolet">Chevrolet</option>
-      <option value="pulsar">Pulsar</option>
+      <option>{{ placeholder }}</option>
+      <option v-for="(item, i) in items" :key="i">{{ item }}</option>
     </select>
   </div>
 </template>
@@ -25,6 +18,16 @@ export default {
       validator: function (value) {
         return ["sm", "md"].indexOf(value) !== -1;
       },
+    },
+    items: {
+      type: Array,
+      default: () => {
+        return []
+      },
+    },
+    placeholder: {
+      type: String,
+      default: "",
     },
   },
 
@@ -80,7 +83,6 @@ export default {
         ll = selElmnt.length;
         a = document.createElement("DIV");
         a.setAttribute("class", "select-selected");
-        a.setAttribute("id", "selected");
         a.addEventListener("click", () => {
           this.selectedItem = a.innerText
         });
