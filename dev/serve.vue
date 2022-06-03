@@ -6,6 +6,7 @@ import {
   GTInputArea,
   GTBreadcrumb,
   GTAlert,
+  GTCombobox,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -26,6 +27,7 @@ export default Vue.extend({
     GTInputArea,
     GTBreadcrumb,
     GTAlert,
+    GTCombobox,
     GridSystem,
     Typography,
     ButtonsList,
@@ -42,6 +44,17 @@ export default Vue.extend({
         { name: "Breadcrumb 5", path: "#" },
         { name: "Breadcrumb 6", path: "#" },
       ],
+      comboboxOptions: [
+        "Lamborghini",
+        "Ferarri",
+        "Mitsubishi",
+        "Toyota",
+        "Suzuki",
+        "Supra",
+        "Chevrolet",
+        "Pulsar",
+      ],
+      miniCbxOptions: ["Lamborghini", "Ferarri"],
     };
   },
   methods: {
@@ -54,7 +67,13 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTAlert
+    <GTCombobox
+      class="mt--15 ml--15"
+      size="md"
+      placeholder="Select a car..."
+      :items="comboboxOptions"
+    />
+    <!-- <GTAlert
       :show.sync="showAlert"
       closeIcon
       linkButton
@@ -68,7 +87,7 @@ export default Vue.extend({
       actionAlign="right"
       alertTitle="Informational Alert"
       alertContent="Explain how to resolve the issue by including any troubleshooting actions or next steps."
-    />
+    /> -->
     <!-- <GTBreadcrumb
       class="mt--15 ml--15"
       :crumbs="crumbs"
