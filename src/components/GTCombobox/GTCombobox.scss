@@ -9,6 +9,8 @@ $combobox-items-hover: color.$neutral-200;
 $combobox-selected-item: color.$primary-navy-blue;
 
 .gt-combobox {
+  @extend .poppins;
+
   position: relative;
   width: 382px;
 
