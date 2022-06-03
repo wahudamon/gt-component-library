@@ -8,74 +8,78 @@ $combobox-arrow: color.$neutral-700;
 $combobox-items-hover: color.$neutral-200;
 $combobox-selected-item: color.$primary-navy-blue;
 
-.custom-select {
+.gt-combobox {
   position: relative;
   width: 382px;
-}
 
-.custom-select select {
-  display: none;
-}
-
-.select-selected {
-  @extend .cr--md;
-
-  background-color: $combobox-bg-base;
-  border: 1px solid $combobox-border;
-  color: $combobox-text;
-  height: 48px;
-  padding: 10px 16px;
-  cursor: pointer;
-  user-select: none;
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 22px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: $combobox-arrow transparent transparent transparent;
+  select {
+    display: none;
   }
 
-  &.select-arrow-active {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  &__selected {
+    @extend .cr--md;
+
+    background-color: $combobox-bg-base;
+    border: 1px solid $combobox-border;
+    color: $combobox-text;
+    height: 48px;
+    padding: 10px 16px;
+    cursor: pointer;
+    user-select: none;
 
     &::after {
-      border-color: transparent transparent $combobox-arrow transparent;
-      top: 12px;
+      position: absolute;
+      content: "";
+      top: 22px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-color: $combobox-arrow transparent transparent transparent;
+    }
+
+    &.select-arrow-active {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &::after {
+        border-color: transparent transparent $combobox-arrow transparent;
+        top: 12px;
+      }
     }
   }
-}
 
-.select-items {
-  position: absolute;
-  background-color: $combobox-bg-base;
-  top: 100%;
-  left: 0;
-  right: 0;
-  max-height: 192px;
-  overflow-y: scroll;
-  z-index: 99;
-  border: 1px solid $combobox-border;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  &__items {
+    position: absolute;
+    background-color: $combobox-bg-base;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 192px;
+    overflow-y: scroll;
+    z-index: 99;
+    border: 1px solid $combobox-border;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 
-  & + .select-empty {
-    cursor: default;
-  }
+    & + .select-empty {
+      cursor: default;
+    }
 
-  &:not(.select-empty) {
-    cursor: pointer;
-  }
+    &:not(.select-empty) {
+      cursor: pointer;
+    }
 
-  div {
-    color: $combobox-text;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    user-select: none;
+    div {
+      color: $combobox-text;
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      user-select: none;
+
+      &:hover:not(.select-empty) {
+        background-color: $combobox-items-hover;
+      }
+    }
   }
 }
 
@@ -90,10 +94,6 @@ $combobox-selected-item: color.$primary-navy-blue;
     margin-top: 5px;
     margin-bottom: 0;
   }
-}
-
-.select-items div:hover:not(.select-empty) {
-  background-color: $combobox-items-hover;
 }
 
 .same-as-selected {

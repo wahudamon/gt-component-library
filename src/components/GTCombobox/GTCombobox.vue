@@ -44,15 +44,15 @@ export default {
     };
   },
 
-  // computed: {
-  //   classes() {
-  //     return {
-  //       "gt-combobox": true,
-  //       "form-select": true,
-  //       "form-select-sm": this.size && this.size === "sm",
-  //     };
-  //   },
-  // },
+  computed: {
+    classes() {
+      return {
+        "gt-combobox": true,
+        "form-select": true,
+        "form-select-sm": this.size && this.size === "sm",
+      };
+    },
+  },
 
   methods: {},
 };

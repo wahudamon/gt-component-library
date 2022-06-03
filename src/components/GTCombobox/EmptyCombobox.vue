@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-select">
+  <div class="gt-combobox">
     <select id="emptyCombobox">
       <option>{{ placeholder }}</option>
     </select>
@@ -61,8 +61,8 @@ export default {
           xl,
           yl,
           arrNo = [];
-        x = document.getElementsByClassName("select-items");
-        y = document.getElementsByClassName("select-selected");
+        x = document.getElementsByClassName("gt-combobox__items");
+        y = document.getElementsByClassName("gt-combobox__selected");
         xl = x.length;
         yl = y.length;
         for (i = 0; i < yl; i++) {
@@ -79,21 +79,21 @@ export default {
         }
       }
 
-      x = document.getElementsByClassName("custom-select");
+      x = document.getElementsByClassName("gt-combobox");
       l = x.length;
 
       for (i = 0; i < l; i++) {
         selElmnt = document.getElementById("emptyCombobox");
         ll = selElmnt.length;
         a = document.createElement("DIV");
-        a.setAttribute("class", "select-selected");
+        a.setAttribute("class", "gt-combobox__selected");
         a.addEventListener("click", () => {
           this.selectedItem = a.innerText;
         });
         a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
         x[i].appendChild(a);
         b = document.createElement("DIV");
-        b.setAttribute("class", "select-items select-hide");
+        b.setAttribute("class", "gt-combobox__items select-hide");
 
         let selectEmptyText = document.createElement("p");
         selectEmptyText.innerText = "Tidak ada data.";
