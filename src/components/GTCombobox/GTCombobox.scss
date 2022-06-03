@@ -10,12 +10,21 @@ $combobox-selected-item: color.$primary-navy-blue;
 
 .gt-combobox {
   @extend .poppins;
+  @extend .poppins--b1-regular;
 
   position: relative;
   width: 382px;
 
   select {
     display: none;
+  }
+
+  &__small {
+    @extend .poppins--b2-regular;
+
+    .gt-combobox__selected {
+      height: 44px;
+    }
   }
 
   &__selected {

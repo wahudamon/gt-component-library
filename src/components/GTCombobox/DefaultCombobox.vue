@@ -1,5 +1,5 @@
 <template>
-  <div class="gt-combobox">
+  <div :class="classes">
     <select id="defaultCombobox">
       <option>{{ placeholder }}</option>
       <option v-for="(item, i) in items" :key="i">{{ item }}</option>
@@ -37,15 +37,14 @@ export default {
     };
   },
 
-  // computed: {
-  //   classes() {
-  //     return {
-  //       "gt-combobox": true,
-  //       "form-select": true,
-  //       "form-select-sm": this.size && this.size === "sm",
-  //     };
-  //   },
-  // },
+  computed: {
+    classes() {
+      return {
+        "gt-combobox": true,
+        "gt-combobox__small": this.size && this.size === "sm",
+      };
+    },
+  },
 
   mounted() {
     this.initCombobox();

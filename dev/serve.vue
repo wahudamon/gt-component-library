@@ -69,6 +69,7 @@ export default Vue.extend({
   <div id="app">
     <GTCombobox
       class="mt--15 ml--15"
+      size="md"
       placeholder="Select a car..."
       :items="comboboxOptions"
     />

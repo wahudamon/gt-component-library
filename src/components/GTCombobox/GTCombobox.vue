@@ -2,10 +2,16 @@
   <div>
     <EmptyCombobox
       v-if="items.length === 0"
+      :size="size"
       :placeholder="placeholder"
       :items="items"
     />
-    <DefaultCombobox v-else :placeholder="placeholder" :items="items" />
+    <DefaultCombobox
+      v-else
+      :size="size"
+      :placeholder="placeholder"
+      :items="items"
+    />
   </div>
 </template>
 
