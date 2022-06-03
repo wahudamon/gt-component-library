@@ -14,12 +14,12 @@ const comboboxOptions = [
 export default {
   title: "Components/GTCombobox",
   component: GTCombobox,
-  // argTypes: {
-  //   separatorSign: {
-  //     control: { type: "select" },
-  //     options: ["/", "-", "|", ">"],
-  //   },
-  // },
+  argTypes: {
+    size: {
+      control: { type: "select" },
+      options: ["sm", "md"],
+    },
+  },
   parameters: {
     viewMode: "docs",
     docs: {
@@ -41,10 +41,4 @@ export const Primary = Template.bind({});
 Primary.args = {
   items: comboboxOptions,
   placeholder: "Select a car...",
-};
-
-export const EmptyDataState = Template.bind({});
-EmptyDataState.args = {
-  items: [],
-  placeholder: "Select an animal...",
 };
