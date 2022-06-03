@@ -44,7 +44,16 @@ export default Vue.extend({
         { name: "Breadcrumb 5", path: "#" },
         { name: "Breadcrumb 6", path: "#" },
       ],
-      comboboxOptions: ["Lamborghini", "Ferarri", "Mitsubishi", "Toyota", "Suzuki", "Supra", "Chevrolet", "Pulsar"],
+      comboboxOptions: [
+        "Lamborghini",
+        "Ferarri",
+        "Mitsubishi",
+        "Toyota",
+        "Suzuki",
+        "Supra",
+        "Chevrolet",
+        "Pulsar",
+      ],
       miniCbxOptions: ["Lamborghini", "Ferarri"],
     };
   },
@@ -58,7 +67,11 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTCombobox class="mt--15 ml--15" placeholder="Select a car..." />
+    <GTCombobox
+      class="mt--15 ml--15"
+      placeholder="Select a car..."
+      :items="comboboxOptions"
+    />
     <!-- <GTAlert
       :show.sync="showAlert"
       closeIcon
