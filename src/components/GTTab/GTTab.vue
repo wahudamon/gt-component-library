@@ -1,19 +1,15 @@
 <template>
   <div>
-    <!-- <Wds /> -->
-    <CodepenOne />
-    <!-- <CodepenTwo /> -->
+    <TabReferences />
   </div>
 </template>
 
 <script>
-import CodepenOne from "./references/CodepenOne.vue";
-import CodepenTwo from "./references/CodepenTwo.vue";
-import Wds from "./references/Wds.vue";
+import TabReferences from "./references/TabReferences.vue";
 
 export default {
   name: "GTTab",
-  components: { Wds, CodepenOne, CodepenTwo },
+  components: { TabReferences },
 };
 </script>
 
