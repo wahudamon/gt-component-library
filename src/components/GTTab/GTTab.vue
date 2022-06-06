@@ -1,17 +1,19 @@
 <template>
   <div>
     <!-- <Wds /> -->
-    <W3s />
+    <CodepenOne />
+    <!-- <CodepenTwo /> -->
   </div>
 </template>
 
 <script>
+import CodepenOne from "./references/CodepenOne.vue";
+import CodepenTwo from "./references/CodepenTwo.vue";
 import Wds from "./references/Wds.vue";
-import W3s from "./references/W3s.vue";
 
 export default {
   name: "GTTab",
-  components: { Wds, W3s },
+  components: { Wds, CodepenOne, CodepenTwo },
 };
 </script>
 
