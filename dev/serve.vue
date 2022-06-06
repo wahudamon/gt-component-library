@@ -69,7 +69,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTab />
+    <GTTab class="mt--15 mx--15" />
   </div>
 </template>
 

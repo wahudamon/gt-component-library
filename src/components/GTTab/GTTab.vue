@@ -1,10 +1,15 @@
 <template>
-  <div>Hello World!</div>
+  <div>
+    <Wds />
+  </div>
 </template>
 
 <script>
+import Wds from "./references/Wds.vue";
+
 export default {
   name: "GTTab",
+  components: { Wds },
 };
 </script>
 
