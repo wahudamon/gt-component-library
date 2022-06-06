@@ -7,6 +7,7 @@ import {
   GTBreadcrumb,
   GTAlert,
   GTCombobox,
+  GTTab,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -28,6 +29,7 @@ export default Vue.extend({
     GTBreadcrumb,
     GTAlert,
     GTCombobox,
+    GTTab,
     GridSystem,
     Typography,
     ButtonsList,
@@ -67,62 +69,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTCombobox
-      class="mt--15 ml--15"
-      size="md"
-      placeholder="Select a car..."
-      :items="comboboxOptions"
-    />
-    <!-- <GTAlert
-      :show.sync="showAlert"
-      closeIcon
-      linkButton
-      actionButton
-      leftButtonText="Yes"
-      rightButtonText="No"
-      :leftButtonFunction="clickAlertButton"
-      :rightButtonFunction="clickAlertButton"
-      class="mt--15 ml--15"
-      type="info"
-      actionAlign="right"
-      alertTitle="Informational Alert"
-      alertContent="Explain how to resolve the issue by including any troubleshooting actions or next steps."
-    /> -->
-    <!-- <GTBreadcrumb
-      class="mt--15 ml--15"
-      :crumbs="crumbs"
-      separatorSign="/"
-      homeIcon
-    /> -->
-    <!-- <GTInputArea
-      class="mt--15 ml--15"
-      variant="outline"
-      size="sm"
-      length="sm"
-      label="Username"
-      helperText="Helper Text"
-    /> -->
-    <!-- <GTInputText
-      disabled
-      class="mt--15 ml--15"
-      variant="outline"
-      size="sm"
-      length="sm"
-      label="Username"
-      placeholder="Placeholder"
-      helperText="Helper Text"
-      trailingIcon="gt-paper-plane-s"
-    /> -->
-    <!-- <input-text-example /> -->
-    <!-- <buttons-list /> -->
-    <!-- <checkbox-example class="mt--10" /> -->
-    <!-- <radio-button-example class="mt--10" /> -->
-    <!-- <button class="ml--20">
-      <GTIcon name="gt-address-book-r" size="md" />
-    </button> -->
-    <!-- <typography />
-    <grid-system />
-    <corner-radius /> -->
+    <GTTab />
   </div>
 </template>
 
