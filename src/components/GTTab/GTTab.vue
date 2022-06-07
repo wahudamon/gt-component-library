@@ -1,5 +1,4 @@
 <template>
-  <!-- <TabReferences /> -->
   <div class="tabs__container">
     <ul class="tabs__field">
       <li data-tab-target="#home" class="active tab">Home</li>

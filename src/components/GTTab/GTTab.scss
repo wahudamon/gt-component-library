@@ -1,4 +1,9 @@
+@use "../../assets/styles/color.scss";
 @import "../../../scss/foundations/style.scss";
+
+$text-tab-inactive: color.$neutral-300;
+$text-tab-active: color.$primary-navy-blue;
+$text-tab-hover-inactive: color.$neutral-500;
 
 [data-tab-content] {
   display: none;
@@ -29,15 +34,18 @@ body {
 }
 
 .tab {
+  width: 100%;
   cursor: pointer;
   padding: 10px;
+  text-align: center;
+  color: $text-tab-inactive;
 
   &.active {
-    background-color: #ccc;
+    color: $text-tab-active;
   }
 
   &:hover {
-    background-color: #aaa;
+    color: $text-tab-hover-inactive;
   }
 }
 
