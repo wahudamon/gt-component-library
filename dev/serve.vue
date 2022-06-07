@@ -69,7 +69,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTab />
+    <GTTab icons="gt-icons-s" />
   </div>
 </template>
 

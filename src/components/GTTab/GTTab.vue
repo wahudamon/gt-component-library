@@ -1,9 +1,18 @@
 <template>
   <div class="tabs__container">
     <ul class="tabs__field">
-      <li data-tab-target="#home" class="active tab">Home</li>
-      <li data-tab-target="#pricing" class="tab">Pricing</li>
-      <li data-tab-target="#about" class="tab">About</li>
+      <li data-tab-target="#home" class="active tab">
+        <GTIcon v-if="icons" :name="icons" size="sm" />
+        <p v-else>Home</p>
+      </li>
+      <li data-tab-target="#pricing" class="tab">
+        <GTIcon v-if="icons" :name="icons" size="sm" />
+        <p v-else>Pricing</p>
+      </li>
+      <li data-tab-target="#about" class="tab">
+        <GTIcon v-if="icons" :name="icons" size="sm" />
+        <p v-else>About</p>
+      </li>
     </ul>
 
     <div class="tab-content">
@@ -24,8 +33,19 @@
 </template>
 
 <script>
+import GTIcon from "../GTIcon/GTIcon.vue";
+
 export default {
   name: "GTTab",
+
+  components: { GTIcon },
+
+  props: {
+    icons: {
+      type: String,
+      default: "",
+    },
+  },
 
   mounted() {
     this.addTabsEvent();
