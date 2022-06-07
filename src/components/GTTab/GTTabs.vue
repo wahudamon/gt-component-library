@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "Tabs",
+  name: "GTTabs",
 
   mounted() {
     this.addTabsEvent();

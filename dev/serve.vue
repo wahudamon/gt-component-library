@@ -7,11 +7,11 @@ import {
   GTBreadcrumb,
   GTAlert,
   GTCombobox,
-  Tabs,
-  TabItems,
-  TabItem,
-  TabContents,
-  TabContentItem,
+  GTTabs,
+  GTTabItems,
+  GTTabItem,
+  GTTabContents,
+  GTTabContentItem,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -33,11 +33,11 @@ export default Vue.extend({
     GTBreadcrumb,
     GTAlert,
     GTCombobox,
-    Tabs,
-    TabItems,
-    TabItem,
-    TabContents,
-    TabContentItem,
+    GTTabs,
+    GTTabItems,
+    GTTabItem,
+    GTTabContents,
+    GTTabContentItem,
     GridSystem,
     Typography,
     ButtonsList,
@@ -105,18 +105,18 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <Tabs>
-      <TabItems>
-        <TabItem
+    <GTTabs>
+      <GTTabItems>
+        <GTTabItem
           v-for="(tabItem, i) in tabItems"
           :key="i"
           :isActive="tabItem.isActive"
           :tabId="tabItem.tabId"
           :title="tabItem.title"
         />
-      </TabItems>
-      <TabContents>
-        <TabContentItem
+      </GTTabItems>
+      <GTTabContents>
+        <GTTabContentItem
           v-for="(tabContentItem, i) in tabContentItems"
           :key="i"
           :isActive="tabContentItem.isActive"
@@ -124,9 +124,9 @@ export default Vue.extend({
         >
           <h1>{{ tabContentItem.contentTitle }}</h1>
           <p>{{ tabContentItem.contentText }}</p>
-        </TabContentItem>
-      </TabContents>
-    </Tabs>
+        </GTTabContentItem>
+      </GTTabContents>
+    </GTTabs>
   </div>
 </template>
 
