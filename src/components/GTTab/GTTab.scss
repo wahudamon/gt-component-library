@@ -29,7 +29,6 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid black;
   }
 }
 
@@ -39,13 +38,21 @@ body {
   padding: 10px;
   text-align: center;
   color: $text-tab-inactive;
+  border-bottom: 4px solid $text-tab-inactive;
 
   &.active {
     color: $text-tab-active;
+    border-bottom-color: $text-tab-active;
+
+    &:hover {
+      color: $text-tab-active;
+      border-bottom-color: $text-tab-active;
+    }
   }
 
   &:hover {
     color: $text-tab-hover-inactive;
+    border-bottom-color: $text-tab-hover-inactive;
   }
 }
 
