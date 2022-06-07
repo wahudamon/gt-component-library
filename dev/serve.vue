@@ -7,7 +7,11 @@ import {
   GTBreadcrumb,
   GTAlert,
   GTCombobox,
-  GTTab,
+  Tabs,
+  TabItems,
+  TabItem,
+  TabContents,
+  TabContentItem,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -29,7 +33,11 @@ export default Vue.extend({
     GTBreadcrumb,
     GTAlert,
     GTCombobox,
-    GTTab,
+    Tabs,
+    TabItems,
+    TabItem,
+    TabContents,
+    TabContentItem,
     GridSystem,
     Typography,
     ButtonsList,
@@ -69,8 +77,42 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTab />
-    <!-- <GTTab icons="gt-icons-s" /> -->
+    <Tabs>
+      <TabItems>
+        <TabItem isActive tabId="home" title="Home" />
+        <TabItem tabId="pricing" title="Pricing" />
+        <TabItem tabId="about" title="About" />
+      </TabItems>
+      <TabContents>
+        <TabContentItem isActive contentId="home">
+          <h1>Home</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            eum illo necessitatibus iusto facere quia a ratione tenetur. Facilis
+            ratione suscipit a incidunt quae nemo aperiam nostrum ab rerum
+            praesentium.
+          </p>
+        </TabContentItem>
+        <TabContentItem contentId="pricing">
+          <h1>Pricing</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            assumenda ad quae minima. Sit ad natus molestiae dolor commodi?
+            Nesciunt ad perspiciatis error molestiae dolores at ea architecto
+            delectus veniam.
+          </p>
+        </TabContentItem>
+        <TabContentItem contentId="about">
+          <h1>About</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            atque ipsum animi totam iste nostrum earum architecto deleniti
+            aperiam delectus aliquid sapiente quis, tempore deserunt! Sapiente
+            amet qui deleniti dignissimos!
+          </p>
+        </TabContentItem>
+      </TabContents>
+    </Tabs>
   </div>
 </template>
 

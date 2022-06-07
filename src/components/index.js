@@ -9,3 +9,8 @@ export { default as GTBreadcrumb } from "./GTBreadcrumb/GTBreadcrumb.vue";
 export { default as GTAlert } from "./GTAlert/GTAlert.vue";
 export { default as GTCombobox } from "./GTCombobox/GTCombobox.vue";
 export { default as GTTab } from "./GTTab/GTTab.vue";
+export { default as Tabs } from "./GTTab/Tabs.vue";
+export { default as TabItems } from "./GTTab/TabItems.vue";
+export { default as TabItem } from "./GTTab/TabItem.vue";
+export { default as TabContents } from "./GTTab/TabContents.vue";
+export { default as TabContentItem } from "./GTTab/TabContentItem.vue";

@@ -36,7 +36,7 @@
         <p>This is the home.</p>
       </div>
       <div id="pricing" data-tab-content>
-        <h1>Home</h1>
+        <h1>Pricing</h1>
         <p>Some information on pricing.</p>
       </div>
       <div id="about" data-tab-content>
