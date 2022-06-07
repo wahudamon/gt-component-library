@@ -3,15 +3,30 @@
     <ul class="tabs__field">
       <li data-tab-target="#home" class="active tab">
         <GTIcon v-if="icons" :name="icons" size="sm" />
-        <p v-else>Home</p>
+        <!-- <p v-else class="tab__text">Home</p> -->
+        <div class="tab__with-icon">
+          <GTIcon name="gt-icons-s" size="sm" />
+          <p class="tab__with-icon--text">Home</p>
+          <GTIcon name="gt-icons-s" size="sm" />
+        </div>
       </li>
       <li data-tab-target="#pricing" class="tab">
         <GTIcon v-if="icons" :name="icons" size="sm" />
-        <p v-else>Pricing</p>
+        <!-- <p v-else class="tab__text">Pricing</p> -->
+        <div class="tab__with-icon">
+          <GTIcon name="gt-icons-s" size="sm" />
+          <p class="tab__with-icon--text">Pricing</p>
+          <GTIcon name="gt-icons-s" size="sm" />
+        </div>
       </li>
       <li data-tab-target="#about" class="tab">
         <GTIcon v-if="icons" :name="icons" size="sm" />
-        <p v-else>About</p>
+        <!-- <p v-else class="tab__text">About</p> -->
+        <div class="tab__with-icon">
+          <GTIcon name="gt-icons-s" size="sm" />
+          <p class="tab__with-icon--text">About</p>
+          <GTIcon name="gt-icons-s" size="sm" />
+        </div>
       </li>
     </ul>
 
