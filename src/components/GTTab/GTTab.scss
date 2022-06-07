@@ -20,6 +20,8 @@ body {
 
 .tabs {
   &__container {
+    @extend .poppins;
+
     width: 100%;
   }
 
@@ -33,6 +35,8 @@ body {
 }
 
 .tab {
+  @extend .poppins--btn-2;
+
   width: 100%;
   cursor: pointer;
   padding: 10px;
