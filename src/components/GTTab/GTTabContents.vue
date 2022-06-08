@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: "TabContents",
+  name: "GTTabContents",
 };
 </script>

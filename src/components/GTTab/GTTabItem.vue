@@ -30,7 +30,7 @@
 import GTIcon from "../GTIcon/GTIcon.vue";
 
 export default {
-  name: "TabItem",
+  name: "GTTabItem",
   components: { GTIcon },
 
   props: {

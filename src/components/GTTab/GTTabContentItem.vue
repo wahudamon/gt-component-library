@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "TabContentItem",
+  name: "GTTabContentItem",
 
   props: {
     contentId: {
