@@ -6,6 +6,12 @@ import {
   GTInputArea,
   GTBreadcrumb,
   GTAlert,
+  GTCombobox,
+  GTTab,
+  GTTabItems,
+  GTTabItem,
+  GTTabContents,
+  GTTabContentItem,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -26,6 +32,12 @@ export default Vue.extend({
     GTInputArea,
     GTBreadcrumb,
     GTAlert,
+    GTCombobox,
+    GTTab,
+    GTTabItems,
+    GTTabItem,
+    GTTabContents,
+    GTTabContentItem,
     GridSystem,
     Typography,
     ButtonsList,
@@ -42,6 +54,45 @@ export default Vue.extend({
         { name: "Breadcrumb 5", path: "#" },
         { name: "Breadcrumb 6", path: "#" },
       ],
+      comboboxOptions: [
+        "Lamborghini",
+        "Ferarri",
+        "Mitsubishi",
+        "Toyota",
+        "Suzuki",
+        "Supra",
+        "Chevrolet",
+        "Pulsar",
+      ],
+      miniCbxOptions: ["Lamborghini", "Ferarri"],
+      tabItems: [
+        { tabId: "home", title: "Home", isActive: true },
+        { tabId: "pricing", title: "Pricing", isActive: false },
+        { tabId: "about", title: "About", isActive: false },
+      ],
+      tabContentItems: [
+        {
+          contentId: "home",
+          isActive: true,
+          contentTitle: "Home",
+          contentText:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eum illo necessitatibus iusto facere quia a ratione tenetur. Facilis ratione suscipit a incidunt quae nemo aperiam nostrum ab rerum praesentium.",
+        },
+        {
+          contentId: "pricing",
+          isActive: false,
+          contentTitle: "Pricing",
+          contentText:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda ad quae minima. Sit ad natus molestiae dolor commodi? Nesciunt ad perspiciatis error molestiae dolores at ea architecto delectus veniam.",
+        },
+        {
+          contentId: "about",
+          isActive: false,
+          contentTitle: "About",
+          contentText:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturiatque ipsum animi totam iste nostrum earum architecto delenitiaperiam delectus aliquid sapiente quis, tempore deserunt! Sapiente amet qui deleniti dignissimos!",
+        },
+      ],
     };
   },
   methods: {
@@ -54,56 +105,28 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTAlert
-      :show.sync="showAlert"
-      closeIcon
-      linkButton
-      actionButton
-      leftButtonText="Yes"
-      rightButtonText="No"
-      :leftButtonFunction="clickAlertButton"
-      :rightButtonFunction="clickAlertButton"
-      class="mt--15 ml--15"
-      type="info"
-      actionAlign="right"
-      alertTitle="Informational Alert"
-      alertContent="Explain how to resolve the issue by including any troubleshooting actions or next steps."
-    />
-    <!-- <GTBreadcrumb
-      class="mt--15 ml--15"
-      :crumbs="crumbs"
-      separatorSign="/"
-      homeIcon
-    /> -->
-    <!-- <GTInputArea
-      class="mt--15 ml--15"
-      variant="outline"
-      size="sm"
-      length="sm"
-      label="Username"
-      helperText="Helper Text"
-    /> -->
-    <!-- <GTInputText
-      disabled
-      class="mt--15 ml--15"
-      variant="outline"
-      size="sm"
-      length="sm"
-      label="Username"
-      placeholder="Placeholder"
-      helperText="Helper Text"
-      trailingIcon="gt-paper-plane-s"
-    /> -->
-    <!-- <input-text-example /> -->
-    <!-- <buttons-list /> -->
-    <!-- <checkbox-example class="mt--10" /> -->
-    <!-- <radio-button-example class="mt--10" /> -->
-    <!-- <button class="ml--20">
-      <GTIcon name="gt-address-book-r" size="md" />
-    </button> -->
-    <!-- <typography />
-    <grid-system />
-    <corner-radius /> -->
+    <GTTab>
+      <GTTabItems>
+        <GTTabItem
+          v-for="(tabItem, i) in tabItems"
+          :key="i"
+          :isActive="tabItem.isActive"
+          :tabId="tabItem.tabId"
+          :title="tabItem.title"
+        />
+      </GTTabItems>
+      <GTTabContents>
+        <GTTabContentItem
+          v-for="(tabContentItem, i) in tabContentItems"
+          :key="i"
+          :isActive="tabContentItem.isActive"
+          :contentId="tabContentItem.contentId"
+        >
+          <h1>{{ tabContentItem.contentTitle }}</h1>
+          <p>{{ tabContentItem.contentText }}</p>
+        </GTTabContentItem>
+      </GTTabContents>
+    </GTTab>
   </div>
 </template>
 
