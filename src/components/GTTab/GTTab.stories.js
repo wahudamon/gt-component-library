@@ -38,6 +38,7 @@ const tabItemsAndContents = {
 export default {
   title: "Components/GTTab",
   component: GTTabs,
+  subcomponents: { GTTabItems, GTTabItem, GTTabContents, GTTabContentItem },
   parameters: {
     viewMode: "docs",
     docs: {
@@ -48,7 +49,7 @@ export default {
   },
 };
 
-const Template = (args, { argTypes }) => ({
+const Template = (args) => ({
   props: Object.keys(args),
   components: {
     GTTabs,
