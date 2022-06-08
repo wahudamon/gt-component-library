@@ -1,4 +1,4 @@
-import GTTabs from "./GTTabs";
+import GTTab from "./GTTab";
 import GTTabItems from "./GTTabItems";
 import GTTabItem from "./GTTabItem";
 import GTTabContents from "./GTTabContents";
@@ -47,7 +47,7 @@ const tabItemsAndContents = {
 
 export default {
   title: "Components/GTTab",
-  component: GTTabs,
+  component: GTTab,
   subcomponents: { GTTabItems, GTTabItem, GTTabContents, GTTabContentItem },
   parameters: {
     viewMode: "docs",
@@ -62,7 +62,7 @@ export default {
 const Template = (args) => ({
   props: Object.keys(args),
   components: {
-    GTTabs,
+    GTTab,
     GTTabItems,
     GTTabItem,
     GTTabContents,
@@ -72,7 +72,7 @@ const Template = (args) => ({
     tabDatas: tabItemsAndContents,
   }),
   template: `
-    <GTTabs>
+    <GTTab>
       <GTTabItems>
         <GTTabItem
           v-for="(tabItem, i) in tabDatas.tabItems"
@@ -93,7 +93,7 @@ const Template = (args) => ({
           <p>{{ tabContentItem.contentText }}</p>
         </GTTabContentItem>
       </GTTabContents>
-    </GTTabs>`,
+    </GTTab>`,
 });
 
 export const Primary = Template.bind({});
@@ -101,7 +101,7 @@ export const Primary = Template.bind({});
 export const WithIcon = (args) => ({
   props: Object.keys(args),
   components: {
-    GTTabs,
+    GTTab,
     GTTabItems,
     GTTabItem,
     GTTabContents,
@@ -111,7 +111,7 @@ export const WithIcon = (args) => ({
     tabDatas: tabItemsAndContents,
   }),
   template: `
-    <GTTabs>
+    <GTTab>
       <GTTabItems>
         <GTTabItem
           v-for="(tabItem, i) in tabDatas.tabItems"
@@ -122,13 +122,13 @@ export const WithIcon = (args) => ({
           :icon="tabItem.icon"
         />
       </GTTabItems>
-    </GTTabs>`,
+    </GTTab>`,
 });
 
 export const WithPrependIcon = (args) => ({
   props: Object.keys(args),
   components: {
-    GTTabs,
+    GTTab,
     GTTabItems,
     GTTabItem,
     GTTabContents,
@@ -138,7 +138,7 @@ export const WithPrependIcon = (args) => ({
     tabDatas: tabItemsAndContents,
   }),
   template: `
-    <GTTabs>
+    <GTTab>
       <GTTabItems>
         <GTTabItem
           v-for="(tabItem, i) in tabDatas.tabItems"
@@ -149,13 +149,13 @@ export const WithPrependIcon = (args) => ({
           :prependIcon="tabItem.icon"
         />
       </GTTabItems>
-    </GTTabs>`,
+    </GTTab>`,
 });
 
 export const WithAppendIcon = (args) => ({
   props: Object.keys(args),
   components: {
-    GTTabs,
+    GTTab,
     GTTabItems,
     GTTabItem,
     GTTabContents,
@@ -165,7 +165,7 @@ export const WithAppendIcon = (args) => ({
     tabDatas: tabItemsAndContents,
   }),
   template: `
-    <GTTabs>
+    <GTTab>
       <GTTabItems>
         <GTTabItem
           v-for="(tabItem, i) in tabDatas.tabItems"
@@ -176,13 +176,13 @@ export const WithAppendIcon = (args) => ({
           :appendIcon="tabItem.icon"
         />
       </GTTabItems>
-    </GTTabs>`,
+    </GTTab>`,
 });
 
 export const WithUpperIcon = (args) => ({
   props: Object.keys(args),
   components: {
-    GTTabs,
+    GTTab,
     GTTabItems,
     GTTabItem,
     GTTabContents,
@@ -192,7 +192,7 @@ export const WithUpperIcon = (args) => ({
     tabDatas: tabItemsAndContents,
   }),
   template: `
-    <GTTabs>
+    <GTTab>
       <GTTabItems>
         <GTTabItem
           v-for="(tabItem, i) in tabDatas.tabItems"
@@ -203,5 +203,5 @@ export const WithUpperIcon = (args) => ({
           :upperIcon="tabItem.icon"
         />
       </GTTabItems>
-    </GTTabs>`,
+    </GTTab>`,
 });

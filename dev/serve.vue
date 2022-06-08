@@ -7,7 +7,7 @@ import {
   GTBreadcrumb,
   GTAlert,
   GTCombobox,
-  GTTabs,
+  GTTab,
   GTTabItems,
   GTTabItem,
   GTTabContents,
@@ -33,7 +33,7 @@ export default Vue.extend({
     GTBreadcrumb,
     GTAlert,
     GTCombobox,
-    GTTabs,
+    GTTab,
     GTTabItems,
     GTTabItem,
     GTTabContents,
@@ -105,7 +105,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTabs>
+    <GTTab>
       <GTTabItems>
         <GTTabItem
           v-for="(tabItem, i) in tabItems"
@@ -126,7 +126,7 @@ export default Vue.extend({
           <p>{{ tabContentItem.contentText }}</p>
         </GTTabContentItem>
       </GTTabContents>
-    </GTTabs>
+    </GTTab>
   </div>
 </template>
 
