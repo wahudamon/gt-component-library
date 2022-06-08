@@ -53,7 +53,8 @@ export default {
     viewMode: "docs",
     docs: {
       description: {
-        component: "Lorem ipsum dolor sir amet.",
+        component:
+          "Tabs organize content across different screens, data sets, and other interactions.",
       },
     },
   },
