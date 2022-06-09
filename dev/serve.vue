@@ -107,7 +107,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTable class="mt--15 ml--15" />
+    <GTTable class="mt--15" bordered hover size="md" />
   </div>
 </template>
 
