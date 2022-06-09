@@ -13,6 +13,11 @@ import {
   GTTabContents,
   GTTabContentItem,
   GTTable,
+  GTTableRow,
+  GTTableHead,
+  GTTableBody,
+  GTTableHeaderCell,
+  GTTableDataCell,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -40,6 +45,11 @@ export default Vue.extend({
     GTTabContents,
     GTTabContentItem,
     GTTable,
+    GTTableRow,
+    GTTableHead,
+    GTTableBody,
+    GTTableHeaderCell,
+    GTTableDataCell,
     GridSystem,
     Typography,
     ButtonsList,
@@ -95,6 +105,16 @@ export default Vue.extend({
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturiatque ipsum animi totam iste nostrum earum architecto delenitiaperiam delectus aliquid sapiente quis, tempore deserunt! Sapiente amet qui deleniti dignissimos!",
         },
       ],
+      tableItems: [
+        { id: "1", firstName: "Mark", lastName: "Otto", handle: "@mdo" },
+        { id: "2", firstName: "Jacob", lastName: "Thornton", handle: "@fat" },
+        {
+          id: "3",
+          firstName: "Larry",
+          lastName: "Lobster",
+          handle: "@twitter",
+        },
+      ],
     };
   },
   methods: {
@@ -107,7 +127,24 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTable class="mt--15" bordered hover size="md" />
+    <GTTable class="mt--15" bordered hover size="md">
+      <GTTableHead>
+        <GTTableRow>
+          <GTTableHeaderCell>#</GTTableHeaderCell>
+          <GTTableHeaderCell>First</GTTableHeaderCell>
+          <GTTableHeaderCell>Last</GTTableHeaderCell>
+          <GTTableHeaderCell>Handle</GTTableHeaderCell>
+        </GTTableRow>
+      </GTTableHead>
+      <GTTableBody>
+        <GTTableRow v-for="tableItem in tableItems" :key="tableItem.id">
+          <GTTableDataCell>{{ tableItem.id }}</GTTableDataCell>
+          <GTTableDataCell>{{ tableItem.firstName }}</GTTableDataCell>
+          <GTTableDataCell>{{ tableItem.lastName }}</GTTableDataCell>
+          <GTTableDataCell>{{ tableItem.handle }}</GTTableDataCell>
+        </GTTableRow>
+      </GTTableBody>
+    </GTTable>
   </div>
 </template>
 
