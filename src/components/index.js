@@ -13,3 +13,4 @@ export { default as GTTabItems } from "./GTTab/GTTabItems.vue";
 export { default as GTTabItem } from "./GTTab/GTTabItem.vue";
 export { default as GTTabContents } from "./GTTab/GTTabContents.vue";
 export { default as GTTabContentItem } from "./GTTab/GTTabContentItem.vue";
+export { default as GTTable } from "./GTTable/GTTable.vue";

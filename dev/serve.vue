@@ -12,6 +12,7 @@ import {
   GTTabItem,
   GTTabContents,
   GTTabContentItem,
+  GTTable,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -38,6 +39,7 @@ export default Vue.extend({
     GTTabItem,
     GTTabContents,
     GTTabContentItem,
+    GTTable,
     GridSystem,
     Typography,
     ButtonsList,
@@ -105,28 +107,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTab>
-      <GTTabItems>
-        <GTTabItem
-          v-for="(tabItem, i) in tabItems"
-          :key="i"
-          :isActive="tabItem.isActive"
-          :tabId="tabItem.tabId"
-          :title="tabItem.title"
-        />
-      </GTTabItems>
-      <GTTabContents>
-        <GTTabContentItem
-          v-for="(tabContentItem, i) in tabContentItems"
-          :key="i"
-          :isActive="tabContentItem.isActive"
-          :contentId="tabContentItem.contentId"
-        >
-          <h1>{{ tabContentItem.contentTitle }}</h1>
-          <p>{{ tabContentItem.contentText }}</p>
-        </GTTabContentItem>
-      </GTTabContents>
-    </GTTab>
+    <GTTable class="mt--15 ml--15" />
   </div>
 </template>
 
