@@ -129,7 +129,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTimeline class="mt--15 ml--15" />
+    <GTTimeline />
   </div>
 </template>
 
