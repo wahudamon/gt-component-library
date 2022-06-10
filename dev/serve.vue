@@ -18,6 +18,7 @@ import {
   GTTableBody,
   GTTableHeaderCell,
   GTTableDataCell,
+  GTTimeline,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -50,6 +51,7 @@ export default Vue.extend({
     GTTableBody,
     GTTableHeaderCell,
     GTTableDataCell,
+    GTTimeline,
     GridSystem,
     Typography,
     ButtonsList,
@@ -127,24 +129,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTable class="mt--15" bordered hover size="md">
-      <GTTableHead>
-        <GTTableRow>
-          <GTTableHeaderCell>#</GTTableHeaderCell>
-          <GTTableHeaderCell>First</GTTableHeaderCell>
-          <GTTableHeaderCell>Last</GTTableHeaderCell>
-          <GTTableHeaderCell>Handle</GTTableHeaderCell>
-        </GTTableRow>
-      </GTTableHead>
-      <GTTableBody>
-        <GTTableRow v-for="tableItem in tableItems" :key="tableItem.id">
-          <GTTableDataCell>{{ tableItem.id }}</GTTableDataCell>
-          <GTTableDataCell>{{ tableItem.firstName }}</GTTableDataCell>
-          <GTTableDataCell>{{ tableItem.lastName }}</GTTableDataCell>
-          <GTTableDataCell>{{ tableItem.handle }}</GTTableDataCell>
-        </GTTableRow>
-      </GTTableBody>
-    </GTTable>
+    <GTTimeline class="mt--15 ml--15" />
   </div>
 </template>
 

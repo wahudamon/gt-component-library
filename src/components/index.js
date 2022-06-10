@@ -19,3 +19,4 @@ export { default as GTTableHead } from "./GTTable/GTTableHead.vue";
 export { default as GTTableBody } from "./GTTable/GTTableBody.vue";
 export { default as GTTableHeaderCell } from "./GTTable/GTTableHeaderCell.vue";
 export { default as GTTableDataCell } from "./GTTable/GTTableDataCell.vue";
+export { default as GTTimeline } from "./GTTimeline/GTTimeline.vue";
