@@ -3,14 +3,13 @@
     <div class="icon"></div>
     <div class="details">
       <div>
-        <span class="title mr--6">Label</span>
-        <span>Sub-label</span>
+        <span class="title mr--6">{{ label }}</span>
+        <span>{{ subLabel }}</span>
       </div>
-      <span>10 min ago</span>
+      <span>{{ lastRecentIndicator }}</span>
     </div>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus
-      sit amet luctus.
+      {{ content }}
     </p>
   </section>
 </template>
@@ -18,6 +17,28 @@
 <script>
 export default {
   name: "GTTimelineCard",
+  props: {
+    icon: {
+      type: String,
+      default: "",
+    },
+    label: {
+      type: String,
+      default: "Label",
+    },
+    subLabel: {
+      type: String,
+      default: "",
+    },
+    lastRecentIndicator: {
+      type: String,
+      default: "",
+    },
+    content: {
+      type: String,
+      default: "",
+    },
+  },
 };
 </script>
 

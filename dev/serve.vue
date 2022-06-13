@@ -135,7 +135,10 @@ export default Vue.extend({
   <div id="app">
     <GTTimeline>
       <GTTimelineItem v-for="i in 3" :key="i">
-        <GTTimelineCard />
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
       </GTTimelineItem>
     </GTTimeline>
   </div>
