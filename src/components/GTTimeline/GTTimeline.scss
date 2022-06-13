@@ -1,4 +1,10 @@
+@use "../../assets/styles/color.scss";
 @import "../../../scss/foundations/style.scss";
+
+$center-line-color: color.$neutral-300;
+$timeline-card-bg: color.$neutral-50;
+$timeline-bullet-icon-bg: color.$neutral-50;
+$timeline-bullet-bg: color.$sun-200;
 
 * {
   margin: 0;
@@ -7,9 +13,6 @@
 }
 html {
   scroll-behavior: smooth;
-}
-body {
-  background: #3ea0e2 !important;
 }
 .wrapper {
   max-width: 1080px;
@@ -21,7 +24,7 @@ body {
   position: absolute;
   height: 100%;
   width: 4px;
-  background: #fff;
+  background: $center-line-color;
   left: 50%;
   top: 20px;
   transform: translateX(-50%);
@@ -29,44 +32,48 @@ body {
 .wrapper .row {
   display: flex;
 }
-.wrapper .row-1 {
+.wrapper .row-left {
   justify-content: flex-start;
 }
-.wrapper .row-2 {
+.wrapper .row-right {
   justify-content: flex-end;
 }
 .wrapper .row section {
-  background: #fff;
-  border-radius: 5px;
+  @extend .be--low-medium;
+
+  background: $timeline-card-bg;
   width: calc(50% - 40px);
+  margin-bottom: 30px;
   padding: 20px;
   position: relative;
+  border-radius: 8px;
 }
 .row section .icon,
 .center-line .scroll-icon {
   position: absolute;
-  background: #fce5bc;
+  background-color: $timeline-bullet-bg;
+  // background-color: $timeline-bullet-icon-bg;
   height: 40px;
   width: 40px;
   text-align: center;
-  line-height: 40px;
-  border: solid 2px #fff;
+  line-height: 35px;
+  border: solid 2px $timeline-card-bg;
   border-radius: 50%;
   color: #000;
-  font-size: 17px;
+  font-size: 12px;
 }
-.center-line .scroll-icon {
+.center-line {
   bottom: 0px;
   left: 50%;
   font-size: 25px;
   transform: translateX(-50%);
 }
-.row-1 section .icon {
-  top: 15px;
+.row-left section .icon {
+  top: 10px;
   right: -4.4rem;
 }
-.row-2 section .icon {
-  top: 15px;
+.row-right section .icon {
+  top: 10px;
   left: -4.4rem;
 }
 .row section .details,

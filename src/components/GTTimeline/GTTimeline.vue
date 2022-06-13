@@ -1,11 +1,17 @@
 <template>
   <div class="wrapper">
     <div class="center-line"></div>
-    <div class="row row-1">
+    <slot></slot>
+    <!-- <div class="row row-right">
       <section>
-        <i class="icon fas fa-home"></i>
+        <div class="icon">
+          <GTIcon name="gt-mosque-s" size="sm" />
+        </div>
         <div class="details">
-          <span class="title">Label</span>
+          <div>
+            <span class="title mr--6">Label</span>
+            <span>Sub-label</span>
+          </div>
           <span>10 min ago</span>
         </div>
         <p>
@@ -13,12 +19,15 @@
           purus sit amet luctus.
         </p>
       </section>
-    </div>
-    <div class="row row-2">
+    </div> -->
+    <!-- <div class="row row-right">
       <section>
         <i class="icon fas fa-star"></i>
         <div class="details">
-          <span class="title">Label</span>
+          <div>
+            <span class="title mr--6">Label</span>
+            <span>Sub-label</span>
+          </div>
           <span>9 min ago</span>
         </div>
         <p>
@@ -27,7 +36,7 @@
         </p>
       </section>
     </div>
-    <div class="row row-1">
+    <div class="row row-left">
       <section>
         <i class="icon fas fa-rocket"></i>
         <div class="details">
@@ -40,7 +49,7 @@
         </p>
       </section>
     </div>
-    <div class="row row-2">
+    <div class="row row-right">
       <section>
         <i class="icon fas fa-globe"></i>
         <div class="details">
@@ -53,7 +62,7 @@
         </p>
       </section>
     </div>
-    <div class="row row-1">
+    <div class="row row-left">
       <section>
         <i class="icon fas fa-paper-plane"></i>
         <div class="details">
@@ -66,7 +75,7 @@
         </p>
       </section>
     </div>
-    <div class="row row-2">
+    <div class="row row-right">
       <section>
         <i class="icon fas fa-map-marker-alt"></i>
         <div class="details">
@@ -78,13 +87,16 @@
           purus sit amet luctus.
         </p>
       </section>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
+import GTIcon from "../GTIcon/GTIcon.vue";
+
 export default {
   name: "GTTimeline",
+  components: { GTIcon },
 };
 </script>
 

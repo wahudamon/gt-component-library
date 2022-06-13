@@ -19,6 +19,8 @@ import {
   GTTableHeaderCell,
   GTTableDataCell,
   GTTimeline,
+  GTTimelineItem,
+  GTTimelineCard,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -52,6 +54,8 @@ export default Vue.extend({
     GTTableHeaderCell,
     GTTableDataCell,
     GTTimeline,
+    GTTimelineItem,
+    GTTimelineCard,
     GridSystem,
     Typography,
     ButtonsList,
@@ -129,7 +133,11 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTimeline />
+    <GTTimeline>
+      <GTTimelineItem v-for="i in 3" :key="i">
+        <GTTimelineCard />
+      </GTTimelineItem>
+    </GTTimeline>
   </div>
 </template>
 
