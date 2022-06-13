@@ -19,8 +19,8 @@
           purus sit amet luctus.
         </p>
       </section>
-    </div> -->
-    <!-- <div class="row row-right">
+    </div>
+    <div class="row row-right">
       <section>
         <i class="icon fas fa-star"></i>
         <div class="details">
