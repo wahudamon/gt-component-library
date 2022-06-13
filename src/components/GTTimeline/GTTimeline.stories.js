@@ -50,7 +50,7 @@
 //     docs: {
 //       description: {
 //         component:
-//           "Timeline organize content across different screens, data sets, and other interactions.",
+//           "Timeline is a useful way to display a whole range of information and or data points to a user.",
 //       },
 //     },
 //   },
