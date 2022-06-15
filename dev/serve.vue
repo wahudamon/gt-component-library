@@ -139,6 +139,7 @@ export default Vue.extend({
           icon="gt-icons-s"
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
+          createdTime="9 min ago"
         />
       </GTTimelineItem>
       <!-- <GTTimelineItem orientation="left">

@@ -8,7 +8,7 @@
         <span class="title mr--6">{{ label }}</span>
         <span v-if="subLabel">{{ subLabel }}</span>
       </div>
-      <span>{{ lastRecentIndicator }}</span>
+      <span>{{ createdTime }}</span>
     </div>
     <p>
       {{ content }}
@@ -35,7 +35,7 @@ export default {
       type: String,
       default: "",
     },
-    lastRecentIndicator: {
+    createdTime: {
       type: String,
       default: "",
     },
