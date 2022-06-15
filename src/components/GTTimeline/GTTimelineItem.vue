@@ -20,8 +20,7 @@ export default {
     classes() {
       return {
         row: true,
-        "row-left": this.orientation === "left",
-        "row-right": this.orientation === "right",
+        [`row-${this.orientation}`]: true,
       };
     },
   },

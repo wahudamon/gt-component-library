@@ -136,6 +136,7 @@ export default Vue.extend({
     <GTTimeline>
       <GTTimelineItem v-for="i in 3" :key="i">
         <GTTimelineCard
+          icon="gt-icons-s"
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
         />

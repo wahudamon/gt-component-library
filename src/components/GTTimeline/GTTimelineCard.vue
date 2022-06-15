@@ -1,6 +1,8 @@
 <template>
   <section>
-    <div class="icon"></div>
+    <div :class="circleClasses">
+      <GTIcon v-if="icon" :name="icon" size="sm" />
+    </div>
     <div class="details">
       <div>
         <span class="title mr--6">{{ label }}</span>
@@ -15,8 +17,11 @@
 </template>
 
 <script>
+import GTIcon from "../GTIcon/GTIcon.vue";
+
 export default {
   name: "GTTimelineCard",
+  components: { GTIcon },
   props: {
     icon: {
       type: String,
@@ -40,8 +45,11 @@ export default {
     },
   },
   computed: {
-    classes() {
-      return {};
+    circleClasses() {
+      return {
+        icon: true,
+        "no-icon": !this.icon,
+      };
     },
   },
 };
