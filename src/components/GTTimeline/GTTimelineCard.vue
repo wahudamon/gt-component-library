@@ -39,6 +39,11 @@ export default {
       default: "",
     },
   },
+  computed: {
+    classes() {
+      return {};
+    },
+  },
 };
 </script>
 

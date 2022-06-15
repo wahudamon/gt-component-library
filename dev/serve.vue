@@ -140,6 +140,24 @@ export default Vue.extend({
           content="Lorem ipsum dolor sir amet."
         />
       </GTTimelineItem>
+      <!-- <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem> -->
     </GTTimeline>
   </div>
 </template>
