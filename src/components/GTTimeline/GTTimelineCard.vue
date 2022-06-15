@@ -6,7 +6,7 @@
     <div class="details">
       <div>
         <span class="title mr--6">{{ label }}</span>
-        <span>{{ subLabel }}</span>
+        <span v-if="subLabel">{{ subLabel }}</span>
       </div>
       <span>{{ lastRecentIndicator }}</span>
     </div>
