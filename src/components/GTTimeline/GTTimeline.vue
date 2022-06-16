@@ -6,11 +6,8 @@
 </template>
 
 <script>
-import GTIcon from "../GTIcon/GTIcon.vue";
-
 export default {
   name: "GTTimeline",
-  components: { GTIcon },
 };
 </script>
 

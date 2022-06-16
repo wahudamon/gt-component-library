@@ -21,6 +21,8 @@ import {
   GTTimeline,
   GTTimelineItem,
   GTTimelineCard,
+  GTTimelineFullCardItem,
+  GTTimelineFullCard,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -56,6 +58,8 @@ export default Vue.extend({
     GTTimeline,
     GTTimelineItem,
     GTTimelineCard,
+    GTTimelineFullCardItem,
+    GTTimelineFullCard,
     GridSystem,
     Typography,
     ButtonsList,

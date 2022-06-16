@@ -22,3 +22,5 @@ export { default as GTTableDataCell } from "./GTTable/GTTableDataCell.vue";
 export { default as GTTimeline } from "./GTTimeline/GTTimeline.vue";
 export { default as GTTimelineItem } from "./GTTimeline/GTTimelineItem.vue";
 export { default as GTTimelineCard } from "./GTTimeline/GTTimelineCard.vue";
+export { default as GTTimelineFullCardItem } from "./GTTimeline/GTTimelineFullCardItem.vue";
+export { default as GTTimelineFullCard } from "./GTTimeline/GTTimelineFullCard.vue";
