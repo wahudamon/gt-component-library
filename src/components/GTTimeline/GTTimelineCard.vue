@@ -6,11 +6,11 @@
     <div class="details">
       <div>
         <span class="title mr--6">{{ label }}</span>
-        <span v-if="subLabel">{{ subLabel }}</span>
+        <span v-if="subLabel" class="subtitle">{{ subLabel }}</span>
       </div>
-      <span>{{ createdTime }}</span>
+      <span class="created-time__text">{{ createdTime }}</span>
     </div>
-    <p>
+    <p class="content__text">
       {{ content }}
     </p>
   </section>

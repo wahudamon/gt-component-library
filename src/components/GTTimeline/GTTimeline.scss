@@ -8,6 +8,8 @@ $timeline-circle-bg: color.$sun-200;
 $timeline-circle-border: color.$neutral-300;
 
 .wrapper {
+  @extend .poppins;
+
   max-width: 1080px;
   margin: 50px auto;
   padding: 0 20px;
@@ -72,8 +74,23 @@ $timeline-circle-border: color.$neutral-300;
         justify-content: space-between;
 
         .title {
-          font-size: 22px;
-          font-weight: 600;
+          @extend .poppins--b1-regular;
+        }
+
+        .subtitle {
+          @extend .poppins--b2-regular;
+        }
+
+        .created-time {
+          &__text {
+            @extend .poppins--b2-regular;
+          }
+        }
+      }
+
+      .content {
+        &__text {
+          @extend .poppins--b2-regular;
         }
       }
 
