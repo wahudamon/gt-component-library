@@ -1,95 +1,372 @@
-// import GTTimeline from "./GTTimeline.vue";
+import GTTimeline from "./GTTimeline.vue";
+import GTTimelineItem from "./GTTimelineItem.vue";
+import GTTimelineCard from "./GTTimelineCard.vue";
 
-// const tabItemsAndContents = {
-//   tabItems: [
-//     {
-//       tabId: "home",
-//       title: "Home",
-//       icon: "gt-house-chimpney-s",
-//       isActive: true,
-//     },
-//     { tabId: "pricing", title: "Pricing", icon: "gt-inbox-s", isActive: false },
-//     {
-//       tabId: "about",
-//       title: "About",
-//       icon: "gt-address-card-s",
-//       isActive: false,
-//     },
-//   ],
-//   tabContentItems: [
-//     {
-//       contentId: "home",
-//       isActive: true,
-//       contentTitle: "Home",
-//       contentText:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eum illo necessitatibus iusto facere quia a ratione tenetur. Facilis ratione suscipit a incidunt quae nemo aperiam nostrum ab rerum praesentium.",
-//     },
-//     {
-//       contentId: "pricing",
-//       isActive: false,
-//       contentTitle: "Pricing",
-//       contentText:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda ad quae minima. Sit ad natus molestiae dolor commodi? Nesciunt ad perspiciatis error molestiae dolores at ea architecto delectus veniam.",
-//     },
-//     {
-//       contentId: "about",
-//       isActive: false,
-//       contentTitle: "About",
-//       contentText:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturiatque ipsum animi totam iste nostrum earum architecto delenitiaperiam delectus aliquid sapiente quis, tempore deserunt! Sapiente amet qui deleniti dignissimos!",
-//     },
-//   ],
-// };
+export default {
+  title: "Components/GTTimeline",
+  component: GTTimeline,
+  subcomponents: { GTTimelineItem, GTTimelineCard },
+  parameters: {
+    viewMode: "docs",
+    docs: {
+      description: {
+        component:
+          "Timeline is a useful way to display a whole range of information and or data points to a user.",
+      },
+    },
+  },
+};
 
-// export default {
-//   title: "Components/GTTimeline",
-//   component: GTTimeline,
-//   subcomponents: { GTTabItems, GTTabItem, GTTabContents, GTTabContentItem },
-//   parameters: {
-//     viewMode: "docs",
-//     docs: {
-//       description: {
-//         component:
-//           "Timeline is a useful way to display a whole range of information and or data points to a user.",
-//       },
-//     },
-//   },
-// };
+const Template = (args) => ({
+  props: Object.keys(args),
+  components: {
+    GTTimeline,
+    GTTimelineItem,
+    GTTimelineCard,
+  },
+  template: `
+    <GTTimeline>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+    </GTTimeline>`,
+});
 
-// const Template = (args) => ({
-//   props: Object.keys(args),
-//   components: {
-//     GTTimeline,
-//     GTTab,
-//     GTTabItems,
-//     GTTabItem,
-//     GTTabContents,
-//     GTTabContentItem,
-//   },
-//   data: () => ({
-//     tabDatas: tabItemsAndContents,
-//   }),
-//   template: `
-//     <GTTimeline>
-//       <GTTabItems>
-//         <GTTabItem
-//           v-for="(tabItem, i) in tabDatas.tabItems"
-//           :key="i"
-//           :isActive="tabItem.isActive"
-//           :tabId="tabItem.tabId"
-//           :title="tabItem.title"
-//         />
-//       </GTTabItems>
-//       <GTTabContents>
-//         <GTTabContentItem
-//           v-for="(tabContentItem, i) in tabDatas.tabContentItems"
-//           :key="i"
-//           :isActive="tabContentItem.isActive"
-//           :contentId="tabContentItem.contentId"
-//         >
-//           <h1>{{ tabContentItem.contentTitle }}</h1>
-//           <p>{{ tabContentItem.contentText }}</p>
-//         </GTTabContentItem>
-//       </GTTabContents>
-//     </GTTab>`,
-// });
+export const Primary = Template.bind({});
+
+export const WithIcon = (args) => ({
+  props: Object.keys(args),
+  components: {
+    GTTimeline,
+    GTTimelineItem,
+    GTTimelineCard,
+  },
+  template: `
+    <GTTimeline>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          icon="gt-icons-s"
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="9 min ago"
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          icon="gt-icons-s"
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="10 min ago"
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          icon="gt-icons-s"
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="11 min ago"
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          icon="gt-icons-s"
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="12 min ago"
+        />
+      </GTTimelineItem>
+    </GTTimeline>`,
+});
+
+export const WithSublabel = (args) => ({
+  props: Object.keys(args),
+  components: {
+    GTTimeline,
+    GTTimelineItem,
+    GTTimelineCard,
+  },
+  template: `
+    <GTTimeline>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          subLabel="lorem ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          subLabel="lorem ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          subLabel="lorem ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          subLabel="lorem ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+    </GTTimeline>`,
+});
+
+export const WithCreatedTimeIndicator = (args) => ({
+  props: Object.keys(args),
+  components: {
+    GTTimeline,
+    GTTimelineItem,
+    GTTimelineCard,
+  },
+  template: `
+    <GTTimeline>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="9 min ago"
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="10 min ago"
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="11 min ago"
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="12 min ago"
+        />
+      </GTTimelineItem>
+    </GTTimeline>`,
+});
+
+export const LeftSideTimeline = (args) => ({
+  props: Object.keys(args),
+  components: {
+    GTTimeline,
+    GTTimelineItem,
+    GTTimelineCard,
+  },
+  template: `
+    <GTTimeline>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+    </GTTimeline>`,
+});
+
+export const CenterTimeline = (args) => ({
+  props: Object.keys(args),
+  components: {
+    GTTimeline,
+    GTTimelineItem,
+    GTTimelineCard,
+  },
+  template: `
+    <GTTimeline>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+    </GTTimeline>`,
+});
+
+export const CenterTimelineWithIcon = (args) => ({
+  props: Object.keys(args),
+  components: {
+    GTTimeline,
+    GTTimelineItem,
+    GTTimelineCard,
+  },
+  template: `
+    <GTTimeline>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          icon="gt-icons-s"
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          icon="gt-icons-s"
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          icon="gt-icons-s"
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          icon="gt-icons-s"
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+    </GTTimeline>`,
+});
+
+export const CenterTimelineWithSubLabel = (args) => ({
+  props: Object.keys(args),
+  components: {
+    GTTimeline,
+    GTTimelineItem,
+    GTTimelineCard,
+  },
+  template: `
+    <GTTimeline>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          subLabel="lorem ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          subLabel="lorem ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          subLabel="lorem ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          subLabel="lorem ipsum"
+          content="Lorem ipsum dolor sir amet."
+        />
+      </GTTimelineItem>
+    </GTTimeline>`,
+});
+
+export const CenterTimelineWithCreatedTimeIndicator = (args) => ({
+  props: Object.keys(args),
+  components: {
+    GTTimeline,
+    GTTimelineItem,
+    GTTimelineCard,
+  },
+  template: `
+    <GTTimeline>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="9 min ago"
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="10 min ago"
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="right">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="11 min ago"
+        />
+      </GTTimelineItem>
+      <GTTimelineItem orientation="left">
+        <GTTimelineCard
+          label="Lorem Ipsum"
+          content="Lorem ipsum dolor sir amet."
+          createdTime="12 min ago"
+        />
+      </GTTimelineItem>
+    </GTTimeline>`,
+});

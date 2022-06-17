@@ -3,6 +3,7 @@
 
 $center-line-color: color.$neutral-300;
 $timeline-card-bg: color.$neutral-50;
+$timeline-full-card-bg: color.$neutral-0;
 $timeline-circle-icon-bg: color.$neutral-50;
 $timeline-circle-bg: color.$sun-200;
 $timeline-circle-border: color.$neutral-300;
@@ -200,5 +201,19 @@ $timeline-circle-border: color.$neutral-300;
         display: none;
       }
     }
+  }
+}
+
+.full-card {
+  &__wrapper {
+    @extend .poppins;
+
+    max-width: 416px;
+    max-height: 516px;
+    margin: 50px auto;
+    padding: 0 10px;
+    position: relative;
+    border-radius: 16px;
+    background-color: $timeline-full-card-bg;
   }
 }

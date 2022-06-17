@@ -8,6 +8,20 @@
 <script>
 export default {
   name: "GTTimeline",
+  props: {
+    fullCard: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    classes() {
+      return {
+        wrapper: !this.fullCard,
+        "full-card__wrapper": this.fullCard,
+      };
+    },
+  },
 };
 </script>
 
