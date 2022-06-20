@@ -1,5 +1,6 @@
 <template>
   <div :class="classes">
+    <p class="timeline__title">{{ title }}</p>
     <div class="center-line"></div>
     <slot></slot>
   </div>
@@ -9,6 +10,10 @@
 export default {
   name: "GTTimeline",
   props: {
+    title: {
+      type: String,
+      default: "",
+    },
     center: {
       type: Boolean,
       default: false,

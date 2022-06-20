@@ -9,6 +9,13 @@ $timeline-circle-bg: color.$sun-200;
 $timeline-circle-border: color.$neutral-300;
 
 .timeline {
+  &__title {
+    @extend .poppins;
+    @extend .poppins--h7;
+
+    margin-bottom: 30px;
+  }
+
   &__wrapper {
     @extend .poppins;
 

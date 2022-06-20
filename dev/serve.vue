@@ -133,14 +133,14 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTimeline center>
-      <GTTimelineItem v-for="i in 3" :key="i">
+    <GTTimeline center title="Lorem Ipsum">
+      <!-- <GTTimelineItem v-for="i in 3" :key="i">
         <GTTimelineCard
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
         />
-      </GTTimelineItem>
-      <!-- <GTTimelineItem orientation="left">
+      </GTTimelineItem> -->
+      <GTTimelineItem orientation="left">
         <GTTimelineCard
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
@@ -157,7 +157,7 @@ export default Vue.extend({
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
         />
-      </GTTimelineItem> -->
+      </GTTimelineItem>
     </GTTimeline>
   </div>
 </template>
