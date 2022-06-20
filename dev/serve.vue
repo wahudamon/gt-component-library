@@ -21,8 +21,6 @@ import {
   GTTimeline,
   GTTimelineItem,
   GTTimelineCard,
-  GTTimelineFullCardItem,
-  GTTimelineFullCard,
 } from "@/entry.esm";
 import GridSystem from "./examples/GridSystem.vue";
 import Typography from "./examples/Typography.vue";
@@ -58,8 +56,6 @@ export default Vue.extend({
     GTTimeline,
     GTTimelineItem,
     GTTimelineCard,
-    GTTimelineFullCardItem,
-    GTTimelineFullCard,
     GridSystem,
     Typography,
     ButtonsList,
@@ -138,7 +134,7 @@ export default Vue.extend({
 <template>
   <div id="app">
     <GTTimeline center>
-      <GTTimelineItem orientation="left" v-for="i in 3" :key="i">
+      <GTTimelineItem v-for="i in 3" :key="i">
         <GTTimelineCard
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."

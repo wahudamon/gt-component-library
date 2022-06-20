@@ -26,7 +26,7 @@ const Template = (args) => ({
   },
   template: `
     <GTTimeline>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
@@ -38,13 +38,13 @@ const Template = (args) => ({
           content="Lorem ipsum dolor sir amet."
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
