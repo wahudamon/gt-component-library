@@ -25,7 +25,7 @@ const Template = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline>
+    <GTTimeline title="Lorem Ipsum">
       <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
@@ -63,7 +63,7 @@ export const WithIcon = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline>
+    <GTTimeline title="Lorem Ipsum">
       <GTTimelineItem>
         <GTTimelineCard
           icon="gt-icons-s"
@@ -107,7 +107,7 @@ export const WithSubLabel = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline>
+    <GTTimeline title="Lorem Ipsum">
       <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
@@ -147,7 +147,7 @@ export const WithCreatedTimeIndicator = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline>
+    <GTTimeline title="Lorem Ipsum">
       <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
@@ -187,7 +187,7 @@ export const CenterTimeline = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline center>
+    <GTTimeline center title="Lorem Ipsum">
       <GTTimelineItem orientation="right">
         <GTTimelineCard
           label="Lorem Ipsum"
@@ -223,7 +223,7 @@ export const CenterTimelineWithIcon = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline center>
+    <GTTimeline center title="Lorem Ipsum">
       <GTTimelineItem orientation="right">
         <GTTimelineCard
           icon="gt-icons-s"
@@ -263,7 +263,7 @@ export const CenterTimelineWithSubLabel = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline center>
+    <GTTimeline center title="Lorem Ipsum">
       <GTTimelineItem orientation="right">
         <GTTimelineCard
           label="Lorem Ipsum"
@@ -303,7 +303,7 @@ export const CenterTimelineWithCreatedTimeIndicator = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline center>
+    <GTTimeline center title="Lorem Ipsum">
       <GTTimelineItem orientation="right">
         <GTTimelineCard
           label="Lorem Ipsum"
