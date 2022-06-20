@@ -137,13 +137,11 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTimeline>
-      <GTTimelineItem v-for="i in 3" :key="i">
+    <GTTimeline center>
+      <GTTimelineItem orientation="left" v-for="i in 3" :key="i">
         <GTTimelineCard
-          icon="gt-icons-s"
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
-          createdTime="9 min ago"
         />
       </GTTimelineItem>
       <!-- <GTTimelineItem orientation="left">

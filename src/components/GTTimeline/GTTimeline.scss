@@ -8,152 +8,246 @@ $timeline-circle-icon-bg: color.$neutral-50;
 $timeline-circle-bg: color.$sun-200;
 $timeline-circle-border: color.$neutral-300;
 
-.wrapper {
-  @extend .poppins;
+.timeline {
+  &__wrapper {
+    @extend .poppins;
 
-  max-width: 1080px;
-  margin: 50px auto;
-  padding: 0 20px;
-  position: relative;
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 0 20px;
+    position: relative;
 
-  .center-line {
-    position: absolute;
-    height: 100%;
-    width: 4px;
-    background: $center-line-color;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
-
-    .scroll-icon {
+    .center-line {
       position: absolute;
-      background-color: $timeline-circle-bg;
-      height: 40px;
-      width: 40px;
-      text-align: center;
-      line-height: 35px;
-      border: solid 2px $timeline-card-bg;
-      border-radius: 50%;
-      color: #000;
-      font-size: 12px;
-    }
-  }
+      height: 100%;
+      width: 4px;
+      background: $center-line-color;
+      left: 0;
+      top: 20px;
+      transform: translateX(-50%);
 
-  .row {
-    display: flex;
-
-    section {
-      @extend .be--low-medium;
-
-      background: $timeline-card-bg;
-      width: calc(50% - 40px);
-      margin-bottom: 30px;
-      padding: 20px;
-      position: relative;
-      border-radius: 8px;
-
-      .icon {
+      .scroll-icon {
         position: absolute;
-        background-color: $timeline-circle-icon-bg;
+        background-color: $timeline-circle-bg;
         height: 40px;
         width: 40px;
         text-align: center;
         line-height: 35px;
-        border: solid 2px $timeline-circle-border;
+        border: solid 2px $timeline-card-bg;
         border-radius: 50%;
         color: #000;
         font-size: 12px;
-
-        &.no-icon {
-          background-color: $timeline-circle-bg;
-        }
       }
+    }
 
-      .details {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .row {
+      display: flex;
 
-        .title {
-          @extend .poppins--b1-regular;
+      section {
+        @extend .be--low-medium;
+
+        background: $timeline-card-bg;
+        width: calc(50% - 40px);
+        margin-bottom: 30px;
+        padding: 20px;
+        position: relative;
+        border-radius: 8px;
+
+        .icon {
+          position: absolute;
+          background-color: $timeline-circle-icon-bg;
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 35px;
+          border: solid 2px $timeline-circle-border;
+          border-radius: 50%;
+          color: #000;
+          font-size: 12px;
+
+          &.no-icon {
+            background-color: $timeline-circle-bg;
+          }
         }
 
-        .subtitle {
-          @extend .poppins--b2-regular;
+        .details {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .title {
+            @extend .poppins--b1-regular;
+          }
+
+          .subtitle {
+            @extend .poppins--b2-regular;
+          }
+
+          .created-time {
+            &__text {
+              @extend .poppins--b2-regular;
+            }
+          }
         }
 
-        .created-time {
+        .content {
           &__text {
             @extend .poppins--b2-regular;
           }
         }
-      }
 
-      .content {
-        &__text {
-          @extend .poppins--b2-regular;
+        p {
+          margin: 10px 0 17px 0;
         }
       }
+    }
 
-      .bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .row-left {
+      justify-content: flex-start;
 
-        a {
-          text-decoration: none;
-          background: #3ea0e2;
-          color: #fff;
-          padding: 7px 15px;
-          border-radius: 5px;
-          /* font-size: 17px; */
-          font-weight: 400;
-          transition: all 0.3s ease;
-
-          &:hover {
-            transform: scale(0.97);
-          }
+      section {
+        .icon {
+          top: 10px;
+          right: -4.4rem;
         }
       }
-
-      p {
-        margin: 10px 0 17px 0;
-      }
     }
-  }
 
-  .row-left {
-    justify-content: flex-start;
+    .row-right {
+      justify-content: flex-start;
 
-    section {
-      .icon {
-        top: 10px;
-        right: -4.4rem;
-      }
-    }
-  }
+      section {
+        margin-left: 32px;
 
-  .row-right {
-    justify-content: flex-end;
-
-    section {
-      .icon {
-        top: 10px;
-        left: -4.4rem;
+        .icon {
+          top: 10px;
+          left: -4.4rem;
+        }
       }
     }
   }
 }
 
-.center-line {
-  bottom: 0px;
-  left: 50%;
-  font-size: 25px;
-  transform: translateX(-50%);
+.center-timeline {
+  &__wrapper {
+    @extend .poppins;
+
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 0 20px;
+    position: relative;
+
+    .center-line {
+      position: absolute;
+      height: 100%;
+      width: 4px;
+      background: $center-line-color;
+      left: 50%;
+      top: 20px;
+      transform: translateX(-50%);
+
+      .scroll-icon {
+        position: absolute;
+        background-color: $timeline-circle-bg;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 35px;
+        border: solid 2px $timeline-card-bg;
+        border-radius: 50%;
+        color: #000;
+        font-size: 12px;
+      }
+    }
+
+    .row {
+      display: flex;
+
+      section {
+        @extend .be--low-medium;
+
+        background: $timeline-card-bg;
+        width: calc(50% - 40px);
+        margin-bottom: 30px;
+        padding: 20px;
+        position: relative;
+        border-radius: 8px;
+
+        .icon {
+          position: absolute;
+          background-color: $timeline-circle-icon-bg;
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 35px;
+          border: solid 2px $timeline-circle-border;
+          border-radius: 50%;
+          color: #000;
+          font-size: 12px;
+
+          &.no-icon {
+            background-color: $timeline-circle-bg;
+          }
+        }
+
+        .details {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .title {
+            @extend .poppins--b1-regular;
+          }
+
+          .subtitle {
+            @extend .poppins--b2-regular;
+          }
+
+          .created-time {
+            &__text {
+              @extend .poppins--b2-regular;
+            }
+          }
+        }
+
+        .content {
+          &__text {
+            @extend .poppins--b2-regular;
+          }
+        }
+
+        p {
+          margin: 10px 0 17px 0;
+        }
+      }
+    }
+
+    .row-left {
+      justify-content: flex-start;
+
+      section {
+        .icon {
+          top: 10px;
+          right: -4.4rem;
+        }
+      }
+    }
+
+    .row-right {
+      justify-content: flex-end;
+
+      section {
+        .icon {
+          top: 10px;
+          left: -4.4rem;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 790px) {
-  .wrapper {
+  .center-timeline__wrapper {
     .center-line {
       left: 40px;
     }
@@ -181,7 +275,7 @@ $timeline-circle-border: color.$neutral-300;
 }
 
 @media (max-width: 440px) {
-  .wrapper {
+  .center-timeline__wrapper {
     .center-line {
       display: none;
     }
@@ -201,19 +295,5 @@ $timeline-circle-border: color.$neutral-300;
         display: none;
       }
     }
-  }
-}
-
-.full-card {
-  &__wrapper {
-    @extend .poppins;
-
-    max-width: 416px;
-    max-height: 516px;
-    margin: 50px auto;
-    padding: 0 10px;
-    position: relative;
-    border-radius: 16px;
-    background-color: $timeline-full-card-bg;
   }
 }

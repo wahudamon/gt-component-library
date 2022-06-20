@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div :class="classes">
     <div class="center-line"></div>
     <slot></slot>
   </div>
@@ -9,7 +9,7 @@
 export default {
   name: "GTTimeline",
   props: {
-    fullCard: {
+    center: {
       type: Boolean,
       default: false,
     },
@@ -17,8 +17,8 @@ export default {
   computed: {
     classes() {
       return {
-        wrapper: !this.fullCard,
-        "full-card__wrapper": this.fullCard,
+        timeline__wrapper: !this.center,
+        "center-timeline__wrapper": this.center,
       };
     },
   },
