@@ -1,7 +1,6 @@
 import { shallowMount } from "@vue/test-utils";
 import GTCheckbox from "./GTCheckbox.vue";
 
-// will be edited after creating checkbox component.
 describe("GTCheckbox.vue", () => {
   it("renders the props when passed", () => {
     const label = "Hello World!";
