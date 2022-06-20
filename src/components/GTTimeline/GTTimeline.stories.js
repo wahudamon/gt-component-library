@@ -64,7 +64,7 @@ export const WithIcon = (args) => ({
   },
   template: `
     <GTTimeline>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           icon="gt-icons-s"
           label="Lorem Ipsum"
@@ -72,7 +72,7 @@ export const WithIcon = (args) => ({
           createdTime="9 min ago"
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           icon="gt-icons-s"
           label="Lorem Ipsum"
@@ -80,7 +80,7 @@ export const WithIcon = (args) => ({
           createdTime="10 min ago"
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           icon="gt-icons-s"
           label="Lorem Ipsum"
@@ -88,7 +88,7 @@ export const WithIcon = (args) => ({
           createdTime="11 min ago"
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           icon="gt-icons-s"
           label="Lorem Ipsum"
@@ -99,7 +99,7 @@ export const WithIcon = (args) => ({
     </GTTimeline>`,
 });
 
-export const WithSublabel = (args) => ({
+export const WithSubLabel = (args) => ({
   props: Object.keys(args),
   components: {
     GTTimeline,
@@ -108,28 +108,28 @@ export const WithSublabel = (args) => ({
   },
   template: `
     <GTTimeline>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           subLabel="lorem ipsum"
           content="Lorem ipsum dolor sir amet."
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           subLabel="lorem ipsum"
           content="Lorem ipsum dolor sir amet."
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           subLabel="lorem ipsum"
           content="Lorem ipsum dolor sir amet."
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           subLabel="lorem ipsum"
@@ -148,68 +148,32 @@ export const WithCreatedTimeIndicator = (args) => ({
   },
   template: `
     <GTTimeline>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
           createdTime="9 min ago"
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
           createdTime="10 min ago"
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
           createdTime="11 min ago"
         />
       </GTTimelineItem>
-      <GTTimelineItem orientation="right">
+      <GTTimelineItem>
         <GTTimelineCard
           label="Lorem Ipsum"
           content="Lorem ipsum dolor sir amet."
           createdTime="12 min ago"
-        />
-      </GTTimelineItem>
-    </GTTimeline>`,
-});
-
-export const LeftSideTimeline = (args) => ({
-  props: Object.keys(args),
-  components: {
-    GTTimeline,
-    GTTimelineItem,
-    GTTimelineCard,
-  },
-  template: `
-    <GTTimeline>
-      <GTTimelineItem orientation="left">
-        <GTTimelineCard
-          label="Lorem Ipsum"
-          content="Lorem ipsum dolor sir amet."
-        />
-      </GTTimelineItem>
-      <GTTimelineItem orientation="left">
-        <GTTimelineCard
-          label="Lorem Ipsum"
-          content="Lorem ipsum dolor sir amet."
-        />
-      </GTTimelineItem>
-      <GTTimelineItem orientation="left">
-        <GTTimelineCard
-          label="Lorem Ipsum"
-          content="Lorem ipsum dolor sir amet."
-        />
-      </GTTimelineItem>
-      <GTTimelineItem orientation="left">
-        <GTTimelineCard
-          label="Lorem Ipsum"
-          content="Lorem ipsum dolor sir amet."
         />
       </GTTimelineItem>
     </GTTimeline>`,
@@ -223,7 +187,7 @@ export const CenterTimeline = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline>
+    <GTTimeline center>
       <GTTimelineItem orientation="right">
         <GTTimelineCard
           label="Lorem Ipsum"
@@ -259,7 +223,7 @@ export const CenterTimelineWithIcon = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline>
+    <GTTimeline center>
       <GTTimelineItem orientation="right">
         <GTTimelineCard
           icon="gt-icons-s"
@@ -299,7 +263,7 @@ export const CenterTimelineWithSubLabel = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline>
+    <GTTimeline center>
       <GTTimelineItem orientation="right">
         <GTTimelineCard
           label="Lorem Ipsum"
@@ -339,7 +303,7 @@ export const CenterTimelineWithCreatedTimeIndicator = (args) => ({
     GTTimelineCard,
   },
   template: `
-    <GTTimeline>
+    <GTTimeline center>
       <GTTimelineItem orientation="right">
         <GTTimelineCard
           label="Lorem Ipsum"
