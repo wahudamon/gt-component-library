@@ -1,0 +1,306 @@
+@use "../../assets/styles/color.scss";
+@import "../../../scss/foundations/style.scss";
+
+$center-line-color: color.$neutral-300;
+$timeline-card-bg: color.$neutral-50;
+$timeline-full-card-bg: color.$neutral-0;
+$timeline-circle-icon-bg: color.$neutral-50;
+$timeline-circle-bg: color.$sun-200;
+$timeline-circle-border: color.$neutral-300;
+
+.timeline {
+  &__title {
+    @extend .poppins;
+    @extend .poppins--h7;
+
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    @extend .poppins;
+
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 0 20px;
+    position: relative;
+
+    .center-line {
+      position: absolute;
+      height: 100%;
+      width: 4px;
+      background: $center-line-color;
+      left: 0;
+      top: 20px;
+      transform: translateX(-50%);
+
+      .scroll-icon {
+        position: absolute;
+        background-color: $timeline-circle-bg;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 35px;
+        border: solid 2px $timeline-card-bg;
+        border-radius: 50%;
+        color: #000;
+        font-size: 12px;
+      }
+    }
+
+    .row {
+      display: flex;
+
+      section {
+        @extend .be--low-medium;
+
+        background: $timeline-card-bg;
+        width: calc(50% - 40px);
+        margin-bottom: 30px;
+        padding: 20px;
+        position: relative;
+        border-radius: 8px;
+
+        .icon {
+          position: absolute;
+          background-color: $timeline-circle-icon-bg;
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 35px;
+          border: solid 2px $timeline-circle-border;
+          border-radius: 50%;
+          color: #000;
+          font-size: 12px;
+
+          &.no-icon {
+            background-color: $timeline-circle-bg;
+          }
+        }
+
+        .details {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .title {
+            @extend .poppins--b1-regular;
+          }
+
+          .subtitle {
+            @extend .poppins--b2-regular;
+          }
+
+          .created-time {
+            &__text {
+              @extend .poppins--b2-regular;
+            }
+          }
+        }
+
+        .content {
+          &__text {
+            @extend .poppins--b2-regular;
+          }
+        }
+
+        p {
+          margin: 10px 0 17px 0;
+        }
+      }
+    }
+
+    .row-left {
+      justify-content: flex-start;
+
+      section {
+        .icon {
+          top: 10px;
+          right: -4.4rem;
+        }
+      }
+    }
+
+    .row-right {
+      justify-content: flex-start;
+
+      section {
+        margin-left: 32px;
+
+        .icon {
+          top: 10px;
+          left: -4.4rem;
+        }
+      }
+    }
+  }
+}
+
+.center-timeline {
+  &__wrapper {
+    @extend .poppins;
+
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 0 20px;
+    position: relative;
+
+    .center-line {
+      position: absolute;
+      height: 100%;
+      width: 4px;
+      background: $center-line-color;
+      left: 50%;
+      top: 20px;
+      transform: translateX(-50%);
+
+      .scroll-icon {
+        position: absolute;
+        background-color: $timeline-circle-bg;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 35px;
+        border: solid 2px $timeline-card-bg;
+        border-radius: 50%;
+        color: #000;
+        font-size: 12px;
+      }
+    }
+
+    .row {
+      display: flex;
+
+      section {
+        @extend .be--low-medium;
+
+        background: $timeline-card-bg;
+        width: calc(50% - 40px);
+        margin-bottom: 30px;
+        padding: 20px;
+        position: relative;
+        border-radius: 8px;
+
+        .icon {
+          position: absolute;
+          background-color: $timeline-circle-icon-bg;
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 35px;
+          border: solid 2px $timeline-circle-border;
+          border-radius: 50%;
+          color: #000;
+          font-size: 12px;
+
+          &.no-icon {
+            background-color: $timeline-circle-bg;
+          }
+        }
+
+        .details {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .title {
+            @extend .poppins--b1-regular;
+          }
+
+          .subtitle {
+            @extend .poppins--b2-regular;
+          }
+
+          .created-time {
+            &__text {
+              @extend .poppins--b2-regular;
+            }
+          }
+        }
+
+        .content {
+          &__text {
+            @extend .poppins--b2-regular;
+          }
+        }
+
+        p {
+          margin: 10px 0 17px 0;
+        }
+      }
+    }
+
+    .row-left {
+      justify-content: flex-start;
+
+      section {
+        .icon {
+          top: 10px;
+          right: -4.4rem;
+        }
+      }
+    }
+
+    .row-right {
+      justify-content: flex-end;
+
+      section {
+        .icon {
+          top: 10px;
+          left: -4.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .center-timeline__wrapper {
+    .center-line {
+      left: 40px;
+    }
+
+    .row {
+      margin: 30px 0 3px 60px;
+
+      section {
+        width: 100%;
+      }
+    }
+  }
+
+  .row-left section {
+    section {
+      &::before {
+        left: -7px;
+      }
+
+      .icon {
+        left: -60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .center-timeline__wrapper {
+    .center-line {
+      display: none;
+    }
+
+    .row {
+      margin: 10px 0;
+    }
+  }
+
+  .row {
+    section {
+      &::before {
+        display: none;
+      }
+
+      .icon {
+        display: none;
+      }
+    }
+  }
+}

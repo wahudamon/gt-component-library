@@ -1,10 +1,10 @@
 import { shallowMount } from "@vue/test-utils";
-import GTInputText from "./GTinputText.vue";
+import GTTimeline from "./GTTimeline.vue";
 
-describe("GTInputText.vue", () => {
+describe("GTTimeline.vue", () => {
   it("renders the props when passed", () => {
     const label = "Hello World!";
-    const wrapper = shallowMount(GTInputText, {
+    const wrapper = shallowMount(GTTimeline, {
       propsData: { label },
     });
     expect(wrapper.props().label).toBe(label);
