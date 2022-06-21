@@ -13,7 +13,7 @@
     <label :class="classes">
       <div>
         <div v-if="leadingIcon" class="icon icon--leading">
-          <GTIcon :name="leadingIcon" :size="size" />
+          <GTIcon :name="leadingIcon" size="sm" />
         </div>
         <input
           type="text"
@@ -28,7 +28,7 @@
           {{ error ? `${label}*` : label }}
         </span>
         <div v-if="trailingIcon" class="icon icon--trailing">
-          <GTIcon :name="trailingIcon" :size="size" />
+          <GTIcon :name="trailingIcon" size="sm" />
         </div>
         <div v-if="helperText" :class="helperClasses">
           <p>{{ helperText }}</p>
@@ -59,7 +59,7 @@ export default {
       type: String,
       default: "md",
       validator: function (value) {
-        return ["sm", "md"].indexOf(value) !== -1;
+        return ["md"].indexOf(value) !== -1;
       },
     },
     length: {
