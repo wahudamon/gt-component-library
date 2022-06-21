@@ -538,6 +538,9 @@ $semantic-warning: $yellow-600;
     }
   }
   &--neutral {
+    &-0 {
+      color: $neutral-0;
+    }
     &-50 {
       color: $neutral-50;
     }
@@ -973,6 +976,9 @@ $semantic-warning: $yellow-600;
     }
   }
   &--neutral {
+    &-0 {
+      background-color: $neutral-0;
+    }
     &-50 {
       background-color: $neutral-50;
     }

@@ -5,6 +5,8 @@ import {
   GTInputText,
   GTInputArea,
   GTBreadcrumb,
+  GTSlider,
+  GTMultiRangeSlider,
   GTAlert,
   GTCombobox,
   GTTab,
@@ -40,6 +42,8 @@ export default Vue.extend({
     GTInputText,
     GTInputArea,
     GTBreadcrumb,
+    GTSlider,
+    GTMultiRangeSlider,
     GTAlert,
     GTCombobox,
     GTTab,
@@ -133,32 +137,49 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTTimeline center title="Lorem Ipsum">
-      <!-- <GTTimelineItem v-for="i in 3" :key="i">
-        <GTTimelineCard
-          label="Lorem Ipsum"
-          content="Lorem ipsum dolor sir amet."
-        />
-      </GTTimelineItem> -->
-      <GTTimelineItem orientation="left">
-        <GTTimelineCard
-          label="Lorem Ipsum"
-          content="Lorem ipsum dolor sir amet."
-        />
-      </GTTimelineItem>
-      <GTTimelineItem orientation="right">
-        <GTTimelineCard
-          label="Lorem Ipsum"
-          content="Lorem ipsum dolor sir amet."
-        />
-      </GTTimelineItem>
-      <GTTimelineItem orientation="left">
-        <GTTimelineCard
-          label="Lorem Ipsum"
-          content="Lorem ipsum dolor sir amet."
-        />
-      </GTTimelineItem>
-    </GTTimeline>
+    <GTSlider
+      showAppendIcon
+      appendIcon="gt-plus-s"
+      class="mt--15 ml--15"
+      min="1"
+      max="100"
+    />
+    <GTMultiRangeSlider class="mt--10 ml--15" />
+    <!-- <GTBreadcrumb
+      class="mt--15 ml--15"
+      :crumbs="crumbs"
+      separatorSign="/"
+      homeIcon
+    /> -->
+    <!-- <GTInputArea
+      class="mt--15 ml--15"
+      variant="outline"
+      size="sm"
+      length="sm"
+      label="Username"
+      helperText="Helper Text"
+    /> -->
+    <!-- <GTInputText
+      disabled
+      class="mt--15 ml--15"
+      variant="outline"
+      size="sm"
+      length="sm"
+      label="Username"
+      placeholder="Placeholder"
+      helperText="Helper Text"
+      trailingIcon="gt-paper-plane-s"
+    /> -->
+    <!-- <input-text-example /> -->
+    <!-- <buttons-list /> -->
+    <!-- <checkbox-example class="mt--10" /> -->
+    <!-- <radio-button-example class="mt--10" /> -->
+    <!-- <button class="ml--20">
+      <GTIcon name="gt-address-book-r" size="md" />
+    </button> -->
+    <!-- <typography />
+    <grid-system />
+    <corner-radius /> -->
   </div>
 </template>
 
