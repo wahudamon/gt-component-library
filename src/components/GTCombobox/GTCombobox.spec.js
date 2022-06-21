@@ -1,12 +1,12 @@
 import { shallowMount } from "@vue/test-utils";
-import GTCheckbox from "./GTCheckbox.vue";
+import GTCombobox from "./GTCombobox.vue";
 
-describe("GTCheckbox.vue", () => {
+describe("GTCombobox.vue", () => {
   it("renders the props when passed", () => {
     const label = "Hello World!";
     const primary = true;
     const size = "medium";
-    const wrapper = shallowMount(GTCheckbox, {
+    const wrapper = shallowMount(GTCombobox, {
       propsData: { label, primary, size },
     });
     expect(wrapper.props().label).toBe(label);

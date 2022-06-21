@@ -1,10 +1,10 @@
 import { shallowMount } from "@vue/test-utils";
-import GTAlert from "./GTAlert.vue";
+import GTTimeline from "./GTTimeline.vue";
 
-describe("GTAlert.vue", () => {
+describe("GTTimeline.vue", () => {
   it("renders the props when passed", () => {
     const label = "Hello World!";
-    const wrapper = shallowMount(GTAlert, {
+    const wrapper = shallowMount(GTTimeline, {
       propsData: { label },
     });
     expect(wrapper.props().label).toBe(label);
