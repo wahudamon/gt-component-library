@@ -76,16 +76,91 @@ export const Primary = Template.bind({});
 Primary.args = {
   bordered: true,
 };
+Primary.parameters = {
+  docs: {
+    source: {
+      code: `
+<GTTable bordered>
+  <GTTableHead>
+    <GTTableRow>
+      <GTTableHeaderCell>ID</GTTableHeaderCell>
+      <GTTableHeaderCell>First</GTTableHeaderCell>
+      <GTTableHeaderCell>Last</GTTableHeaderCell>
+      <GTTableHeaderCell>Twitter</GTTableHeaderCell>
+    </GTTableRow>
+  </GTTableHead>
+  <GTTableBody>
+    <GTTableRow v-for="item in items" :key="item.id">
+      <GTTableDataCell>{{ item.id }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.firstName }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.lastName }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.twitter }}</GTTableDataCell>
+    </GTTableRow>
+  </GTTableBody>
+</GTTable>
+      `,
+    },
+  },
+};
 
 export const SmallTable = Template.bind({});
 SmallTable.args = {
   size: "sm",
   bordered: true,
 };
+SmallTable.parameters = {
+  docs: {
+    source: {
+      code: `
+<GTTable size="sm" bordered>
+  <GTTableHead>
+    <GTTableRow>
+      <GTTableHeaderCell>ID</GTTableHeaderCell>
+      <GTTableHeaderCell>First</GTTableHeaderCell>
+      <GTTableHeaderCell>Last</GTTableHeaderCell>
+      <GTTableHeaderCell>Twitter</GTTableHeaderCell>
+    </GTTableRow>
+  </GTTableHead>
+  <GTTableBody>
+    <GTTableRow v-for="item in items" :key="item.id">
+      <GTTableDataCell>{{ item.id }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.firstName }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.lastName }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.twitter }}</GTTableDataCell>
+    </GTTableRow>
+  </GTTableBody>
+</GTTable>
+      `,
+    },
+  },
+};
 
 export const BorderlessTable = Template.bind({});
-BorderlessTable.args = {
-  size: "md",
+BorderlessTable.parameters = {
+  docs: {
+    source: {
+      code: `
+<GTTable>
+  <GTTableHead>
+    <GTTableRow>
+      <GTTableHeaderCell>ID</GTTableHeaderCell>
+      <GTTableHeaderCell>First</GTTableHeaderCell>
+      <GTTableHeaderCell>Last</GTTableHeaderCell>
+      <GTTableHeaderCell>Twitter</GTTableHeaderCell>
+    </GTTableRow>
+  </GTTableHead>
+  <GTTableBody>
+    <GTTableRow v-for="item in items" :key="item.id">
+      <GTTableDataCell>{{ item.id }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.firstName }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.lastName }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.twitter }}</GTTableDataCell>
+    </GTTableRow>
+  </GTTableBody>
+</GTTable>
+      `,
+    },
+  },
 };
 
 export const HoverableTable = Template.bind({});
@@ -93,8 +168,60 @@ HoverableTable.args = {
   bordered: true,
   hover: true,
 };
+HoverableTable.parameters = {
+  docs: {
+    source: {
+      code: `
+<GTTable hover bordered>
+  <GTTableHead>
+    <GTTableRow>
+      <GTTableHeaderCell>ID</GTTableHeaderCell>
+      <GTTableHeaderCell>First</GTTableHeaderCell>
+      <GTTableHeaderCell>Last</GTTableHeaderCell>
+      <GTTableHeaderCell>Twitter</GTTableHeaderCell>
+    </GTTableRow>
+  </GTTableHead>
+  <GTTableBody>
+    <GTTableRow v-for="item in items" :key="item.id">
+      <GTTableDataCell>{{ item.id }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.firstName }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.lastName }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.twitter }}</GTTableDataCell>
+    </GTTableRow>
+  </GTTableBody>
+</GTTable>
+      `,
+    },
+  },
+};
 
 export const HoverableBorderlessTable = Template.bind({});
 HoverableBorderlessTable.args = {
   hover: true,
+};
+HoverableBorderlessTable.parameters = {
+  docs: {
+    source: {
+      code: `
+<GTTable hover>
+  <GTTableHead>
+    <GTTableRow>
+      <GTTableHeaderCell>ID</GTTableHeaderCell>
+      <GTTableHeaderCell>First</GTTableHeaderCell>
+      <GTTableHeaderCell>Last</GTTableHeaderCell>
+      <GTTableHeaderCell>Twitter</GTTableHeaderCell>
+    </GTTableRow>
+  </GTTableHead>
+  <GTTableBody>
+    <GTTableRow v-for="item in items" :key="item.id">
+      <GTTableDataCell>{{ item.id }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.firstName }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.lastName }}</GTTableDataCell>
+      <GTTableDataCell>{{ item.twitter }}</GTTableDataCell>
+    </GTTableRow>
+  </GTTableBody>
+</GTTable>
+      `,
+    },
+  },
 };
