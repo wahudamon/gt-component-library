@@ -42,6 +42,13 @@ Primary.args = {
   name: "gt-meteor-s",
   size: "md",
 };
+Primary.parameters = {
+  docs: {
+    source: {
+      code: `<GTIcon name="gt-meteor-s" size="md" />`,
+    },
+  },
+};
 
 export const AccessibilityIcons = (args) => ({
   props: Object.keys(args),
@@ -63,6 +70,13 @@ export const AccessibilityIcons = (args) => ({
     </div>
   `,
 });
+AccessibilityIcons.parameters = {
+  docs: {
+    source: {
+      code: `<GTIcon name="" size="md" />`,
+    },
+  },
+};
 
 export const AstronomyIcons = (args) => ({
   props: Object.keys(args),
@@ -84,6 +98,13 @@ export const AstronomyIcons = (args) => ({
     </div>
   `,
 });
+AstronomyIcons.parameters = {
+  docs: {
+    source: {
+      code: `<GTIcon name="" size="md" />`,
+    },
+  },
+};
 
 export const AutomotiveIcons = (args) => ({
   props: Object.keys(args),
@@ -105,6 +126,13 @@ export const AutomotiveIcons = (args) => ({
     </div>
   `,
 });
+AutomotiveIcons.parameters = {
+  docs: {
+    source: {
+      code: `<GTIcon name="" size="md" />`,
+    },
+  },
+};
 
 export const BuildingIcons = (args) => ({
   props: Object.keys(args),
@@ -126,6 +154,13 @@ export const BuildingIcons = (args) => ({
     </div>
   `,
 });
+BuildingIcons.parameters = {
+  docs: {
+    source: {
+      code: `<GTIcon name="" size="md" />`,
+    },
+  },
+};
 
 export const CommunicationIcons = (args) => ({
   props: Object.keys(args),
@@ -147,6 +182,13 @@ export const CommunicationIcons = (args) => ({
     </div>
   `,
 });
+CommunicationIcons.parameters = {
+  docs: {
+    source: {
+      code: `<GTIcon name="" size="md" />`,
+    },
+  },
+};
 
 export const ConnectivityIcons = (args) => ({
   props: Object.keys(args),
@@ -168,6 +210,13 @@ export const ConnectivityIcons = (args) => ({
     </div>
   `,
 });
+ConnectivityIcons.parameters = {
+  docs: {
+    source: {
+      code: `<GTIcon name="" size="md" />`,
+    },
+  },
+};
 
 export const EditingIcons = (args) => ({
   props: Object.keys(args),
@@ -189,6 +238,13 @@ export const EditingIcons = (args) => ({
     </div>
   `,
 });
+EditingIcons.parameters = {
+  docs: {
+    source: {
+      code: `<GTIcon name="" size="md" />`,
+    },
+  },
+};
 
 export const NavigationIcons = (args) => ({
   props: Object.keys(args),
@@ -210,6 +266,13 @@ export const NavigationIcons = (args) => ({
     </div>
   `,
 });
+NavigationIcons.parameters = {
+  docs: {
+    source: {
+      code: `<GTIcon name="" size="md" />`,
+    },
+  },
+};
 
 export const SymbolIcons = (args) => ({
   props: Object.keys(args),
@@ -231,3 +294,10 @@ export const SymbolIcons = (args) => ({
     </div>
   `,
 });
+SymbolIcons.parameters = {
+  docs: {
+    source: {
+      code: `<GTIcon name="" size="md" />`,
+    },
+  },
+};
