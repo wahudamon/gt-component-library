@@ -6,7 +6,6 @@ import {
   GTInputArea,
   GTBreadcrumb,
   GTSlider,
-  GTMultiRangeSlider,
   GTAlert,
   GTCombobox,
   GTTab,
@@ -43,7 +42,6 @@ export default Vue.extend({
     GTInputArea,
     GTBreadcrumb,
     GTSlider,
-    GTMultiRangeSlider,
     GTAlert,
     GTCombobox,
     GTTab,
@@ -144,7 +142,6 @@ export default Vue.extend({
       min="1"
       max="100"
     />
-    <GTMultiRangeSlider class="mt--10 ml--15" />
     <!-- <GTBreadcrumb
       class="mt--15 ml--15"
       :crumbs="crumbs"

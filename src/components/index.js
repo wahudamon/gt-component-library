@@ -8,7 +8,6 @@ export { default as GTInputArea } from "./GTInputArea/GTInputArea.vue";
 export { default as GTBreadcrumb } from "./GTBreadcrumb/GTBreadcrumb.vue";
 export { default as GTAlert } from "./GTAlert/GTAlert.vue";
 export { default as GTSlider } from "./GTSlider/GTSlider.vue";
-export { default as GTMultiRangeSlider } from "./GTMultiRangeSlider/GTMultiRangeSlider.vue";
 export { default as GTCombobox } from "./GTCombobox/GTCombobox.vue";
 export { default as GTTab } from "./GTTab/GTTab.vue";
 export { default as GTTabItems } from "./GTTab/GTTabItems.vue";
