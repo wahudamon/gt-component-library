@@ -42,14 +42,12 @@ Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang d
 
 Tools ini dibangun dengan menggunakan beberapa framework, library, dan package di bawah ini :
 
-| Nama                      | Versi  |
-| ------------------------- | ------ |
-| Vue                       | 2.6.14 |
-| Bootstrap                 | 5.1.3  |
-| @storybook/vue            | 6.4.19 |
-| @vue/cli-plugin-unit-jest | 4.5.15 |
-| @vue/test-utils           | 1.3.0  |
-| vue-sfc-rollup            | 4.1.1  |
+| Nama           | Versi  |
+| -------------- | ------ |
+| Vue            | 2.6.14 |
+| Bootstrap      | 5.1.3  |
+| vue-sfc-rollup | 4.1.1  |
+| @storybook/vue | 6.5.9  |
 
 ## Lisensi
 
