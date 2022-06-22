@@ -58,23 +58,21 @@ $bg-slider-track-disabled: color.$neutral-300;
     background-repeat: no-repeat;
 
     &::-webkit-slider-thumb {
-      @extend .bg--neutral-0;
-      @extend .border--neutral-500;
-
       -webkit-appearance: none;
       appearance: none;
       width: 24px;
       height: 24px;
+      background-color: #f9fafa;
+      border: solid 1px #929a9b;
       border-radius: 50%;
       cursor: pointer;
     }
 
     &::-moz-range-thumb {
-      @extend .bg--neutral-0;
-      @extend .border--neutral-500;
-
       width: 24px;
       height: 24px;
+      background-color: #f9fafa;
+      border: solid 1px #929a9b;
       border-radius: 50%;
       cursor: pointer;
     }
