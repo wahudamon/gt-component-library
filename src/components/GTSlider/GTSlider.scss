@@ -43,8 +43,6 @@ $bg-slider-track-disabled: color.$neutral-300;
   }
 
   &__field {
-    @extend .bg--neutral-100;
-
     -webkit-transition: 0.2s;
     -webkit-appearance: none;
     transition: opacity 0.2s;
@@ -53,6 +51,7 @@ $bg-slider-track-disabled: color.$neutral-300;
     height: 4px;
     border-radius: 5px;
     outline: none;
+    background-color: #f3f4f4;
     background-image: linear-gradient($bg-slider-track, $bg-slider-track);
     background-size: 0% 100%;
     background-repeat: no-repeat;
