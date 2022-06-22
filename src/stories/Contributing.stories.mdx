@@ -11,6 +11,8 @@ import { Meta } from "@storybook/addon-docs";
 
 Library ini akan terus dikembangkan seiring dengan kebutuhan dari tim produk dan tim desain terkait produk yang sedang dikembangkan. Jika akan dilakukan update terhadap library ini, berikut ini adalah beberapa langkah dalam melakukan perubahan baik penambahan komponen baru, pengurangan komponen yang tidak dibutuhkan, dan lain-lain di dalam library ini.
 
+Library ini dikembangkan dengan Node.js versi **`15.14.0`** dan npm versi **`7.7.6`**
+
 ## Setup Proyek
 
 - Clone [repository ini](https://github.com/wahudamon/gamatechno-component-lib-vue)
@@ -20,20 +22,22 @@ Library ini akan terus dikembangkan seiring dengan kebutuhan dari tim produk dan
 
 ## Membuat komponen baru
 
-- Buat file baru dengan ekstensi .vue pada folder components
-- Tambahkan properti name pada section script
-- Buat struktur, styling dan behavior komponen
+- Buat folder dengan nama komponen yang akan dibuat pada folder components
+- Buat file baru dengan ekstensi .vue di dalam folder
+- Tambahkan struktur, styling dan behavior komponen di dalam file tersebut
 - Import as default komponen pada components/index.js
 - Import dan deklarasikan komponen pada dev/serve.vue
-- Buat file stories dengan format (Nama Komponen).stories.js di dalam folder stories
+- Buat file styling untuk komponen dengan format scss
+- Import file styling pada tag style di dalam komponen
+- Import file styling komponen pada scss/components/style.scss
+- Jalankan perintah `npm run build:css` untuk mengkonversi styling dari scss ke css
+- Buat file stories dengan format (Nama Komponen).stories.js
 - Buat stories untuk komponen yang sedang dibuat
-- Buat file untuk unit test case dengan format (Nama Komponen).spec.js di dalam folder test/unit
-- Buat unit test case untuk komponen yang sedang dibuat
-- Jalankan perintah npm run test:unit
 
 ## Mengubah komponen yang sudah ada
 
 - Buat perubahan untuk komponen pada folder components
+- Jalankan perintah `npm run build:css` untuk mengkonversi styling dari scss ke css
 - Tambahkan test case baru untuk perubahan yang dilakukan pada komponen (jika ada)
 - Tambahkan perubahan pada komponen ke dalam file stories komponen
 
@@ -41,7 +45,7 @@ Library ini akan terus dikembangkan seiring dengan kebutuhan dari tim produk dan
 
 - Jalankan perintah npm run build
 - Ubah versi library pada file package.json
-- Melakukan registrasi akun baru pada website [npmjs](https://www.npmjs.com/) jika belum memiliki akun npm untuk PT Gamatechno Indonesia
+- Melakukan registrasi akun baru pada website [npmjs](https://www.npmjs.com/) jika belum memiliki akun
 - Jalankan perintah npm login
 - Masukkan username dan password dari akun npm milik PT Gamatechno Indonesia
 - Jalankan perintah npm publish

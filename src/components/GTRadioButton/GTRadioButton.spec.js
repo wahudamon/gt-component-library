@@ -1,7 +1,6 @@
 import { shallowMount } from "@vue/test-utils";
 import GTRadioButton from "./GTRadioButton.vue";
 
-// will be edited after creating checkbox component.
 describe("GTRadioButton.vue", () => {
   it("renders the props when passed", () => {
     const label = "Hello World!";

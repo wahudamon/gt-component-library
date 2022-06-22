@@ -6,7 +6,7 @@ export default {
   argTypes: {
     size: {
       control: { type: "select" },
-      options: ["sm", "md"],
+      options: ["md"],
     },
     length: {
       control: { type: "select" },
@@ -35,87 +35,128 @@ const Template = (args, { argTypes }) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
-  variant: "outline",
-  size: "sm",
+  label: "Label",
+};
+Primary.parameters = {
+  docs: {
+    source: {
+      code: `<GTInputText label="Label" />`,
+    },
+  },
+};
+
+export const Small = Template.bind({});
+Small.args = {
   length: "sm",
   label: "Label",
 };
-
-export const SmallLength = Template.bind({});
-SmallLength.args = {
-  variant: "outline",
-  size: "sm",
-  length: "sm",
-  label: "Label",
+Small.parameters = {
+  docs: {
+    source: {
+      code: `<GTInputText length="sm" label="Label" />`,
+    },
+  },
 };
 
-export const MediumLength = Template.bind({});
-MediumLength.args = {
-  variant: "outline",
-  size: "sm",
+export const Medium = Template.bind({});
+Medium.args = {
   length: "md",
   label: "Label",
 };
+Medium.parameters = {
+  docs: {
+    source: {
+      code: `<GTInputText length="md" label="Label" />`,
+    },
+  },
+};
 
-export const LargeLength = Template.bind({});
-LargeLength.args = {
-  variant: "outline",
-  size: "sm",
+export const Large = Template.bind({});
+Large.args = {
   length: "lg",
   label: "Label",
+};
+Large.parameters = {
+  docs: {
+    source: {
+      code: `<GTInputText length="lg" label="Label" />`,
+    },
+  },
 };
 
 export const HorizontalLabel = Template.bind({});
 HorizontalLabel.args = {
   variant: "horizontal",
-  size: "sm",
-  length: "sm",
   label: "Label",
   placeholder: "placeholder",
+};
+HorizontalLabel.parameters = {
+  docs: {
+    source: {
+      code: `<GTInputText variant="horizontal" label="Label" placeholder="placeholder" />`,
+    },
+  },
 };
 
 export const VerticalLabel = Template.bind({});
 VerticalLabel.args = {
   variant: "vertical",
-  size: "sm",
-  length: "sm",
   label: "Label",
   placeholder: "placeholder",
 };
-
-export const HelperText = Template.bind({});
-HelperText.args = {
-  variant: "outline",
-  size: "sm",
-  length: "sm",
-  label: "Label",
-  helperText: "Helper Text",
+VerticalLabel.parameters = {
+  docs: {
+    source: {
+      code: `<GTInputText variant="vertical" label="Label" placeholder="placeholder" />`,
+    },
+  },
 };
 
 export const LeadingIcon = Template.bind({});
 LeadingIcon.args = {
-  variant: "outline",
-  size: "sm",
-  length: "sm",
   label: "Label",
   leadingIcon: "gt-paper-plane-s",
+};
+LeadingIcon.parameters = {
+  docs: {
+    source: {
+      code: `<GTInputText label="Label" leadingIcon="gt-paper-plane-s" />`,
+    },
+  },
 };
 
 export const TrailingIcon = Template.bind({});
 TrailingIcon.args = {
-  variant: "outline",
-  size: "sm",
-  length: "sm",
   label: "Label",
   trailingIcon: "gt-paper-plane-s",
+};
+TrailingIcon.parameters = {
+  docs: {
+    source: {
+      code: `<GTInputText label="Label" trailingIcon="gt-paper-plane-s" />`,
+    },
+  },
 };
 
 export const LeadingAndTrailingIcon = Template.bind({});
 LeadingAndTrailingIcon.args = {
-  variant: "outline",
-  size: "sm",
-  length: "sm",
   label: "Label",
   leadingIcon: "gt-paper-plane-s",
   trailingIcon: "gt-paper-plane-s",
 };
+LeadingAndTrailingIcon.parameters = {
+  docs: {
+    source: {
+      code: `<GTInputText label="Label" leadingIcon="gt-paper-plane-s" trailingIcon="gt-paper-plane-s" />`,
+    },
+  },
+};
+
+// export const HelperText = Template.bind({});
+// HelperText.args = {
+//   variant: "outline",
+//   size: "sm",
+//   length: "sm",
+//   label: "Label",
+//   helperText: "Helper Text",
+// };

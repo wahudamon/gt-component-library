@@ -42,3 +42,10 @@ Primary.args = {
   items: comboboxOptions,
   placeholder: "Select a car...",
 };
+Primary.parameters = {
+  docs: {
+    source: {
+      code: `<GTCombobox :items="comboboxOptions" placeholder="Select a car..." />`,
+    },
+  },
+};

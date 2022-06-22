@@ -13,7 +13,7 @@
     <label :class="classes">
       <div>
         <div v-if="leadingIcon" class="icon icon--leading">
-          <GTIcon :name="leadingIcon" :size="size" />
+          <GTIcon :name="leadingIcon" size="sm" />
         </div>
         <textarea
           type="text"
@@ -28,7 +28,7 @@
           {{ error ? `${label}*` : label }}
         </span>
         <div v-if="trailingIcon" class="icon icon--trailing">
-          <GTIcon :name="trailingIcon" :size="size" />
+          <GTIcon :name="trailingIcon" size="sm" />
         </div>
         <div v-if="helperText" :class="helperClasses">
           <p>{{ helperText }}</p>
@@ -57,14 +57,14 @@ export default {
     },
     size: {
       type: String,
-      default: "md",
+      default: "sm",
       validator: function (value) {
         return ["sm", "md"].indexOf(value) !== -1;
       },
     },
     length: {
       type: String,
-      default: "md",
+      default: "sm",
       validator: function (value) {
         return ["sm", "md", "lg"].indexOf(value) !== -1;
       },

@@ -1,10 +1,10 @@
 import { shallowMount } from "@vue/test-utils";
-import GTInputText from "./GTinputText.vue";
+import GTSlider from "./GTSlider.vue";
 
-describe("GTInputText.vue", () => {
+describe("GTSlider.vue", () => {
   it("renders the props when passed", () => {
     const label = "Hello World!";
-    const wrapper = shallowMount(GTInputText, {
+    const wrapper = shallowMount(GTSlider, {
       propsData: { label },
     });
     expect(wrapper.props().label).toBe(label);

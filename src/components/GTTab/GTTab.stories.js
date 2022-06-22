@@ -98,6 +98,35 @@ const Template = (args) => ({
 });
 
 export const Primary = Template.bind({});
+Primary.parameters = {
+  docs: {
+    source: {
+      code: `
+      <GTTab>
+  <GTTabItems>
+    <GTTabItem
+      v-for="(tabItem, i) in tabDatas.tabItems"
+      :key="i"
+      :isActive="tabItem.isActive"
+      :tabId="tabItem.tabId"
+      :title="tabItem.title"
+    />
+  </GTTabItems>
+  <GTTabContents>
+    <GTTabContentItem
+      v-for="(tabContentItem, i) in tabDatas.tabContentItems"
+      :key="i"
+      :isActive="tabContentItem.isActive"
+      :contentId="tabContentItem.contentId"
+    >
+      <h1>{{ tabContentItem.contentTitle }}</h1>
+      <p>{{ tabContentItem.contentText }}</p>
+    </GTTabContentItem>
+  </GTTabContents>
+</GTTab>`,
+    },
+  },
+};
 
 export const WithIcon = (args) => ({
   props: Object.keys(args),
@@ -125,6 +154,26 @@ export const WithIcon = (args) => ({
       </GTTabItems>
     </GTTab>`,
 });
+WithIcon.parameters = {
+  docs: {
+    source: {
+      code: `
+<GTTab>
+  <GTTabItems>
+    <GTTabItem
+      v-for="(tabItem, i) in tabDatas.tabItems"
+      :key="i"
+      :isActive="tabItem.isActive"
+      :tabId="tabItem.tabId"
+      :title="tabItem.title"
+      :icon="tabItem.icon"
+    />
+  </GTTabItems>
+</GTTab>
+      `,
+    },
+  },
+};
 
 export const WithPrependIcon = (args) => ({
   props: Object.keys(args),
@@ -152,6 +201,26 @@ export const WithPrependIcon = (args) => ({
       </GTTabItems>
     </GTTab>`,
 });
+WithPrependIcon.parameters = {
+  docs: {
+    source: {
+      code: `
+<GTTab>
+  <GTTabItems>
+    <GTTabItem
+      v-for="(tabItem, i) in tabDatas.tabItems"
+      :key="i"
+      :isActive="tabItem.isActive"
+      :tabId="tabItem.tabId"
+      :title="tabItem.title"
+      :prependIcon="tabItem.icon"
+    />
+  </GTTabItems>
+</GTTab>
+      `,
+    },
+  },
+};
 
 export const WithAppendIcon = (args) => ({
   props: Object.keys(args),
@@ -179,6 +248,26 @@ export const WithAppendIcon = (args) => ({
       </GTTabItems>
     </GTTab>`,
 });
+WithAppendIcon.parameters = {
+  docs: {
+    source: {
+      code: `
+<GTTab>
+  <GTTabItems>
+    <GTTabItem
+      v-for="(tabItem, i) in tabDatas.tabItems"
+      :key="i"
+      :isActive="tabItem.isActive"
+      :tabId="tabItem.tabId"
+      :title="tabItem.title"
+      :appendIcon="tabItem.icon"
+    />
+  </GTTabItems>
+</GTTab>
+      `,
+    },
+  },
+};
 
 export const WithUpperIcon = (args) => ({
   props: Object.keys(args),
@@ -206,3 +295,23 @@ export const WithUpperIcon = (args) => ({
       </GTTabItems>
     </GTTab>`,
 });
+WithUpperIcon.parameters = {
+  docs: {
+    source: {
+      code: `
+<GTTab>
+  <GTTabItems>
+    <GTTabItem
+      v-for="(tabItem, i) in tabDatas.tabItems"
+      :key="i"
+      :isActive="tabItem.isActive"
+      :tabId="tabItem.tabId"
+      :title="tabItem.title"
+      :upperIcon="tabItem.icon"
+    />
+  </GTTabItems>
+</GTTab>
+      `,
+    },
+  },
+};
