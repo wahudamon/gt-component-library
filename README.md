@@ -4,39 +4,12 @@ Gamatechno Component Library adalah sebuah tools berisi kumpulan komponen yang d
 
 ## Setup Proyek
 
+Project ini dikembangkan dengan Node.js versi **`15.14.0`** dan npm versi **`7.7.6`**
+
 - Clone repository ini
 - Jalankan perintah npm install
 - Jalankan perintah npm run serve
 - Jalankan perintah npm run storybook
-
-## Membuat komponen baru
-
-- Buat file baru dengan ekstensi .vue pada folder components
-- Tambahkan properti name pada section script
-- Buat struktur, styling dan behavior komponen
-- Import as default komponen pada components/index.js
-- Import dan deklarasikan komponen pada dev/serve.vue
-- Buat file stories dengan format (Nama Komponen).stories.js di dalam folder stories
-- Buat stories untuk komponen yang sedang dibuat
-- Buat file untuk unit test case dengan format (Nama Komponen).spec.js di dalam folder test/unit
-- Buat unit test case untuk komponen yang sedang dibuat
-- Jalankan perintah npm run test:unit
-
-## Mengubah komponen yang sudah ada
-
-- Buat perubahan untuk komponen pada folder components
-- Tambahkan test case baru untuk perubahan yang dilakukan pada komponen (jika ada)
-- Tambahkan perubahan pada komponen ke dalam file stories komponen
-
-## Mempublikasikan versi terbaru
-
-- Jalankan perintah npm run build
-- Ubah versi library pada file package.json
-- Melakukan registrasi akun baru pada website [npmjs](https://www.npmjs.com/) jika belum memiliki akun
-- Jalankan perintah npm login
-- Masukkan username dan password dari akun npm
-- Jalankan perintah npm publish
-- Masukkan kode OTP jika diperlukan
 
 ## Teknologi yang digunakan
 
