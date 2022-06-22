@@ -79,7 +79,6 @@ export default {
         );
       },
     },
-    // should be deleted!
     text: {
       type: String,
       default: "",

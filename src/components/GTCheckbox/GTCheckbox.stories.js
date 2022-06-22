@@ -32,48 +32,13 @@ const Template = (args, { argTypes }) => ({
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
-  type: "primary",
   text: "Text",
   subtext: "This is subtext",
-  size: "md",
-  isDisabled: false,
 };
-
-export const WithoutText = Template.bind({});
-WithoutText.args = {
-  type: "primary",
-  size: "md",
-};
-
-export const WithoutSubtext = Template.bind({});
-WithoutSubtext.args = {
-  type: "primary",
-  text: "Text",
-  size: "md",
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  type: "primary",
-  text: "Text",
-  subtext: "This is subtext",
-  size: "sm",
-};
-
-export const Medium = Template.bind({});
-Medium.args = {
-  type: "primary",
-  text: "Text",
-  subtext: "This is subtext",
-  size: "md",
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  type: "primary",
-  text: "Text",
-  subtext: "This is subtext",
-  size: "lg",
+Primary.parameters = {
+  docs: {
+    source: { code: `<GTCheckbox text="Text" subtext="This is subtext"  />` },
+  },
 };
 
 export const Secondary = Template.bind({});
@@ -81,14 +46,84 @@ Secondary.args = {
   type: "secondary",
   text: "Text",
   subtext: "This is subtext",
-  size: "md",
+};
+Secondary.parameters = {
+  docs: {
+    source: {
+      code: `<GTCheckbox type="secondary" text="Text" subtext="This is subtext"  />`,
+    },
+  },
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  type: "primary",
+  text: "Text",
+  subtext: "This is subtext",
+  isDisabled: true,
+};
+Disabled.parameters = {
+  docs: {
+    source: {
+      code: `<GTCheckbox isDisabled text="Text" subtext="This is subtext"  />`,
+    },
+  },
+};
+
+export const WithoutText = Template.bind({});
+WithoutText.parameters = {
+  docs: {
+    source: { code: `<GTCheckbox />` },
+  },
+};
+
+export const WithoutSubtext = Template.bind({});
+WithoutSubtext.args = {
+  text: "Text",
+};
+WithoutSubtext.parameters = {
+  docs: {
+    source: { code: `<GTCheckbox text="Text" />` },
+  },
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  text: "Text",
+  subtext: "This is subtext",
+  size: "sm",
+};
+Small.parameters = {
+  docs: {
+    source: {
+      code: `<GTCheckbox size="sm" text="Text" subtext="This is subtext"  />`,
+    },
+  },
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
   text: "Text",
   subtext: "This is subtext",
   size: "md",
-  isDisabled: true,
+};
+Medium.parameters = {
+  docs: {
+    source: {
+      code: `<GTCheckbox size="md" text="Text" subtext="This is subtext"  />`,
+    },
+  },
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  text: "Text",
+  subtext: "This is subtext",
+  size: "lg",
+};
+Large.parameters = {
+  docs: {
+    source: {
+      code: `<GTCheckbox size="lg" text="Text" subtext="This is subtext"  />`,
+    },
+  },
 };

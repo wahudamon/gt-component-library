@@ -36,6 +36,13 @@ Primary.args = {
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
 };
+Primary.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." />`,
+    },
+  },
+};
 
 export const TypeInfo = Template.bind({});
 TypeInfo.args = {
@@ -43,6 +50,13 @@ TypeInfo.args = {
   type: "info",
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
+};
+TypeInfo.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show type="info" alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." />`,
+    },
+  },
 };
 
 export const TypeSuccess = Template.bind({});
@@ -52,6 +66,13 @@ TypeSuccess.args = {
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
 };
+TypeSuccess.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show type="success" alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." />`,
+    },
+  },
+};
 
 export const TypeWarning = Template.bind({});
 TypeWarning.args = {
@@ -60,6 +81,13 @@ TypeWarning.args = {
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
 };
+TypeWarning.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show type="warning" alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." />`,
+    },
+  },
+};
 
 export const TypeError = Template.bind({});
 TypeError.args = {
@@ -67,6 +95,13 @@ TypeError.args = {
   type: "error",
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
+};
+TypeError.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show type="error" alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." />`,
+    },
+  },
 };
 
 export const TypeInfoSuppressed = Template.bind({});
@@ -77,6 +112,13 @@ TypeInfoSuppressed.args = {
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
 };
+TypeInfoSuppressed.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show suppressed type="info" alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." />`,
+    },
+  },
+};
 
 export const TypeSuccessSuppressed = Template.bind({});
 TypeSuccessSuppressed.args = {
@@ -85,6 +127,13 @@ TypeSuccessSuppressed.args = {
   type: "success",
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
+};
+TypeSuccessSuppressed.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show suppressed type="success" alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." />`,
+    },
+  },
 };
 
 export const TypeWarningSuppressed = Template.bind({});
@@ -95,6 +144,13 @@ TypeWarningSuppressed.args = {
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
 };
+TypeWarningSuppressed.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show suppressed type="warning" alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." />`,
+    },
+  },
+};
 
 export const TypeErrorSuppressed = Template.bind({});
 TypeErrorSuppressed.args = {
@@ -104,6 +160,13 @@ TypeErrorSuppressed.args = {
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
 };
+TypeErrorSuppressed.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show suppressed type="error" alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." />`,
+    },
+  },
+};
 
 export const WithCloseButton = Template.bind({});
 WithCloseButton.args = {
@@ -111,6 +174,13 @@ WithCloseButton.args = {
   closeIcon: true,
   alertTitle: "Lorem Ipsum",
   alertContent: "Lorem ipsum dolor sir amet.",
+};
+WithCloseButton.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show closeIcon alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." />`,
+    },
+  },
 };
 
 export const WithActionButton = Template.bind({});
@@ -121,6 +191,13 @@ WithActionButton.args = {
   alertContent: "Lorem ipsum dolor sir amet.",
   leftButtonText: "Yes",
   rightButtonText: "No",
+};
+WithActionButton.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show actionButton alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." leftButtonText="Yes" rightButtonText="No" :leftButtonFunction="functionName" :rightButtonFunction="functionName" />`,
+    },
+  },
 };
 
 export const WithCenterActionButton = Template.bind({});
@@ -133,6 +210,13 @@ WithCenterActionButton.args = {
   leftButtonText: "Yes",
   rightButtonText: "No",
 };
+WithCenterActionButton.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show actionButton actionAlign="center" alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." leftButtonText="Yes" rightButtonText="No" :leftButtonFunction="functionName" :rightButtonFunction="functionName" />`,
+    },
+  },
+};
 
 export const WithRightActionButton = Template.bind({});
 WithRightActionButton.args = {
@@ -143,4 +227,11 @@ WithRightActionButton.args = {
   alertContent: "Lorem ipsum dolor sir amet.",
   leftButtonText: "Yes",
   rightButtonText: "No",
+};
+WithRightActionButton.parameters = {
+  docs: {
+    source: {
+      code: `<GTAlert show actionButton actionAlign="right" alertTitle="Lorem Ipsum" alertContent="Lorem ipsum dolor sir amet." leftButtonText="Yes" rightButtonText="No" :leftButtonFunction="functionName" :rightButtonFunction="functionName" />`,
+    },
+  },
 };

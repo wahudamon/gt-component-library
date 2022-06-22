@@ -4,7 +4,7 @@ import storybookTheme from "./storybookTheme";
 import "../css/components/style.css";
 import "../css/foundations/style.css";
 
-var beautify_html = require("js-beautify").html;
+// var beautify_html = require("js-beautify").html;
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -16,10 +16,10 @@ export const parameters = {
   },
   docs: {
     theme: storybookTheme,
-    transformSource: (src) => {
-      const string1 = src.substr(0, src.length - 12).substr(10);
-      return beautify_html(string1);
-    },
+    // transformSource: (src) => {
+    //   const string1 = src.substr(0, src.length - 12).substr(10);
+    //   return beautify_html(string1);
+    // },
   },
   options: {
     storySort: {
