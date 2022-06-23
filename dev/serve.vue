@@ -114,16 +114,17 @@ export default Vue.extend({
           handle: "@twitter",
         },
       ],
-      sliderVal: "0",
       cbxSelectedItem: "",
+      rbSelectedItem: "",
+      sliderValue: "0",
       inputTextValue: "",
       inputAreaValue: "",
     };
   },
   watch: {
-    // inputAreaValue(val) {
-    //   console.log(val);
-    // },
+    rbSelectedItem(val) {
+      console.log(val);
+    },
   },
 });
 </script>
@@ -132,8 +133,8 @@ export default Vue.extend({
   <div id="app">
     <div class="mt--15 ml--15">
       <GTRadioButton type="secondary" size="md">
-        <GTRadioButtonItem text="Text" />
-        <GTRadioButtonItem text="Text" />
+        <GTRadioButtonItem text="Spaghetti" value="Spaghetti" />
+        <GTRadioButtonItem text="Pizza" value="Pizza" />
       </GTRadioButton>
     </div>
   </div>

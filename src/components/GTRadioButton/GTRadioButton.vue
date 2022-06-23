@@ -26,10 +26,15 @@ export default {
         return ["sm", "md", "lg"].indexOf(value) !== -1;
       },
     },
-    value: {
+    selectedItem: {
       type: String,
       default: "",
     },
+  },
+  data() {
+    return {
+      selectedItemValue: this.value,
+    };
   },
   computed: {
     classes() {
@@ -39,6 +44,16 @@ export default {
         [`gt-radio--${this.type}`]: !this.isDisabled,
         [`gt-radio--${this.size}`]: true,
       };
+    },
+  },
+  watch: {
+    selectedItemValue(val) {
+      this.sendValueToParent(val);
+    },
+  },
+  methods: {
+    sendValueToParent(value) {
+      this.$emit("update:selectedItem", value);
     },
   },
 };
