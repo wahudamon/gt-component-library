@@ -66,6 +66,7 @@ export default Vue.extend({
   data() {
     return {
       sliderVal: "0",
+      cbxSelectedItem: "",
       showAlert: true,
       crumbs: [
         { name: "Breadcrumb", path: "#" },
@@ -77,7 +78,7 @@ export default Vue.extend({
       ],
       comboboxOptions: [
         "Lamborghini",
-        "Ferarri",
+        "Ferrari",
         "Mitsubishi",
         "Toyota",
         "Suzuki",
@@ -85,6 +86,7 @@ export default Vue.extend({
         "Chevrolet",
         "Pulsar",
       ],
+      comboboxEmptyOption: [],
       miniCbxOptions: ["Lamborghini", "Ferarri"],
       tabItems: [
         { tabId: "home", title: "Home", isActive: true },
@@ -126,11 +128,11 @@ export default Vue.extend({
       ],
     };
   },
-  // watch: {
-  //   sliderVal(val) {
-  //     console.log(val);
-  //   },
-  // },
+  watch: {
+    // cbxSelectedItem(val) {
+    //   console.log(val);
+    // },
+  },
   methods: {
     clickAlertButton() {
       console.log("this button are clicked!");
@@ -141,48 +143,11 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTSlider
-      rightLabel
-      class="mt--15 ml--15"
-      min="100"
-      :value.sync="sliderVal"
-      max="1000"
+    <GTCombobox
+      class="ml--15 mt--15"
+      :items="comboboxOptions"
+      :selectedItem.sync="cbxSelectedItem"
     />
-    <!-- <GTBreadcrumb
-      class="mt--15 ml--15"
-      :crumbs="crumbs"
-      separatorSign="/"
-      homeIcon
-    /> -->
-    <!-- <GTInputArea
-      class="mt--15 ml--15"
-      variant="outline"
-      size="sm"
-      length="sm"
-      label="Username"
-      helperText="Helper Text"
-    /> -->
-    <!-- <GTInputText
-      disabled
-      class="mt--15 ml--15"
-      variant="outline"
-      size="sm"
-      length="sm"
-      label="Username"
-      placeholder="Placeholder"
-      helperText="Helper Text"
-      trailingIcon="gt-paper-plane-s"
-    /> -->
-    <!-- <input-text-example /> -->
-    <!-- <buttons-list /> -->
-    <!-- <checkbox-example class="mt--10" /> -->
-    <!-- <radio-button-example class="mt--10" /> -->
-    <!-- <button class="ml--20">
-      <GTIcon name="gt-address-book-r" size="md" />
-    </button> -->
-    <!-- <typography />
-    <grid-system />
-    <corner-radius /> -->
   </div>
 </template>
 
