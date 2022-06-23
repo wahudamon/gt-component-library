@@ -45,7 +45,7 @@ Primary.args = {
 Primary.parameters = {
   docs: {
     source: {
-      code: `<GTCombobox :items="comboboxOptions" placeholder="Select a car..." />`,
+      code: `<GTCombobox :items="comboboxOptions" :selectedItem.sync="cbxSelectedItem" placeholder="Select a car..." />`,
     },
   },
 };
