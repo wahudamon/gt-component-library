@@ -65,6 +65,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      sliderVal: "0",
       showAlert: true,
       crumbs: [
         { name: "Breadcrumb", path: "#" },
@@ -125,6 +126,11 @@ export default Vue.extend({
       ],
     };
   },
+  watch: {
+    sliderVal(val) {
+      console.log(val);
+    },
+  },
   methods: {
     clickAlertButton() {
       console.log("this button are clicked!");
@@ -140,6 +146,7 @@ export default Vue.extend({
       appendIcon="gt-plus-s"
       class="mt--15 ml--15"
       min="1"
+      :value.sync="sliderVal"
       max="100"
     />
     <!-- <GTBreadcrumb

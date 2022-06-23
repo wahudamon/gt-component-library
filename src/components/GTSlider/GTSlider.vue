@@ -89,6 +89,9 @@ export default {
   },
 
   watch: {
+    sliderVal(val) {
+      this.sendValueToParent(val);
+    },
     valueLabel: {
       handler() {
         setTimeout(() => {
@@ -148,6 +151,9 @@ export default {
   },
 
   methods: {
+    sendValueToParent(value) {
+      this.$emit("update:value", value);
+    },
     initialTrackFill(element) {
       if (element) {
         const min = element.min;
