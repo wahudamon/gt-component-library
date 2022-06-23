@@ -7,6 +7,7 @@
       type="radio"
       name="radio"
       :disabled="isDisabled"
+      :value="text"
     />
     <span class="checkmark"></span>
   </label>

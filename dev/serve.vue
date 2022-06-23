@@ -2,6 +2,8 @@
 import Vue from "vue";
 import {
   GTIcon,
+  GTCheckbox,
+  GTCheckboxItem,
   GTRadioButton,
   GTRadioButtonItem,
   GTInputText,
@@ -30,6 +32,8 @@ export default Vue.extend({
   name: "ServeDev",
   components: {
     GTIcon,
+    GTCheckbox,
+    GTCheckboxItem,
     GTRadioButton,
     GTRadioButtonItem,
     GTInputText,
@@ -116,6 +120,7 @@ export default Vue.extend({
       ],
       cbxSelectedItem: "",
       rbSelectedItem: "",
+      checkboxItems: "",
       sliderValue: "0",
       inputTextValue: "",
       inputAreaValue: "",
@@ -132,11 +137,17 @@ export default Vue.extend({
 <template>
   <div id="app">
     <div class="mt--15 ml--15">
+      <GTCheckbox size="md" type="secondary">
+        <GTCheckboxItem text="Spaghetti" />
+        <GTCheckboxItem text="Pizza" />
+      </GTCheckbox>
+    </div>
+    <!-- <div class="mt--15 ml--15">
       <GTRadioButton type="secondary" size="md">
         <GTRadioButtonItem text="Spaghetti" value="Spaghetti" />
         <GTRadioButtonItem text="Pizza" value="Pizza" />
       </GTRadioButton>
-    </div>
+    </div> -->
   </div>
 </template>
 

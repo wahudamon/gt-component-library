@@ -1,12 +1,20 @@
 <template>
-  <div :class="classes">
-    <slot :isDisabled="isDisabled"></slot>
-  </div>
+  <label :class="classes">
+    <p class="label--title">{{ text }}</p>
+    <p class="label--subtitle">{{ subtext }}</p>
+    <input
+      id="gt-checkbox"
+      type="checkbox"
+      :disabled="isDisabled"
+      :value="text"
+    />
+    <span class="checkmark"></span>
+  </label>
 </template>
 
 <script>
 export default {
-  name: "GTCheckbox",
+  name: "GTCheckboxItem",
 
   props: {
     isDisabled: {
@@ -40,11 +48,12 @@ export default {
   computed: {
     classes() {
       return {
-        "gt-checkbox": true,
-        "gt-checkbox--disabled": this.isDisabled,
-        [`gt-checkbox--${this.type}`]: !this.isDisabled,
-        [`gt-checkbox--${this.size}`]: true,
-        [`gt-checkbox--${this.size}-indeterminate`]: this.checkIndeterminate(),
+        "gt-checkbox__item": true,
+        "gt-checkbox__item--disabled": this.isDisabled,
+        [`gt-checkbox__item--${this.type}`]: !this.isDisabled,
+        [`gt-checkbox__item--${this.size}`]: true,
+        [`gt-checkbox__item--${this.size}-indeterminate`]:
+          this.checkIndeterminate(),
       };
     },
   },

@@ -2,6 +2,7 @@
 export { default as GTButton } from "./GTButton/GTButton.vue";
 export { default as GTIcon } from "./GTIcon/GTIcon.vue";
 export { default as GTCheckbox } from "./GTCheckbox/GTCheckbox.vue";
+export { default as GTCheckboxItem } from "./GTCheckbox/GTCheckboxItem.vue";
 export { default as GTRadioButton } from "./GTRadioButton/GTRadioButton.vue";
 export { default as GTRadioButtonItem } from "./GTRadioButton/GTRadioButtonItem.vue";
 export { default as GTInputText } from "./GTInputText/GTInputText.vue";
