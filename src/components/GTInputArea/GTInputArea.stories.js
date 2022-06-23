@@ -40,7 +40,7 @@ Primary.args = {
 Primary.parameters = {
   docs: {
     source: {
-      code: `<GTInputArea label="Label" />`,
+      code: `<GTInputArea :value.sync="inputAreaValue" label="Label" />`,
     },
   },
 };
@@ -50,11 +50,10 @@ MediumSize.args = {
   size: "md",
   label: "Label",
 };
-
 MediumSize.parameters = {
   docs: {
     source: {
-      code: `<GTInputArea size="md" label="Label" />`,
+      code: `<GTInputArea :value.sync="inputAreaValue" size="md" label="Label" />`,
     },
   },
 };
@@ -67,7 +66,7 @@ MediumLength.args = {
 MediumLength.parameters = {
   docs: {
     source: {
-      code: `<GTInputArea length="md" label="Label" />`,
+      code: `<GTInputArea :value.sync="inputAreaValue" length="md" label="Label" />`,
     },
   },
 };
@@ -82,7 +81,7 @@ LargeLength.args = {
 LargeLength.parameters = {
   docs: {
     source: {
-      code: `<GTInputArea length="lg" label="Label" />`,
+      code: `<GTInputArea :value.sync="inputAreaValue" length="lg" label="Label" />`,
     },
   },
 };
@@ -96,7 +95,7 @@ HorizontalLabel.args = {
 HorizontalLabel.parameters = {
   docs: {
     source: {
-      code: `<GTInputArea variant="horizontal" label="Label" placeholder="placeholder" />`,
+      code: `<GTInputArea :value.sync="inputAreaValue" variant="horizontal" label="Label" placeholder="placeholder" />`,
     },
   },
 };
@@ -110,7 +109,7 @@ VerticalLabel.args = {
 VerticalLabel.parameters = {
   docs: {
     source: {
-      code: `<GTInputArea variant="vertical" label="Label" placeholder="placeholder" />`,
+      code: `<GTInputArea :value.sync="inputAreaValue" variant="vertical" label="Label" placeholder="placeholder" />`,
     },
   },
 };
@@ -123,7 +122,7 @@ HelperText.args = {
 HelperText.parameters = {
   docs: {
     source: {
-      code: `<GTInputArea label="Label" placeholder="placeholder" helperText="Helper Text" />`,
+      code: `<GTInputArea :value.sync="inputAreaValue" label="Label" placeholder="placeholder" helperText="Helper Text" />`,
     },
   },
 };
@@ -136,7 +135,7 @@ LeadingIcon.args = {
 LeadingIcon.parameters = {
   docs: {
     source: {
-      code: `<GTInputArea label="Label" leadingIcon="gt-paper-plane-s" />`,
+      code: `<GTInputArea :value.sync="inputAreaValue" label="Label" leadingIcon="gt-paper-plane-s" />`,
     },
   },
 };
@@ -149,7 +148,7 @@ TrailingIcon.args = {
 TrailingIcon.parameters = {
   docs: {
     source: {
-      code: `<GTInputArea label="Label" trailingIcon="gt-paper-plane-s" />`,
+      code: `<GTInputArea :value.sync="inputAreaValue" label="Label" trailingIcon="gt-paper-plane-s" />`,
     },
   },
 };
@@ -163,7 +162,7 @@ LeadingAndTrailingIcon.args = {
 LeadingAndTrailingIcon.parameters = {
   docs: {
     source: {
-      code: `<GTInputArea label="Label" leadingIcon="gt-paper-plane-s" trailingIcon="gt-paper-plane-s" />`,
+      code: `<GTInputArea :value.sync="inputAreaValue" label="Label" leadingIcon="gt-paper-plane-s" trailingIcon="gt-paper-plane-s" />`,
     },
   },
 };
