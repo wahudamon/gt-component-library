@@ -1,10 +1,7 @@
 <template>
-  <label :class="classes">
-    <p class="label--title">{{ text }}</p>
-    <p class="label--subtitle">{{ subtext }}</p>
-    <input type="radio" name="radio" :disabled="isDisabled" :value="text" />
-    <span class="checkmark"></span>
-  </label>
+  <div :class="classes">
+    <slot :isDisabled="isDisabled"></slot>
+  </div>
 </template>
 
 <script>
@@ -29,11 +26,7 @@ export default {
         return ["sm", "md", "lg"].indexOf(value) !== -1;
       },
     },
-    text: {
-      type: String,
-      default: "",
-    },
-    subtext: {
+    value: {
       type: String,
       default: "",
     },

@@ -2,6 +2,8 @@
 import Vue from "vue";
 import {
   GTIcon,
+  GTRadioButton,
+  GTRadioButtonItem,
   GTInputText,
   GTInputArea,
   GTBreadcrumb,
@@ -23,21 +25,13 @@ import {
   GTTimelineItem,
   GTTimelineCard,
 } from "@/entry.esm";
-import GridSystem from "./examples/GridSystem.vue";
-import Typography from "./examples/Typography.vue";
-import ButtonsList from "./examples/ButtonsList.vue";
-import CornerRadius from "./examples/CornerRadius.vue";
-import CheckboxExample from "./examples/CheckboxExample.vue";
-import RadioButtonExample from "./examples/RadioButtonExample.vue";
-import InputTextExample from "./examples/InputTextExample.vue";
 
 export default Vue.extend({
   name: "ServeDev",
   components: {
-    CheckboxExample,
-    RadioButtonExample,
-    InputTextExample,
     GTIcon,
+    GTRadioButton,
+    GTRadioButtonItem,
     GTInputText,
     GTInputArea,
     GTBreadcrumb,
@@ -58,10 +52,6 @@ export default Vue.extend({
     GTTimeline,
     GTTimelineItem,
     GTTimelineCard,
-    GridSystem,
-    Typography,
-    ButtonsList,
-    CornerRadius,
   },
   data() {
     return {
@@ -140,11 +130,12 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTInputArea
-      class="mt--15 ml--15"
-      :value.sync="inputAreaValue"
-      label="Label"
-    />
+    <div class="mt--15 ml--15">
+      <GTRadioButton type="secondary" size="md">
+        <GTRadioButtonItem text="Text" />
+        <GTRadioButtonItem text="Text" />
+      </GTRadioButton>
+    </div>
   </div>
 </template>
 
