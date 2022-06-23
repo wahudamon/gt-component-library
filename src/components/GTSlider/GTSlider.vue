@@ -1,13 +1,13 @@
 <template>
   <div :class="sliderContainerClasses">
     <div>
-      <span
-        v-if="valueLabel"
+      <!-- <span
+        v-if="upperLabel"
         id="gt-slider__value-label"
         :class="valueLabelClasses"
       >
         {{ sliderVal }}
-      </span>
+      </span> -->
       <input
         v-model="sliderVal"
         class="gt-slider__field"
@@ -18,15 +18,15 @@
         :disabled="disabled"
       />
     </div>
-    <div v-if="rightValue || showAppendIcon" class="ml--4">
+    <div v-if="rightLabel || showAppendIcon" class="ml--4">
       <GTIcon
-        v-if="showAppendIcon && !rightValue"
+        v-if="showAppendIcon && !rightLabel"
         :class="sliderIconsClasses"
         :name="appendIcon"
         size="sm"
       />
       <span
-        v-if="rightValue && !showAppendIcon && !valueLabel"
+        v-if="rightLabel && !showAppendIcon && !upperLabel"
         :class="valueLabelClasses"
       >
         {{ sliderVal }}
@@ -48,11 +48,11 @@ export default {
       type: Boolean,
       default: false,
     },
-    valueLabel: {
+    upperLabel: {
       type: Boolean,
       default: false,
     },
-    rightValue: {
+    rightLabel: {
       type: Boolean,
       default: false,
     },
@@ -69,6 +69,7 @@ export default {
     value: {
       type: String,
       default: "0",
+      required: true,
     },
     showAppendIcon: {
       type: Boolean,
@@ -92,10 +93,10 @@ export default {
     sliderVal(val) {
       this.sendValueToParent(val);
     },
-    valueLabel: {
+    upperLabel: {
       handler() {
         setTimeout(() => {
-          if (this.valueLabel) {
+          if (this.upperLabel) {
             this.sliderElement = document.getElementById("gt-slider__field");
 
             this.valueLabelElement = document.getElementById(
@@ -117,13 +118,14 @@ export default {
     sliderContainerClasses() {
       return {
         "gt-slider__container": true,
-        "align-items-center": !this.valueLabel,
-        "align-items-end": this.valueLabel,
+        "align-items-center": !this.upperLabel,
+        "align-items-end": this.upperLabel,
       };
     },
     valueLabelClasses() {
       return {
-        "gt-slider__value-label": true,
+        "gt-slider__value-label": this.upperLabel,
+        "gt-slider__value-label-right": this.rightLabel,
         "gt-slider__value-label--disabled": this.disabled,
       };
     },
@@ -136,13 +138,15 @@ export default {
   },
 
   mounted() {
+    if (this.sliderVal < this.min) this.sliderVal = this.min;
+
     this.sliderElement = document.getElementById("gt-slider__field");
 
     this.sliderElement.addEventListener("input", this.handleInputChange);
 
     this.initialTrackFill(this.sliderElement);
 
-    if (this.valueLabel) {
+    if (this.upperLabel) {
       this.valueLabelElement = document.getElementById(
         "gt-slider__value-label"
       );
@@ -194,7 +198,7 @@ export default {
         target.style.backgroundSize =
           ((value - min) * 100) / (max - min) + "% 100%";
 
-        if (this.valueLabel) {
+        if (this.upperLabel) {
           this.valueLabelElement.innerHTML = value;
 
           let valueLabelPosition = value / max;

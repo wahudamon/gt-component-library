@@ -126,11 +126,11 @@ export default Vue.extend({
       ],
     };
   },
-  watch: {
-    sliderVal(val) {
-      console.log(val);
-    },
-  },
+  // watch: {
+  //   sliderVal(val) {
+  //     console.log(val);
+  //   },
+  // },
   methods: {
     clickAlertButton() {
       console.log("this button are clicked!");
@@ -142,12 +142,11 @@ export default Vue.extend({
 <template>
   <div id="app">
     <GTSlider
-      showAppendIcon
-      appendIcon="gt-plus-s"
+      rightLabel
       class="mt--15 ml--15"
-      min="1"
+      min="100"
       :value.sync="sliderVal"
-      max="100"
+      max="1000"
     />
     <!-- <GTBreadcrumb
       class="mt--15 ml--15"
