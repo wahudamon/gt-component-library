@@ -127,26 +127,22 @@ export default Vue.extend({
       sliderVal: "0",
       cbxSelectedItem: "",
       inputTextValue: "",
+      inputAreaValue: "",
     };
   },
   watch: {
-    // inputTextValue(val) {
+    // inputAreaValue(val) {
     //   console.log(val);
     // },
-  },
-  methods: {
-    clickAlertButton() {
-      console.log("this button are clicked!");
-    },
   },
 });
 </script>
 
 <template>
   <div id="app">
-    <GTInputText
+    <GTInputArea
       class="mt--15 ml--15"
-      :value.sync="inputTextValue"
+      :value.sync="inputAreaValue"
       label="Label"
     />
   </div>
