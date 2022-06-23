@@ -65,8 +65,6 @@ export default Vue.extend({
   },
   data() {
     return {
-      sliderVal: "0",
-      cbxSelectedItem: "",
       showAlert: true,
       crumbs: [
         { name: "Breadcrumb", path: "#" },
@@ -126,10 +124,13 @@ export default Vue.extend({
           handle: "@twitter",
         },
       ],
+      sliderVal: "0",
+      cbxSelectedItem: "",
+      inputTextValue: "",
     };
   },
   watch: {
-    // cbxSelectedItem(val) {
+    // inputTextValue(val) {
     //   console.log(val);
     // },
   },
@@ -143,10 +144,10 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <GTCombobox
-      class="ml--15 mt--15"
-      :items="comboboxOptions"
-      :selectedItem.sync="cbxSelectedItem"
+    <GTInputText
+      class="mt--15 ml--15"
+      :value.sync="inputTextValue"
+      label="Label"
     />
   </div>
 </template>
