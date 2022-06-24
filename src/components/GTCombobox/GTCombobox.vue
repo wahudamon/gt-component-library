@@ -11,6 +11,7 @@
       :size="size"
       :placeholder="placeholder"
       :items="items"
+      :selectedItem.sync="cbxSelectedItem"
     />
   </div>
 </template>
@@ -38,15 +39,19 @@ export default {
         return [];
       },
     },
-    placeholder: {
+    selectedItem: {
       type: String,
       default: "",
+    },
+    placeholder: {
+      type: String,
+      default: "Select an item...",
     },
   },
 
   data() {
     return {
-      selectedItem: "",
+      cbxSelectedItem: this.selectedItem,
     };
   },
 
@@ -60,6 +65,16 @@ export default {
     },
   },
 
-  methods: {},
+  watch: {
+    cbxSelectedItem(val) {
+      this.sendValueToParent(val);
+    },
+  },
+
+  methods: {
+    sendValueToParent(value) {
+      this.$emit("update:selectedItem", value);
+    },
+  },
 };
 </script>

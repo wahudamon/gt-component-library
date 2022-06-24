@@ -1,7 +1,7 @@
 <template>
   <div :class="classes">
     <select id="emptyCombobox">
-      <option>{{ placeholder }}</option>
+      <option v-if="placeholder">{{ placeholder }}</option>
     </select>
   </div>
 </template>

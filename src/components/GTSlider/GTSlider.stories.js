@@ -28,7 +28,7 @@ Primary.args = {
 Primary.parameters = {
   docs: {
     source: {
-      code: `<GTSlider min="1" max="100" />`,
+      code: `<GTSlider min="1" max="100" :value.sync="value" />`,
     },
   },
 };

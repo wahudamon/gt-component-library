@@ -16,6 +16,7 @@
           <GTIcon :name="leadingIcon" size="sm" />
         </div>
         <textarea
+          v-model="inputAreaModel"
           type="text"
           :class="inputFieldClasses"
           :placeholder="placeholder"
@@ -76,6 +77,10 @@ export default {
         return ["outline", "horizontal", "vertical"].indexOf(value) !== -1;
       },
     },
+    value: {
+      type: String,
+      default: "",
+    },
     label: {
       type: String,
       default: "",
@@ -96,6 +101,12 @@ export default {
       type: String,
       default: "",
     },
+  },
+
+  data() {
+    return {
+      inputAreaModel: this.value,
+    };
   },
 
   computed: {
@@ -127,6 +138,18 @@ export default {
         "gt-inputarea__helper--error": this.error,
         "ml--4": true,
       };
+    },
+  },
+
+  watch: {
+    inputAreaModel(val) {
+      this.sendValueToParent(val);
+    },
+  },
+
+  methods: {
+    sendValueToParent(value) {
+      this.$emit("update:value", value);
     },
   },
 };

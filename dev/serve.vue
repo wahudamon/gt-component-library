@@ -2,6 +2,10 @@
 import Vue from "vue";
 import {
   GTIcon,
+  GTCheckbox,
+  GTCheckboxItem,
+  GTRadioButton,
+  GTRadioButtonItem,
   GTInputText,
   GTInputArea,
   GTBreadcrumb,
@@ -23,21 +27,15 @@ import {
   GTTimelineItem,
   GTTimelineCard,
 } from "@/entry.esm";
-import GridSystem from "./examples/GridSystem.vue";
-import Typography from "./examples/Typography.vue";
-import ButtonsList from "./examples/ButtonsList.vue";
-import CornerRadius from "./examples/CornerRadius.vue";
-import CheckboxExample from "./examples/CheckboxExample.vue";
-import RadioButtonExample from "./examples/RadioButtonExample.vue";
-import InputTextExample from "./examples/InputTextExample.vue";
 
 export default Vue.extend({
   name: "ServeDev",
   components: {
-    CheckboxExample,
-    RadioButtonExample,
-    InputTextExample,
     GTIcon,
+    GTCheckbox,
+    GTCheckboxItem,
+    GTRadioButton,
+    GTRadioButtonItem,
     GTInputText,
     GTInputArea,
     GTBreadcrumb,
@@ -58,10 +56,6 @@ export default Vue.extend({
     GTTimeline,
     GTTimelineItem,
     GTTimelineCard,
-    GridSystem,
-    Typography,
-    ButtonsList,
-    CornerRadius,
   },
   data() {
     return {
@@ -76,7 +70,7 @@ export default Vue.extend({
       ],
       comboboxOptions: [
         "Lamborghini",
-        "Ferarri",
+        "Ferrari",
         "Mitsubishi",
         "Toyota",
         "Suzuki",
@@ -84,6 +78,7 @@ export default Vue.extend({
         "Chevrolet",
         "Pulsar",
       ],
+      comboboxEmptyOption: [],
       miniCbxOptions: ["Lamborghini", "Ferarri"],
       tabItems: [
         { tabId: "home", title: "Home", isActive: true },
@@ -123,60 +118,33 @@ export default Vue.extend({
           handle: "@twitter",
         },
       ],
+      cbxSelectedItem: "",
+      rbSelectedItem: "",
+      checkboxItems: [],
+      sliderValue: "0",
+      inputTextValue: "",
+      inputAreaValue: "",
     };
-  },
-  methods: {
-    clickAlertButton() {
-      console.log("this button are clicked!");
-    },
   },
 });
 </script>
 
 <template>
   <div id="app">
-    <GTSlider
-      showAppendIcon
-      appendIcon="gt-plus-s"
-      class="mt--15 ml--15"
-      min="1"
-      max="100"
-    />
-    <!-- <GTBreadcrumb
-      class="mt--15 ml--15"
-      :crumbs="crumbs"
-      separatorSign="/"
-      homeIcon
-    /> -->
-    <!-- <GTInputArea
-      class="mt--15 ml--15"
-      variant="outline"
-      size="sm"
-      length="sm"
-      label="Username"
-      helperText="Helper Text"
-    /> -->
-    <!-- <GTInputText
-      disabled
-      class="mt--15 ml--15"
-      variant="outline"
-      size="sm"
-      length="sm"
-      label="Username"
-      placeholder="Placeholder"
-      helperText="Helper Text"
-      trailingIcon="gt-paper-plane-s"
-    /> -->
-    <!-- <input-text-example /> -->
-    <!-- <buttons-list /> -->
-    <!-- <checkbox-example class="mt--10" /> -->
-    <!-- <radio-button-example class="mt--10" /> -->
-    <!-- <button class="ml--20">
-      <GTIcon name="gt-address-book-r" size="md" />
-    </button> -->
-    <!-- <typography />
-    <grid-system />
-    <corner-radius /> -->
+    <div class="mt--15 ml--15">
+      <GTRadioButton>
+        <GTRadioButtonItem
+          :model.sync="rbSelectedItem"
+          text="Spaghetti"
+          value="spaghetti"
+        />
+        <GTRadioButtonItem
+          :model.sync="rbSelectedItem"
+          text="Pizza"
+          value="pizza"
+        />
+      </GTRadioButton>
+    </div>
   </div>
 </template>
 
