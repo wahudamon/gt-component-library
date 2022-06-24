@@ -1,10 +1,11 @@
 import GTCheckbox from "./GTCheckbox.vue";
+import GTCheckboxItem from "./GTCheckboxItem.vue";
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
   title: "Components/GTCheckbox",
   component: GTCheckbox,
-  // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
+  subcomponents: { GTCheckboxItem },
   argTypes: {
     size: {
       control: { type: "select" },
@@ -22,108 +23,282 @@ export default {
   },
 };
 
-// More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { GTCheckbox },
-  template: '<GTCheckbox v-bind="$props" />',
+  components: { GTCheckbox, GTCheckboxItem },
+  template: `
+<GTCheckbox>
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>
+  `,
 });
 
 export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/vue/writing-stories/args
-Primary.args = {
-  text: "Text",
-  subtext: "This is subtext",
-};
 Primary.parameters = {
   docs: {
-    source: { code: `<GTCheckbox text="Text" subtext="This is subtext"  />` },
+    source: {
+      code: `
+<GTCheckbox>
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>`,
+    },
   },
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  type: "secondary",
-  text: "Text",
-  subtext: "This is subtext",
-};
+export const Secondary = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTCheckbox, GTCheckboxItem },
+  template: `
+<GTCheckbox>
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    type="secondary"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    type="secondary"
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>
+  `,
+});
 Secondary.parameters = {
   docs: {
     source: {
-      code: `<GTCheckbox type="secondary" text="Text" subtext="This is subtext"  />`,
+      code: `
+<GTCheckbox>
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    type="secondary"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    type="secondary"
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>`,
     },
   },
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  text: "Text",
-  subtext: "This is subtext",
-  isDisabled: true,
-};
+export const Disabled = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTCheckbox, GTCheckboxItem },
+  template: `
+<GTCheckbox>
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    isDisabled
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    isDisabled
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>
+  `,
+});
 Disabled.parameters = {
   docs: {
     source: {
-      code: `<GTCheckbox isDisabled text="Text" subtext="This is subtext"  />`,
+      code: `
+<GTCheckbox>
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    isDisabled
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    isDisabled
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>`,
     },
   },
 };
 
-export const WithoutText = Template.bind({});
-WithoutText.parameters = {
+export const WithSubtext = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTCheckbox, GTCheckboxItem },
+  template: `
+<GTCheckbox>
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Spaghetti"
+    subtext="an Italian noodles with sauce"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Pizza"
+    subtext="an Italian roasted food with toppings"
+    value="pizza"
+  />
+</GTCheckbox>
+  `,
+});
+WithSubtext.parameters = {
   docs: {
-    source: { code: `<GTCheckbox />` },
+    source: {
+      code: `
+<GTCheckbox>
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Spaghetti"
+    subtext="an Italian noodles with sauce"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Pizza"
+    subtext="an Italian roasted food with toppings"
+    value="pizza"
+  />
+</GTCheckbox>`,
+    },
   },
 };
 
-export const WithoutSubtext = Template.bind({});
-WithoutSubtext.args = {
-  text: "Text",
-};
-WithoutSubtext.parameters = {
-  docs: {
-    source: { code: `<GTCheckbox text="Text" />` },
-  },
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  text: "Text",
-  subtext: "This is subtext",
-  size: "sm",
-};
+export const Small = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTCheckbox, GTCheckboxItem },
+  template: `
+<GTCheckbox size="sm">
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>
+  `,
+});
 Small.parameters = {
   docs: {
     source: {
-      code: `<GTCheckbox size="sm" text="Text" subtext="This is subtext"  />`,
+      code: `
+<GTCheckbox size="sm">
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>`,
     },
   },
 };
 
-export const Medium = Template.bind({});
-Medium.args = {
-  text: "Text",
-  subtext: "This is subtext",
-  size: "md",
-};
+export const Medium = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTCheckbox, GTCheckboxItem },
+  template: `
+<GTCheckbox size="md">
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>
+  `,
+});
 Medium.parameters = {
   docs: {
     source: {
-      code: `<GTCheckbox size="md" text="Text" subtext="This is subtext"  />`,
+      code: `
+<GTCheckbox size="md">
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>`,
     },
   },
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  text: "Text",
-  subtext: "This is subtext",
-  size: "lg",
-};
+export const Large = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTCheckbox, GTCheckboxItem },
+  template: `
+<GTCheckbox size="lg">
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>
+  `,
+});
 Large.parameters = {
   docs: {
     source: {
-      code: `<GTCheckbox size="lg" text="Text" subtext="This is subtext"  />`,
+      code: `
+<GTCheckbox size="lg">
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTCheckboxItem
+    :model.sync="checkboxItems"
+    text="Pizza"
+    value="pizza"
+  />
+</GTCheckbox>`,
     },
   },
 };
