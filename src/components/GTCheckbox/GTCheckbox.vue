@@ -1,6 +1,6 @@
 <template>
   <div :class="classes">
-    <slot :isDisabled="isDisabled"></slot>
+    <slot></slot>
   </div>
 </template>
 
@@ -9,17 +9,6 @@ export default {
   name: "GTCheckbox",
 
   props: {
-    isDisabled: {
-      type: Boolean,
-      default: false,
-    },
-    type: {
-      type: String,
-      default: "primary",
-      validator: function (value) {
-        return ["primary", "secondary"].indexOf(value) !== -1;
-      },
-    },
     size: {
       type: String,
       default: "md",
@@ -42,7 +31,6 @@ export default {
       return {
         "gt-checkbox": true,
         "gt-checkbox--disabled": this.isDisabled,
-        [`gt-checkbox--${this.type}`]: !this.isDisabled,
         [`gt-checkbox--${this.size}`]: true,
         [`gt-checkbox--${this.size}-indeterminate`]: this.checkIndeterminate(),
       };

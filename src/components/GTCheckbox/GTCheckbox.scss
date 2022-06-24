@@ -141,79 +141,6 @@
     }
   }
 
-  &--primary {
-    .gt-checkbox {
-      &__item {
-        .label--title {
-          @extend .text--neutral-900;
-        }
-
-        .label--subtitle {
-          @extend .text--neutral-700;
-        }
-
-        input:checked ~ .checkmark {
-          @extend .bg--primary-navy-blue;
-          border: none;
-        }
-
-        input:checked ~ .checkmark:after {
-          display: block;
-        }
-
-        .checkmark {
-          @extend .border--neutral-600;
-        }
-      }
-    }
-  }
-
-  &--secondary {
-    .gt-checkbox {
-      &__item {
-        .label--title {
-          @extend .text--neutral-900;
-        }
-
-        .label--subtitle {
-          @extend .text--neutral-700;
-        }
-
-        input:checked ~ .checkmark {
-          @extend .bg--semantic-error;
-          border: none;
-        }
-
-        input:checked ~ .checkmark:after {
-          display: block;
-        }
-
-        .checkmark {
-          @extend .border--semantic-error;
-        }
-      }
-    }
-  }
-
-  &--disabled {
-    .gt-checkbox {
-      &__item {
-        .label--title {
-          @extend .text--neutral-500;
-        }
-
-        .label--subtitle {
-          @extend .text--neutral-500;
-        }
-
-        .checkmark {
-          @extend .bg--neutral-300;
-          border: none;
-        }
-      }
-    }
-  }
-
   &__item {
     display: block;
     position: relative;
@@ -245,6 +172,67 @@
     .label--subtitle {
       @extend .poppins;
       @extend .poppins--caption;
+    }
+
+    &--primary {
+      .label--title {
+        @extend .text--neutral-900;
+      }
+
+      .label--subtitle {
+        @extend .text--neutral-700;
+      }
+
+      input:checked ~ .checkmark {
+        @extend .bg--primary-navy-blue;
+        border: none;
+      }
+
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .checkmark {
+        @extend .border--neutral-600;
+      }
+    }
+
+    &--secondary {
+      .label--title {
+        @extend .text--neutral-900;
+      }
+
+      .label--subtitle {
+        @extend .text--neutral-700;
+      }
+
+      input:checked ~ .checkmark {
+        @extend .bg--semantic-error;
+        border: none;
+      }
+
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .checkmark {
+        @extend .border--semantic-error;
+      }
+    }
+
+    &--disabled {
+      .label--title {
+        @extend .text--neutral-500;
+      }
+
+      .label--subtitle {
+        @extend .text--neutral-500;
+      }
+
+      .checkmark {
+        @extend .bg--neutral-300;
+        border: none !important;
+      }
     }
   }
 }

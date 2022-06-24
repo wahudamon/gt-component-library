@@ -120,15 +120,15 @@ export default Vue.extend({
       ],
       cbxSelectedItem: "",
       rbSelectedItem: "",
-      checkboxItems: "",
+      checkboxItems: [],
       sliderValue: "0",
       inputTextValue: "",
       inputAreaValue: "",
     };
   },
   watch: {
-    rbSelectedItem(val) {
-      console.log(val);
+    checkboxItems(val) {
+      console.log(this.checkboxItems);
     },
   },
 });
@@ -137,9 +137,29 @@ export default Vue.extend({
 <template>
   <div id="app">
     <div class="mt--15 ml--15">
-      <GTCheckbox size="md" type="secondary">
-        <GTCheckboxItem text="Spaghetti" />
-        <GTCheckboxItem text="Pizza" />
+      <GTCheckbox>
+        <GTCheckboxItem
+          isDisabled
+          :model.sync="checkboxItems"
+          text="Spaghetti"
+          value="spaghetti"
+        />
+        <GTCheckboxItem
+          :model.sync="checkboxItems"
+          text="Pizza"
+          value="pizza"
+        />
+        <GTCheckboxItem
+          isDisabled
+          :model.sync="checkboxItems"
+          text="Burger"
+          value="burger"
+        />
+        <GTCheckboxItem
+          :model.sync="checkboxItems"
+          text="Fried Rice"
+          value="fried rice"
+        />
       </GTCheckbox>
     </div>
     <!-- <div class="mt--15 ml--15">
