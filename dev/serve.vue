@@ -126,48 +126,25 @@ export default Vue.extend({
       inputAreaValue: "",
     };
   },
-  watch: {
-    checkboxItems(val) {
-      console.log(this.checkboxItems);
-    },
-  },
 });
 </script>
 
 <template>
   <div id="app">
     <div class="mt--15 ml--15">
-      <GTCheckbox>
-        <GTCheckboxItem
-          isDisabled
-          :model.sync="checkboxItems"
+      <GTRadioButton>
+        <GTRadioButtonItem
+          :model.sync="rbSelectedItem"
           text="Spaghetti"
           value="spaghetti"
         />
-        <GTCheckboxItem
-          :model.sync="checkboxItems"
+        <GTRadioButtonItem
+          :model.sync="rbSelectedItem"
           text="Pizza"
           value="pizza"
         />
-        <GTCheckboxItem
-          isDisabled
-          :model.sync="checkboxItems"
-          text="Burger"
-          value="burger"
-        />
-        <GTCheckboxItem
-          :model.sync="checkboxItems"
-          text="Fried Rice"
-          value="fried rice"
-        />
-      </GTCheckbox>
-    </div>
-    <!-- <div class="mt--15 ml--15">
-      <GTRadioButton type="secondary" size="md">
-        <GTRadioButtonItem text="Spaghetti" value="Spaghetti" />
-        <GTRadioButtonItem text="Pizza" value="Pizza" />
       </GTRadioButton>
-    </div> -->
+    </div>
   </div>
 </template>
 

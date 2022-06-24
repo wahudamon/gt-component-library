@@ -105,65 +105,6 @@
     }
   }
 
-  &--primary {
-    .gt-radio {
-      &__item {
-        .label--title {
-          @extend .text--neutral-900;
-        }
-
-        .label--subtitle {
-          @extend .text--neutral-700;
-        }
-
-        input:checked ~ .checkmark {
-          @extend .bg--primary-navy-blue;
-        }
-
-        input:checked ~ .checkmark:after {
-          display: block;
-        }
-      }
-    }
-  }
-
-  &--secondary {
-    .gt-radio {
-      &__item {
-        .label--title {
-          @extend .text--neutral-900;
-        }
-
-        .label--subtitle {
-          @extend .text--neutral-700;
-        }
-
-        input:checked ~ .checkmark {
-          @extend .bg--semantic-error;
-          border: none;
-        }
-
-        input:checked ~ .checkmark:after {
-          display: block;
-        }
-      }
-    }
-  }
-
-  &--disabled {
-    .gt-radio {
-      &__item {
-        .label--title {
-          @extend .text--neutral-500;
-        }
-
-        .label--subtitle {
-          @extend .text--neutral-500;
-        }
-      }
-    }
-  }
-
   &__item {
     display: block;
     position: relative;
@@ -194,6 +135,53 @@
     .label--subtitle {
       @extend .poppins;
       @extend .poppins--caption;
+    }
+
+    &--primary {
+      .label--title {
+        @extend .text--neutral-900;
+      }
+
+      .label--subtitle {
+        @extend .text--neutral-700;
+      }
+
+      input:checked ~ .checkmark {
+        @extend .bg--primary-navy-blue;
+      }
+
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+    }
+
+    &--secondary {
+      .label--title {
+        @extend .text--neutral-900;
+      }
+
+      .label--subtitle {
+        @extend .text--neutral-700;
+      }
+
+      input:checked ~ .checkmark {
+        @extend .bg--semantic-error;
+        border: none;
+      }
+
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+    }
+
+    &--disabled {
+      .label--title {
+        @extend .text--neutral-500;
+      }
+
+      .label--subtitle {
+        @extend .text--neutral-500;
+      }
     }
   }
 }

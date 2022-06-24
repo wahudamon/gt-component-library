@@ -3,11 +3,11 @@
     <p class="label--title">{{ text }}</p>
     <p class="label--subtitle">{{ subtext }}</p>
     <input
-      v-model="radioButtonModel"
+      @click="onRadioButtonClick"
       type="radio"
       name="radio"
       :disabled="isDisabled"
-      :value="text"
+      :value="value"
     />
     <span class="checkmark"></span>
   </label>
@@ -17,15 +17,22 @@
 export default {
   name: "GTRadioButtonItem",
   props: {
+    type: {
+      type: String,
+      default: "primary",
+      validator: function (value) {
+        return ["primary", "secondary"].indexOf(value) !== -1;
+      },
+    },
     isDisabled: {
       type: Boolean,
       default: false,
     },
-    value: {
+    model: {
       type: String,
       default: "",
     },
-    selectedItem: {
+    value: {
       type: String,
       default: "",
     },
@@ -38,27 +45,21 @@ export default {
       default: "",
     },
   },
-  data() {
-    return {
-      radioButtonModel: this.value,
-    };
-  },
   computed: {
     classes() {
       return {
         "gt-radio__item": true,
         "gt-radio__item--disabled": this.isDisabled,
+        [`gt-radio__item--${this.type}`]: !this.isDisabled,
       };
-    },
-  },
-  watch: {
-    radioButtonModel(val) {
-      this.sendValueToParent(val);
     },
   },
   methods: {
     sendValueToParent(value) {
-      this.$emit("update:selectedItem", value);
+      this.$emit("update:model", value);
+    },
+    onRadioButtonClick() {
+      this.sendValueToParent(this.value);
     },
   },
 };
