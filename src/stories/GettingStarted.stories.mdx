@@ -49,3 +49,28 @@ Kemudian meng-import Bootstrap package yang sudah diinstal pada root file di pro
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 ```
+
+## How to Import Components
+
+Untuk dapat menggunakan komponen-komponen yang ada pada Gamatechno Component Library, perlu untuk meng-import komponen tersebut terlebih dahulu ke dalam file target di dalam project. Berikut ini adalah cara untuk meng-import komponen.
+
+```html
+<script>
+  import {
+    GTRadioButton,
+    GTRadioButtonItem,
+    GTCheckbox,
+    GTCheckboxItem,
+  } from "gamatechno-vue-component-library";
+
+  export default {
+    name: "HelloWorld",
+    components: {
+      GTRadioButton,
+      GTRadioButtonItem,
+      GTCheckbox,
+      GTCheckboxItem,
+    },
+  };
+</script>
+```
