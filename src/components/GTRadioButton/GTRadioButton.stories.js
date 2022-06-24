@@ -1,10 +1,10 @@
 import GTRadioButton from "./GTRadioButton.vue";
+import GTRadioButtonItem from "./GTRadioButtonItem.vue";
 
-// More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
   title: "Components/GTRadioButton",
   component: GTRadioButton,
-  // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
+  subcomponents: { GTRadioButtonItem },
   argTypes: {
     size: {
       control: { type: "select" },
@@ -22,100 +22,232 @@ export default {
   },
 };
 
-// More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { GTRadioButton },
-  template: '<GTRadioButton v-bind="$props" />',
+  components: { GTRadioButton, GTRadioButtonItem },
+  template: `
+<GTRadioButton>
+  <GTRadioButtonItem
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    text="Pizza"
+    value="pizza"
+  />
+</GTRadioButton>
+  `,
 });
-
 export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/vue/writing-stories/args
-Primary.args = {
-  text: "Text",
-  subtext: "This is subtext",
-};
 Primary.parameters = {
   docs: {
     source: {
-      code: `<GTRadioButton text="Text" subtext="This is subtext" />`,
+      code: `
+<GTRadioButton>
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    text="Pizza"
+    value="pizza"
+  />
+</GTRadioButton>`,
     },
   },
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  type: "secondary",
-  text: "Text",
-  subtext: "This is subtext",
-};
+export const Secondary = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTRadioButton, GTRadioButtonItem },
+  template: `
+<GTRadioButton>
+  <GTRadioButtonItem
+    type="secondary"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    type="secondary"
+    text="Pizza"
+    value="pizza"
+  />
+</GTRadioButton>
+  `,
+});
 Secondary.parameters = {
   docs: {
     source: {
-      code: `<GTRadioButton type="secondary" text="Text" subtext="This is subtext" />`,
+      code: `
+<GTRadioButton>
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    type="secondary"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    type="secondary"
+    text="Pizza"
+    value="pizza"
+  />
+</GTRadioButton>`,
     },
   },
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  text: "Text",
-  subtext: "This is subtext",
-  isDisabled: true,
-};
+export const Disabled = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTRadioButton, GTRadioButtonItem },
+  template: `
+<GTRadioButton>
+  <GTRadioButtonItem
+    isDisabled
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    isDisabled
+    text="Pizza"
+    value="pizza"
+  />
+</GTRadioButton>
+  `,
+});
 Disabled.parameters = {
   docs: {
     source: {
-      code: `<GTRadioButton isDisabled text="Text" subtext="This is subtext" />`,
+      code: `
+<GTRadioButton>
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    isDisabled
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    isDisabled
+    text="Pizza"
+    value="pizza"
+  />
+</GTRadioButton>`,
     },
   },
 };
 
-export const WithoutText = Template.bind({});
-WithoutText.parameters = {
+export const WithSubtext = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTRadioButton, GTRadioButtonItem },
+  template: `
+<GTRadioButton>
+  <GTRadioButtonItem
+    text="Spaghetti"
+    subtext="an Italian noodles with sauce"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    type="secondary"
+    text="Pizza"
+    subtext="an Italian roasted food with toppings"
+    value="pizza"
+  />
+</GTRadioButton>
+  `,
+});
+WithSubtext.parameters = {
   docs: {
     source: {
-      code: `<GTRadioButton />`,
+      code: `
+<GTRadioButton>
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    text="Spaghetti"
+    subtext="an Italian noodles with sauce"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    text="Pizza"
+    subtext="an Italian roasted food with toppings"
+    value="pizza"
+  />
+</GTRadioButton>`,
     },
   },
 };
 
-export const WithoutSubtext = Template.bind({});
-WithoutSubtext.args = {
-  text: "Text",
-};
-WithoutSubtext.parameters = {
-  docs: {
-    source: {
-      code: `<GTRadioButton text="Text" />`,
-    },
-  },
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  text: "Text",
-  subtext: "This is subtext",
-  size: "sm",
-};
+export const Small = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTRadioButton, GTRadioButtonItem },
+  template: `
+<GTRadioButton size="sm">
+  <GTRadioButtonItem
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    text="Pizza"
+    value="pizza"
+  />
+</GTRadioButton>
+  `,
+});
 Small.parameters = {
   docs: {
     source: {
-      code: `<GTRadioButton size="sm" text="Text" subtext="This is subtext" />`,
+      code: `
+<GTRadioButton size="sm">
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    text="Pizza"
+    value="pizza"
+  />
+</GTRadioButton>`,
     },
   },
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  text: "Text",
-  subtext: "This is subtext",
-  size: "lg",
-};
+export const Large = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { GTRadioButton, GTRadioButtonItem },
+  template: `
+<GTRadioButton size="lg">
+  <GTRadioButtonItem
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    text="Pizza"
+    value="pizza"
+  />
+</GTRadioButton>
+  `,
+});
 Large.parameters = {
   docs: {
     source: {
-      code: `<GTRadioButton size="lg" text="Text" subtext="This is subtext" />`,
+      code: `
+<GTRadioButton size="lg">
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    text="Spaghetti"
+    value="spaghetti"
+  />
+  <GTRadioButtonItem
+    :model.sync="rbSelectedItem"
+    text="Pizza"
+    value="pizza"
+  />
+</GTRadioButton>`,
     },
   },
 };
